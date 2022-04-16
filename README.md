@@ -7,7 +7,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * 2022-04-16 TypeScript 化
   - [今さら聞けないNext.jsをTypeScript化する方法【2021年4月版】](https://zenn.dev/yukito0616/articles/fa41ea2d0cb308)
 
-typescript @types/react @types/node
+### 共通の Layout コンポーネントの作成
+
+* [Next.js入門（TypeScript版） | webOpixel](https://www.webopixel.net/javascript/1714.html)
+
+### Tailwind CSS の導入
+
+* [Install Tailwind CSS with Next.js - Tailwind CSS](https://tailwindcss.com/docs/guides/nextjs)
+
+npx tailwindcss init -p
 
 ## Getting Started
 
