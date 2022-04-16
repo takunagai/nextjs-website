@@ -1,3 +1,6 @@
+/**
+ * _app.tsx で読み込まれるグローバルスタイル
+ */
 html,
 body {
   padding: 0;
