@@ -21,9 +21,9 @@ export default function Layout({ children, title, description }: Props) {
                 <h1>{ pageTitle }</h1>
             </header>
             <nav>
-                <ul>
-                    <li><Link href="../">Home</Link></li>
-                    <li><Link href="../about">About</Link></li>
+                <ul className="md:flex">
+                    <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../">Home</Link></li>
+                    <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../about">About</Link></li>
                 </ul>
             </nav>
             <main>{ children }</main>

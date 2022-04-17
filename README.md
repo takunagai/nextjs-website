@@ -15,7 +15,22 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 * [Install Tailwind CSS with Next.js - Tailwind CSS](https://tailwindcss.com/docs/guides/nextjs)
 
-npx tailwindcss init -p
+
+## 気づき
+
+* デフォルトで静的生成
+* 外部データの取得がある場合の静的生成
+    - ページのコンテンツが外部データに依存する場合、getStaticProps (async 関数)
+        * ビルド時にデータ取得
+    - ページのパス(path)が外部データに依存する場合、getStaticPaths
+        * データに基づきプリレンダリングする動的ルートを特定
+        * クライアント側では呼び出されないため、データベースクエリを直接実行することも可能
+        * HTML と JSONを生成し、CDN でキャッシュされる(高速)
+        * 使うシーン
+            - ページをレンダリングするのに必要な外部データがある(先に読み込みが必要)
+* process.cwd() を使って Next.js が実行されたディレクトリを取得
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ## Getting Started
 

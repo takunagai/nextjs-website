@@ -1,6 +1,7 @@
 import Layout from '../components/layout'
+import type {FC} from 'react'
 
-export default function Home() {
+const About: FC = () => {
     return (
         <Layout
             title="About"
@@ -10,3 +11,5 @@ export default function Home() {
         </Layout>
     )
 }
+
+export default About
