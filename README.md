@@ -5,15 +5,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## ログ
 
 * 2022-04-16 TypeScript 化
-  - [今さら聞けないNext.jsをTypeScript化する方法【2021年4月版】](https://zenn.dev/yukito0616/articles/fa41ea2d0cb308)
+  - [今さら聞けないNext.jsをTypeScript化する方法【2021年4月版】- Zenn](https://zenn.dev/yukito0616/articles/fa41ea2d0cb308)
 
 ### 共通の Layout コンポーネントの作成
 
-* [Next.js入門（TypeScript版） | webOpixel](https://www.webopixel.net/javascript/1714.html)
+* [Next.js入門（TypeScript版）- webOpixel](https://www.webopixel.net/javascript/1714.html)
 
 ### Tailwind CSS の導入
 
 * [Install Tailwind CSS with Next.js - Tailwind CSS](https://tailwindcss.com/docs/guides/nextjs)
+
+### github api からデータ取得し表示
+
+* [Github からユーザをフェッチする - JavaScript Info](https://ja.javascript.info/task/fetch-users)
+* [Basic Features: データ取得 - Next.js](https://nextjs-ja-translation-docs.vercel.app/docs/basic-features/data-fetching)
 
 
 ## 気づき
@@ -21,7 +26,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * デフォルトで静的生成
 * 外部データの取得がある場合の静的生成
     - ページのコンテンツが外部データに依存する場合、getStaticProps (async 関数)
-        * ビルド時にデータ取得
+        * ビルド時(`next build`)にデータ取得
+    * ISR と組み合わせると、古いページが再検証されている間、getStaticPropsがバックグラウンドで実行。更新されていれば新しいページがブラウザーに提供される
+    * getStaticPropsは着信要求（クエリパラメーターやHTTPヘッダーなど）にアクセスできない。ページリクエストにアクセスする必要がある場合は、getStaticProps + ミドルウェアの使用を検討する
+    * Next.js v12.1 以降は、[On-demand Revalidation (Beta)](https://nextjs.
+      org/docs/basic-features/data-fetching/incremental-static-regeneration#on-demand-revalidation-beta)が使える
     - ページのパス(path)が外部データに依存する場合、getStaticPaths
         * データに基づきプリレンダリングする動的ルートを特定
         * クライアント側では呼び出されないため、データベースクエリを直接実行することも可能
