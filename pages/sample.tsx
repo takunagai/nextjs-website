@@ -20,6 +20,21 @@ const About: FC = () => {
                 height={375} // Desired size with correct aspect ratio
                 alt="代替テキスト"
             />
+
+            <hr />
+
+            <h2>styled-jsx</h2>
+            <ul>
+                <li>Next.js には styled-jsx のサポートが組み込まれている</li>
+                <li>styled-components や emotion などの CSS-in-JS ライブラリも使用できる</li>
+                <li>コンポーネント内で CSS を記述でき、スコープが設定される(他コンポーネントは影響を受けない)</li>
+                <li>Next.js には、CSS と Sass のサポートが組み込まれており、.css ファイルと .scss ファイルをインポートできる</li>
+                <li>TailwindCSS などのCSSライブラリの使用もサポートされている</li>
+                <li className="foo">これは、styled-jsx でスタイリングしてみたもの</li>
+            </ul>
+            <style jsx>{`
+              .foo {font-weight: bold; font-size: 1.5em;}
+            `}</style>
         </Layout>
     )
 }

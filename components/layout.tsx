@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 type Props = {
-    children?: React.ReactNode // React 18 以降で、children を props として受け取るのに必要になった
+    children: React.ReactNode // React 18 以降で、children を props として受け取るのに必要になった
     title?: string
     description?: string
 }
