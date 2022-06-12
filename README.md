@@ -1,5 +1,7 @@
 # Php Storm の Next.js プラグインで新規に作成したプロジェクト
 
+* 2022-04-16 Pivot川西もくもく会
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## ログ
@@ -19,6 +21,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 * [Github からユーザをフェッチする - JavaScript Info](https://ja.javascript.info/task/fetch-users)
 * [Basic Features: データ取得 - Next.js](https://nextjs-ja-translation-docs.vercel.app/docs/basic-features/data-fetching)
+
+### TypeScript 化
+
+* [TypeScript で書く Next.js のページコンポーネント ++ Gaji-Laboブログ](https://blog.gaji.jp/2021/11/08/8476/) ★★途中
+* [玖ノ型：約束の地へ｜カタ柱じゃなくてもできる、TypeScript の呼吸](https://zenn.dev/tkdn/books/type-breathing/viewer/9-promise-resolve-type) ★★未
+* [Next.js の InferGetStaticPropsType が便利](https://zenn.dev/catnose99/articles/7201a6c56d3c88) ★★未
+* [Next.js getStaticPropsの型の付け方、型定義について - Zenn](https://zenn.dev/eitches/articles/2021-0424-getstaticprops-type) ★★未
+
 
 
 ## 気づき

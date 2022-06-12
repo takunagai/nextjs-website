@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2015", // es5
     "lib": [
       "dom",
       "dom.iterable",
@@ -8,7 +8,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true, // false
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
@@ -17,7 +17,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve", // jsxのコンパイルをtscではなくBabelなど他に任せたい場合に使用, "react"
+    "types": ["react/next", "react-dom/next"], // ★★Temp 2022-04-20 v18用
+    "sourceMap": true // Add
   },
   "include": [
     "next-env.d.ts",
