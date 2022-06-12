@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 type Props = {
-    children?: React.ReactNode
+    children?: React.ReactNode // React 18 以降で、children を props として受け取るのに必要になった
     title?: string
     description?: string
 }
@@ -11,7 +11,7 @@ type Props = {
 export default function Layout({ children, title, description }: Props) {
     const pageTitle = title || 'タイトル未設定'
     return (
-        <div>
+        <>
             <Head>
                 <title>{ pageTitle } - ナガイ商店.com</title>
                 <meta name="description" content={ description || 'ページ概要未設定' } />
@@ -24,10 +24,12 @@ export default function Layout({ children, title, description }: Props) {
                 <ul className="md:flex">
                     <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../">Home</Link></li>
                     <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../about">About</Link></li>
+                    <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../sample">Sample</Link></li>
+                    <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../tutorial1">Tutorial1</Link></li>
                 </ul>
             </nav>
             <main>{ children }</main>
             <footer>(c) nagaishouten.com</footer>
-        </div>
+        </>
     )
 }

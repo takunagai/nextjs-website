@@ -1,35 +1,22 @@
 import Layout from '../components/layout'
 import styles from '../styles/Home.module.css'
-import { GetStaticProps } from 'next' // TypeScript の型データ
+import { GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next' // TypeScript の型データ
 
-// type Props = {
-//   aaa:string
-//   bbb:string
-// }
-
-const Home = ({results}) => {
-    return (
-        <Layout
-            title="ナガイ商店.com - 兵庫県川西市 Web 制作"
-            description="概要です。"
-        >
-            <h1 className="text-3xl font-bold underline">見出し１です。</h1>
-            <p className={styles.primary}>内容</p>
-            <ul>
-                {results.map((result, index) => (
-                   <li key={index}>{result.id} {result.name}</li>
-                ))}
-            </ul>
-        </Layout>
-    )
+type Props = InferGetStaticPropsType<typeof getStaticProps>
+type Result = {
+    id: number,
+    name: string
 }
 
-
-// export const getStaticProps: GetStaticProps<Props> = async () => {
-export const getStaticProps: GetStaticProps = async (context) => {
+// getStaticProps は、実装者が大きな変更をしない限り Promise を返却する = 条件は必ず真に流れる
+// ★★TODO: エラー消す (参考：https://zenn.dev/eitches/articles/2021-0424-getstaticprops-type)
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext<{ slug: string }>) => {
 
     const names = ['takunagai', 'GeoSot']
     let jobs = []
+    let div: HTMLParagraphElement
+
+    // const post = getPost(context.params.slug)
 
     for (let name of names) {
         let job = fetch(`https://api.github.com/users/${name}`).then(
@@ -55,7 +42,26 @@ export const getStaticProps: GetStaticProps = async (context) => {
     }
 }
 
+const Home: NextPage<Props> = ({ results }) => {
+    return (
+        <Layout
+            title="ナガイ商店.com - 兵庫県川西市 Web 制作"
+            description="概要です。"
+        >
+            <h1 className="text-3xl font-bold underline">見出し１です。</h1>
+            <p className={styles.primary}>内容</p>
+            <ul>
+                {results.map((result: Result, index: number) => (
+                    <li key={index}>{result.id} {result.name}</li>
+                ))}
+            </ul>
+        </Layout>
+    )
+}
+
 export default Home
+
+
 
 // 元のもの
 // import Head from 'next/head'
