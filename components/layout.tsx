@@ -28,7 +28,14 @@ export default function Layout({ children, title, description }: Props) {
                     <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../tutorial1">Tutorial1</Link></li>
                 </ul>
             </nav>
-            <main>{ children }</main>
+            <main>
+                { children }
+                <p>
+                    <Link href="/">
+                        <a className="border-b-2">Back to home</a>
+                    </Link>
+                </p>
+            </main>
             <footer>(c) nagaishouten.com</footer>
         </>
     )
