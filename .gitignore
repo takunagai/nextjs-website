@@ -8,7 +8,7 @@
 # testing
 /coverage
 
-# next.js
+# nextjs-website.js
 /.next/
 /out/
 
