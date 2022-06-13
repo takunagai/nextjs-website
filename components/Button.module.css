@@ -1,0 +1,5 @@
+/* スコープされるため、.error が他の CSS 中の .error と衝突することを心配する必要はない */
+.error {
+  color: white;
+  background-color: red;
+}

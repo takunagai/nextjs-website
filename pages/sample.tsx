@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Layout from '../components/layout'
+import Button from '../components/Button'
 import type {FC} from 'react'
 
 const About: FC = () => {
@@ -35,6 +36,28 @@ const About: FC = () => {
             <style jsx>{`
               .foo {font-weight: bold; font-size: 1.5em;}
             `}</style>
+
+            <hr />
+
+            <h2>CSS Modules</h2>
+            <ul>
+                <li>コンポーネントレベルのスタイルに役立つ</li>
+                <li>コンポーネントファイル名.modules.css で</li>
+                <li>ユニークなクラス名が自動で充てられスコープされるので、他とのクラス名衝突の心配が不要</li>
+                <li>ページごとに最小限のCSSがロード。バンドルサイズが小さく</li>
+                <li>CSS モジュールはビルド時に JavaScript バンドルから抽出され、Next.js が自動的にロードされる css を生成する</li>
+            </ul>
+            <Button />
+
+            <hr />
+
+            <h2>グローバルな CSS</h2>
+            <p>styles/global.css を作成し _app.tsx に読み込む(リスタート必要)</p>
+
+            <hr />
+
+            <h2>PostCSS, TailwindCSS, Sass</h2>
+            <a href="https://nextjs.org/learn/basics/assets-metadata-css/styling-tips">Styling Tips - Assets, Metadata, and CSS | Learn Next.js</a>
         </Layout>
     )
 }
