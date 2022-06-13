@@ -45,6 +45,7 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
 const Home: NextPage<Props> = ({ results }) => {
     return (
         <Layout
+            home
             title="ナガイ商店.com - 兵庫県川西市 Web 制作"
             description="概要です。"
         >

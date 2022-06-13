@@ -1,4 +1,10 @@
-.container {
+/**
+ * CSS Modules
+ *   一意のクラス名を自動的に作成
+ *   Next.js デフォルトで組み込まれている
+ *   ページ名.module.css とページと対応
+ */
+.container { /* このクラス名は自動でユニークなものに変更される */
   max-width: 70rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;

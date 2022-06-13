@@ -1,0 +1,9 @@
+/**
+ * utils.module.css
+ * 複数のコンポーネントで役立つタイポグラフィなどのユーティリティCSSクラスのセット
+ * components/layout.tsx で読み込ませる
+ * Tailwind など使う場合は不要？
+ */
+.utilsModuleCssTest {
+	border: 3px dotted pink;
+}
