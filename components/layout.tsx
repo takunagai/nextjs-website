@@ -47,6 +47,7 @@ export default function Layout({ children, title, description, home }: Props) {
                         <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../sample">Sample</Link></li>
                         <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../base">Base</Link></li>
                         <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../tutorial1">Tutorial1</Link></li>
+                        <li className="outline outline-offset-2 outline-1 outline-black"><Link href="../blog-posts">Blog</Link></li>
                     </ul>
                 </nav>
                 <div className={styles.container}>
