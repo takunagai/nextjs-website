@@ -1,12 +1,15 @@
 /**
  * App コンポーネント(全てのページを初期化)を継承し上書き
  * 全ページで必要な処理を書く
+ * @see https://qiita.com/tetsutaroendo/items/c7171286137d963cdecf
+ * _app.js はサーバーサイドでレンダリング（getInitialPropsの実行を含む）され、
+ *     ライフサイクルのイベントはクライアントサイドでも実行される
  */
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type {AppProps} from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({Component, pageProps}: AppProps) {
+    return <Component {...pageProps} />
 }
 
 export default MyApp
