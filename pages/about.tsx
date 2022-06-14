@@ -1,7 +1,7 @@
 import Layout from '../components/layout'
-import type {FC} from 'react'
+import type { NextPage } from "next"
 
-const About: FC = () => {
+const About: NextPage = () => {
     return (
         <Layout
             title="About"

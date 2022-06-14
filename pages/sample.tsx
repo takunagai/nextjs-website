@@ -3,9 +3,9 @@ import Layout from '../components/layout'
 import Button from '../components/Button'
 import Alert from '../components/Alert'
 import cn from 'classnames'
-import type {FC} from 'react'
+import type { NextPage } from "next"
 
-const About: FC = () => {
+const About: NextPage = () => {
     return (
         <Layout
             title="サンプル"
@@ -65,8 +65,8 @@ const About: FC = () => {
 
             <h2>classnames ライブラリ</h2>
             <ul>
-                <li><a href="https://github.com/JedWatson/classnames" target="_blank">classnames - github</a></li>
-                <li><a href="https://www.yoheim.net/blog.php?q=20180701" target="_blank">React.js の classNameに、複数のクラスを簡単に指定する Classnames</a></li>
+                <li><a href="https://github.com/JedWatson/classnames" target="_blank" rel="noreferrer">classnames - github</a></li>
+                <li><a href="https://www.yoheim.net/blog.php?q=20180701" target="_blank" rel="noreferrer">React.js の classNameに、複数のクラスを簡単に指定する Classnames</a></li>
                 <Alert type="success">classnames ライブラリで条件でクラスを出し分けしたアラートコンポーネント</Alert>
                 <Alert type="error">classnames ライブラリで条件でクラスを出し分けしたアラートコンポーネント</Alert>
             </ul>

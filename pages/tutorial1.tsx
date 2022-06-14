@@ -1,6 +1,7 @@
 import Layout from '../components/layout'
 import { useState } from 'react'
 import type { FC } from 'react'
+import type { NextPage } from "next"
 type Props = { title?: string }
 
 const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton']
@@ -9,7 +10,7 @@ const Header: FC<Props> = ({ title }) => {
     return <h1>{title ? title : 'Default title'}</h1>
 }
 
-const Tutorial1: FC = () => {
+const Tutorial1: NextPage = () => {
     const [likes, setLikes] = useState(0)
 
     function handleClick() {

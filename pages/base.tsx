@@ -1,7 +1,8 @@
+import Image from 'next/image'
 import Layout from '../components/layout'
-import type {FC} from 'react'
+import type { NextPage } from "next"
 
-const About: FC = () => {
+const About: NextPage = () => {
     return (
         <Layout
             title="Base"
@@ -198,10 +199,20 @@ const About: FC = () => {
                 <section className="stack-small">
                     <h2>The Frame - アスペクト比 ★★うまくいかない？</h2>
                     <div className="frame">
-                        <img src="https://picsum.photos/600/600.webp?random=1?grayscale" alt="" />
+                        <Image
+                            src="https://picsum.photos/600/600.webp" // Route of the image file
+                            width={400} // Desired size with correct aspect ratio
+                            height={600} // Desired size with correct aspect ratio
+                            alt="代替テキスト"
+                        />
                     </div>
                     <div className="frame:square">
-                        <img src="https://picsum.photos/400/600.webp?random=1?grayscale" alt="" />
+                        <Image
+                            src="https://picsum.photos/400/600.webp" // Route of the image file
+                            width={400} // Desired size with correct aspect ratio
+                            height={600} // Desired size with correct aspect ratio
+                            alt="代替テキスト"
+                        />
                     </div>
                 </section>
             </div>

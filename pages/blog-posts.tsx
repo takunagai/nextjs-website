@@ -1,17 +1,27 @@
 import Layout from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
-import type {FC} from 'react'
+
+import type { NextPage } from "next"
+
+type Props = {
+    allPostsData: {
+        id: string,
+        date: string,
+        title: string
+    }[]
+}
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData()
     return {
         props: {
-            allPostsData,
+            allPostsData
         },
     }
 }
 
-const BlogPosts: FC = ({ allPostsData }) => {
+// const BlogPosts: NextPage = ({ allPostsData }: Props) => {
+const BlogPosts: NextPage<Props> = ({ allPostsData }: Props) => {
     return (
         <Layout
             title="BlogPosts"
