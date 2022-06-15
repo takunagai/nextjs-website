@@ -1,35 +1,30 @@
-# Php Storm の Next.js プラグインで新規に作成したプロジェクト
+# Next.js で Web サイト制作の練習
 
-* 2022-04-16 Pivot川西もくもく会
+[Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) を TypeScript ベースで進めながら、Web サイト制作の仕方を学習していく。
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[» デモ](https://nextjs-website-lemon.vercel.app/)
 
 ## ログ
 
+* 2022-04-16 PhpStorm の Next.js プラグインで新規プロジェクト作成
 * 2022-04-16 TypeScript 化
   - [今さら聞けないNext.jsをTypeScript化する方法【2021年4月版】- Zenn](https://zenn.dev/yukito0616/articles/fa41ea2d0cb308)
-
-### 共通の Layout コンポーネントの作成
-
-* [Next.js入門（TypeScript版）- webOpixel](https://www.webopixel.net/javascript/1714.html)
-
-### Tailwind CSS の導入
-
-* [Install Tailwind CSS with Next.js - Tailwind CSS](https://tailwindcss.com/docs/guides/nextjs)
-
-### github api からデータ取得し表示
-
-* [Github からユーザをフェッチする - JavaScript Info](https://ja.javascript.info/task/fetch-users)
-* [Basic Features: データ取得 - Next.js](https://nextjs-ja-translation-docs.vercel.app/docs/basic-features/data-fetching)
-
-### TypeScript 化
-
-* [TypeScript で書く Next.js のページコンポーネント ++ Gaji-Laboブログ](https://blog.gaji.jp/2021/11/08/8476/) ★★途中
-* [玖ノ型：約束の地へ｜カタ柱じゃなくてもできる、TypeScript の呼吸](https://zenn.dev/tkdn/books/type-breathing/viewer/9-promise-resolve-type) ★★未
-* [Next.js の InferGetStaticPropsType が便利](https://zenn.dev/catnose99/articles/7201a6c56d3c88) ★★未
-* [Next.js getStaticPropsの型の付け方、型定義について - Zenn](https://zenn.dev/eitches/articles/2021-0424-getstaticprops-type) ★★未
-
-
+* 共通の Layout コンポーネントの作成
+  - [Next.js入門（TypeScript版）- webOpixel](https://www.webopixel.net/javascript/1714.html)
+* Tailwind CSS の導入
+  - [Install Tailwind CSS with Next.js - Tailwind CSS](https://tailwindcss.com/docs/guides/nextjs)
+* github api からデータ取得し表示
+  - [Github からユーザをフェッチする - JavaScript Info](https://ja.javascript.info/task/fetch-users)
+  - [Basic Features: データ取得 - Next.js](https://nextjs-ja-translation-docs.vercel.app/docs/basic-features/data-fetching)
+* TypeScript 化
+  - [公式サンプル：next-learn/basics/typescript-final - github](https://github.com/vercel/next-learn/tree/master/basics/typescript-final)
+  - [TypeScript で書く Next.js のページコンポーネント ++ Gaji-Laboブログ](https://blog.gaji.jp/2021/11/08/8476/)
+  - [玖ノ型：約束の地へ｜カタ柱じゃなくてもできる、TypeScript の呼吸](https://zenn.dev/tkdn/books/type-breathing/viewer/9-promise-resolve-type)
+  - [Next.js の InferGetStaticPropsType が便利](https://zenn.dev/catnose99/articles/7201a6c56d3c88)
+  - [Next.js getStaticPropsの型の付け方、型定義について - Zenn](https://zenn.dev/eitches/articles/2021-0424-getstaticprops-type)
+  - [TypeScriptの as って何です？(型アサーションについて) - Qiita](https://qiita.com/irico/items/9d71060e52ffc1e79962)
+  - [型定義：DefinitelyTyped/DefinitelyTyped - github](https://github.com/DefinitelyTyped/DefinitelyTyped)
+    - `npm install --save-dev @types/react-dom`
 
 ## 気づき
 
@@ -50,6 +45,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 * process.cwd() を使って Next.js が実行されたディレクトリを取得
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
