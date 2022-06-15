@@ -1,6 +1,6 @@
 import useSWR from "swr"
-import styles from "../styles/Home.module.css"
-import type {NextPage} from "next"
+import Layout from '../components/layout'
+import type { NextPage } from "next"
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
@@ -14,17 +14,21 @@ const Home: NextPage = () => {
     if (!data) return <div>Loading...</div>
 
     return (
-        <div className={styles.container}>
-            <main className={styles.main}>
-                <h1 className={styles.title}>{data.name}</h1>
-                <p className={styles.description}>{data.description}</p>
+        <Layout
+            title="swr"
+            description="swr でフェッチしたデータを表示"
+        >
+            <main>
+                <h1>{data.name}</h1>
+                <p>swr で <a href="https://api.github.com/repos/vercel" className="border-b-2">github API</a> からフェッチしたデータを表示</p>
+                <p>{data.description}</p>
                 <p>
                     <strong>👁 {data.subscribers_count}</strong>{" "}
                     <strong>✨ {data.stargazers_count}</strong>{" "}
                     <strong>🍴 {data.forks_count}</strong>
                 </p>
             </main>
-        </div>
+        </Layout>
     )
 }
 
