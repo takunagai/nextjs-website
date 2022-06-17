@@ -5,6 +5,7 @@ import Layout from '../../components/layout'
 import {getAllPostIds, getPostData} from '../../lib/posts'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
+import Date from '../../components/date'
 
 type Props = {
     postData: {
@@ -28,7 +29,8 @@ export default function Post({ postData }: Props) {
             <br/>
             {postData.id}
             <br/>
-            {postData.date}
+            {/*{postData.date}*/}
+            <Date dateString={postData.date}/>
             <br/>
             {/* dangerouslySetInnerHTML は、ブラウザ DOM における innerHTML の React での代替 */}
             {/* ★★TODO: サニタイズ推奨 https://hackmd.io/@euxn23/ByfD97Ujv */}
