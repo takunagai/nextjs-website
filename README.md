@@ -1,6 +1,13 @@
 # Next.js で Web サイト制作の練習
 
-次：https://nextjs.org/learn/basics/dynamic-routes/polishing-index-page
+次：[next.js/examples at canary · vercel/next.js](https://github.com/vercel/next.js/tree/canary/examples)
+  * [microCMS + Next.jsでJamstackブログを作ってみよう | microCMSブログ](https://blog.microcms.io/microcms-next-jamstack-blog/)
+  * [Next.js(SSG)でページネーションを実装してみよう | microCMSブログ](https://blog.microcms.io/next-pagination/)
+  * [next.js/examples/with-storybook at canary · vercel/next.js](https://github.com/vercel/next.js/tree/canary/examples/with-storybook)
+  * [next.js/examples/with-clerk at canary · vercel/next.js](https://github.com/vercel/next.
+   js/tree/canary/examples/with-clerk)
+  * [next.js/examples/with-next-page-transitions at canary · vercel/next.js](https://github.com/vercel/next.js/tree/canary/examples/with-next-page-transitions)
+  * [next.js/examples/cms-wordpress at canary · vercel/next.js](https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress)
 
 [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) を TypeScript ベースで進めながら、Web サイト制作の仕方を学習していく。
 

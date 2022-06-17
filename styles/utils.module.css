@@ -5,5 +5,6 @@
  * Tailwind など使う場合は不要？
  */
 .utilsModuleCssTest {
-	border: 3px dotted pink;
+	font-size: 2rem;
+	font-weight: bold;
 }

@@ -200,17 +200,17 @@ const About: NextPage = () => {
                     <h2>The Frame - アスペクト比 ★★うまくいかない？</h2>
                     <div className="frame">
                         <Image
-                            src="https://picsum.photos/600/600.webp" // Route of the image file
-                            width={400} // Desired size with correct aspect ratio
-                            height={600} // Desired size with correct aspect ratio
+                            src="https://picsum.photos/600/600.webp" // 外部 URL の場合、next.config に要追記
+                            width={400}
+                            height={600}
                             alt="代替テキスト"
                         />
                     </div>
                     <div className="frame:square">
                         <Image
-                            src="https://picsum.photos/400/600.webp" // Route of the image file
-                            width={400} // Desired size with correct aspect ratio
-                            height={600} // Desired size with correct aspect ratio
+                            src="https://picsum.photos/400/600.webp"
+                            width={400}
+                            height={600}
                             alt="代替テキスト"
                         />
                     </div>

@@ -5,7 +5,7 @@
  *   ページ名.module.css とページと対応
  */
 .container { /* このクラス名は自動でユニークなものに変更される */
-  max-width: 70rem;
+  max-width: 80rem;
   padding: 0 1rem;
   margin: 3rem auto 6rem;
 }
