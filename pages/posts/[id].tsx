@@ -9,7 +9,7 @@ import Date from '../../components/date'
 
 type Props = {
     postData: {
-        id: string,
+        // id: string,
         title: string,
         date: string,
         contentHtml: string,
@@ -25,17 +25,16 @@ export default function Post({ postData }: Props) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            {postData.title}
-            <br/>
-            {postData.id}
-            <br/>
-            {/*{postData.date}*/}
-            <Date dateString={postData.date}/>
-            <br/>
+            {/*{postData.id}*/}
+            <h1>{postData.title}</h1>
+            <p><Date dateString={postData.date}/></p>
             {/* dangerouslySetInnerHTML は、ブラウザ DOM における innerHTML の React での代替 */}
             {/* ★★TODO: サニタイズ推奨 https://hackmd.io/@euxn23/ByfD97Ujv */}
             {/*<div dangerouslySetInnerHTML={{ __html: sanitizer(postData.contentHtml) }} />*/}
-            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <div
+                className="content mt-5"
+                dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+            />
         </Layout>
     )
 }

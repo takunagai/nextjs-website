@@ -1,3 +1,6 @@
+/**
+ * 日付を整形する
+ */
 import { parseISO, format } from 'date-fns'
 
 type Props = {
