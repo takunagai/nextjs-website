@@ -14,11 +14,13 @@ type Props = {
 export const siteTitle = 'ナガイ商店.com'
 
 export default function Layout({ children, title, description, home }: Props) {
+
     const pageTitle = title || 'タイトル未設定'
+
     return (
         <>
             <Head>
-                <title>{ pageTitle } - {siteTitle}</title>
+                <title>{pageTitle} - {siteTitle}</title>
                 <meta name="description" content={ description || 'ページ概要未設定' } />
                 <meta
                     property="og:image"
@@ -26,15 +28,17 @@ export default function Layout({ children, title, description, home }: Props) {
                 />
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
-                <link rel="icon" href="../public/favicon.ico" />
+                <link rel="icon" href="../public/favicon/favicon.ico" />
             </Head>
 
             <div className="site-wrapper">
                 <header className="my-1">
                     {home ? (
-                        <h1 className={utilStyles.utilsModuleCssTest}>{ siteTitle }</h1>
+                        <h1 className={utilStyles.utilsModuleCssTest}>{siteTitle}</h1>
                     ) : (
-                        <p className={utilStyles.utilsModuleCssTest}><Link href="/"><a>{ siteTitle }</a></Link></p>
+                        <p className={utilStyles.utilsModuleCssTest}>
+                            <Link href="/"><a>{siteTitle}</a></Link>
+                        </p>
                     )}
                 </header>
 
@@ -53,11 +57,11 @@ export default function Layout({ children, title, description, home }: Props) {
 
                 <div className={`wrapper ${styles.container}`}>
                     <main>
-                        { children }
+                        {children}
                     </main>
                     {!home && (
                         <p className="mt-5 text-center">
-                            <Link href="/"><a className="border-b-2">Back to home</a></Link>
+                            <Link href="/"><a className="border-b-2">ホームに戻る</a></Link>
                         </p>
                     )}
                 </div>

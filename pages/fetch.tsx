@@ -45,11 +45,10 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
 const Fetch: NextPage<Props> = ({ results }) => {
     return (
         <Layout
-            home
             title="github API からフェッチ"
             description="github API からデータをフェッチして表示するサンプルです。"
         >
-            <h2 className="text-2xl">github API からフェッチ</h2>
+            <h1>github API からフェッチ</h1>
             <ul>
                 {results.map((result: Result, index: number) => (
                     <li key={index}>{result.id} {result.name}</li>

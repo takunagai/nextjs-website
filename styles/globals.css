@@ -21,7 +21,9 @@
   --s3: calc(var(--s2) * var(--ratio)); /* 1rem * 1.5 * 1.5 * 1.5 */
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
-  --measure: 80ch; /* メジャーは 60ch を超えてはならない 1/3 */
+  --measure: 60rem; /* 80ch, メジャーは --measure を超えてはならない 1/3 */
+  --font-size-small: 1rem;
+  --font-size-smaller: 1rem;
   --font-size-base: 1rem;
   --font-size-biggish: 1.75rem;
   --font-size-big: 2.25rem;
@@ -64,9 +66,10 @@ p, h1, h2, h3, h4, h5, h6 {
  * Base styles
  */
 * {
-  max-inline-size: var(--measure); /* ≒ max-width (方向で変わる)、メジャーは 60ch を超えてはならない 2/3 */
+  max-inline-size: var(--measure); /* ≒ max-width (方向で変わる)、メジャーは --measure を超えてはならない 2/3 */
 }
-html, body, div, header, nav, main, footer {
+html, body, div,
+header, nav, main, footer {
   max-inline-size: none;
 }
 /*div, section, header, nav, main, footer {*/
@@ -78,8 +81,9 @@ html, body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+section,
 p, h1, h2, h3, h4, h5, h6,
-li, figcaption {
+ul, figcaption {
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
@@ -117,16 +121,14 @@ h6 {}
 
   }
   .site-wrapper > .wrapper {
-    flex-grow: 1;
+    flex: 1;
+    overflow-x: hidden;
   }
   .site-wrapper > footer {
 
   }
 
-main {
-    flex: 1;
-    overflow-x: hidden;
-}
+main {}
 main a {
   text-decoration: underline !important;
 }
@@ -140,6 +142,12 @@ main p + p {
  * utilities
  */
 /* Font Size */
+.font-size\:small {
+  font-size: var(--font-size-small) !important;
+}
+.font-size\:smaller {
+  font-size: var(--font-size-smaller) !important;
+}
 .font-size\:base {
   font-size: var(--font-size-base) !important;
 }
@@ -150,7 +158,7 @@ main p + p {
   font-size: var(--font-size-big) !important;
 }
 
-/* メジャーは 60ch を超えてはならない 3/3 */
+/* メジャーは --measure を超えてはならない 3/3 */
 .max-inline-size\:measure {
   max-inline-size: var(--measure);
 }

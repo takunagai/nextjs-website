@@ -1,13 +1,27 @@
 # Next.js で Web サイト制作の練習
 
 次：[next.js/examples at canary · vercel/next.js](https://github.com/vercel/next.js/tree/canary/examples)
+
+### microcms
+
   * [microCMS + Next.jsでJamstackブログを作ってみよう | microCMSブログ](https://blog.microcms.io/microcms-next-jamstack-blog/)
   * [Next.js(SSG)でページネーションを実装してみよう | microCMSブログ](https://blog.microcms.io/next-pagination/)
-  * [next.js/examples/with-storybook at canary · vercel/next.js](https://github.com/vercel/next.js/tree/canary/examples/with-storybook)
+
+### 公式サンプル
+
+  * [with-storybook at canary](https://github.com/vercel/next.js/tree/canary/examples/with-storybook)
   * [next.js/examples/with-clerk at canary · vercel/next.js](https://github.com/vercel/next.
    js/tree/canary/examples/with-clerk)
-  * [next.js/examples/with-next-page-transitions at canary · vercel/next.js](https://github.com/vercel/next.js/tree/canary/examples/with-next-page-transitions)
-  * [next.js/examples/cms-wordpress at canary · vercel/next.js](https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress)
+  * [with-next-page-transitions at canary](https://github.com/vercel/next.js/tree/canary/examples/with-next-page-transitions)
+  * [cms-wordpress at canary](https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress)
+
+### 小技 (UI、効果 他)
+
+  * [React custom hooksでフェードインアニメーションを実装する | Keshiwo Tech Blog](https://keshiwo.jp/learning-custom-hooks-practical-edition/)
+  * [React で URL props が変わったら fade アニメーションで 背景を変える](https://zenn.dev/anozon/articles/react-transition-props-bg)
+  * フェードイン
+    * [Reactでお手軽にIntersection Observerを使う](https://zenn.dev/himorishige/articles/e17b7d04fc7722)
+    * [React scroll animations with Framer Motion - LogRocket Blog](https://blog.logrocket.com/react-scroll-animations-framer-motion/)
 
 [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) を TypeScript ベースで進めながら、Web サイト制作の仕方を学習していく。
 

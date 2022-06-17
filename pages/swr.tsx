@@ -18,16 +18,14 @@ const Home: NextPage = () => {
             title="swr"
             description="swr でフェッチしたデータを表示"
         >
-            <main>
-                <h1>{data.name}</h1>
-                <p>swr で <a href="https://api.github.com/repos/vercel" className="border-b-2">github API</a> からフェッチしたデータを表示</p>
-                <p>{data.description}</p>
-                <p>
-                    <strong>👁 {data.subscribers_count}</strong>{" "}
-                    <strong>✨ {data.stargazers_count}</strong>{" "}
-                    <strong>🍴 {data.forks_count}</strong>
-                </p>
-            </main>
+            <h1>{data.name}</h1>
+            <p>swr で <a href="https://api.github.com/repos/vercel" className="border-b-2">github API</a> からフェッチしたデータを表示</p>
+            <p>{data.description}</p>
+            <p>
+                <strong>👁 {data.subscribers_count}</strong>{" "}
+                <strong>✨ {data.stargazers_count}</strong>{" "}
+                <strong>🍴 {data.forks_count}</strong>
+            </p>
         </Layout>
     )
 }
