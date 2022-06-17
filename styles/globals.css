@@ -61,23 +61,33 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /**
- * Styles
+ * Base styles
  */
 * {
   max-inline-size: var(--measure); /* ≒ max-width (方向で変わる)、メジャーは 60ch を超えてはならない 2/3 */
 }
-
-html, body, div, header,
-nav, main, footer {
+html, body, div, header, nav, main, footer {
   max-inline-size: none;
 }
-/*p, h1, h2, h3, h4, h5, h6,
+/*div, section, header, nav, main, footer {*/
+/*  margin-inline-start: auto;*/
+/*  margin-inline-end: auto;*/
+/*}*/
+
+html, body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+p, h1, h2, h3, h4, h5, h6,
 li, figcaption {
-  max-inline-size: var(--measure);
-}*/
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
 
-/* elements */
 h1 {
   font-size: var(--font-size-big);
 }
@@ -91,7 +101,6 @@ h4 {}
 h5 {}
 h6 {}
 
-
 /**
  * レイアウトのベース
  */
@@ -101,12 +110,28 @@ h6 {}
     min-height: 100vh;
     min-height: 100dvh;
 }
+  .site-wrapper > header {
+
+  }
+  .site-wrapper > nav {
+
+  }
+  .site-wrapper > .wrapper {
+    flex-grow: 1;
+  }
+  .site-wrapper > footer {
+
+  }
+
 main {
     flex: 1;
     overflow-x: hidden;
 }
 main a {
   text-decoration: underline !important;
+}
+main p + p {
+  margin-top: 1em;
 }
 
 
@@ -349,18 +374,3 @@ main a {
     aspect-ratio: 1 / 1;
   }
 }
-
-/**
- * Base Styles
- */
-html,
-body {
-  /*padding: 0;*/
-  /*margin: 0;*/
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-}
-

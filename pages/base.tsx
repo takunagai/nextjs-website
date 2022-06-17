@@ -8,7 +8,7 @@ const About: NextPage = () => {
             title="Base"
             description="ページのベース (Every Layout を参考)"
         >
-            <div className="stack">
+            <div className="stack-large">
 
                 <section>
                     <h1>Every Layout を取り入れてコーディング</h1>

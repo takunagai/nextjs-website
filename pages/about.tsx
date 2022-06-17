@@ -7,6 +7,7 @@ const About: NextPage = () => {
             title="About"
             description="About の概要です。"
         >
+            <h1>About</h1>
             <p>About の内容</p>
         </Layout>
     )
