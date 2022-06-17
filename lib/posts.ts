@@ -33,7 +33,7 @@ export function getSortedPostsData() {
         // }
         const matterResult = matter(fileContents)
 
-        // データを ID と組み合わせる
+        // ID とデータを組み合わせる
         // {
         //   id: 'pre-rendering',
         //   title: 'Two Forms of Pre-rendering',
@@ -54,4 +54,46 @@ export function getSortedPostsData() {
             return 0
         }
     })
+}
+
+/**
+ * posts ディレクトリにあるファイルのファイル名のリストを取得
+ * getStaticPaths に必要なこと
+ *   - 返されるリストは、オブジェクトの配列でなければならない
+ *   - params キーが必要で、id キーを持つオブジェクトが含まれている必要がある（ファイル名の [id] 用）
+ */
+export function getAllPostIds() {
+    const fileNames = fs.readdirSync(postsDirectory)
+
+    // 以下のような配列を返す
+    // [
+    //   { params: { id: 'ssg-ssr'} },
+    //   { params: { id: 'pre-rendering'} }
+    // ]
+    return fileNames.map((fileName) => {
+        return {
+            params: {
+                id: fileName.replace(/\.md$/, ''),
+            },
+        }
+    })
+}
+
+/**
+ * 指定 ID で投稿をレンダリングするために必要なデータをフェッチ
+ */
+export function getPostData(id: string) {
+    const fullPath = path.join(postsDirectory, `${id}.md`)
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+
+    // gray-matter で、Markdown のフロントマター(投稿メタデータセクション)を解析
+    // 上の getSortedPostsData と同じ形のオブジェクトデータが返る
+    const matterResult = matter(fileContents)
+
+    // ID とデータを組み合わせる
+    // 上の getSortedPostsData と同じ形のオブジェクトデータ
+    return {
+        id,
+        ...matterResult.data,
+    }
 }
