@@ -27,7 +27,9 @@ export default function Post({ postData }: Props) {
             <br/>
             {postData.date}
             <br/>
-            {/* dangerouslySetInnerHTML は、ブラウザ DOM における innerHTML の React での代替。サニタイズ推奨 */}
+            {/* dangerouslySetInnerHTML は、ブラウザ DOM における innerHTML の React での代替 */}
+            {/* ★★TODO: サニタイズ推奨 https://hackmd.io/@euxn23/ByfD97Ujv */}
+            {/*<div dangerouslySetInnerHTML={{ __html: sanitizer(postData.contentHtml) }} />*/}
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </Layout>
     )
