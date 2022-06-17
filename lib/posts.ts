@@ -3,6 +3,8 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { remark } from 'remark'
+import html from 'remark-html'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -12,6 +14,10 @@ const postsDirectory = path.join(process.cwd(), 'posts')
 //     date: string
 // }
 
+/**
+ * 日付降順でソートしたブログ記事のデータセットを返す
+ * blog-posts.tsx が使用
+ */
 export function getSortedPostsData() {
     // /posts 下のファイル名を取得
     const fileNames = fs.readdirSync(postsDirectory)
@@ -58,6 +64,8 @@ export function getSortedPostsData() {
 
 /**
  * posts ディレクトリにあるファイルのファイル名のリストを取得
+ * [id].tsx が使用
+ *
  * getStaticPaths に必要なこと
  *   - 返されるリストは、オブジェクトの配列でなければならない
  *   - params キーが必要で、id キーを持つオブジェクトが含まれている必要がある（ファイル名の [id] 用）
@@ -81,8 +89,9 @@ export function getAllPostIds() {
 
 /**
  * 指定 ID で投稿をレンダリングするために必要なデータをフェッチ
+ * [id].tsx が使用
  */
-export function getPostData(id: string) {
+export async function getPostData(id: string) {
     const fullPath = path.join(postsDirectory, `${id}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -90,10 +99,17 @@ export function getPostData(id: string) {
     // 上の getSortedPostsData と同じ形のオブジェクトデータが返る
     const matterResult = matter(fileContents)
 
+    // remark で Markdown を HTML 文字列に変換
+    const processedContent = await remark()
+        .use(html)
+        .process(matterResult.content)
+    const contentHtml = processedContent.toString() // 文字型への変換が必要
+
     // ID とデータを組み合わせる
     // 上の getSortedPostsData と同じ形のオブジェクトデータ
     return {
         id,
+        contentHtml,
         ...matterResult.data,
     }
 }

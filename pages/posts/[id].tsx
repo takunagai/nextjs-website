@@ -3,6 +3,7 @@
  */
 import Layout from '../../components/layout'
 import {getAllPostIds, getPostData} from '../../lib/posts'
+import { GetStaticProps, GetStaticPaths } from 'next'
 
 // ★★TODO: 型の付け方間違ってる？
 type Props = {
@@ -10,14 +11,7 @@ type Props = {
         id: string,
         title: string,
         date: string,
-    }
-}
-
-type Params = {
-    params: {
-        id: string,
-        title: string,
-        date: string,
+        contentHtml: string,
     }
 }
 
@@ -32,6 +26,9 @@ export default function Post({ postData }: Props) {
             {postData.id}
             <br/>
             {postData.date}
+            <br/>
+            {/* dangerouslySetInnerHTML は、ブラウザ DOM における innerHTML の React での代替。サニタイズ推奨 */}
+            <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </Layout>
     )
 }
@@ -39,7 +36,7 @@ export default function Post({ postData }: Props) {
 /**
  * id に指定可能な値のリストを返す
  */
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     const paths = getAllPostIds() // パスの配列(pages/posts/[id].tsx によって定義されたパラメーターを含む)
     return {
         paths,
@@ -50,8 +47,9 @@ export async function getStaticPaths() {
 /**
  * params.id で、ブログ記事に必要なデータを取得
  */
-export async function getStaticProps({ params }: Params) {
-    const postData = getPostData(params.id)
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+    // const postData = await getPostData(params.id as string)
+    const postData = await getPostData(params?.id as string) // await 必要、オプショナルチェーンで undefined の場合の対応
     return {
         props: {
             postData,
