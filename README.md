@@ -1,5 +1,7 @@
 # Next.js で Web サイト制作の練習
 
+次：https://nextjs.org/learn/basics/dynamic-routes/implement-getstaticprops
+
 [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) を TypeScript ベースで進めながら、Web サイト制作の仕方を学習していく。
 
 [» デモ](https://nextjs-website-lemon.vercel.app/)
@@ -11,13 +13,16 @@
   - [今さら聞けないNext.jsをTypeScript化する方法【2021年4月版】- Zenn](https://zenn.dev/yukito0616/articles/fa41ea2d0cb308)
 * 共通の Layout コンポーネントの作成
   - [Next.js入門（TypeScript版）- webOpixel](https://www.webopixel.net/javascript/1714.html)
-* Tailwind CSS の導入
-  - [Install Tailwind CSS with Next.js - Tailwind CSS](https://tailwindcss.com/docs/guides/nextjs)
+* CSS
+  - Tailwind CSS の導入
+    - [Install Tailwind CSS with Next.js - Tailwind CSS](https://tailwindcss.com/docs/guides/nextjs)
+  - [Next.jsとCSS - Qiita](https://qiita.com/tetsutaroendo/items/8e3351bc4bfbb419f662)
 * github api からデータ取得し表示
   - [Github からユーザをフェッチする - JavaScript Info](https://ja.javascript.info/task/fetch-users)
   - [Basic Features: データ取得 - Next.js](https://nextjs-ja-translation-docs.vercel.app/docs/basic-features/data-fetching)
 * TypeScript 化
   - [公式サンプル：next-learn/basics/typescript-final - github](https://github.com/vercel/next-learn/tree/master/basics/typescript-final)
+  - [【初心者】React × TypeScript 基本の型定義](https://zenn.dev/ogakuzuko/articles/react-typescript-for-beginner)
   - [TypeScript で書く Next.js のページコンポーネント ++ Gaji-Laboブログ](https://blog.gaji.jp/2021/11/08/8476/)
   - [玖ノ型：約束の地へ｜カタ柱じゃなくてもできる、TypeScript の呼吸](https://zenn.dev/tkdn/books/type-breathing/viewer/9-promise-resolve-type)
   - [Next.js の InferGetStaticPropsType が便利](https://zenn.dev/catnose99/articles/7201a6c56d3c88)
