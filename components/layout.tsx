@@ -59,7 +59,9 @@ export default function Layout({ children, title, description, home }: Props) {
                         <p className="mt-5 text-center"><Link href="/"><a className="border-b-2">Back to home</a></Link></p>
                     )}
                 </div>
-                <footer>(c) nagaishouten.com</footer>
+                <footer className="text-center">
+                    <p>©nagaishouten.com</p>
+                </footer>
             </div>
         </>
     )

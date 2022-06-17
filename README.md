@@ -1,6 +1,6 @@
 # Next.js で Web サイト制作の練習
 
-次：https://nextjs.org/learn/basics/dynamic-routes/implement-getstaticprops
+次：https://nextjs.org/learn/basics/dynamic-routes/polishing-index-page
 
 [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) を TypeScript ベースで進めながら、Web サイト制作の仕方を学習していく。
 

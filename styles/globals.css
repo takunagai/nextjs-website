@@ -105,6 +105,9 @@ main {
     flex: 1;
     overflow-x: hidden;
 }
+main a {
+  text-decoration: underline !important;
+}
 
 
 /**

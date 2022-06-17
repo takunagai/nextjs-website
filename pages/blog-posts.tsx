@@ -1,5 +1,7 @@
 import Layout from '../components/layout'
 import { getSortedPostsData } from '../lib/posts'
+import Link from 'next/link'
+import Date from '../components/date'
 
 import type { NextPage } from "next"
 
@@ -30,8 +32,13 @@ const BlogPosts: NextPage<Props> = ({ allPostsData }: Props) => {
             <ul>
                 {allPostsData.map(({id, date, title}) => (
                     <li key={id} className="mb-5">
-                        <h3>{title}</h3>
-                        <p>{id} / {date}</p>
+                        {/*{id}*/}
+                        <h3>
+                            <Link href={`/posts/${id}`}>
+                                <a>{title}</a>
+                            </Link>
+                        </h3>
+                        <p><Date dateString={date}/></p>
                     </li>
                 ))}
             </ul>
