@@ -4,8 +4,8 @@
 import Layout from '../../components/layout'
 import {getAllPostIds, getPostData} from '../../lib/posts'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import Head from 'next/head'
 
-// ★★TODO: 型の付け方間違ってる？
 type Props = {
     postData: {
         id: string,
@@ -21,6 +21,9 @@ type Props = {
 export default function Post({ postData }: Props) {
     return (
         <Layout>
+            <Head>
+                <title>{postData.title}</title>
+            </Head>
             {postData.title}
             <br/>
             {postData.id}
