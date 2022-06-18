@@ -45,15 +45,18 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
 const Fetch: NextPage<Props> = ({ results }) => {
     return (
         <Layout
-            title="github API からフェッチ"
-            description="github API からデータをフェッチして表示するサンプルです。"
+            title="fetch() メソッドで API からフェッチ"
+            description="fetch() メソッドで github API からデータをフェッチして表示するサンプル"
         >
-            <h1>github API からフェッチ</h1>
-            <ul>
-                {results.map((result: Result, index: number) => (
-                    <li key={index}>{result.id} {result.name}</li>
-                ))}
-            </ul>
+            <h1>fetch() メソッドで API からフェッチ</h1>
+            <p>fetch() メソッドで github API からデータをフェッチして表示するサンプル</p>
+            <section className="box mt-5">
+                <ul>
+                    {results.map((result: Result, index: number) => (
+                        <li key={index}>{result.id} {result.name}</li>
+                    ))}
+                </ul>
+            </section>
         </Layout>
     )
 }

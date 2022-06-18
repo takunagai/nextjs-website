@@ -29,16 +29,17 @@ const BlogPosts: NextPage<Props> = ({ allPostsData }: Props) => {
             title="BlogPosts"
             description="BlogPosts の概要です。"
         >
-            <ul>
-                {allPostsData.map(({id, date, title}) => (
-                    <li key={id} className="mb-5">
+            <h1>ブログ</h1>
+            <ul className="stack-small">
+                {allPostsData.map(({ id, date, title }) => (
+                    <li key={id}>
                         {/*{id}*/}
-                        <h3>
+                        <h2 className="font-size:base">
                             <Link href={`/posts/${id}`}>
                                 <a>{title}</a>
                             </Link>
-                        </h3>
-                        <p><Date dateString={date}/></p>
+                        </h2>
+                        <p className="font-size:small"><Date dateString={date}/></p>
                     </li>
                 ))}
             </ul>

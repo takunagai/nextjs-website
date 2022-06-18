@@ -24,9 +24,10 @@ const Tutorial1: NextPage = () => {
             title="Tutorial1"
             description="Tutorial1 の概要です。"
         >
-            <div className="stack">
+            <div className="stack-large">
+                <h1>コンポーネントの使用サンプル</h1>
                 <section>
-                    <h2>コンポーネントの使用</h2>
+                    <h2>基本</h2>
                     <Header title="Develop. Preview. Ship. 🚀" />
                     <p><a href="https://nextjs.org/learn/foundations/from-react-to-nextjs/getting-started-with-nextjs">元コード(Learn Next.js)</a></p>
                 </section>
