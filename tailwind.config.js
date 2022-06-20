@@ -1,4 +1,10 @@
 module.exports = { // ★★TODO: purge, theme 等についてちゃんとやる
+  mode: 'jit',
+  purge: [
+    './public/**/*.html',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
+  ],
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',

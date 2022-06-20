@@ -25,6 +25,22 @@ const About: NextPage = () => {
 
 
                 <section className="stack-small">
+                    <h2>段落</h2>
+                    <p>p ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱</p>
+                    <p>p+p ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱</p>
+                    <p className="max-inline-size:measure">.max-inline-size:measure ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱</p>
+                    <p className="max-inline-size:measure/2">.max-inline-size:measure/2 ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱</p>
+                </section>
+
+
+                <section className="stack-small">
+                    <h2>コード</h2>
+                    <pre><code>ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。&lt;/p&gt;
+                    &lt;p className=&quot;max-inline-size:measure&quot;&gt;.max-inline-size:measure ダミーコピーです手はおっかさん&lt;/p&gt;</code></pre>
+                </section>
+
+
+                <section className="stack-small">
                     <h2>The Stack - スタックレイアウトプリミティブ</h2>
                     <div className="stack outline-1 outline-cyan-500">
                         <div className="outline-1 outline-fuchsia-400">

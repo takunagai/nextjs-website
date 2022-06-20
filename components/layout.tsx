@@ -46,7 +46,8 @@ export default function Layout({ children, title, description, home }: Props) {
                     <ul className="md:flex gap-2">
                         <li><Link href="../">Home</Link></li>
                         <li><Link href="../about">About</Link></li>
-                        <li><Link href="../sample">Sample</Link></li>
+                        <li><Link href="../css">CSS関連</Link></li>
+                        <li><Link href="../images">画像関連</Link></li>
                         <li><Link href="../base">Base</Link></li>
                         <li><Link href="../tutorial1">Tutorial1</Link></li>
                         <li><Link href="../blog-posts">Blog</Link></li>
