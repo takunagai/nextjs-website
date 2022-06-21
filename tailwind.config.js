@@ -13,6 +13,7 @@ module.exports = { // ★★TODO: purge, theme 等についてちゃんとやる
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'media',
   theme: {
     extend: {
       colors: {
@@ -30,6 +31,10 @@ module.exports = { // ★★TODO: purge, theme 等についてちゃんとやる
       },
       lineHeight: {
         tight: 1.2,
+      },
+      fontFamily: {
+        sans: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+        serif: ['Merriweather', 'serif'],
       },
       fontSize: {
         '5xl': '2.5rem',
