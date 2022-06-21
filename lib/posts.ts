@@ -16,7 +16,7 @@ const postsDirectory = path.join(process.cwd(), 'posts')
 
 /**
  * 日付降順でソートしたブログ記事のデータセットを返す
- * blog-posts.tsx が使用
+ * posts.tsx が使用
  */
 export function getSortedPostsData() {
     // /posts 下のファイル名を取得

@@ -22,6 +22,35 @@ const About: NextPage = () => {
                     <p className="font-size:big">.font-size:big。ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝たしはでまた箱のダミーコピーです上手。</p>
                     <h2 className="font-size:base">font-size:base。見出し２です</h2>
                 </section>
+                <section>
+                    <h2>Modular scale</h2>
+                    <div>
+                        <div className="test --s-5"></div>
+                        <div className="test --s-4"></div>
+                        <div className="test --s-3"></div>
+                        <div className="test --s-2"></div>
+                        <div className="test --s-1"></div>
+                        <div className="test --s0"></div>
+                        <div className="test --s1"></div>
+                        <div className="test --s2"></div>
+                        <div className="test --s3"></div>
+                        <div className="test --s4"></div>
+                        <div className="test --s5"></div>
+                    </div>
+                    <div className="scale-15">
+                        <div className="test --s-5"></div>
+                        <div className="test --s-4"></div>
+                        <div className="test --s-3"></div>
+                        <div className="test --s-2"></div>
+                        <div className="test --s-1"></div>
+                        <div className="test --s0"></div>
+                        <div className="test --s1"></div>
+                        <div className="test --s2"></div>
+                        <div className="test --s3"></div>
+                        <div className="test --s4"></div>
+                        <div className="test --s5"></div>
+                    </div>
+                </section>
 
 
                 <section className="stack-small">

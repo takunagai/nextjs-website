@@ -1,7 +1,7 @@
-import Layout from '../components/layout'
-import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
+import Layout from '../components/layout'
 import Date from '../components/date'
+import { getSortedPostsData } from '../lib/posts'
 
 import type { NextPage } from "next"
 
@@ -22,14 +22,15 @@ export async function getStaticProps() {
     }
 }
 
-// const BlogPosts: NextPage = ({ allPostsData }: Props) => {
-const BlogPosts: NextPage<Props> = ({ allPostsData }: Props) => {
+// const Posts: NextPage = ({ allPostsData }: Props) => {
+const Posts: NextPage<Props> = ({ allPostsData }: Props) => {
     return (
         <Layout
-            title="BlogPosts"
-            description="BlogPosts の概要です。"
+            title="ブログ (Markdown)"
+            description="Markdown で書いた記事を読み込んで表示する"
         >
-            <h1>ブログ</h1>
+            <h1>ブログ (Markdown)</h1>
+            <p>Markdown で書いた記事を読み込んで表示する</p>
             <ul className="stack-small">
                 {allPostsData.map(({ id, date, title }) => (
                     <li key={id}>
@@ -47,4 +48,4 @@ const BlogPosts: NextPage<Props> = ({ allPostsData }: Props) => {
     )
 }
 
-export default BlogPosts
+export default Posts
