@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Script from 'next/script'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 
@@ -28,7 +29,7 @@ export default function Layout({ children, title, description, home }: Props) {
                 />
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
-                <link rel="icon" href="../public/favicon/favicon.ico" />
+                <link rel="icon" href="favicon/favicon.ico" />
             </Head>
 
             <div className="cover site-wrapper">
@@ -54,16 +55,16 @@ export default function Layout({ children, title, description, home }: Props) {
 
                 <nav>
                     <ul className="alignfull md:flex gap-2">
-                        <li><Link href="../">Home</Link></li>
-                        <li><Link href="../about">About</Link></li>
-                        <li><Link href="../works">Works</Link></li>
-                        <li><Link href="../css">CSS関連</Link></li>
-                        <li><Link href="../images">画像関連</Link></li>
-                        <li><Link href="../base">Base</Link></li>
-                        <li><Link href="../tutorial1">Tutorial1</Link></li>
-                        <li><Link href="../posts">Blog</Link></li>
-                        <li><Link href="../fetch">fetch</Link></li>
-                        <li><Link href="../swr">swr</Link></li>
+                        <li><Link href="/">Home</Link></li>
+                        <li><Link href="/about">About</Link></li>
+                        <li><Link href="/works">Works</Link></li>
+                        <li><Link href="/css">CSS関連</Link></li>
+                        <li><Link href="/images">画像関連</Link></li>
+                        <li><Link href="/base">Base</Link></li>
+                        <li><Link href="/tutorial1">Tutorial1</Link></li>
+                        <li><Link href="/posts">Blog</Link></li>
+                        <li><Link href="/fetch">fetch</Link></li>
+                        <li><Link href="/swr">swr</Link></li>
                     </ul>
                 </nav>
 
@@ -81,6 +82,7 @@ export default function Layout({ children, title, description, home }: Props) {
                     <p>©nagaishouten.com</p>
                 </footer>
             </div>
+            <Script src="js/hs-ui.bundle.js"></Script>
         </>
     )
 }
