@@ -1,10 +1,13 @@
 /**
  * _app.tsx で読み込まれるグローバルスタイル
  */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base"; /* @tailwind base; */
+@import "tailwindcss/components"; /* @tailwind components; */
+@import "tailwindcss/utilities"; /* @tailwind utilities; */
 
+/* import のテスト用 */
+@import "../components/Alert.module.css";
+@import "../components/Button.module.css";
 /**
  * Custom Properties
  * 16

@@ -7,7 +7,7 @@ module.exports = { // ★★TODO: purge, theme 等についてちゃんとやる
   theme: {
     extend: {
       colors: {
-        'accent-1': '#FAFAFA',
+        'accent-1': '#FAFAFA', // Theme 関数の使用：theme('colors.accent-1')
         'accent-2': '#EAEAEA',
         'accent-7': '#333',
         success: '#0070f3',
