@@ -3,8 +3,9 @@
  * type が success, error でスタイルを変える例
  * https://nextjs.org/learn/basics/assets-metadata-css/styling-tips
  */
-import cn from 'classnames'
+import React from 'react'
 import styles from './Alert.module.css'
+import cn from 'classnames'
 
 // import type {FC} from 'react'
 type Props = {
