@@ -7,9 +7,14 @@
  */
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'next-themes' // for Dark mode
 
 function MyApp({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />
+    return (
+        <ThemeProvider attribute="class" defaultTheme="dark">
+            <Component {...pageProps} />
+        </ThemeProvider>
+    )
 }
 
 export default MyApp

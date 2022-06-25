@@ -35,6 +35,27 @@
   --border-thick: 3px;
 }
 
+/**
+ * Modes
+ * color-scheme: dark; オペレーティングシステムのダーク配色を使用
+ */
+:root {
+  color-scheme: dark light;
+}
+/*:root[data-theme="light"] {*/
+/*  !* ライトテーマで適用するプロパティ値 *!*/
+/*  --theme-font-color: #6750a4;*/
+/*  --theme-bg-color: #625b71;*/
+/*}*/
+/*:root[data-theme="dark"] {*/
+/*  !* ダークテーマで適用するプロパティ値 *!*/
+/*  --theme-font-color: #d0bcff;*/
+/*  --theme-bg-color: red;*/
+/*}*/
+/*body {*/
+/*  background-color: var(--theme-bg-color);*/
+/*}*/
+
 /* Modular scale Test Sample */
 .test {
   height: var(--s0);

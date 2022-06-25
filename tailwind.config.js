@@ -1,9 +1,5 @@
 module.exports = { // ★★TODO: purge, theme 等についてちゃんとやる
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-  ],
-  darkMode: 'class',
+  darkMode: 'class', // 'media', false
   theme: {
     extend: {
       colors: {
@@ -42,7 +38,7 @@ module.exports = { // ★★TODO: purge, theme 等についてちゃんとやる
     require('preline/plugin')
   ],
   mode: 'jit',
-  purge: [
+  content: [
     './public/**/*.html',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
