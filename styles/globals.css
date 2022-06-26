@@ -34,52 +34,6 @@
 @import "../components/Alert.module.css";
 @import "../components/Button.module.css";
 
-:root {
-  /**
-   * Custom Properties
-   */
-  --ratio: 1.61803398875; /* 黄金比 */
-  --s-5: calc(var(--s-4) / var(--ratio));
-  --s-4: calc(var(--s-3) / var(--ratio));
-  --s-3: calc(var(--s-2) / var(--ratio)); /* 1rem --ratio --ratio --ratio */
-  --s-2: calc(var(--s-1) / var(--ratio)); /* 1rem ÷ --ratio ÷ --ratio ※ = pow(var(--ratio), 2) */
-  --s-1: calc(var(--s0) / var(--ratio)); /* 1rem ÷ --ratio */
-  --s0: 1rem;
-  --s1: calc(var(--s0) * var(--ratio)); /* 1rem * --ratio */
-  --s2: calc(var(--s1) * var(--ratio)); /* 1rem * --ratio * --ratio */
-  --s3: calc(var(--s2) * var(--ratio)); /* 1rem * --ratio * --ratio * --ratio */
-  --s4: calc(var(--s3) * var(--ratio));
-  --s5: calc(var(--s4) * var(--ratio));
-  --measure: 80ch; /* 60rem, メジャーは --measure を超えてはならない 1/3 */
-  --font-size-small: 0.625rem; /* 10px */
-  --font-size-smaller: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-biggish: 1.5rem; /* 24px */
-  --font-size-big: 2rem; /* 32px */
-  --border-thin: 1px;
-  --border-thick: 3px;
-
-  /**
-   * Modes
-   * color-scheme: dark; オペレーティングシステムのダーク配色を使用
-   */
-  color-scheme: dark light;
-}
-
-/*:root[data-theme="light"] {*/
-/*  !* ライトテーマで適用するプロパティ値 *!*/
-/*  --theme-font-color: #6750a4;*/
-/*  --theme-bg-color: #625b71;*/
-/*}*/
-/*:root[data-theme="dark"] {*/
-/*  !* ダークテーマで適用するプロパティ値 *!*/
-/*  --theme-font-color: #d0bcff;*/
-/*  --theme-bg-color: red;*/
-/*}*/
-
-/*body {*/
-/*  background-color: var(--theme-bg-color);*/
-/*}*/
 
 /**
  * Tailwind @apply テスト
@@ -90,55 +44,22 @@
   }
 }
 
-/* Modular scale Test Sample */
-.test {
-  height: var(--s0);
-  background-color: silver;
-}
-.scale-15 {
-  --ratio: 1.5; /* TODO: 機能しない。この下に計算置くと機能するが。。 */
-}
-.test.--s-5 { width: var(--s-5); } /* 1.45px */
-.test.--s-4 { width: var(--s-4); } /* 2.3333px */
-.test.--s-3 { width: var(--s-3); } /* 3.783333px */
-.test.--s-2 { width: var(--s-2); } /* 6.11667px */
-.test.--s-1 { width: var(--s-1); } /* 9.88333px */
-.test.--s0 { width: var(--s0); }   /* 16px */
-.test.--s1 { width: var(--s1); }   /* 25.8833px */
-.test.--s2 { width: var(--s2); }   /* 41.8833px */
-.test.--s3 { width: var(--s3); }   /* 67.7833px */
-.test.--s4 { width: var(--s4); }   /* 109.667px */
-.test.--s5 { width: var(--s5); }   /* 177.45px */
+:root {
+  /**
+   * Custom Properties
+   */
+  --measure: 80ch;
+  --font-size-small: 0.625rem; /* 10px */
+  --font-size-smaller: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-biggish: 1.5rem; /* 24px */
+  --font-size-big: 2rem; /* 32px */
 
-/*
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-*/
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-* {
-  margin: 0;
-}
-html, body {
-  height: 100%;
-}
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-input, button, textarea, select {
-  font: inherit;
-}
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-#root, #__next {
-  isolation: isolate;
+  /**
+   * Modes
+   * color-scheme: dark; オペレーティングシステムのダーク配色を使用
+   */
+  color-scheme: dark light;
 }
 
 /**
@@ -153,38 +74,12 @@ header, nav, main, footer {
   max-inline-size: none;
 }
 
-/*div, section, header, nav, main, footer {*/
-/*  margin-inline-start: auto;*/
-/*  margin-inline-end: auto;*/
-/*}*/
-
-html, body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
 section,
 p, h1, h2, h3, h4, h5, h6,
 ul, figcaption {
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-}
-
-h1 {
-  font-size: var(--font-size-big);
-}
-h2 {
-  font-size: var(--font-size-biggish);
-}
-h3 {
-  font-size: var(--font-size-biggish);
-}
-h4 {}
-h5 {}
-h6 {}
 
 /**
  * General purpose classes
@@ -196,44 +91,6 @@ h6 {}
   --measure: 100vw;
 }
 
-/**
- * レイアウト
- */
-.cover.site-wrapper { /* .cover も参照 */
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    min-block-size: 100vh;
-    min-block-size: 100dvh;
-}
-  .site-wrapper > header {}
-  .site-wrapper > nav {}
-  .site-wrapper > .wrapper {
-    /*flex: 1;*/
-    /*overflow-x: hidden;*/
-  }
-  .site-wrapper > footer {}
-
-  .wrapper {}
-
-  /* .site-wrapper > .wrapper */
-    main {}
-    /*main > * {*/
-    /*  margin-inline-start: 1rem;*/
-    /*  margin-inline-end: 1rem;*/
-    /*}*/
-
-    main a {
-      text-decoration: underline !important;
-    }
-    main p + p {
-      margin-top: 1em;
-    }
-
-
-/**
- * helpers.css に
- * utilities
- */
 /* Font Size */
 .font-size\:small {
   font-size: var(--font-size-small) !important;
@@ -251,12 +108,32 @@ h6 {}
   font-size: var(--font-size-big) !important;
 }
 
-/* メジャーは --measure を超えてはならない 3/3 */
-.max-inline-size\:measure {
-  max-inline-size: var(--measure);
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
 }
-.max-inline-size\:measure\/2 {
-  max-inline-size: calc(var(--measure) / 2);
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 {}
+
+main a {
+  text-decoration: underline !important;
+}
+main p + p {
+  margin-top: 1em;
+}
+
+/**
+ * General purpose classes
+ */
+.alignwide {
+  --measure: 100ch;
+}
+.alignfull {
+  --measure: 100vw;
 }
 
 /* The Stack */
@@ -298,181 +175,6 @@ h6 {}
 }
 
 /**
- * The Box
+ * 一時無効化 (Every Layout 他)
  */
-.box {
-  padding: var(--s1);
-  border: var(--border-thin) solid;
-  /*border: 0 solid; 枠なし、ハイコントラストモードで表示*/
-  /*outline: var(--border-thin) solid transparent;*/
-  /*outline-offset: calc(var(--border-thin) * -1);*/
-  --color-light: #fff9eb;
-  --color-dark: #333;
-  color: var(--color-dark);
-  background-color: var(--color-light);
-}
-.box * {
-  color: inherit;
-}
-.box.invert {
-  color: var(--color-light);
-  background-color: var(--color-dark);
-}
-
-/**
- * The Center
- */
-.center {
-  box-sizing: content-box;
-  margin-inline: auto;
-  max-inline-size: var(--measure);
-  /* テキストをセンター揃えにするなら以下を有効に */
-  /*margin-inline: auto;*/
-  /*text-align: center;*/
-  /* ガターを設定するなら以下を有効に */
-  /*padding-inline-start: 2ch;*/
-  /*padding-inline-end: 2ch;*/
-  /* 最大値より幅の狭い子要素を中央寄せにするなら以下を有効に */
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;*/
-}
-.center-2 {
-  box-sizing: content-box;
-  margin-inline: auto;
-  max-inline-size: var(--measure);
-  /* テキストをセンター揃えにするなら以下を有効に */
-  /*margin-inline: auto;*/
-  /*text-align: center;*/
-  /* ガターを設定するなら以下を有効に */
-  /*padding-inline-start: 2ch;*/
-  /*padding-inline-end: 2ch;*/
-  /* 最大値より幅の狭い子要素を中央寄せにするなら以下を有効に */
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/**
- * The Cluster
- */
-.cluster {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space, 1.5rem);
-  justify-content: flex-start; /* center */
-  align-items: center; /* stretch, start */
-}
-
-/**
- * The Sidebar
- */
-.with-sidebar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s1);
-}
-.with-sidebar > :last-child {
-  flex-basis: content; /* 15rem、これ以下になる状況なら１カラムになる */
-  flex-grow: 1;
-}
-.with-sidebar > :first-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-inline-size: 50%; /* コンテンツ部がこの値以下になると１カラムになる */
-}
-
-/**
- * The Switcher
- */
-.switcher {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s1);
-}
-.switcher > * {
-  flex-grow: 1;
-  flex-basis: calc(( 30rem - 100%) * 999);
-}
-/* 合計5つ以上の要素がある場合、垂直レイアウトに */
-.switcher > :nth-last-child(n+ 5),
-.switcher > :nth-last-child(n+ 5) ~ * {
-  flex-basis: 100%;
-}
-
-/**
- * The Cover
- */
-.cover {
-  display: flex;
-  flex-direction: column;
-  min-block-size: 50vh;
-  /*padding: 1rem;*/
-}
-.cover > * {
-  margin-block: 1rem;
-}
-.cover > :first-child:not(.cover__main) {
-  margin-inline-start: 0;
-}
-.cover > :last-child:not(.cover__main) {
-  margin-inline-end: 0;
-}
-.cover > .cover__main {
-  /*margin-block-end: auto;*/
-  margin-block: auto;
-}
-
-/**
- * The Grid
- */
-.grid {
-  display: grid;
-  grid-gap: 1rem;
-}
-@supports (width: min(250px, 100%)) { /* 最小幅 250px */
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-  }
-}
-
-/**
- * The Frame
- * インラインにカスタムプロパティをセットで任意の比率に
- */
-.frame,
-.frame\:16x9 {
-  --n: 16;
-  --d: 9;
-  aspect-ratio: var(--n) / var(--d);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-[class^="frame"] > img,/* ★★きかない？ */
-[class^="frame"] > video {
-  inline-size: 100%;outline:1px dotted red;
-  block-size: 100%;
-  object-fit: cover;
-}
-/* バリエーション */
-.frame\:3x2 {
-  --n: 3;
-  --d: 2;
-}
-.frame\:square,
-.frame\:1x1 {
-  --n: 3;
-  --d: 2;
-}
-.frame\:2x3 {
-  --n: 2;
-  --d: 3;
-}
-/* デバイス縦向きでアスペクト比を変える場合 */
-@media (orientation: portrait) {
-  .frame {
-    aspect-ratio: 1 / 1;
-  }
-}
+/*@import "./globals-disable.css";*/

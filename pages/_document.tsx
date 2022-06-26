@@ -21,9 +21,9 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html lang="ja">
+            <Html lang="ja" className="h-full">
                 <Head />
-                <body>
+                <body className="flex h-full">
                     <Main />
                     <NextScript />
                 </body>

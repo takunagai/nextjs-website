@@ -11,7 +11,7 @@ const About: NextPage = () => {
             <div className="stack-large">
 
                 <section>
-                    <h1>Every Layout を取り入れてコーディング</h1>
+                    <h1>Every Layout を取り入れてコーディング(無効化中)</h1>
                     <h2>見出し２です</h2>
                     <h3>見出し３です</h3>
                     <h4>見出し４です</h4>
