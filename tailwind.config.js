@@ -1,11 +1,21 @@
-module.exports = { // ★★TODO: purge, theme 等についてちゃんとやる
-  darkMode: 'class', // 'media', false
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // darkMode: 'class', // 'media'(デフォルト、この行削除するとこれが適用), false
   theme: {
+    container: { // Preline Container デフォルト
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
     extend: {
       colors: {
-        'accent-1': '#FAFAFA', // Theme 関数の使用：theme('colors.accent-1')
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
+        'accent-1': '#ff0000', // Theme 関数の使用：theme('colors.accent-1')
+        'accent-2': '#e35f26',
         success: '#0070f3',
         cyan: '#79FFE1',
       },
@@ -39,7 +49,6 @@ module.exports = { // ★★TODO: purge, theme 等についてちゃんとやる
   ],
   mode: 'jit',
   content: [
-    './public/**/*.html',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],

@@ -1,18 +1,43 @@
 /**
+ *
  * _app.tsx で読み込まれるグローバルスタイル
+ * Next.jsは、設定なしでCSSをコンパイル
+ *   - Autoprefixer
+ *   - Cross-browser Flexbox bugs
+ *   - IE11 用 New CSS features Polyfill (※ CSS Grid はコメントでの有効化が必要、Custom Properties は使えない)
+ * package.json の "browserslist" で、対応ブラウザ設定
+ * PostCSS で Tailwind やその他プラグインを使用
+ * @see https://nextjs.org/docs/advanced-features/customizing-postcss-config
+ *
+ */
+
+/**
+ * Tailwind
+ * @see https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss
+ * @see https://tailwindcss.com/docs/using-with-preprocessors
+ *   @import は冒頭に配置する必要がある。他の CSS ファイルの読み込みができるよう、
+ *   Tailwind のファイルを @tailwind → @import の記述に変えて読み込む
  */
 @import "tailwindcss/base"; /* @tailwind base; */
-@import "tailwindcss/components"; /* @tailwind components; */
-@import "tailwindcss/utilities"; /* @tailwind utilities; */
+/*@import "./custom-base-styles.css";*/
 
-/* import のテスト用 */
+@import "tailwindcss/components"; /* @tailwind components; */
+/*@import "./custom-components.css";*/
+
+@import "tailwindcss/utilities"; /* @tailwind utilities; */
+/*@import "./custom-utilities.css";*/
+
+
+/**
+ * import のテスト用
+ */
 @import "../components/Alert.module.css";
 @import "../components/Button.module.css";
-/**
- * Custom Properties
- * 16
- */
+
 :root {
+  /**
+   * Custom Properties
+   */
   --ratio: 1.61803398875; /* 黄金比 */
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -33,15 +58,14 @@
   --font-size-big: 2rem; /* 32px */
   --border-thin: 1px;
   --border-thick: 3px;
-}
 
-/**
- * Modes
- * color-scheme: dark; オペレーティングシステムのダーク配色を使用
- */
-:root {
+  /**
+   * Modes
+   * color-scheme: dark; オペレーティングシステムのダーク配色を使用
+   */
   color-scheme: dark light;
 }
+
 /*:root[data-theme="light"] {*/
 /*  !* ライトテーマで適用するプロパティ値 *!*/
 /*  --theme-font-color: #6750a4;*/
@@ -52,9 +76,19 @@
 /*  --theme-font-color: #d0bcff;*/
 /*  --theme-bg-color: red;*/
 /*}*/
+
 /*body {*/
 /*  background-color: var(--theme-bg-color);*/
 /*}*/
+
+/**
+ * Tailwind @apply テスト
+ */
+@layer components {
+  .box__alert {
+    @apply bg-red-50 border border-red-200 text-sm text-red-600 rounded-md p-4;
+  }
+}
 
 /* Modular scale Test Sample */
 .test {

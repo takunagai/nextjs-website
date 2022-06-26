@@ -8,7 +8,8 @@ module.exports = {
     //   features: { 'nesting-rules': false },
     // },
     autoprefixer: {},
-    // 圧縮はフレームワークが処理するから不要？
+    // cssnano による圧縮は問題あり？
+    // https://github.com/vercel/next.js/discussions/22560
     // ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
   },
 }

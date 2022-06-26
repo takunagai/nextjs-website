@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Layout from '../components/layout'
 import Button from '../components/Button'
 import Alert from '../components/Alert'
-import cn from 'classnames'
+import { BeakerIcon, ChevronDoubleRightIcon, ExclamationCircleIcon } from '@heroicons/react/solid'
 import type { NextPage } from "next"
 
 const About: NextPage = () => {
@@ -61,9 +61,11 @@ const About: NextPage = () => {
                     </ul>
                 </section>
 
+                <hr />
+
                 <section>
                     <h2>Tailwind サンプル</h2>
-                    <h3>カード</h3>
+                    <h3 className="mt-5">カード</h3>
                     <div
                         className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
                         <Image
@@ -83,34 +85,34 @@ const About: NextPage = () => {
                             </button>
                         </div>
                     </div>
-                    <h3>ダークモード</h3>
+                    <h3 className="mt-5">ダークモード</h3>
                     <div className="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
                         <div>
                         <span
                             className="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
                         </span>
                         </div>
-                        <h3 className="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">Writes
-                            Upside-Down</h3>
+                        <h4 className="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">Writes
+                            Upside-Down</h4>
                         <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
                             The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even
                             works in outer space.
                         </p>
                     </div>
-                    <h3>親要素の状態に応じてスタイル変更</h3>
+                    <h3 className="mt-5">親要素の状態に応じてスタイル変更</h3>
                     <a href="#" className="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
                       <div className="flex items-center space-x-3">
-                        <h3 className="text-slate-900 group-hover:text-white text-sm font-semibold">New project</h3>
+                        <h4 className="text-slate-900 group-hover:text-white text-sm font-semibold">New project</h4>
                       </div>
                       <p className="text-slate-500 group-hover:text-white text-sm">Create a new project from a variety of starting templates.</p>
                     </a>
-                    <h3>リストマーカー</h3>
+                    <h3 className="mt-5">リストマーカー</h3>
                     <ul role="list" className="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-400">
                         <li>5 cups chopped Porcini mushrooms</li>
                         <li>1/2 cup of olive oil</li>
                         <li>3lb of celery</li>
                     </ul>
-                    <h3>開閉パネル</h3>
+                    <h3 className="mt-5">開閉パネル</h3>
                     <div className="max-w-lg mx-auto">
                         <details
                             className="open:bg-white dark:open:bg-slate-900 open:ring-1 open:ring-black/5 dark:open:ring-white/10 open:shadow-lg p-6 rounded-lg"
@@ -123,6 +125,19 @@ const About: NextPage = () => {
                             </div>
                         </details>
                     </div>
+                    <h3 className="mt-5">カスタムクラス (@apply)</h3>
+                    <div className="box__alert">
+                        <p>@apply で作成したカスタムクラス box__alert です。</p>
+                    </div>
+                </section>
+                <hr />
+                <section>
+                    <h2>アイコンフォント (heroicons)</h2>
+                    <ul>
+                        <li><ChevronDoubleRightIcon className="h-5 w-5 text-orange-500 inline" /> リスト項目1</li>
+                        <li><ExclamationCircleIcon className="h-5 w-5 text-green-500 inline" /> リスト項目2</li>
+                        <li><BeakerIcon className="h-5 w-5 text-blue-500 inline" /> リスト項目3</li>
+                    </ul>
                 </section>
             </div>
         </Layout>

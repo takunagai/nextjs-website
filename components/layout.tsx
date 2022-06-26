@@ -68,6 +68,7 @@ export default function Layout({ children, title, description, home }: Props) {
                         <li><Link href="/about">About</Link></li>
                         <li><Link href="/works">Works</Link></li>
                         <li><Link href="/css">CSS関連</Link></li>
+                        <li><Link href="/preline">Preline</Link></li>
                         <li><Link href="/images">画像関連</Link></li>
                         <li><Link href="/base">Base</Link></li>
                         <li><Link href="/tutorial1">Tutorial1</Link></li>
