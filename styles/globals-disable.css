@@ -156,10 +156,10 @@ h6 {}
  * レイアウト
  */
 .cover.site-wrapper { /* .cover も参照 */
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    min-block-size: 100vh;
-    min-block-size: 100dvh;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  min-block-size: 100vh;
+  /*noinspection CssInvalidPropertyValue*/min-block-size: 100dvh;
 }
   .site-wrapper > header {}
   .site-wrapper > nav {}
@@ -348,7 +348,7 @@ h6 {}
 }
 .switcher > * {
   flex-grow: 1;
-  flex-basis: calc(( 30rem - 100%) * 999);
+  flex-basis: calc((30rem - 100%) * 999);
 }
 /* 合計5つ以上の要素がある場合、垂直レイアウトに */
 .switcher > :nth-last-child(n+ 5),

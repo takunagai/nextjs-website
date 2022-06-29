@@ -112,6 +112,7 @@ const About: NextPage = () => {
                         <li>1/2 cup of olive oil</li>
                         <li>3lb of celery</li>
                     </ul>
+
                     <h3 className="mt-5">開閉パネル</h3>
                     <div className="max-w-lg mx-auto">
                         <details
@@ -125,7 +126,61 @@ const About: NextPage = () => {
                             </div>
                         </details>
                     </div>
+
+                    <h3>開閉パネル2</h3>
+                    <dl className="mt-2 divide-y divide-slate-500 dark:divide-slate-200">
+                        <details className="group py-4 marker:content-['']">
+                            <summary
+                                className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 dark:text-slate-300 group-open:text-indigo-600 [&::-webkit-details-marker]:hidden">What
+                                does lifetime access” mean exactly?
+                                <svg className="mt-0.5 ml-4 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-indigo-500"
+                                     fill="none" xmlns="http://www.w3.org/2000/svg" strokeWidth="2" strokeLinecap="round"
+                                     strokeLinejoin="round">
+                                    <path d="M18 12H6"></path>
+                                    <path className="group-open:hidden" d="M12 6v12"></path>
+                                </svg>
+                            </summary>
+                            <div className="pt-6 pb-6">
+                                <div
+                                    className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500">
+                                    <p>Tailwind UI products are a <strong>one-time purchase, with no recurring
+                                        subscription</strong>. When you purchase any Tailwind UI product, you have access to all
+                                        of the content in that product forever.</p></div>
+                            </div>
+                        </details>
+                        <details className="group py-4 marker:content-['']" open={false}>
+                            <summary
+                                className="flex w-full cursor-pointer select-none justify-between text-left text-base font-semibold leading-7 text-slate-900 dark:text-slate-300 group-open:text-indigo-600 [&::-webkit-details-marker]:hidden">What
+                                does free updates includes?
+                                <svg className="mt-0.5 ml-4 h-6 w-6 flex-none stroke-slate-700 group-open:stroke-indigo-500"
+                                     fill="none" xmlns="http://www.w3.org/2000/svg" strokeWidth="2" strokeLinecap="round"
+                                     strokeLinejoin="round">
+                                    <path d="M18 12H6"></path>
+                                    <path className="group-open:hidden" d="M12 6v12"></path>
+                                </svg>
+                            </summary>
+                            <div className="pt-6 pb-6">
+                                <div
+                                    className="prose prose-slate max-w-none prose-a:font-semibold prose-a:text-indigo-600 hover:prose-a:text-indigo-500">
+                                    <p>When you purchase any Tailwind UI product, any improvements we make to that product will
+                                        always be free for anyone who owns that product.</p><p><strong>Individual
+                                    templates:</strong> When you buy an individual template, any improvements we make to that
+                                    template will be available to you as part of your original purchase.</p><p>So if we fix a
+                                    bug or upgrade the template to use the latest version of Tailwind CSS or Next.js, you can
+                                    download an updated version of the template free of charge.</p><p>Any <em>new</em> templates
+                                    we release are considered separate products, and can be purchased separately.</p><p>
+                                    <strong>All-access:</strong> When you purchase an all-access license, you get access to
+                                    every site template available <em>and</em> every component package available today, plus any
+                                    new templates or component packages we release in the future at no additional cost.</p>
+                                    <p>This means that if we add a brand new social media website template or new component
+                                        package like “Journalism”, access to those products are included in your original
+                                        purchase, with no upgrade cost.</p></div>
+                            </div>
+                        </details>
+                    </dl>
+
                     <h3 className="mt-5">カスタムクラス (@apply)</h3>
+                    <p><a className="btn-primary no-underline" href="#">ボタン(.btn-primary)</a></p>
                     <div className="box__alert">
                         <p>@apply で作成したカスタムクラス box__alert です。</p>
                     </div>
