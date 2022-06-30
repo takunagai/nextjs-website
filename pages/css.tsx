@@ -15,6 +15,11 @@ const About: NextPage = () => {
                 <h1>CSS 関連</h1>
 
                 <section>
+                    <h2>グローバルな CSS</h2>
+                    <p>styles/global.css を作成し _app.tsx に読み込む(リスタート必要)</p>
+                </section>
+
+                <section>
                     <h2>styled-jsx</h2>
                     <ul className="list-disc">
                         <li>Next.js には styled-jsx のサポートが組み込まれている</li>
@@ -39,11 +44,6 @@ const About: NextPage = () => {
                         <li>CSS モジュールはビルド時に JavaScript バンドルから抽出され、Next.js が自動的にロードされる css を生成する</li>
                     </ul>
                     <Button />
-                </section>
-
-                <section>
-                    <h2>グローバルな CSS</h2>
-                    <p>styles/global.css を作成し _app.tsx に読み込む(リスタート必要)</p>
                 </section>
 
                 <section>

@@ -56,9 +56,9 @@ export default function Layout({ children, title, description, home }: Props) {
                     <nav className="w-full px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
                         <div className="flex items-center justify-between">
                             {home ? (
-                                <h1 className="flex-none text-xl font-semibold text-white" aria-label="Brand">{siteTitle}</h1>
+                                <h1 className="flex-none text-xl font-bold" aria-label="Brand">{siteTitle}</h1>
                             ) : (
-                                <p className="flex-none text-xl font-semibold text-white" aria-label="Brand">
+                                <p className="flex-none text-xl font-bold" aria-label="Brand">
                                     <Link href="/"><a>{siteTitle}</a></Link>
                                 </p>
                             )}
