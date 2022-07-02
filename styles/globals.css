@@ -68,6 +68,10 @@
  * @layer に含めない CSS は、コンパイルされた CSS に常に含まれる
  */
 
+#__next {
+  width: 100%;
+}
+
 :root {
   /**
    * Custom Properties
