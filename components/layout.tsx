@@ -32,27 +32,24 @@ export default function Layout({ children, title, description, home }: Props) {
             <Head>
                 <title>{pageTitle} - {siteTitle}</title>
                 <meta name="description" content={ description || 'ページ概要未設定' } />
-
                 <meta name="twitter:site" content={siteTitle} />
                 <meta name="twitter:creator" content="@nagai_shouten" />
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:title" content={pageTitle} />
                 <meta name="twitter:description" content={ description || 'ページ概要未設定' } />
                 <meta name="twitter:image" content="https://preline.co/preline-logo.svg" />
-
                 <meta property="og:url" content="https://preline.co/" />
                 <meta property="og:site_name" content={siteTitle} />
                 <meta property="og:title" content={pageTitle} />
                 <meta property="og:description" content={ description || 'ページ概要未設定' } />
                 <meta property="og:image" content="https://preline.co/preline-logo.svg" />
-
                 <link rel="icon" href="/favicon/favicon.ico" />
             </Head>
 
 
             {/*<div className="max-w-[50rem] flex flex-col mx-auto w-full h-full">*/}
             <div className="flex flex-col mx-auto w-full h-full">
-                <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-4">
+                <header className="z-50 text-sm py-4">
                     <nav className="w-full px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8" aria-label="Global">
                         <div className="flex items-center justify-between">
                             {home ? (
@@ -122,6 +119,39 @@ export default function Layout({ children, title, description, home }: Props) {
                             </a>
                         </div>
                     </nav>
+
+                    {/* パンクズリスト */}
+                    {/*<ol className="flex items-center whitespace-nowrap min-w-0" ariaLabel="Breadcrumb">*/}
+                    <ol className="flex items-center whitespace-nowrap min-w-0">
+                        <li className="text-sm">
+                            <a className="flex items-center text-gray-500 hover:text-blue-600" href="#">
+                                Home
+                                <svg
+                                    className="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 dark:text-gray-600"
+                                    width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14"
+                                          stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li className="text-sm">
+                            <a className="flex items-center text-gray-500 hover:text-blue-600" href="#">
+                                App Center
+                                <svg
+                                    className="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 dark:text-gray-600"
+                                    width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14"
+                                          stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                                </svg>
+                            </a>
+                        </li>
+                        {/*<li className="text-sm font-semibold text-gray-800 truncate dark:text-gray-200" ariaCurrent="page">*/}
+                        <li className="text-sm font-semibold text-gray-800 truncate dark:text-gray-200">
+                            Application
+                        </li>
+                    </ol>
                 </header>
 
                 {/*<div className={`cover__main wrapper ${styles.container}`}>*/}
