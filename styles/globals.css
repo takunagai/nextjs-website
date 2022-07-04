@@ -1,6 +1,6 @@
 /**
  *
- * _app.tsx で読み込まれるグローバルスタイル
+ * _app.tsx でインラインで読み込まれるグローバルスタイル
  * Next.jsは、設定なしでCSSをコンパイル
  *   - Autoprefixer
  *   - Cross-browser Flexbox bugs
@@ -31,52 +31,17 @@
 /**
  * import のテスト用
  */
-@import "../components/Alert.module.css";
-@import "../components/Button.module.css";
+@import "./every-layout.css";
 
-
-/**
- * Tailwind @apply テスト
- * @layer: base, components, utilities
- * @layer ディレクティブ内の CSS を、対応する @tailwind ルールと同じ場所に自動的に移動する
- *   なので、特異性の問題回避のための順序の考慮は不要
- * @apply での指定、デフォルトで !important が削除される(特異性の問題を回避するため)
- *   特異性高めたいなら、指定に !important 付ける
- * よりきれいに見せるためだけに @apply を使用しないこと(ワークフローと保守性の利点を捨てることになる)
- *   ボタンやフォームコントロールなど、非常に小さく、再利用性の高いものに使用する
- */
-
-/*@layer base {*/
-/*  h1 {*/
-/*    @apply text-2xl;*/
-/*  }*/
-/*  h2 {*/
-/*    @apply text-xl;*/
-/*  }*/
-/*}*/
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold no-underline hover:underline rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
-  }
-  .box__alert {
-    @apply bg-red-50 border border-red-200 text-sm text-red-600 rounded-md p-4;
-  }
-}
 
 /**
  * @layer に含めない CSS は、コンパイルされた CSS に常に含まれる
  */
-
-#__next {
-  width: 100%;
-}
-
 :root {
   /**
    * Custom Properties
    */
-  --measure: 80ch;
+  --measure: 50rem; /* 80ch */
   --font-size-small: 0.625rem; /* 10px */
   --font-size-smaller: 0.875rem; /* 14px */
   --font-size-base: 1rem; /* 16px */
@@ -90,119 +55,188 @@
   color-scheme: dark light;
 }
 
+
 /**
- * Base styles
+ * @layer ディレクティブ: base, components, utilities
+ * @layer ディレクティブ内の CSS を対応する @tailwind ルールと同じ場所に自動的に移動する
+ *   なので、特異性の問題回避のための順序の考慮が不要
+ *
+ * @apply での指定は、デフォルトで !important が削除される(特異性の問題を回避するため)
+ *   特異性高めたいなら、指定に !important 付ける
+ * よりきれいに見せるためだけに @apply を使用しないこと(ワークフローと保守性の利点を捨てることになる)
+ *   ボタンやフォームコントロールなど、非常に小さく、再利用性の高いものに使用する
  */
+
+@layer base {
+  /* font-family は、tailwind.config.js の fontFamily で設定 */
+}
+
+
+@layer components {
+  :root {
+    --btn-padding-x: 1.5em;
+    --btn-padding-y: 0.75em;
+  }
+  .btn {
+    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)];
+  }
+  .btn--primary {
+    @apply bg-blue-500 hover:bg-blue-700 text-white focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition;
+  }
+  .btn--secondary {
+    @apply bg-orange-500 hover:bg-orange-700 text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 transition;
+  }
+  .btn--icon {
+    @apply  inline-flex justify-center items-center gap-x-3.5;
+  }
+  .box__alert {
+    @apply bg-red-50 border border-red-200 text-sm text-red-600 rounded-md p-4;
+  }
+}
+
+@layer utilities {
+  /* ユーティリティ */
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - -
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+ - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* // tailwind base で設定
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+*/
+
+/* // body タグに tailwind クラスで指定
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+*/
+
+/** next/image が指定
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+*/
+
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#__next {
+  isolation: isolate;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - -
+  Base Styles
+ - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*:root[data-theme="light"] {*/
+/*  !* ライトテーマで適用するプロパティ値 *!*/
+/*  --theme-font-color: #6750a4;*/
+/*  --theme-bg-color: #625b71;*/
+/*}*/
+/*:root[data-theme="dark"] {*/
+/*  !* ダークテーマで適用するプロパティ値 *!*/
+/*  --theme-font-color: #d0bcff;*/
+/*  --theme-bg-color: red;*/
+/*}*/
+
 * {
   max-inline-size: var(--measure); /* ≒ max-width (方向で変わる)、メジャーは --measure を超えてはならない 2/3 */
 }
 
-html, body, div,
+html, body, div, section,
 header, nav, main, footer {
   max-inline-size: none;
 }
 
-section,
-p, h1, h2, h3, h4, h5, h6,
-ul, figcaption {
+h1, h2, h3, h4, h5, h6,
+p, ul, figcaption {
   margin-inline-start: auto;
   margin-inline-end: auto;
-}
-
-/**
- * General purpose classes
- */
-.alignwide {
-  --measure: 100ch;
-}
-.alignfull {
-  --measure: 100vw;
-}
-
-/* Font Size */
-.font-size\:small {
-  font-size: var(--font-size-small) !important;
-}
-.font-size\:smaller {
-  font-size: var(--font-size-smaller) !important;
-}
-.font-size\:base {
-  font-size: var(--font-size-base) !important;
-}
-.font-size\:biggish {
-  font-size: var(--font-size-biggish) !important;
-}
-.font-size\:big {
-  font-size: var(--font-size-big) !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.75rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.1rem; }
-h6 {}
-
-main a { /* ★★TODO: ボタンの場合どうする？ */
-  text-decoration: underline;
-}
-main p + p {
-  margin-top: 1em;
-}
-
 /**
  * General purpose classes
  */
 .alignwide {
-  --measure: 100ch;
+  --measure: 80rem; /* 100ch */
 }
 .alignfull {
   --measure: 100vw;
 }
 
-/* The Stack */
-[class^='stack'] > * {
-  /* horizontal-tb writing モードでの上下マージン */
-  margin-block: 0;
-}
-.stack > * + * {
-  margin-block-start: var(--space, 1.5em);
-}
-.stack-large > * + * {
-  margin-block-start: 3rem;
-}
-.stack-small > * + * {
-  margin-block-start: 1rem;
-}
-/* 例外 (カスタムプロパティでオーバーライド) 上下に例外の間隔を適用 */
-.stack-exception,
-.stack-exception + * { /* ← 上のスペースだけを増やしたい場合は削除 */
-  --space: 3rem;
+.lead {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
-.stack-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.stack-card > * {
-  margin-block: 0;
-}
-.stack-card > * + * {
-  margin-block-start: var(--space, 1.5rem);
-}
-.stack-card:only-child {
-  block-size: 100%;
-}
-.stack-card > :nth-child(2) {
-  margin-block-end: auto;
-}
 
 /**
- * 一時無効化 (Every Layout 他)
+ * レイアウト
  */
-/*@import "./globals-disable.css";*/
+.cover.site-wrapper { /* .cover も参照 */
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  min-block-size: 100vh;
+  /*noinspection CssInvalidPropertyValue*/min-block-size: 100dvh;
+}
+  .site-wrapper > header {}
+  .site-wrapper > nav {}
+  .site-wrapper > .wrapper {
+    /*flex: 1;*/
+    /*overflow-x: hidden;*/
+  }
+  .site-wrapper > footer {}
+
+  .wrapper {}
+
+  /* .site-wrapper > .wrapper */
+    main {}
+    main > * {
+      margin-inline-start: 1rem;
+      margin-inline-end: 1rem;
+    }
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - -
+  メインコンテンツ
+ - - - - - - - - - - - - - - - - - - - - - - - - */
+main h1 { font-size: 2rem; }
+main h2 { font-size: 1.75rem; }
+main h3 { font-size: 1.5rem; }
+main h4 { font-size: 1.25rem; }
+main h5 { font-size: 1.1rem; }
+main h6 { font-size: 1rem; }
+
+main a:not([class*="btn"]) {
+  padding-right: .25em;
+  padding-left: .25em;
+  color: #0070f3;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+main a:not([class*="btn"]):hover {
+  color: #4892e8;
+  text-decoration: underline;
+}
+
+main p + p {
+  margin-top: 1em;
+}

@@ -13,11 +13,28 @@ module.exports = {
       },
     },
     extend: {
-      colors: {
-        'accent-1': '#ff0000', // Theme 関数の使用：theme('colors.accent-1')
-        'accent-2': '#e35f26',
-        success: '#0070f3',
-        cyan: '#79FFE1',
+      colors: { // Theme 関数の使用：theme('colors.primary')
+        transparent: 'transparent',
+        current: 'currentColor',
+        'primary': {
+          100: '#E5D3DA', // 使用: bg-primary-100
+          200: '#CAA8B5',
+          light: '#B07C91',
+          300: '#B07C91',
+          400: '#96516C',
+          DEFAULT: '#7C2648',
+          500: '#7C2648',
+          600: '#66203C',
+          dark: '#591C34',
+          700: '#591C34',
+          800: '#4D182D',
+          900: '#401425',
+        },
+        'secondary': '#948D35',
+        'accent': '#187994',
+        'accent-dark': '#0F3B47',
+        'base': '#F0F0EC',
+        // cyan: '#79FFE1', // 既存色の上書き設定
       },
       spacing: {
         28: '7rem',

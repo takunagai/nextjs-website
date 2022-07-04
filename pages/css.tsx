@@ -43,12 +43,14 @@ const About: NextPage = () => {
                         <li>ページごとに最小限のCSSがロード。バンドルサイズが小さく</li>
                         <li>CSS モジュールはビルド時に JavaScript バンドルから抽出され、Next.js が自動的にロードされる css を生成する</li>
                     </ul>
-                    <Button />
+                    <p><Button /></p>
                 </section>
 
                 <section>
                     <h2>PostCSS, TailwindCSS, Sass</h2>
-                    <a href="https://nextjs.org/learn/basics/assets-metadata-css/styling-tips">Styling Tips - Assets, Metadata, and CSS | Learn Next.js</a>
+                    <ul>
+                        <li><a href="https://nextjs.org/learn/basics/assets-metadata-css/styling-tips">Styling Tips - Assets, Metadata, and CSS | Learn Next.js</a></li>
+                    </ul>
                 </section>
 
                 <section>
@@ -65,6 +67,22 @@ const About: NextPage = () => {
 
                 <section>
                     <h2>Tailwind サンプル</h2>
+                    <h3>テーマカラー</h3>
+                    <p>tailwind.config.js の extend で設定。<a href="https://tailwindcss.com/docs/customizing-colors#color-object-syntax">» 公式ドキュメント</a></p>
+                    <ul className="mt-5 text-xs">
+                        <li className="bg-primary-100 mb-1">bg-primary-100</li>
+                        <li className="bg-primary-200 mb-1">bg-primary-200</li>
+                        <li className="bg-primary-light mb-1">bg-primary-light</li>
+                        <li className="bg-primary-300 mb-1">bg-primary-300</li>
+                        <li className="bg-primary-400 mb-1">bg-primary-400</li>
+                        <li className="bg-primary mb-1">bg-primary (DEFAULT)</li>
+                        <li className="bg-primary-500 mb-1">bg-primary-500</li>
+                        <li className="bg-primary-600 mb-1">bg-primary-600</li>
+                        <li className="bg-primary-dark mb-1">bg-primary-dark</li>
+                        <li className="bg-primary-700 mb-1">bg-primary-700</li>
+                        <li className="bg-primary-800 mb-1">bg-primary-800</li>
+                        <li className="bg-primary-900 mb-1">bg-primary-900</li>
+                    </ul>
                     <h3 className="mt-5">カード</h3>
                     <div
                         className="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">

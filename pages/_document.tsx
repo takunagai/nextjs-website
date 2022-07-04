@@ -23,7 +23,7 @@ class MyDocument extends Document {
         return (
             <Html lang="ja" className="h-full">
                 <Head />
-                <body className="flex h-full">
+                <body className="flex flex-col h-full leading-relaxed antialiased">
                     <Main />
                     <NextScript />
                 </body>
