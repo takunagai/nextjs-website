@@ -10,10 +10,10 @@ const Home = () => {
             description="概要です。"
         >
             <div className="text-center py-10 px-4 sm:px-6 lg:px-8">
-                <h1 className="block text-2xl font-bold text-white sm:text-4xl">Cover Page</h1>
+                <h1 className="text-2xl sm:text-4xl font-bold text-white">Cover Page</h1>
                 <p className="mt-3 text-lg text-gray-300">Cover is a one-page template for building simple and beautiful
                     home pages using Tailwind CSS.</p>
-                <div className="mt-5 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
+                <div className="mt-5 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-3">
                     <a className="btn btn--primary btn--icon shadow-md rounded-full w-full sm:w-auto"
                        href="https://github.com/htmlstreamofficial/preline/tree/main/examples">
                         <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -21,11 +21,9 @@ const Home = () => {
                         </svg>
                         Get the source code
                     </a>
-                    <a className="w-full sm:w-auto inline-flex justify-center items-center gap-x-3.5 text-center border border-2 border-gray-600 shadow-sm text-sm font-medium rounded-md text-gray-300 hover:text-white hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition py-3 px-4"
-                       href="#">
+                    <a className="btn btn--secondary btn--icon shadow-md w-full sm:w-auto" href="#">
                         <svg className="w-2.5 h-2.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path
-                                d="M11.2792 1.64001L5.63273 7.28646C5.43747 7.48172 5.43747 7.79831 5.63273 7.99357L11.2792 13.64"
+                            <path d="M11.2792 1.64001L5.63273 7.28646C5.43747 7.48172 5.43747 7.79831 5.63273 7.99357L11.2792 13.64"
                                 stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                         Back to examples
@@ -60,16 +58,17 @@ const Home = () => {
                     <p className="mt-5">★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わず生意気たたという口ましだ。勝手たたのましはでまた箱のダミーコピーです上手どものときではさっさと俄たますて、みんなまでぶんを弾いがっことだまし。立っすぎそれは間がひどくたて今の夜中のかっこ動きが、たるめるで片手も一生しがこいまし。こどもは二わから狸のようを出て来う。助けはゴーシュかっこうたり何が待ってだしない。マッ子をょっとにしから虎を片手ダミーコピーですのようを教えてかっこうに云いてごうごうとゴがしててるた。ふっとダミーコピーですぶるぶる虎にゴーシュが合わですた。それそうに別をひきて諸君へいった(300文字)。</p>
                 </section>
 
-                <section>
+                <section className="py-10 bg-pink-50 bg-dots bg-blend-multiply text-black">
                     <h2>メモ</h2>
-                    <ul>
+                    <ul className="list-disc">
                         <li>PostCSS</li>
                         <li>TailwindCSS
-                            <ul>
+                            <ul className="list-square ml-5">
                                 <li>jit ([] で個別の値で設定できる、calc() も使える、疑似要素使える)</li>
                                 <li>preline (UI ライブラリ)</li>
                                 <li>heroicons (アイコンフォント)</li>
                                 <li>ダークモード</li>
+                                <li>テーマカラー、そのグラデーション</li>
                             </ul>
                         </li>
                         <li>autoprefixer, import, nesting</li>
