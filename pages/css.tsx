@@ -5,7 +5,7 @@ import Alert from '../components/Alert'
 import { BeakerIcon, ChevronDoubleRightIcon, ExclamationCircleIcon } from '@heroicons/react/solid'
 import type { NextPage } from "next"
 
-const About: NextPage = () => {
+const CSS: NextPage = () => {
     return (
         <Layout
             title="CSS関連"
@@ -217,4 +217,4 @@ const About: NextPage = () => {
     )
 }
 
-export default About
+export default CSS
