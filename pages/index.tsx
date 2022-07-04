@@ -13,7 +13,7 @@ const Home = () => {
                 <h1 className="text-2xl sm:text-4xl font-bold text-white">Cover Page</h1>
                 <p className="mt-3 text-lg text-gray-300">Cover is a one-page template for building simple and beautiful
                     home pages using Tailwind CSS.</p>
-                <div className="mt-5 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-3">
+                <div className="mt-5 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5">
                     <a className="btn btn--primary btn--icon shadow-md rounded-full w-full sm:w-auto"
                        href="https://github.com/htmlstreamofficial/preline/tree/main/examples">
                         <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -58,7 +58,7 @@ const Home = () => {
                     <p className="mt-5">★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わず生意気たたという口ましだ。勝手たたのましはでまた箱のダミーコピーです上手どものときではさっさと俄たますて、みんなまでぶんを弾いがっことだまし。立っすぎそれは間がひどくたて今の夜中のかっこ動きが、たるめるで片手も一生しがこいまし。こどもは二わから狸のようを出て来う。助けはゴーシュかっこうたり何が待ってだしない。マッ子をょっとにしから虎を片手ダミーコピーですのようを教えてかっこうに云いてごうごうとゴがしててるた。ふっとダミーコピーですぶるぶる虎にゴーシュが合わですた。それそうに別をひきて諸君へいった(300文字)。</p>
                 </section>
 
-                <section className="py-10 bg-pink-50 bg-dots bg-blend-multiply text-black">
+                <section className="py-10 bg-pink-50/50 bg-dots bg-blend-multiply bg-fixed text-black">
                     <h2>メモ</h2>
                     <ul className="list-disc">
                         <li>PostCSS</li>

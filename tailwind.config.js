@@ -69,7 +69,11 @@ module.exports = {
     },
   },
   plugins: [
-    require('preline/plugin')
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/line-clamp'),
+    require('preline/plugin'),
   ],
   mode: 'jit',
   content: [
