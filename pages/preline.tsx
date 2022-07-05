@@ -317,7 +317,107 @@ const Preline: NextPage = () => {
             </section>
             <hr className="my-10" />
             <section>
+                <h2>Table</h2>
+                <div className="flex flex-col container">{/* mx-auto は、tailwind.config.js で中央揃えにしてるので不要 */}
+                    <div className="-m-1.5 overflow-x-auto">
+                        <div className="p-1.5 min-w-full inline-block align-middle">
+                            <div className="overflow-hidden">
+                                <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Name
+                                            </th>
+                                            <th scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Title
+                                            </th>
+                                            <th scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Age
+                                            </th>
+                                            <th scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email
+                                            </th>
+                                            <th scope="col"
+                                                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Address
+                                            </th>
+                                            <th scope="col"
+                                                className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase">Action
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                                        <tr>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">John
+                                                Brown
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">Regional
+                                                Paradigm Technician
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">john@site.com</td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">45</td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">New
+                                                York No. 1 Lake Park
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                <a className="text-blue-500 hover:text-blue-700" href="#">Delete</a>
+                                            </td>
+                                        </tr>
 
+                                        <tr>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">Jim
+                                                Green
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">Forward
+                                                Response Developer
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">jim@site.com</td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">27</td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">London
+                                                No. 1 Lake Park
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                <a className="text-blue-500 hover:text-blue-700" href="#">Delete</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">Joe
+                                                Black
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">Product
+                                                Directives Officer
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">joe@site.com</td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">31</td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200">Sidney
+                                                No. 1 Lake Park
+                                            </td>
+                                            <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                <a className="text-blue-500 hover:text-blue-700" href="#">Delete</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr className="my-10" />
+            <section>
+                <h2>Device</h2>
+                <h3>Smartphone</h3>
+                <figure className="mx-auto max-w-full w-60 h-auto">
+                    <div className="p-1.5 bg-gray-800 rounded-3xl shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]">
+                        <Image
+                            src="/images/work-wacca.jpg"
+                            width={600}
+                            height={900}
+                            alt="代替テキスト"
+                            className="max-w-full h-auto rounded-[1.25rem]"
+                        />
+                    </div>
+                </figure>
             </section>
         </Layout>
     )

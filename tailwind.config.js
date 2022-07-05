@@ -36,6 +36,9 @@ module.exports = {
         'base': '#F0F0EC',
         // cyan: '#79FFE1', // 既存色の上書き設定
       },
+      container: { // container をデフォルトで中央揃え
+        center: true,
+      },
       spacing: {
         28: '7rem',
       },
@@ -111,7 +114,7 @@ module.exports = {
         // },
       }),
     },
-    aspectRatio: {
+    aspectRatio: { // @tailwindcss/aspect-ratio Plugin
       auto: 'auto',
       square: '1 / 1',
       video: '16 / 9',
