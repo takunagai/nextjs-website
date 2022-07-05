@@ -158,12 +158,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 html, body, div, section,
-header, nav, main, footer {
+header, nav, main, footer, iframe {
   max-inline-size: none;
 }
 
 h1, h2, h3, h4, h5, h6,
-p, ul, figcaption {
+p, ul, figcaption,
+table, form { /* table, form は付け加えた */
   margin-inline-start: auto;
   margin-inline-end: auto;
 }

@@ -81,6 +81,7 @@ export default function Layout({ children, title, description, home }: Props) {
                                 ['About', '/about'],
                                 ['Works', '/works'],
                                 ['CSS', '/css'],
+                                ['TW Plugins', '/official-plugins'],
                                 ['Preline', '/preline'],
                                 ['Images', '/images'],
                                 ['Base', '/base'],
