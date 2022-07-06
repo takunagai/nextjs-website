@@ -27,12 +27,10 @@
 @import "tailwindcss/utilities"; /* @tailwind utilities; */
 /*@import "./custom-utilities.css";*/
 
-
 /**
  * import のテスト用
  */
 @import "./every-layout.css";
-
 
 /**
  * @layer に含めない CSS は、コンパイルされた CSS に常に含まれる
@@ -55,7 +53,6 @@
   color-scheme: dark light;
 }
 
-
 /**
  * @layer ディレクティブ: base, components, utilities
  * @layer ディレクティブ内の CSS を対応する @tailwind ルールと同じ場所に自動的に移動する
@@ -71,7 +68,6 @@
   /* font-family は、tailwind.config.js の fontFamily で設定 */
 }
 
-
 @layer components {
   :root {
     --btn-padding-x: 1.5em;
@@ -81,23 +77,22 @@
     @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] transition hover:scale-105;
   }
   .btn--primary {
-    @apply bg-blue-500 hover:bg-blue-700 text-white focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition;
+    @apply bg-blue-500 text-white transition hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
   }
   .btn--secondary {
-    @apply bg-orange-500 hover:bg-orange-700 text-white focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75 transition;
+    @apply bg-orange-500 text-white transition hover:bg-orange-700 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75;
   }
   .btn--icon {
-    @apply  inline-flex justify-center items-center gap-x-3.5;
+    @apply inline-flex items-center justify-center gap-x-3.5;
   }
   .box__alert {
-    @apply bg-red-50 border border-red-200 text-sm text-red-600 rounded-md p-4;
+    @apply rounded-md border border-red-200 bg-red-50 p-4 text-sm text-red-600;
   }
 }
 
 @layer utilities {
   /* ユーティリティ */
 }
-
 
 /* - - - - - - - - - - - - - - - - - - - - - - - -
   Josh's Custom CSS Reset
@@ -127,16 +122,25 @@ img, picture, video, canvas, svg {
 }
 */
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 #__next {
+  height: 100%;
   isolation: isolate;
 }
-
 
 /* - - - - - - - - - - - - - - - - - - - - - - - -
   Base Styles
@@ -154,22 +158,45 @@ p, h1, h2, h3, h4, h5, h6 {
 /*}*/
 
 * {
-  max-inline-size: var(--measure); /* ≒ max-width (方向で変わる)、メジャーは --measure を超えてはならない 2/3 */
+  max-inline-size: var(
+    --measure
+  ); /* ≒ max-width (方向で変わる)、メジャーは --measure を超えてはならない 2/3 */
 }
 
-html, body, div, section,
-header, nav, main, footer, iframe {
+html,
+body,
+div,
+section,
+header,
+nav,
+main,
+footer,
+iframe {
   max-inline-size: none;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, ul, figcaption,
-table, form { /* table, form は付け加えた */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+figcaption,
+table,
+form {
+  /* table, form は付け加えた */
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
 }
 
@@ -188,47 +215,64 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-
 /**
  * レイアウト
  */
-.cover.site-wrapper { /* .cover も参照 */
+.cover.site-wrapper {
+  /* .cover も参照 */
   /*display: flex;*/
   /*flex-direction: column;*/
   min-block-size: 100vh;
-  /*noinspection CssInvalidPropertyValue*/min-block-size: 100dvh;
+  /*noinspection CssInvalidPropertyValue*/
+  min-block-size: 100dvh;
 }
-  .site-wrapper > header {}
-  .site-wrapper > nav {}
-  .site-wrapper > .wrapper {
-    /*flex: 1;*/
-    /*overflow-x: hidden;*/
-  }
-  .site-wrapper > footer {}
+.site-wrapper > header {
+}
+.site-wrapper > nav {
+}
+.site-wrapper > .wrapper {
+  /*flex: 1;*/
+  /*overflow-x: hidden;*/
+}
+.site-wrapper > footer {
+}
 
-  .wrapper {}
+.wrapper {
+}
 
-  /* .site-wrapper > .wrapper */
-    main {}
-    main > * {
-      margin-inline-start: 1rem;
-      margin-inline-end: 1rem;
-    }
-
+/* .site-wrapper > .wrapper */
+main {
+}
+main > * {
+  margin-inline-start: 1rem;
+  margin-inline-end: 1rem;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - -
   メインコンテンツ
  - - - - - - - - - - - - - - - - - - - - - - - - */
-main h1 { font-size: 2rem; }
-main h2 { font-size: 1.75rem; }
-main h3 { font-size: 1.5rem; }
-main h4 { font-size: 1.25rem; }
-main h5 { font-size: 1.1rem; }
-main h6 { font-size: 1rem; }
+main h1 {
+  font-size: 2rem;
+}
+main h2 {
+  font-size: 1.75rem;
+}
+main h3 {
+  font-size: 1.5rem;
+}
+main h4 {
+  font-size: 1.25rem;
+}
+main h5 {
+  font-size: 1.1rem;
+}
+main h6 {
+  font-size: 1rem;
+}
 
 main a:not([class*="btn"]) {
-  padding-right: .25em;
-  padding-left: .25em;
+  padding-right: 0.25em;
+  padding-left: 0.25em;
   color: #0070f3;
   text-decoration: underline;
   text-decoration-style: dotted;

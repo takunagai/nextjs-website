@@ -11,26 +11,30 @@
  * DocumentのgetInitialProps は、クライアントサイドの遷移中、ページが静的に最適化されている場合にも呼び出さない
  */
 // Learn Next.js (公式) より
-import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document'
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from "next/document";
 
 class MyDocument extends Document {
-    static async getInitialProps(ctx: DocumentContext) {
-        const initialProps = await Document.getInitialProps(ctx)
-        return initialProps
-    }
+  static async getInitialProps(ctx: DocumentContext) {
+    return await Document.getInitialProps(ctx);
+  }
 
-    render() {
-        return (
-            <Html lang="ja" className="h-full">
-                <Head />
-                <body className="flex flex-col h-full leading-relaxed antialiased">
-                    <Main />
-                    <NextScript />
-                </body>
-            </Html>
-        )
-    }
+  render() {
+    return (
+      <Html lang="ja" className="h-full">
+        <Head />
+        <body className="flex h-full flex-col leading-relaxed antialiased">
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
 
-
-export default MyDocument
+export default MyDocument;
