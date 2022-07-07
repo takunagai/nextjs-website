@@ -1,4 +1,20 @@
 const Footer = () => {
+  // const footerLinks = [
+  //   {
+  //     headerTitle: "About",
+  //     items: [
+  //       {
+  //         title: "事業所概要",
+  //         url: "about",
+  //       },
+  //       {
+  //         title: "事業所概要",
+  //         url: "about",
+  //       },
+  //     ],
+  //   },
+  // ];
+
   return (
     <footer className="mt-auto">
       <div className="container px-5 py-12">
