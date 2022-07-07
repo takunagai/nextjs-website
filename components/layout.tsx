@@ -66,6 +66,7 @@ export default function Layout({ children, title, description, home }: Props) {
         <Header
           home={home}
           siteTitle={siteTitle}
+          pageTitle={pageTitle}
           theme={theme}
           setTheme={setTheme}
         />

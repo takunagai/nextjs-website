@@ -7,11 +7,12 @@ import BreadCrumbs from "./BreadCrumbs";
 type Props = {
   home?: boolean;
   siteTitle: string;
+  pageTitle: string;
   theme?: string;
   setTheme: (theme: string) => void;
 };
 
-const Header = ({ home, siteTitle, theme, setTheme }: Props) => {
+const Header = ({ home, siteTitle, pageTitle, theme, setTheme }: Props) => {
   return (
     <header className="z-50 py-4 text-sm">
       <nav
@@ -29,7 +30,7 @@ const Header = ({ home, siteTitle, theme, setTheme }: Props) => {
       </nav>
 
       <div className="container">
-        <BreadCrumbs />
+        <BreadCrumbs pageTitle={pageTitle} />
       </div>
     </header>
   );
