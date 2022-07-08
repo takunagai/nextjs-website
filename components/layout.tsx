@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Script from "next/script";
 import { useTheme } from "next-themes";
+import TopmostNotificationBar from "./TopmostNotificationBar";
 import Header from "./Header";
 import Footer from "./Footer";
 // import styles from './layout.module.css'
@@ -62,6 +63,7 @@ export default function Layout({ children, title, description, home }: Props) {
       </Head>
 
       <div className="flex h-full w-full flex-col">
+        <TopmostNotificationBar />
         <Header
           home={home}
           siteTitle={siteTitle}
