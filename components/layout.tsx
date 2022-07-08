@@ -5,6 +5,7 @@ import Script from "next/script";
 import { useTheme } from "next-themes";
 import TopmostNotificationBar from "./TopmostNotificationBar";
 import Header from "./Header";
+import BreadCrumbs from "./BreadCrumbs";
 import Footer from "./Footer";
 // import styles from './layout.module.css'
 // import utilStyles from '../styles/utils.module.css'
@@ -71,7 +72,9 @@ export default function Layout({ children, title, description, home }: Props) {
           theme={theme}
           setTheme={setTheme}
         />
-
+        <div className="mt-3 w-full px-4 sm:px-6 lg:px-8">
+          <BreadCrumbs pageTitle={pageTitle} />
+        </div>
         {/*<div className={`cover__main wrapper ${styles.container}`}>*/}
         <div className="cover__main wrapper">
           <main id="primary" role="main">

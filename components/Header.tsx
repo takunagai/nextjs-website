@@ -1,8 +1,7 @@
 import SiteLogo from "./SiteLogo";
-import NavbarCollapse from "./NavbarCollapse";
-import Navbar from "./Navbar";
+import NavbarCollapse2 from "./NavbarCollapse2";
+import Navbar2 from "./Navbar2";
 import ModeSwitcher from "./ModeSwitcher";
-import BreadCrumbs from "./BreadCrumbs";
 
 type Props = {
   home?: boolean;
@@ -12,9 +11,9 @@ type Props = {
   setTheme: (theme: string) => void;
 };
 
-const Header = ({ home, siteTitle, pageTitle, theme, setTheme }: Props) => {
+const Header = ({ home, siteTitle, theme, setTheme }: Props) => {
   return (
-    <header className="z-50 py-4 text-sm">
+    <header className="relative z-50 bg-zinc-800 py-4 text-sm">
       <nav
         className="w-full px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
         aria-label="Global"
@@ -22,16 +21,12 @@ const Header = ({ home, siteTitle, pageTitle, theme, setTheme }: Props) => {
         <div className="flex items-center justify-between">
           <SiteLogo home={home} siteTitle={siteTitle} />
           <div className="sm:hidden">
-            <NavbarCollapse />
+            <NavbarCollapse2 />
           </div>
         </div>
-        <Navbar />
+        <Navbar2 />
         <ModeSwitcher theme={theme} setTheme={setTheme} />
       </nav>
-
-      <div className="container">
-        <BreadCrumbs pageTitle={pageTitle} />
-      </div>
     </header>
   );
 };
