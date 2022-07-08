@@ -61,7 +61,6 @@ export default function Layout({ children, title, description, home }: Props) {
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
 
-      {/*<div className="max-w-[50rem] flex flex-col mx-auto w-full h-full">*/}
       <div className="flex h-full w-full flex-col">
         <Header
           home={home}
@@ -76,19 +75,23 @@ export default function Layout({ children, title, description, home }: Props) {
           <main id="primary" role="main">
             {children}
           </main>
-          {/*<div id="secondary">*/}
-          {/*    <p>サイドバー</p>*/}
-          {/*</div>*/}
+
+          {/* <div id="secondary">
+              <p>サイドバー</p>
+          </div> */}
+
           {!home && (
-            <p className="mt-5 text-center">
+            <p className="mt-5 text-center text-sm">
               <Link href="/">
-                <a className="border-b-2">ホームに戻る</a>
+                <a className="border-b">ホームに戻る</a>
               </Link>
             </p>
           )}
         </div>
         <Footer />
       </div>
+
+      {/* preline UI */}
       <Script src="/js/hs-ui.bundle.js"></Script>
     </>
   );

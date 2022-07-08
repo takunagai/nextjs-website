@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 const About: NextPage = () => {
   return (
     <Layout title="About" description="About の概要です。">
-      <section className="alignwide">
+      <section className="container">
         <h1>About</h1>
         <h2>見出しです</h2>
         <p>
