@@ -8,7 +8,7 @@ type Props = {
 const BreadCrumbs = ({ pageTitle }: Props) => {
   return (
     <ol className="flex min-w-0 items-center whitespace-nowrap">
-      <li className="flex items-center text-sm">
+      <li className="flex items-center text-xs">
         <Link className="text-gray-500 hover:text-blue-600" href="/">
           Home
         </Link>
@@ -28,7 +28,7 @@ const BreadCrumbs = ({ pageTitle }: Props) => {
           />
         </svg>
       </li>
-      <li className="flex items-center text-sm">
+      <li className="flex items-center text-xs">
         <Link className="text-gray-500 hover:text-blue-600" href="/">
           Blog
         </Link>
@@ -48,9 +48,9 @@ const BreadCrumbs = ({ pageTitle }: Props) => {
           />
         </svg>
       </li>
-      {/*<li className="text-sm font-semibold text-gray-800 truncate dark:text-gray-200" ariaCurrent="page">*/}
+      {/*<li className="text-xs font-semibold text-gray-800 truncate dark:text-gray-200" ariaCurrent="page">*/}
       <li
-        className="truncate truncate text-sm font-semibold text-gray-800 dark:text-gray-200"
+        className="truncate truncate text-xs font-semibold text-gray-800 dark:text-gray-200"
         aria-current="page"
       >
         {pageTitle}

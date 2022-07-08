@@ -72,7 +72,7 @@ export default function Layout({ children, title, description, home }: Props) {
           theme={theme}
           setTheme={setTheme}
         />
-        <div className="mt-3 w-full px-4 sm:px-6 lg:px-8">
+        <div className="w-full border-b border-zinc-500/25 py-2 px-4 sm:px-6 lg:px-8">
           <BreadCrumbs pageTitle={pageTitle} />
         </div>
         {/*<div className={`cover__main wrapper ${styles.container}`}>*/}
