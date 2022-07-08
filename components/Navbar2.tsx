@@ -64,8 +64,26 @@ const Navbar2 = () => {
               >
                 スポット手伝い
               </a>
+              <a
+                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                href="#"
+              >
+                仲間/アシスタント募集
+              </a>
             </div>
           </div>
+
+          <Link href="/works">
+            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500">
+              制作実績
+            </a>
+          </Link>
+
+          <Link href="/posts">
+            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500">
+              ブログ
+            </a>
+          </Link>
 
           <div className="hs-mega-menu">
             <button
@@ -317,19 +335,7 @@ const Navbar2 = () => {
             </div>
           </div>
 
-          <Link href="/works">
-            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500">
-              制作実績
-            </a>
-          </Link>
-
-          <Link href="/posts">
-            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500">
-              ブログ
-            </a>
-          </Link>
-
-          <Link href="#">
+          <Link href="/inquiry">
             <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500">
               相談・問合せ
             </a>
