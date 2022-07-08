@@ -52,13 +52,56 @@ const Navbar2 = () => {
               >
                 WordPress
               </a>
+              <a
+                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                href="#"
+              >
+                Jamstack サイト
+              </a>
+              <a
+                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                href="#"
+              >
+                スポット手伝い
+              </a>
+            </div>
+          </div>
+
+          <div className="hs-mega-menu">
+            <button
+              id="hs-mega-menu-basic-dr"
+              type="button"
+              className="hs-mega-menu-toggle flex w-full items-center font-medium text-gray-600 hover:text-gray-400 hs-mega-menu-open:text-gray-500 hover:hs-mega-menu-open:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500"
+            >
+              Samples
+              <svg
+                className="ml-2 h-2.5 w-2.5 text-gray-600"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                ></path>
+              </svg>
+            </button>
+
+            <div
+              className="hs-mega-menu-content top-full z-10 hidden w-full rounded-md bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:-top-5 before:left-0 before:h-5 before:w-full hs-mega-menu-open:opacity-100 dark:bg-gray-800 sm:absolute sm:w-48 sm:shadow-md sm:transition-all sm:duration-300"
+              aria-labelledby="hs-mega-menu-basic-dr"
+            >
               <div className="hs-mega-menu relative rounded-md sm:flex sm:items-center sm:gap-x-3.5">
                 <a
                   id="hs-mega-menu-basic-sub-dr"
                   className="hs-mega-menu-toggle flex w-full items-center justify-between rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                   href="javascript:;"
                 >
-                  Sub menu
+                  CSS
                   <svg
                     className="ml-2 h-2.5 w-2.5 text-gray-600 sm:-rotate-90"
                     width="16"
@@ -80,44 +123,108 @@ const Navbar2 = () => {
                   className="hs-mega-menu-content top-0 left-full z-10 hidden w-full bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:top-0 before:-left-5 before:h-full before:w-5 after:absolute after:top-0 after:-right-5 after:h-full after:w-5 hs-mega-menu-open:opacity-100 dark:bg-gray-800 sm:absolute sm:mx-2.5 sm:mt-2 sm:w-48 sm:rounded-md sm:shadow-md sm:transition-all sm:duration-300 sm:hs-mega-menu-open:mt-0"
                   aria-labelledby="hs-mega-menu-basic-sub-dr"
                 >
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                    href="#"
-                  >
-                    Newsletter
-                  </a>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                    href="#"
-                  >
-                    Purchases
-                  </a>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                    href="#"
-                  >
-                    Downloads
-                  </a>
-                  <a
-                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                    href="#"
-                  >
-                    Team Account
-                  </a>
+                  <Link href="/css">
+                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                      CSS 基本
+                    </a>
+                  </Link>
+                  <Link href="/official-plugins">
+                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                      Tailwind プラグイン
+                    </a>
+                  </Link>
+                  <Link href="/css">
+                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                      Preline
+                    </a>
+                  </Link>
                 </div>
               </div>
-              <a
-                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                href="#"
-              >
-                Jamstack サイト
-              </a>
-              <a
-                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                href="#"
-              >
-                スポット手伝い
-              </a>
+              <div className="hs-mega-menu relative rounded-md sm:flex sm:items-center sm:gap-x-3.5">
+                <a
+                  id="hs-mega-menu-basic-sub-dr"
+                  className="hs-mega-menu-toggle flex w-full items-center justify-between rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  href="javascript:;"
+                >
+                  HTML ベース
+                  <svg
+                    className="ml-2 h-2.5 w-2.5 text-gray-600 sm:-rotate-90"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    ></path>
+                  </svg>
+                </a>
+
+                <div
+                  className="hs-mega-menu-content top-0 left-full z-10 hidden w-full bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:top-0 before:-left-5 before:h-full before:w-5 after:absolute after:top-0 after:-right-5 after:h-full after:w-5 hs-mega-menu-open:opacity-100 dark:bg-gray-800 sm:absolute sm:mx-2.5 sm:mt-2 sm:w-48 sm:rounded-md sm:shadow-md sm:transition-all sm:duration-300 sm:hs-mega-menu-open:mt-0"
+                  aria-labelledby="hs-mega-menu-basic-sub-dr"
+                >
+                  <Link href="/images">
+                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                      画像
+                    </a>
+                  </Link>
+                  <Link href="/base">
+                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                      レイアウトのベース
+                    </a>
+                  </Link>
+                  <Link href="/tutorial1">
+                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                      Tutorial1
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="hs-mega-menu relative rounded-md sm:flex sm:items-center sm:gap-x-3.5">
+                <a
+                  id="hs-mega-menu-basic-sub-dr"
+                  className="hs-mega-menu-toggle flex w-full items-center justify-between rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  href="javascript:;"
+                >
+                  データのフェッチ
+                  <svg
+                    className="ml-2 h-2.5 w-2.5 text-gray-600 sm:-rotate-90"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    ></path>
+                  </svg>
+                </a>
+
+                <div
+                  className="hs-mega-menu-content top-0 left-full z-10 hidden w-full bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:top-0 before:-left-5 before:h-full before:w-5 after:absolute after:top-0 after:-right-5 after:h-full after:w-5 hs-mega-menu-open:opacity-100 dark:bg-gray-800 sm:absolute sm:mx-2.5 sm:mt-2 sm:w-48 sm:rounded-md sm:shadow-md sm:transition-all sm:duration-300 sm:hs-mega-menu-open:mt-0"
+                  aria-labelledby="hs-mega-menu-basic-sub-dr"
+                >
+                  <Link href="/fetch">
+                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                      fetch メソッド
+                    </a>
+                  </Link>
+                  <Link href="/swr">
+                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
+                      swr
+                    </a>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
