@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "@etchteam/next-pagination": "^3.5.4",
+    "@hashicorp/platform-code-highlighting": "^0.1.2",
     "@heroicons/react": "^1.0.6",
     "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
