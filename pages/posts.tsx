@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Pagination from "@etchteam/next-pagination";
+import styles from "../styles/Pagination.module.css";
 import Layout from "../components/layout";
 import Date from "../components/date";
 import { getSortedPostsData } from "../lib/posts";
@@ -44,6 +46,14 @@ const Posts: NextPage<Props> = ({ allPostsData }: Props) => {
             </li>
           ))}
         </ul>
+        <hr className="my-10 opacity-20" />
+        <Pagination
+          total={1000}
+          perPageText="表示件数"
+          setPageSizeText="表示件数を設定"
+          theme={styles}
+          // sizes={[5, 10, 25, 150]}
+        />
       </div>
     </Layout>
   );
