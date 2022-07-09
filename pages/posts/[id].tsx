@@ -4,7 +4,6 @@
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import { GetStaticProps, GetStaticPaths } from "next";
-import Head from "next/head";
 import Date from "../../components/date";
 
 type Props = {
@@ -21,16 +20,13 @@ type Props = {
  */
 export default function Post({ postData }: Props) {
   return (
-    <Layout>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      {/*{postData.id}*/}
-      <div className="container">
-        <h1>{postData.title}</h1>
-        <p>
+    <Layout title={postData.title} description="★★TODO:概要表示の実装">
+      <article className="prose prose-sm prose-zinc prose-pink max-w-none prose-headings:underline dark:prose-invert lg:prose-base">
+        <p className="text-sm">
           <Date dateString={postData.date} />
         </p>
+        {/*{postData.id}*/}
+        {/*{postData.title}*/}
         {/* dangerouslySetInnerHTML は、ブラウザ DOM における innerHTML の React での代替 */}
         {/* ★★TODO: サニタイズ推奨 https://hackmd.io/@euxn23/ByfD97Ujv */}
         {/*<div dangerouslySetInnerHTML={{ __html: sanitizer(postData.contentHtml) }} />*/}
@@ -38,7 +34,7 @@ export default function Post({ postData }: Props) {
           className="content mt-5"
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
-      </div>
+      </article>
     </Layout>
   );
 }

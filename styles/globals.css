@@ -172,7 +172,8 @@ header,
 nav,
 main,
 footer,
-iframe {
+iframe,
+pre {
   max-inline-size: none;
 }
 
