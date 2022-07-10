@@ -9,19 +9,20 @@ const Works: NextPage = () => {
         <h1>Works</h1>
         <p>Works の内容</p>
         <div className="grid grid-cols-2 gap-5 text-center md:grid-cols-3 lg:grid-cols-5">
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-wacca.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a
                 href="https://blueberry-wacca.com/"
                 target="_blank"
                 rel="noreferrer"
+                className="after:absolute after:inset-0"
               >
                 ブルーベリー農園 Wacca
               </a>
@@ -43,13 +44,13 @@ const Works: NextPage = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-kingoma.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a href="https://kingoma.shop" target="_blank" rel="noreferrer">
@@ -73,13 +74,13 @@ const Works: NextPage = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-goodon-life.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a href="https://good-on.co.jp/" target="_blank" rel="noreferrer">
@@ -103,13 +104,13 @@ const Works: NextPage = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-alafarine.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a href="https://alafarine.com" target="_blank" rel="noreferrer">
@@ -130,13 +131,13 @@ const Works: NextPage = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-anvil.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a
@@ -164,13 +165,13 @@ const Works: NextPage = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-dacapo.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a
@@ -198,13 +199,13 @@ const Works: NextPage = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-knots-berry.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a
@@ -226,13 +227,13 @@ const Works: NextPage = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-harapeco-morimushi.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a
@@ -257,13 +258,13 @@ const Works: NextPage = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-mimibridal.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a
@@ -288,13 +289,13 @@ const Works: NextPage = () => {
               </span>
             </p>
           </div>
-          <div>
+          <div className="relative hover:opacity-95">
             <Image
               src="/images/work-kanami.jpg"
               width={600}
               height={900}
               alt="代替テキスト"
-              className="outline outline-1 outline-zinc-300 hover:opacity-90"
+              className="outline outline-1 outline-zinc-300"
             />
             <p>
               <a
