@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 const JamstackSite: NextPage = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <Layout
+      title="Jamstack Webサイト制作"
+      description="Jamstack Webサイト制作 の概要です。"
     >
-      <Layout
-        title="Jamstack Webサイト制作"
-        description="Jamstack Webサイト制作 の概要です。"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       >
         <header className="mx-0 bg-zinc-500/10">
           <h1>Jamstack Webサイト制作</h1>
@@ -27,8 +27,8 @@ const JamstackSite: NextPage = () => {
             ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです上手どもっさと俄たますて、みんなまでぶんを弾いとだまし。ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た。
           </p>
         </section>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 
 const OfficialPlugins: NextPage = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <Layout
+      title="Official Plugins"
+      description="Official Plugins の概要です。"
     >
-      <Layout
-        title="Official Plugins"
-        description="Official Plugins の概要です。"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       >
         <h1 className="mt-5">Tailwind 公式プラグイン 4つ</h1>
 
@@ -165,8 +165,8 @@ const OfficialPlugins: NextPage = () => {
             チェック
           </form>
         </article>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

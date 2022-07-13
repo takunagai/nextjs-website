@@ -2,22 +2,22 @@ import Image from "next/image";
 import Layout from "../components/layout";
 import Button from "../components/Button";
 import Alert from "../components/Alert";
+import { motion } from "framer-motion";
 import {
   BeakerIcon,
   ChevronDoubleRightIcon,
   ExclamationCircleIcon,
 } from "@heroicons/react/solid";
 import type { NextPage } from "next";
-import { motion } from "framer-motion";
 
 const CSS: NextPage = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Layout title="CSS関連" description="CSS関連のこと。">
+    <Layout title="CSS関連" description="CSS関連のこと。">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="stack-large">
           <h1>CSS 関連</h1>
 
@@ -336,8 +336,8 @@ const CSS: NextPage = () => {
             </ul>
           </section>
         </div>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

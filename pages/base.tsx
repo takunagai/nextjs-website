@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 const About: NextPage = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Layout title="Base" description="ページのベース (Every Layout を参考)">
+    <Layout title="Base" description="ページのベース (Every Layout を参考)">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="stack-large">
           <section>
             <h1>Every Layout を取り入れてコーディング(無効化中)</h1>
@@ -360,8 +360,8 @@ const About: NextPage = () => {
             </div>
           </section>
         </div>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

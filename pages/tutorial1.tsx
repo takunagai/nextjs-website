@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import type { FC } from "react";
 import type { NextPage } from "next";
+
 type Props = { title?: string };
 
 const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
@@ -21,12 +22,12 @@ const Tutorial1: NextPage = () => {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Layout title="Tutorial1" description="Tutorial1 の概要です。">
+    <Layout title="Tutorial1" description="Tutorial1 の概要です。">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="stack-large">
           <h1>コンポーネントの使用サンプル</h1>
           <section>
@@ -55,8 +56,8 @@ const Tutorial1: NextPage = () => {
             </button>
           </section>
         </div>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

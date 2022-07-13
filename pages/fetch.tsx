@@ -55,19 +55,25 @@ const Fetch: NextPage<Props> = ({ results }) => {
       title="fetch() メソッドで API からフェッチ"
       description="fetch() メソッドで github API からデータをフェッチして表示するサンプル"
     >
-      <h1>fetch() メソッドで API からフェッチ</h1>
-      <p>
-        fetch() メソッドで github API からデータをフェッチして表示するサンプル
-      </p>
-      <section className="box mt-5">
-        <ul>
-          {results.map((result: Result, index: number) => (
-            <li key={index}>
-              {result.id} {result.name}
-            </li>
-          ))}
-        </ul>
-      </section>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <h1>fetch() メソッドで API からフェッチ</h1>
+        <p>
+          fetch() メソッドで github API からデータをフェッチして表示するサンプル
+        </p>
+        <section className="box mt-5">
+          <ul>
+            {results.map((result: Result, index: number) => (
+              <li key={index}>
+                {result.id} {result.name}
+              </li>
+            ))}
+          </ul>
+        </section>
+      </motion.div>
     </Layout>
   );
 };

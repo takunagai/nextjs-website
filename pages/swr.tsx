@@ -15,14 +15,14 @@ const Home: NextPage = () => {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <Layout
+      title="swr"
+      description="swr で github API からフェッチしたデータを表示"
     >
-      <Layout
-        title="swr"
-        description="swr で github API からフェッチしたデータを表示"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       >
         <h1>swr でフェッチ</h1>
         <p>
@@ -47,8 +47,8 @@ const Home: NextPage = () => {
             <b>🍴 {data.forks_count}</b>
           </p>
         </section>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

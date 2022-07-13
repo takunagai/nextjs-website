@@ -27,14 +27,14 @@ export async function getStaticProps() {
 
 const Posts: NextPage<Props> = ({ allPostsData }: Props) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <Layout
+      title="ブログ (Markdown)"
+      description="Markdown で書いた記事を読み込んで表示する"
     >
-      <Layout
-        title="ブログ (Markdown)"
-        description="Markdown で書いた記事を読み込んで表示する"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       >
         <div className="container">
           <h1>ブログ (Markdown)</h1>
@@ -61,8 +61,8 @@ const Posts: NextPage<Props> = ({ allPostsData }: Props) => {
             // sizes={[5, 10, 25, 150]}
           />
         </div>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

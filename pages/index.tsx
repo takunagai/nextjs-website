@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <Layout
+      home
+      title="ナガイ商店.com - 兵庫県川西市 Web 制作"
+      description="概要です。"
     >
-      <Layout
-        home
-        title="ナガイ商店.com - 兵庫県川西市 Web 制作"
-        description="概要です。"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       >
         <div className="flex h-[80vh] flex-col items-center justify-center bg-zinc-700 py-10 px-4 text-center sm:px-6 md:h-[60vh] lg:px-8">
           <h1 className="text-2xl font-bold text-white sm:text-4xl">
@@ -134,7 +134,7 @@ const Home = () => {
                 <strong>重ね合わせコンテキスト</strong>
                 <rp> (</rp>
                 <rt>Stacking context</rt>
-                <rp>) </rp>
+                <rp>)</rp>
               </ruby>
               それから思わず生意気たたという口ましだ。勝手たたのましはでまた箱のダミーコピーです上手どものときではさっさと俄たますて、みんなまでぶんを弾いがっことだまし。立っすぎそれは間がひどくたて今の夜中のかっこ動きが、たるめるで片手も一生しがこいまし。こどもは二わから狸のようを出て来う。
             </p>
@@ -186,8 +186,8 @@ const Home = () => {
             </ul>
           </section>
         </div>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

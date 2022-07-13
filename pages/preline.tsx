@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 const Preline: NextPage = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Layout title="Preline" description="Preline の概要です。">
+    <Layout title="Preline" description="Preline の概要です。">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <h1>Preline (Tailwind CSS UI library)</h1>
         <p>
           <a href="https://preline.co/docs/grid.html">
@@ -685,8 +685,8 @@ const Preline: NextPage = () => {
             </div>
           </figure>
         </section>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

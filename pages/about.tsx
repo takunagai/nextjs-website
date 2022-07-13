@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 
 const About: NextPage = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }} // initial
-      animate={{ opacity: 1 }} // on mount
-      exit={{ opacity: 0 }} // on unmount
-    >
-      <Layout title="About" description="About の概要です。">
+    <Layout title="About" description="About の概要です。">
+      <motion.div
+        initial={{ opacity: 0 }} // initial
+        animate={{ opacity: 1 }} // on mount
+        // transition={{ duration: 0.5 }}
+        exit={{ opacity: 0 }} // on unmount
+      >
         <header className="mx-0 bg-zinc-500/10">
           <h1>About</h1>
         </header>
@@ -134,8 +135,8 @@ const About: NextPage = () => {
             </ul>
           </section>
         </div>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 

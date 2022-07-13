@@ -21,12 +21,12 @@ type Props = {
  */
 export default function Post({ postData }: Props) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Layout title={postData.title} description="★★TODO:概要表示の実装">
+    <Layout title={postData.title} description="★★TODO:概要表示の実装">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <article className="prose prose-sm prose-zinc prose-pink max-w-none prose-headings:underline dark:prose-invert lg:prose-base">
           <p className="text-sm">
             <Date dateString={postData.date} />
@@ -41,8 +41,8 @@ export default function Post({ postData }: Props) {
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           />
         </article>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 }
 

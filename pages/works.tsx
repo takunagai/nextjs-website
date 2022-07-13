@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 const Works: NextPage = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Layout title="Works" description="Works の概要です。">
+    <Layout title="Works" description="Works の概要です。">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <div className="stack-large container">
           <h1>Works</h1>
           <p>Works の内容</p>
@@ -336,8 +336,8 @@ const Works: NextPage = () => {
             </div>
           </div>
         </div>
-      </Layout>
-    </motion.div>
+      </motion.div>
+    </Layout>
   );
 };
 
