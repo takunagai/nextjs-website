@@ -59,7 +59,12 @@ const Works: NextPage = () => {
                 className="outline outline-1 outline-zinc-300"
               />
               <p>
-                <a href="https://kingoma.shop" target="_blank" rel="noreferrer">
+                <a
+                  href="https://kingoma.shop"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="after:absolute after:inset-0"
+                >
                   金ごま本舗 Online Shop(改善中)
                 </a>
                 <br />
@@ -93,6 +98,7 @@ const Works: NextPage = () => {
                   href="https://good-on.co.jp/"
                   target="_blank"
                   rel="noreferrer"
+                  className="after:absolute after:inset-0"
                 >
                   地域工務店グートンライフ
                 </a>
@@ -127,6 +133,7 @@ const Works: NextPage = () => {
                   href="https://alafarine.com"
                   target="_blank"
                   rel="noreferrer"
+                  className="after:absolute after:inset-0"
                 >
                   パン教室 アラファリーヌ(改善中)
                 </a>
@@ -158,6 +165,7 @@ const Works: NextPage = () => {
                   href="https://takarazuka-anvil.com"
                   target="_blank"
                   rel="noreferrer"
+                  className="after:absolute after:inset-0"
                 >
                   彫金教室 アンビル
                 </a>
@@ -192,6 +200,7 @@ const Works: NextPage = () => {
                   href="https://dacapo-osaka.com"
                   target="_blank"
                   rel="noreferrer"
+                  className="after:absolute after:inset-0"
                 >
                   車のお手入れ専門店 ダ・カーポ(リニューアル中)
                 </a>
@@ -226,6 +235,7 @@ const Works: NextPage = () => {
                   href="https://knotts-berry.com"
                   target="_blank"
                   rel="noreferrer"
+                  className="after:absolute after:inset-0"
                 >
                   スフレ専門店 ナッツベリー(リニューアル中)
                 </a>
@@ -254,6 +264,7 @@ const Works: NextPage = () => {
                   href="https://harapeco-morimushi.com"
                   target="_blank"
                   rel="noreferrer"
+                  className="after:absolute after:inset-0"
                 >
                   教室サロン ハラペコモリムシ
                 </a>
@@ -285,6 +296,7 @@ const Works: NextPage = () => {
                   href="https://www.mimibridal-osaka.com"
                   target="_blank"
                   rel="noreferrer"
+                  className="after:absolute after:inset-0"
                 >
                   結婚相談所 ミミブライダル
                 </a>
@@ -316,6 +328,7 @@ const Works: NextPage = () => {
                   href="https://kanami-office.com"
                   target="_blank"
                   rel="noreferrer"
+                  className="after:absolute after:inset-0"
                 >
                   かなみ社会保険労務士事務所
                 </a>
