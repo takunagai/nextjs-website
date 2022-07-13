@@ -4,6 +4,37 @@ TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/abo
 
 [» デモ](https://nextjs-website-lemon.vercel.app/)
 
+## Dependency
+
+* typescript
+* React, Next.js
+* PostCSS
+  - postcss-import
+  - tailwindcss/nesting'
+  - Tailwind CSS
+  - autoprefixer
+* Tailwind CSS, Preline (UIコンポーネント集)
+  - @tailwindcss/typography: バニラHTMLにスタイリング
+  - @tailwindcss/forms: 基本フォームスタイル(オーバーライド)
+  - @tailwindcss/aspect-ratio: Safari 15 対応
+  - @tailwindcss/line-clamp: 指定行数以降を非表示
+  - preline/plugin
+* markdown
+  - remark: Markdown の解析
+  - remark-html: Markdown を HTML にコンパイル
+  - gray-matter: フロントマターを解析
+* Framer Motion: アニメーション
+* next-themes: ダークテーマ用
+* データフェッチ
+  - swr
+* ユーティリティ
+  - date-fns: 日付の操作
+  - classnames: クラス名を条件付きで結合
+* コンポーネント
+  - @etchteam/next-pagination: ページネーション
+* 素材
+  - @heroicons/react: アイコンフォント
+
 ## Documentation
 
 * 準備中
