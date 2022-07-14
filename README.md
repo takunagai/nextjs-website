@@ -7,18 +7,20 @@ TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/abo
 ## Dependency
 
 * typescript
+* ESLint, Prettier
+  - prettier-plugin-tailwindcss: クラス名のソート
 * React, Next.js
 * PostCSS
-  - postcss-import
-  - tailwindcss/nesting'
+  - postcss-import: 外部 CSS 読み込み
+  - tailwindcss/nesting: ネストで記述
   - Tailwind CSS
-  - autoprefixer
+  - autoprefixer: ベンダープレフィックス付与
 * Tailwind CSS, Preline (UIコンポーネント集)
   - @tailwindcss/typography: バニラHTMLにスタイリング
   - @tailwindcss/forms: 基本フォームスタイル(オーバーライド)
   - @tailwindcss/aspect-ratio: Safari 15 対応
   - @tailwindcss/line-clamp: 指定行数以降を非表示
-  - preline/plugin
+  - preline/plugin: Tailwind UI ライブラリ
 * markdown
   - remark: Markdown の解析
   - remark-html: Markdown を HTML にコンパイル
