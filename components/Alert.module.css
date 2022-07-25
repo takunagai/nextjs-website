@@ -1,11 +1,11 @@
 .success {
-	background-color: #c6d0c6;
-	border: 1px solid green;
-	color: green;
+  background-color: #c6d0c6;
+  border: 1px solid green;
+  color: green;
 }
 
 .error {
-	background-color: #ecdbdb;
-	border: 1px solid red;
-	color: red;
+  background-color: #ecdbdb;
+  border: 1px solid red;
+  color: red;
 }

@@ -5,6 +5,6 @@ module.exports = {
 // URL のホスト名を images.domains 構成に追加
 module.exports = {
   images: {
-    domains: ['picsum.photos'],
+    domains: ["picsum.photos"],
   },
 }

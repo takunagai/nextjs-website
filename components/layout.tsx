@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import Script from "next/script";
-import { useTheme } from "next-themes";
-import TopmostNotificationBar from "./TopmostNotificationBar";
-import Header from "./Header";
-import BreadCrumbs from "./BreadCrumbs";
-import Footer from "./Footer";
+import React, { useState, useEffect } from "react"
+import Head from "next/head"
+import Link from "next/link"
+import Script from "next/script"
+import { useTheme } from "next-themes"
+import TopmostNotificationBar from "./TopmostNotificationBar"
+import Header from "./Header"
+import BreadCrumbs from "./BreadCrumbs"
+import Footer from "./Footer"
 // import styles from './layout.module.css'
 // import utilStyles from '../styles/utils.module.css'
 
 type Props = {
-  children: React.ReactNode; // React 18 以降で、children を props として受け取るのに必要になった
-  title?: string;
-  description?: string;
-  home?: boolean;
-};
+  children: React.ReactNode // React 18 以降で、children を props として受け取るのに必要になった
+  title?: string
+  description?: string
+  home?: boolean
+}
 
-export const siteTitle = "ナガイ商店.com";
+export const siteTitle = "ナガイ商店.com"
 
 export default function Layout({ children, title, description, home }: Props) {
-  const pageTitle = title || "タイトル未設定";
+  const pageTitle = title || "タイトル未設定"
 
   // Dark mode
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState<boolean>(false);
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState<boolean>(false)
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => setMounted(true), [])
 
-  if (!mounted) return null;
+  if (!mounted) return null
 
   return (
     <>
@@ -99,5 +99,5 @@ export default function Layout({ children, title, description, home }: Props) {
       {/* preline UI */}
       <Script src="/js/hs-ui.bundle.js"></Script>
     </>
-  );
+  )
 }

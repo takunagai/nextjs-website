@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Layout from "../components/layout";
-import { motion } from "framer-motion";
+import Image from "next/image"
+import Layout from "../components/layout"
+import { motion } from "framer-motion"
 // import styles from '../styles/Home.module.css'
 
 const Home = () => {
@@ -188,7 +188,7 @@ const Home = () => {
         </div>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

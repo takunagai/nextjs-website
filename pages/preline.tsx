@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Layout from "../components/layout";
-import type { NextPage } from "next";
-import { motion } from "framer-motion";
+import Image from "next/image"
+import Layout from "../components/layout"
+import type { NextPage } from "next"
+import { motion } from "framer-motion"
 
 const Preline: NextPage = () => {
   return (
@@ -687,7 +687,7 @@ const Preline: NextPage = () => {
         </section>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Preline;
+export default Preline

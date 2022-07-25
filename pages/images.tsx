@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Layout from "../components/layout";
-import type { NextPage } from "next";
-import { motion } from "framer-motion";
+import Image from "next/image"
+import Layout from "../components/layout"
+import type { NextPage } from "next"
+import { motion } from "framer-motion"
 
 const Images: NextPage = () => {
   return (
@@ -39,7 +39,7 @@ const Images: NextPage = () => {
         </div>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Images;
+export default Images

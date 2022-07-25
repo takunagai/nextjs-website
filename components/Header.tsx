@@ -1,15 +1,15 @@
-import SiteLogo from "./SiteLogo";
-import NavbarCollapse2 from "./NavbarCollapse2";
-import Navbar2 from "./Navbar2";
-import ModeSwitcher from "./ModeSwitcher";
+import SiteLogo from "./SiteLogo"
+import NavbarCollapse2 from "./NavbarCollapse2"
+import Navbar2 from "./Navbar2"
+import ModeSwitcher from "./ModeSwitcher"
 
 type Props = {
-  home?: boolean;
-  siteTitle: string;
-  pageTitle: string;
-  theme?: string;
-  setTheme: (theme: string) => void;
-};
+  home?: boolean
+  siteTitle: string
+  pageTitle: string
+  theme?: string
+  setTheme: (theme: string) => void
+}
 
 const Header = ({ home, siteTitle, theme, setTheme }: Props) => {
   return (
@@ -28,7 +28,7 @@ const Header = ({ home, siteTitle, theme, setTheme }: Props) => {
         <ModeSwitcher theme={theme} setTheme={setTheme} />
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

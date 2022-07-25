@@ -1,18 +1,18 @@
-import useSWR from "swr";
-import Layout from "../components/layout";
-import type { NextPage } from "next";
-import { motion } from "framer-motion";
+import useSWR from "swr"
+import Layout from "../components/layout"
+import type { NextPage } from "next"
+import { motion } from "framer-motion"
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 const Home: NextPage = () => {
   const { data, error } = useSWR(
     "https://api.github.com/repos/vercel/swr",
-    fetcher
-  );
+    fetcher,
+  )
 
-  if (error) return <div>An error has occurred.</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <div>An error has occurred.</div>
+  if (!data) return <div>Loading...</div>
 
   return (
     <Layout
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         </section>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

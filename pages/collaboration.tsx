@@ -1,6 +1,6 @@
-import Layout from "../components/layout";
-import type { NextPage } from "next";
-import { motion } from "framer-motion";
+import Layout from "../components/layout"
+import type { NextPage } from "next"
+import { motion } from "framer-motion"
 
 const Collaboration: NextPage = () => {
   return (
@@ -29,7 +29,7 @@ const Collaboration: NextPage = () => {
         </section>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Collaboration;
+export default Collaboration

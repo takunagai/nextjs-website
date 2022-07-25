@@ -1,14 +1,14 @@
-import Image from "next/image";
-import Layout from "../components/layout";
-import Button from "../components/Button";
-import Alert from "../components/Alert";
-import { motion } from "framer-motion";
+import Image from "next/image"
+import Layout from "../components/layout"
+import Button from "../components/Button"
+import Alert from "../components/Alert"
+import { motion } from "framer-motion"
 import {
   BeakerIcon,
   ChevronDoubleRightIcon,
   ExclamationCircleIcon,
-} from "@heroicons/react/solid";
-import type { NextPage } from "next";
+} from "@heroicons/react/solid"
+import type { NextPage } from "next"
 
 const CSS: NextPage = () => {
   return (
@@ -338,7 +338,7 @@ const CSS: NextPage = () => {
         </div>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default CSS;
+export default CSS

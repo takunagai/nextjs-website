@@ -1,6 +1,6 @@
-import Layout from "../components/layout";
-import type { NextPage } from "next";
-import { motion } from "framer-motion";
+import Layout from "../components/layout"
+import type { NextPage } from "next"
+import { motion } from "framer-motion"
 
 const WordPress: NextPage = () => {
   return (
@@ -29,7 +29,7 @@ const WordPress: NextPage = () => {
         </section>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default WordPress;
+export default WordPress

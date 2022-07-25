@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 const Navbar2 = () => {
   return (
@@ -344,7 +344,7 @@ const Navbar2 = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Navbar2;
+export default Navbar2

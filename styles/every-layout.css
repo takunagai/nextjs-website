@@ -9,7 +9,9 @@
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
   --s-3: calc(var(--s-2) / var(--ratio)); /* 1rem --ratio --ratio --ratio */
-  --s-2: calc(var(--s-1) / var(--ratio)); /* 1rem ÷ --ratio ÷ --ratio ※ = pow(var(--ratio), 2) */
+  --s-2: calc(
+    var(--s-1) / var(--ratio)
+  ); /* 1rem ÷ --ratio ÷ --ratio ※ = pow(var(--ratio), 2) */
   --s-1: calc(var(--s0) / var(--ratio)); /* 1rem ÷ --ratio */
   --s0: 1rem;
   --s1: calc(var(--s0) * var(--ratio)); /* 1rem * --ratio */
@@ -27,7 +29,6 @@
   --border-thick: 3px;
 }
 
-
 /* Modular scale Test Sample */
 .test {
   height: var(--s0);
@@ -36,18 +37,39 @@
 .scale-15 {
   --ratio: 1.5; /* TODO: 機能しない。この下に計算置くと機能するが。。 */
 }
-.test.--s-5 { width: var(--s-5); } /* 1.45px */
-.test.--s-4 { width: var(--s-4); } /* 2.3333px */
-.test.--s-3 { width: var(--s-3); } /* 3.783333px */
-.test.--s-2 { width: var(--s-2); } /* 6.11667px */
-.test.--s-1 { width: var(--s-1); } /* 9.88333px */
-.test.--s0 { width: var(--s0); }   /* 16px */
-.test.--s1 { width: var(--s1); }   /* 25.8833px */
-.test.--s2 { width: var(--s2); }   /* 41.8833px */
-.test.--s3 { width: var(--s3); }   /* 67.7833px */
-.test.--s4 { width: var(--s4); }   /* 109.667px */
-.test.--s5 { width: var(--s5); }   /* 177.45px */
-
+.test.--s-5 {
+  width: var(--s-5);
+} /* 1.45px */
+.test.--s-4 {
+  width: var(--s-4);
+} /* 2.3333px */
+.test.--s-3 {
+  width: var(--s-3);
+} /* 3.783333px */
+.test.--s-2 {
+  width: var(--s-2);
+} /* 6.11667px */
+.test.--s-1 {
+  width: var(--s-1);
+} /* 9.88333px */
+.test.--s0 {
+  width: var(--s0);
+} /* 16px */
+.test.--s1 {
+  width: var(--s1);
+} /* 25.8833px */
+.test.--s2 {
+  width: var(--s2);
+} /* 41.8833px */
+.test.--s3 {
+  width: var(--s3);
+} /* 67.7833px */
+.test.--s4 {
+  width: var(--s4);
+} /* 109.667px */
+.test.--s5 {
+  width: var(--s5);
+} /* 177.45px */
 
 /**
  * helpers.css に
@@ -79,7 +101,7 @@
 }
 
 /* The Stack */
-[class^='stack'] > * {
+[class^="stack"] > * {
   /* horizontal-tb writing モードでの上下マージン */
   margin-block: 0;
 }
@@ -94,7 +116,8 @@
 }
 /* 例外 (カスタムプロパティでオーバーライド) 上下に例外の間隔を適用 */
 .stack-exception,
-.stack-exception + * { /* ← 上のスペースだけを増やしたい場合は削除 */
+.stack-exception + * {
+  /* ← 上のスペースだけを増やしたい場合は削除 */
   --space: 3rem;
 }
 
@@ -167,7 +190,7 @@
   /*padding-inline-start: 2ch;*/
   /*padding-inline-end: 2ch;*/
   /* 最大値より幅の狭い子要素を中央寄せにするなら以下を有効に */
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -214,8 +237,8 @@
   flex-basis: calc((30rem - 100%) * 999);
 }
 /* 合計5つ以上の要素がある場合、垂直レイアウトに */
-.switcher > :nth-last-child(n+ 5),
-.switcher > :nth-last-child(n+ 5) ~ * {
+.switcher > :nth-last-child(n + 5),
+.switcher > :nth-last-child(n + 5) ~ * {
   flex-basis: 100%;
 }
 
@@ -249,7 +272,8 @@
   display: grid;
   grid-gap: 1rem;
 }
-@supports (width: min(250px, 100%)) { /* 最小幅 250px */
+@supports (width: min(250px, 100%)) {
+  /* 最小幅 250px */
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   }
@@ -271,7 +295,8 @@
 }
 [class^="frame"] > img,/* ★★きかない？ */
 [class^="frame"] > video {
-  inline-size: 100%;outline:1px dotted red;
+  inline-size: 100%;
+  outline: 1px dotted red;
   block-size: 100%;
   object-fit: cover;
 }

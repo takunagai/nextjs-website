@@ -1,7 +1,7 @@
 type Props = {
-  theme?: string;
-  setTheme: (theme: string) => void;
-};
+  theme?: string
+  setTheme: (theme: string) => void
+}
 
 const ModeSwitcher = ({ theme, setTheme }: Props) => {
   return (
@@ -63,7 +63,7 @@ const ModeSwitcher = ({ theme, setTheme }: Props) => {
         </a>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ModeSwitcher;
+export default ModeSwitcher

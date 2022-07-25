@@ -1,6 +1,6 @@
-import Layout from "../components/layout";
-import type { NextPage } from "next";
-import { motion } from "framer-motion";
+import Layout from "../components/layout"
+import type { NextPage } from "next"
+import { motion } from "framer-motion"
 
 const WorkHistory: NextPage = () => {
   return (
@@ -71,7 +71,7 @@ const WorkHistory: NextPage = () => {
         </div>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default WorkHistory;
+export default WorkHistory

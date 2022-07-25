@@ -17,11 +17,11 @@ import Document, {
   Html,
   Main,
   NextScript,
-} from "next/document";
+} from "next/document"
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    return await Document.getInitialProps(ctx);
+    return await Document.getInitialProps(ctx)
   }
 
   render() {
@@ -33,8 +33,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument

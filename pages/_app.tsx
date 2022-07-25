@@ -5,10 +5,10 @@
  * _app.js はサーバーサイドでレンダリング（getInitialPropsの実行を含む）され、
  *     ライフサイクルのイベントはクライアントサイドでも実行される
  */
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import { ThemeProvider } from "next-themes"; // for Dark mode
-import { AnimatePresence } from "framer-motion";
+import "../styles/globals.css"
+import type { AppProps } from "next/app"
+import { ThemeProvider } from "next-themes" // for Dark mode
+import { AnimatePresence } from "framer-motion"
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         <Component key={router.asPath} {...pageProps} />
       </ThemeProvider>
     </AnimatePresence>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

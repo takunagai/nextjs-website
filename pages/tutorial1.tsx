@@ -1,24 +1,24 @@
-import { useState } from "react";
-import Layout from "../components/layout";
-import { motion } from "framer-motion";
+import { useState } from "react"
+import Layout from "../components/layout"
+import { motion } from "framer-motion"
 
-import type { FC } from "react";
-import type { NextPage } from "next";
+import type { FC } from "react"
+import type { NextPage } from "next"
 
-type Props = { title?: string };
+type Props = { title?: string }
 
-const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"];
+const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"]
 
 // コンポーネントの使用のサンプルとして
 const Header: FC<Props> = ({ title }) => {
-  return <h1>{title ? title : "Default title"}</h1>;
-};
+  return <h1>{title ? title : "Default title"}</h1>
+}
 
 const Tutorial1: NextPage = () => {
-  const [likes, setLikes] = useState(0);
+  const [likes, setLikes] = useState(0)
 
   function handleClick() {
-    setLikes(likes + 1);
+    setLikes(likes + 1)
   }
 
   return (
@@ -58,7 +58,7 @@ const Tutorial1: NextPage = () => {
         </div>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Tutorial1;
+export default Tutorial1

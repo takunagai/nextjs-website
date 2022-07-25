@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Layout from "../components/layout";
-import type { NextPage } from "next";
-import { motion } from "framer-motion";
+import Image from "next/image"
+import Layout from "../components/layout"
+import type { NextPage } from "next"
+import { motion } from "framer-motion"
 
 const Works: NextPage = () => {
   return (
@@ -351,7 +351,7 @@ const Works: NextPage = () => {
         </div>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Works;
+export default Works

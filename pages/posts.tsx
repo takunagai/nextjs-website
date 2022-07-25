@@ -1,28 +1,28 @@
-import Link from "next/link";
-import Pagination from "@etchteam/next-pagination";
-import styles from "../styles/Pagination.module.css";
-import Layout from "../components/layout";
-import Date from "../components/date";
-import { getSortedPostsData } from "../lib/posts";
-import { motion } from "framer-motion";
+import Link from "next/link"
+import Pagination from "@etchteam/next-pagination"
+import styles from "../styles/Pagination.module.css"
+import Layout from "../components/layout"
+import Date from "../components/date"
+import { getSortedPostsData } from "../lib/posts"
+import { motion } from "framer-motion"
 
-import type { NextPage } from "next";
+import type { NextPage } from "next"
 
 type Props = {
   allPostsData: {
-    id: string;
-    date: string;
-    title: string;
-  }[];
-};
+    id: string
+    date: string
+    title: string
+  }[]
+}
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData()
   return {
     props: {
       allPostsData,
     },
-  };
+  }
 }
 
 const Posts: NextPage<Props> = ({ allPostsData }: Props) => {
@@ -63,7 +63,7 @@ const Posts: NextPage<Props> = ({ allPostsData }: Props) => {
         </div>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Posts;
+export default Posts

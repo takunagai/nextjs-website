@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FlagIcon } from "@heroicons/react/outline";
+import Link from "next/link"
+import { FlagIcon } from "@heroicons/react/outline"
 
 const TopmostNotificationBar = () => {
   return (
@@ -14,7 +14,7 @@ const TopmostNotificationBar = () => {
         </span>
       </div>
     </aside>
-  );
-};
+  )
+}
 
-export default TopmostNotificationBar;
+export default TopmostNotificationBar

@@ -131,8 +131,8 @@ const Footer = () => {
       </div>
       <FooterBar />
     </footer>
-  );
-};
+  )
+}
 
 const FooterBar = () => {
   return (
@@ -223,7 +223,7 @@ const FooterBar = () => {
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

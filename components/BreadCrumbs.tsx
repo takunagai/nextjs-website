@@ -1,9 +1,9 @@
 // ★★TODO: ブログでページタイトルが取得できていないのを修正
-import Link from "next/link";
+import Link from "next/link"
 
 type Props = {
-  pageTitle: string;
-};
+  pageTitle: string
+}
 
 const BreadCrumbs = ({ pageTitle }: Props) => {
   return (
@@ -56,7 +56,7 @@ const BreadCrumbs = ({ pageTitle }: Props) => {
         {pageTitle}
       </li>
     </ol>
-  );
-};
+  )
+}
 
-export default BreadCrumbs;
+export default BreadCrumbs

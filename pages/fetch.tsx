@@ -1,27 +1,27 @@
-import Layout from "../components/layout";
+import Layout from "../components/layout"
 import {
   GetStaticProps,
   GetStaticPropsContext,
   InferGetStaticPropsType,
   NextPage,
-} from "next"; // TypeScript の型データ
-import { motion } from "framer-motion";
+} from "next" // TypeScript の型データ
+import { motion } from "framer-motion"
 
-type Props = InferGetStaticPropsType<typeof getStaticProps>;
+type Props = InferGetStaticPropsType<typeof getStaticProps>
 type Result = {
-  id: number;
-  name: string;
-};
+  id: number
+  name: string
+}
 
 // getStaticProps は、実装者が大きな変更をしない限り Promise を返却する = 条件は必ず真に流れる
 // ★★TODO: エラー消す (参考：https://zenn.dev/eitches/articles/2021-0424-getstaticprops-type)
 // export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext<{ slug: string }>) => {
 export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
+  context: GetStaticPropsContext,
 ) => {
-  const names = ["takunagai", "GeoSot"];
-  let jobs = [];
-  let div: HTMLParagraphElement;
+  const names = ["takunagai", "GeoSot"]
+  let jobs = []
+  let div: HTMLParagraphElement
 
   // const post = getPost(context.params.slug)
 
@@ -29,25 +29,25 @@ export const getStaticProps: GetStaticProps = async (
     let job = fetch(`https://api.github.com/users/${name}`).then(
       (successResponse) => {
         if (successResponse.status != 200) {
-          return null;
+          return null
         } else {
-          return successResponse.json();
+          return successResponse.json()
         }
       },
       (failResponse) => {
-        return null;
-      }
-    );
-    jobs.push(job); // Array of Users json Data
+        return null
+      },
+    )
+    jobs.push(job) // Array of Users json Data
   }
-  let results = await Promise.all(jobs);
+  let results = await Promise.all(jobs)
 
   return {
     props: {
       results,
     },
-  };
-};
+  }
+}
 
 const Fetch: NextPage<Props> = ({ results }) => {
   return (
@@ -75,7 +75,7 @@ const Fetch: NextPage<Props> = ({ results }) => {
         </section>
       </motion.div>
     </Layout>
-  );
-};
+  )
+}
 
-export default Fetch;
+export default Fetch

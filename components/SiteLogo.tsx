@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from "next/link"
 
 type Props = {
-  home?: boolean;
-  siteTitle: string;
-};
+  home?: boolean
+  siteTitle: string
+}
 
 const SiteLogo = ({ home, siteTitle }: Props) => {
   return (
@@ -20,7 +20,7 @@ const SiteLogo = ({ home, siteTitle }: Props) => {
         </p>
       )}
     </>
-  );
-};
+  )
+}
 
-export default SiteLogo;
+export default SiteLogo
