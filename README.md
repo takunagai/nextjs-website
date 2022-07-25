@@ -9,6 +9,8 @@ TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/abo
 * typescript
 * ESLint, Prettier
   - prettier-plugin-tailwindcss: クラス名のソート
+  - eslint-plugin-storybook ★★未
+* Storybook ★★未
 * React, Next.js
 * PostCSS
   - postcss-import: 外部 CSS 読み込み
