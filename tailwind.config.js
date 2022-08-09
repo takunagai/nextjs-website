@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     extend: {
+      // extend は、デフォルト値を保持しつつ、新しい値を追加
       colors: {
         // Theme 関数の使用：theme('colors.primary')
         transparent: "transparent",
@@ -36,11 +37,7 @@ module.exports = {
         accent: "#187994",
         "accent-dark": "#0F3B47",
         base: "#F0F0EC",
-        // cyan: '#79FFE1', // 既存色の上書き設定
-      },
-      container: {
-        // container をデフォルトで中央揃え
-        center: true,
+        // cyan: '#79FFE1', // 既存色の上書き設定も可能
       },
       spacing: {
         28: "7rem",
