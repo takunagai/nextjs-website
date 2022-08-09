@@ -39,6 +39,45 @@ TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/abo
 * 素材
   - @heroicons/react: アイコンフォント
 
+## 設定ファイル
+
+* package.json
+    - 基本情報：プロジェクト名、概要、バージョン、プライベートか
+    - "dependencies": 公開用パッケージ
+    - "devDependencies": 開発用パッケージ
+    - "scripts": node ショートカットコマンド登録
+    - "browserslist": 対応ブラウザ指定
+* tsconfig.json
+    - "target": "ES2015"
+    - "strict": true 他、コードで参照
+* .eslintrc.json
+    - 未編集。他に合わせて js にした方が良い？
+* prettier.config.js (コードフォーマッター)
+    - カンマあり、セミコロンなし、タブ幅
+    - 追加：Tailwind 用プラグイン読み込み
+* next.config.js
+    - 追加：URL のホスト名を images.domains 構成に追加
+* postcss.config.js (プラグイン)
+    - postcss-import: @import が使えるように
+    - tailwindcss/nesting: 入れ子で書けるように
+    - tailwindcss: Tailwind CSS をプラグインとして使う
+    - autoprefixer: ベンダープレフィックス自動付加。対応ブラウザは、package.json の"browserslist" に指定
+* tailwind.config.js
+    - darkMode: デフォルトの 'media' のままの実装なので不要
+    - theme.container: デフォルトで center に、レスポンシブ余白
+    - extend でデフォルト値を保持しつつ、新しい値を追加
+      + theme.extend: テーマカラー "primary", "secondary"等を追加。グラデーションも作れる (暫定)
+      + 既存プロパティの再設定でオーバーライド
+    - typography 公式プラグイン設定
+      + Markdown や CMS からフェッチした HTML をよしなにスタイリング。その設定
+    - aspectRatio 公式プラグイン設定
+      + Safari 14 でも aspectRatio に対応してくれる(Safari 14 不要なら、Tailwind デフォルトでサポート)
+    - forms 公式プラグイン(読み込みのみ)
+      + form 要素をユーティリティで簡単にオーバーライドできるようにするフォームスタイルの基本的なリセットを提供
+    - preline (Tailwind 用 UI ライブラリ集)
+    - mode: "jit" で Just in Time モードに
+    - content で、コンパイルするファイルのパス(パターン)を指定
+
 ## Documentation
 
 * 準備中
