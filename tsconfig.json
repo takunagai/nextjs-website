@@ -18,7 +18,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve", // jsxのコンパイルをtscではなくBabelなど他に任せたい場合に使用, "react"
-    "types": ["react/next", "react-dom/next"], // ★★Temp 2022-04-20 v18用
+    // "types": ["react/next", "react-dom/next"], // ★★Temp 2022-04-20 v18用 もう不要・
     "sourceMap": true // Add
   },
   "include": [
