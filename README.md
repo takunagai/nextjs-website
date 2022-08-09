@@ -72,6 +72,7 @@ TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/abo
       + Markdown や CMS からフェッチした HTML をよしなにスタイリング。その設定
     - aspectRatio 公式プラグイン設定
       + Safari 14 でも aspectRatio に対応してくれる(Safari 14 不要なら、Tailwind デフォルトでサポート)
+      + @tailwindcss/aspect-ratio との競合を避けるため無効化するコードが必要
     - forms 公式プラグイン(読み込みのみ)
       + form 要素をユーティリティで簡単にオーバーライドできるようにするフォームスタイルの基本的なリセットを提供
     - preline (Tailwind 用 UI ライブラリ集)
