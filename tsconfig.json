@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2015", // es5
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true, // false
@@ -21,12 +17,6 @@
     // "types": ["react/next", "react-dom/next"], // ★★Temp 2022-04-20 v18用 もう不要・
     "sourceMap": true // Add
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules", ".next"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 }
