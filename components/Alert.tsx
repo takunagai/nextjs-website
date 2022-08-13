@@ -16,8 +16,9 @@ type Props = {
 export default function Alert({ children, type }: Props) {
   return (
     <div
-      className={cn({
-        [styles.success]: type === "success",
+      className={cn(styles["foo-bar"], {
+        // マルチクラスの表現参考用
+        [styles.success]: type === "success", // true なら styles.success を表示、false なら何も表示しない
         [styles.error]: type === "error",
       })}
     >

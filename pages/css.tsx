@@ -88,8 +88,13 @@ const CSS: NextPage = () => {
           </section>
 
           <section>
-            <h2>classnames ライブラリ</h2>
+            <h2>CSS Modules x classnames ライブラリ</h2>
             <ul>
+              <li>
+                CSS Modules
+                でマルチクラス指定やハイフン付きクラス名の使用ができるようにしてくれる
+              </li>
+              <li>条件分岐でスタイルを当てることができる</li>
               <li>
                 <a
                   href="https://github.com/JedWatson/classnames"
@@ -109,15 +114,25 @@ const CSS: NextPage = () => {
                   Classnames
                 </a>
               </li>
-              <Alert type="success">
-                classnames
-                ライブラリで条件でクラスを出し分けしたアラートコンポーネント
-              </Alert>
-              <Alert type="error">
-                classnames
-                ライブラリで条件でクラスを出し分けしたアラートコンポーネント
-              </Alert>
+              <li>
+                <a
+                  href="https://pitang1965.gatsbyjs.io/2022/08/12/how-to-specify-multiple-classes-in-css-modules/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  CSS Modulesで複数クラスを指定する方法 -
+                  定年後にWeb開発者目指す
+                </a>
+              </li>
             </ul>
+            <Alert type="success">
+              classnames
+              ライブラリで条件でクラスを出し分けしたアラートコンポーネント
+            </Alert>
+            <Alert type="error">
+              classnames
+              ライブラリで条件でクラスを出し分けしたアラートコンポーネント
+            </Alert>
           </section>
 
           <hr />
