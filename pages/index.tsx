@@ -1,9 +1,10 @@
 import Image from "next/image"
 import Layout from "../components/layout"
 import { motion } from "framer-motion"
+import type { NextPage } from "next"
 // import styles from '../styles/Home.module.css'
 
-const Home = () => {
+const Home: NextPage = () => {
   return (
     <Layout
       home
