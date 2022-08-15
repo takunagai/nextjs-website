@@ -157,11 +157,11 @@ h6 {
 /*  --theme-bg-color: red;*/
 /*}*/
 
-* {
-  max-inline-size: var(
-    --measure
-  ); /* ≒ max-width (方向で変わる)、メジャーは --measure を超えてはならない 2/3 */
-}
+/** {*/
+/*  max-inline-size: var(*/
+/*    --measure*/
+/*  ); !* ≒ max-width (方向で変わる)、メジャーは --measure を超えてはならない 2/3 *!*/
+/*}*/
 
 html,
 body,
