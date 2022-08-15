@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="flex h-[80vh] flex-col items-center justify-center bg-zinc-700 py-10 px-4 text-center sm:px-6 md:h-[60vh] lg:px-8">
+        <div className="alignfull flex h-[80vh] flex-col items-center justify-center bg-zinc-700 py-10 px-4 text-center sm:px-6 md:h-[60vh] lg:h-[70vh] lg:px-8">
           <h1 className="text-2xl font-bold text-white sm:text-4xl">
             Cover Page
           </h1>
@@ -158,33 +158,35 @@ const Home: NextPage = () => {
             </p>
           </section>
 
-          <section className="bg-pink-50/50 bg-dots bg-fixed py-10 text-black bg-blend-multiply">
-            <h2>メモ</h2>
-            <ul className="list-disc">
-              <li>PostCSS</li>
-              <li>
-                TailwindCSS
-                <ul className="ml-5 list-square">
-                  <li>
-                    jit ([] で個別の値で設定できる、calc()
-                    も使える、疑似要素使える)
-                  </li>
-                  <li>preline (UI ライブラリ)</li>
-                  <li>heroicons (アイコンフォント)</li>
-                  <li>ダークモード</li>
-                  <li>テーマカラー、そのグラデーション</li>
-                </ul>
-              </li>
-              <li>autoprefixer, import, nesting</li>
-              <li>Every Layout</li>
-              <li>
-                Markdown で投稿 →
-                HTML化して表示(remark)、フロントマター(gray-matter)
-              </li>
-              <li>フェッチ</li>
-              <li>fetch メソッド</li>
-              <li>swr</li>
-            </ul>
+          <section className="alignfull bg-pink-50/50 bg-dots bg-fixed py-10 text-black bg-blend-multiply">
+            <div className="container">
+              <h2>メモ</h2>
+              <ul className="list-disc">
+                <li>PostCSS</li>
+                <li>
+                  TailwindCSS
+                  <ul className="ml-5 list-square">
+                    <li>
+                      jit ([] で個別の値で設定できる、calc()
+                      も使える、疑似要素使える)
+                    </li>
+                    <li>preline (UI ライブラリ)</li>
+                    <li>heroicons (アイコンフォント)</li>
+                    <li>ダークモード</li>
+                    <li>テーマカラー、そのグラデーション</li>
+                  </ul>
+                </li>
+                <li>autoprefixer, import, nesting</li>
+                <li>Every Layout</li>
+                <li>
+                  Markdown で投稿 →
+                  HTML化して表示(remark)、フロントマター(gray-matter)
+                </li>
+                <li>フェッチ</li>
+                <li>fetch メソッド</li>
+                <li>swr</li>
+              </ul>
+            </div>
           </section>
         </div>
       </motion.div>

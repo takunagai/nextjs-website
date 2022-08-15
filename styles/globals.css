@@ -210,8 +210,8 @@ h6 {
 }
 .alignfull {
   --measure: 100vw;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
 }
 
 .lead {
