@@ -177,21 +177,21 @@ pre {
   max-inline-size: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-figcaption,
-table,
-form {
-  /* table, form は付け加えた */
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-}
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6,*/
+/*p,*/
+/*ul,*/
+/*figcaption,*/
+/*table,*/
+/*form {*/
+/*  !* table, form は付け加えた *!*/
+/*  margin-inline-start: auto;*/
+/*  margin-inline-end: auto;*/
+/*}*/
 
 h1,
 h2,

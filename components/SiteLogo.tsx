@@ -9,11 +9,17 @@ const SiteLogo = ({ home, siteTitle }: Props) => {
   return (
     <>
       {home ? (
-        <h1 className="flex-none text-xl font-bold" aria-label="Brand">
+        <h1
+          className="flex-none text-xl font-bold text-zinc-800 dark:text-white"
+          aria-label="Brand"
+        >
           {siteTitle}
         </h1>
       ) : (
-        <p className="flex-none text-xl font-bold" aria-label="Brand">
+        <p
+          className="flex-none text-xl font-bold text-zinc-800 dark:text-white"
+          aria-label="Brand"
+        >
           <Link href="/">
             <a>{siteTitle}</a>
           </Link>

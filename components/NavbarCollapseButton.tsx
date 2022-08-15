@@ -1,10 +1,10 @@
-const NavbarCollapse = () => {
+const NavbarCollapseButton = () => {
   return (
     <button
       type="button"
-      className="hs-collapse-toggle inline-flex items-center justify-center gap-2 border border-gray-700 p-2 align-middle text-sm text-gray-300 shadow-sm transition-all hover:border-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-slate-900"
-      data-hs-collapse="#navbar-collapse-with-animation"
-      aria-controls="navbar-collapse-with-animation"
+      className="hs-collapse-toggle inline-flex items-center justify-center gap-2 rounded-md border bg-white p-2 align-middle text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white dark:focus:ring-offset-gray-800"
+      data-hs-collapse="#navbar-collapse"
+      aria-controls="navbar-collapse"
       aria-label="Toggle navigation"
     >
       <svg
@@ -32,4 +32,4 @@ const NavbarCollapse = () => {
   )
 }
 
-export default NavbarCollapse
+export default NavbarCollapseButton

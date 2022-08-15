@@ -3,9 +3,9 @@ import { FlagIcon } from "@heroicons/react/outline"
 
 const TopmostNotificationBar = () => {
   return (
-    <aside className="bg-gradient-to-r from-purple-500 to-pink-500 py-3">
+    <aside className="bg-gradient-to-r from-purple-500 to-pink-500 py-2 text-white">
       <div className="flex flex-col justify-center text-center md:flex-row">
-        <FlagIcon className="mx-auto inline h-7 w-7 text-white md:mx-0" />
+        <FlagIcon className="mx-auto inline h-7 w-7 md:mx-0" />
         <p className="mx-3 inline-block font-bold">
           目立たせたいお知らせが入ります！
         </p>
