@@ -23,22 +23,22 @@ const Footer = () => {
             <h2 className="title-font mb-3 text-sm tracking-widest">About</h2>
             <nav className="mb-10 list-none">
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   事業所概要
                 </a>
               </li>
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   Second Link
                 </a>
               </li>
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   Third Link
                 </a>
               </li>
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   Fourth Link
                 </a>
               </li>
@@ -50,22 +50,22 @@ const Footer = () => {
             </h2>
             <nav className="mb-10 list-none">
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   First Link
                 </a>
               </li>
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   Second Link
                 </a>
               </li>
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   Third Link
                 </a>
               </li>
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   Fourth Link
                 </a>
               </li>
@@ -77,22 +77,22 @@ const Footer = () => {
             </h2>
             <nav className="mb-10 list-none">
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   First Link
                 </a>
               </li>
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   Second Link
                 </a>
               </li>
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   Third Link
                 </a>
               </li>
               <li>
-                <a className="text-gray hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">
+                <a className="text-zinc-600 hover:text-zinc-400 dark:text-gray-400 dark:hover:text-gray-200">
                   Fourth Link
                 </a>
               </li>

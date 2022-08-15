@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       exitBeforeEnter
       onExitComplete={() => window.scrollTo(0, 0)}
     >
-      <ThemeProvider attribute="class" defaultTheme="light">
+      <ThemeProvider attribute="class" defaultTheme="system">
         <Component key={router.asPath} {...pageProps} />
       </ThemeProvider>
     </AnimatePresence>
