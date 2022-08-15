@@ -17,32 +17,44 @@ const About: NextPage = () => {
         </header>
 
         {/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/}
-        <div className="alignfull flex h-[80vh] flex-col items-center justify-center bg-zinc-700 py-10 px-4 text-center sm:px-6 md:h-[60vh] lg:h-[70vh] lg:px-8">
-          <h1 className="text-2xl font-bold text-white sm:text-4xl">
-            Cover Page
-          </h1>
-          <p className="mt-3 text-lg text-gray-300">
-            Cover is a one-page template for building simple and beautiful home
-            pages using Tailwind CSS.
-          </p>
+        <h1 className="site-title mt-8 text-center text-xs font-normal">
+          <Image
+            src="/images/souffle/logo.png"
+            width={140}
+            height={47}
+            alt="Knott's Berry"
+            className="logo site-branding"
+          />
+          <br />
+          スフレ専門店 ナッツベリー
+        </h1>
+
+        <div className="hero-image alignfull relative mt-8 bg-cover bg-center">
+          <Image
+            src="/images/souffle/main.png"
+            width={1200}
+            height={588}
+            alt="スフレ"
+          />
         </div>
-        <p className="home-catch aligncenter">
+
+        <p className="home-catch mt-12 text-center">
           <Image
             src="/images/souffle/top_catch.png"
-            width={500}
-            height={375}
+            width={280}
+            height={94}
             alt="あつあつ、ふわふわ。まるで夢を食べているような特別なスフレケーキ"
           />
         </p>
         <p>↑ のメッセージを修正：すべてのお客様に感動を</p>
-        <p className="lead">
+        <p className="lead mx-auto max-w-xl">
           オーダーを聞いてからつくる、熱々のとろける新感覚デザート。憧れの人と一緒にナッツベリーのスフレを食べれば、映画「麗しのサブリナ」のオードリー・ヘップバーンのように素敵な恋に落ちるかも…
         </p>
 
-        <section className="feature container py-16">
-          <div className="fadein-images grid gap-8">
+        <section className="feature py-16">
+          <div className="fadein-images grid flex-row gap-12 sm:grid-cols-3 sm:flex-col sm:gap-8 lg:gap-12">
             <div className="grid__item">
-              <div className="media--mobile-2col">
+              <div className="media--mobile-2col text-center">
                 <Image
                   src="/images/souffle/feature_dough.png"
                   width={403}
@@ -51,11 +63,12 @@ const About: NextPage = () => {
                   className="media__img fuwafuwa-a"
                 />
                 <div className="media__body mt-4">
-                  <p className="feature__sholder text-center text-sm">
+                  <p className="feature__sholder text-center text-sm text-secondary">
                     感動の理由 １
                   </p>
-                  <p className="feature__title mt-1 text-center text-2xl">
-                    <b>生地</b>へのこだわり
+                  <p className="feature__title mt-1 text-center text-lg font-bold tracking-widest">
+                    <b className="font-serif text-2xl text-primary">生地</b>
+                    へのこだわり
                   </p>
                   <p className="feature__body tracking-wide">
                     温度管理をしながら、やさしく生地を混ぜ続ける。職人技で作る生地は絶品です。
@@ -64,7 +77,7 @@ const About: NextPage = () => {
               </div>
             </div>
             <div className="grid__item">
-              <div className="media--mobile-2col media--mobile--inverse">
+              <div className="media--mobile-2col media--mobile--inverse text-center">
                 <Image
                   src="/images/souffle/feature_bake.png"
                   width={403}
@@ -73,11 +86,12 @@ const About: NextPage = () => {
                   className="media__img fuwafuwa-a"
                 />
                 <div className="media__body mt-4">
-                  <p className="feature__sholder text-center text-sm">
+                  <p className="feature__sholder text-center text-sm text-secondary">
                     感動の理由 2
                   </p>
-                  <p className="feature__title mt-1 text-center text-2xl">
-                    <b>焼き</b>へのこだわり
+                  <p className="feature__title mt-1 text-center text-lg font-bold tracking-widest">
+                    <b className="font-serif text-2xl text-primary">焼き</b>
+                    へのこだわり
                   </p>
                   <p className="feature__body tracking-wide">
                     美味しいスフレのために、ナッツベリーが独自開発した「特別なオーブン」でじっくりと焼き上げます。
@@ -86,7 +100,7 @@ const About: NextPage = () => {
               </div>
             </div>
             <div className="grid__item">
-              <div className="media--mobile-2col">
+              <div className="media--mobile-2col text-center">
                 <Image
                   src="/images/souffle/feature_serve.png"
                   width={403}
@@ -95,11 +109,12 @@ const About: NextPage = () => {
                   className="media__img fuwafuwa-a"
                 />
                 <div className="media__body mt-4">
-                  <p className="feature__sholder text-center text-sm">
+                  <p className="feature__sholder text-center text-sm text-secondary">
                     感動の理由 3
                   </p>
-                  <p className="feature__title mt-1 text-center text-2xl">
-                    食べごろ<b>３分以内</b>
+                  <p className="feature__title mt-1 text-center text-lg font-bold tracking-widest">
+                    食べごろ
+                    <b className="font-serif text-2xl text-primary">３分以内</b>
                   </p>
                   <p className="feature__body tracking-wide">
                     できたて熱々が食べごろ。冷めると萎んでしまうから、ナッツベリーの店舗でしか食べることができません。
@@ -110,9 +125,9 @@ const About: NextPage = () => {
           </div>
         </section>
 
-        <section className="menu alignfull bg-dots py-16">
+        <section className="menu alignfull bg-craft py-16">
           <div className="container">
-            <div className="aligncenter">
+            <div className="text-center">
               <h2 className="text-center text-xs font-normal tracking-wide">
                 <Image
                   src="/images/souffle/header_menu.png"
@@ -130,10 +145,13 @@ const About: NextPage = () => {
               <p className="mt-0 text-sm">
                 (混雑時にはさらにお時間がかかる場合があります)
               </p>
-              <p>アレルギー表示：卵、小麦、乳、一部落花生</p>
+
+              <p className="inline-block border border-primary px-3 text-sm text-primary">
+                アレルギー表示：卵、小麦、乳、一部落花生
+              </p>
             </div>
 
-            <div className="fadein-images mt-8 grid gap-8">
+            <div className="fadein-images mt-8 grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <div className="grid__item">
                 <p className="menu__img">
                   <Image
@@ -212,6 +230,7 @@ const About: NextPage = () => {
                 </p>
                 <p className="menu__body mt-2">
                   カシスの甘ずっぱさがたまらない爽やかなスフレ。ちょっと贅沢なプレートで。あたたかいスフレを冷たいアイスクリームと一緒に。
+                  <br />
                   <small>※季節によりトッピング変更</small>
                 </p>
               </div>
@@ -233,6 +252,7 @@ const About: NextPage = () => {
                 </p>
                 <p className="menu__body mt-2">
                   紅茶の香りが広がる大人の味。オーガニックの紅茶を使ったこだわりの一品です。あたたかいスフレを冷たいアイスクリームと一緒に。
+                  <br />
                   <small>※季節によりトッピング変更</small>
                 </p>
               </div>
@@ -318,76 +338,88 @@ const About: NextPage = () => {
               <br />
               テイクアウト・配達
             </h2>
-            <div className="mt-10 grid">
+            <div className="mt-10 md:grid md:grid-cols-2 md:gap-12">
               <div className="text-center">
-                <div className="takeout-images">
+                <div className="takeout-images text-center">
                   <Image
                     src="/images/souffle/takeout_sandwitches.jpg"
-                    width={364}
-                    height={458}
+                    width={728}
+                    height={916}
                     alt="サンドイッチ(テイクアウト)"
                     className="takeout-image"
                   />
-                  <Image
-                    src="/images/souffle/takeout_one-hand-souffle-ice.jpg"
-                    width={364}
-                    height={458}
-                    alt="ワンハンド・スフレ３種"
-                    className="takeout-image"
-                  />
-                  <Image
-                    src="/images/souffle/takeout_counter.jpg"
-                    width={364}
-                    height={458}
-                    alt="テイクアウトのカウンター"
-                    className="takeout-image"
-                  />
+                  {/*<Image*/}
+                  {/*  src="/images/souffle/takeout_one-hand-souffle-ice.jpg"*/}
+                  {/*  width={364}*/}
+                  {/*  height={458}*/}
+                  {/*  alt="ワンハンド・スフレ３種"*/}
+                  {/*  className="takeout-image"*/}
+                  {/*/>*/}
+                  {/*<Image*/}
+                  {/*  src="/images/souffle/takeout_counter.jpg"*/}
+                  {/*  width={364}*/}
+                  {/*  height={458}*/}
+                  {/*  alt="テイクアウトのカウンター"*/}
+                  {/*  className="takeout-image"*/}
+                  {/*/>*/}
                 </div>
               </div>
               <div>
-                <h3 className="text-lg text-primary">
-                  サンドイッチ(テイクアウト)
+                <h3 className="text-xl tracking-widest text-primary">
+                  サンドイッチ
                 </h3>
                 <p className="mt-2">
                   テイクアウトのサンドイッチ３種類。セットはドリンク付き。ランチタイムやお帰りの際に、ぜひご利用くださいませ。
                 </p>
-                <p className="mt-2 text-sm">
+                <p className="mt-0 text-sm">
                   (ショーケースの中に商品が無くてもお作りできますので、お気軽にお声がけ下さい)
                 </p>
-                <ul className="mt-3 list-inside list-square font-bold">
+                <ul className="mt-3 list-inside list-square font-bold marker:text-primary-200">
                   <li>
-                    ミックスサンド <small>単品 680円 / セット 1,000円</small>
+                    ミックスサンド{" "}
+                    <small className="font-normal">
+                      単品 680円 / セット 1,000円
+                    </small>
                   </li>
                   <li>
-                    チキンサンド <small>単品 760円 / セット 1,000円</small>
+                    チキンサンド{" "}
+                    <small className="font-normal">
+                      単品 760円 / セット 1,000円
+                    </small>
                   </li>
                   <li>
-                    オムサンド <small>単品 710円 / セット 1,000円</small>
+                    オムサンド{" "}
+                    <small className="font-normal">
+                      単品 710円 / セット 1,000円
+                    </small>
                   </li>
                 </ul>
 
-                <h3 className="mt-5 text-lg text-primary">
+                <h3 className="mt-8 text-xl tracking-widest text-primary">
                   ワンハンド・スフレ
                 </h3>
-                <p className="mt-2 text-sm">
+                <p className="mt-2">
                   ★★アイスに：片手で持てるスフレコーン。ふわふわのスフレの上にかわいくて美味しいトッピングを載せました。コーンの中にはクリームがたっぷり！
                 </p>
-                <p className="mt-2 text-sm">
+                <p className="mt-0 text-sm">
                   (ショーケースの中に商品が無くてもお作りできますので、お気軽にお声がけ下さい)
                 </p>
-                <ul className="mt-3 list-inside list-square font-bold">
+                <ul className="mt-3 list-inside list-square font-bold marker:text-primary-200">
                   <li>
-                    チョコレートアイススフレ <small>単品 500円</small>
+                    チョコレートアイススフレ{" "}
+                    <small className="font-normal">単品 500円</small>
                   </li>
                   <li>
-                    キャラメルアイススフレ <small>単品 500円</small>
+                    キャラメルアイススフレ{" "}
+                    <small className="font-normal">単品 500円</small>
                   </li>
                   <li>
-                    抹茶アイススフレ <small>単品 500円</small>
+                    抹茶アイススフレ{" "}
+                    <small className="font-normal">単品 500円</small>
                   </li>
                 </ul>
 
-                <div className="mt-5 rounded-lg border p-3">
+                <div className="mt-5 rounded-lg border py-3 px-5">
                   <p>
                     <b className="text-sm">配達料無料！</b>
                   </p>
@@ -402,8 +434,9 @@ const About: NextPage = () => {
             </div>
           </div>
         </section>
+        <hr className="border-dashed border-t-primary-300" />
 
-        <section className="voice py-16">
+        <section className="voice alignfull bg-dots2 py-16">
           <h2 className="text-center text-xs font-normal tracking-wide">
             <Image
               src="/images/souffle/header_voice.png"
@@ -420,7 +453,7 @@ const About: NextPage = () => {
           </p>
 
           <div className="mx-auto max-w-4xl">
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 ナッツベリーのチーズスフレの大ファンです！
               </p>
@@ -429,7 +462,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 口に入れた途端、ふわっふわでとろける食感！
               </p>
@@ -438,7 +471,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 「熱々で甘さ控えめのスフレ」と「冷たくて甘いクリーム」のバランスが最高！
               </p>
@@ -448,7 +481,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 ハニーマスタードが絶妙で美味しい「チキンサンド」！
               </p>
@@ -457,7 +490,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 待つこと15分。焼きたてスフレだからこその美味しさがあります。
               </p>
@@ -466,7 +499,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 ふわふわの食感。口に含むと細かくはぜるように溶けてゆきます
               </p>
@@ -475,7 +508,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 淡く儚い食感なのに、食べ応えもあるスフレ
               </p>
@@ -484,7 +517,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 スフレのふわふわ感。濃厚だがしつこくなく、美味しかったです
               </p>
@@ -493,7 +526,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 甘さ控えめ、軽い食感がいい。男性でも美味しくいただけました
               </p>
@@ -502,7 +535,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 p-3">
+            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 待つこと15分。焼きたてスフレだからこその美味しさがあります。
               </p>
@@ -538,7 +571,7 @@ const About: NextPage = () => {
         </section>
 
         <section className="about py-16">
-          <div className="mt-10 grid">
+          <div className="mt-10 md:grid md:grid-cols-2 md:items-center md:gap-12">
             <div>
               <h2 className="text-center text-xs font-normal tracking-wide">
                 <Image
@@ -551,37 +584,37 @@ const About: NextPage = () => {
                 <br />
                 ナッツベリーについて
               </h2>
-              <p className="mt-4">
+              <p className="mt-4 leading-8 tracking-wider">
                 平成元年4月
                 アステ川西にてカフェ開業。創業以来、ナッツベリーのスフレのファンが拡がっています。
               </p>
-              <p>
+              <p className="leading-8 tracking-wider">
                 2010年夏 宝塚花組公演のミュージカル
                 『麗しのサブリナ』で、タカラジェンヌのトップスターが、スフレづくりのシーンを参考するために、ナッツベリーを訪問見学されました。
               </p>
             </div>
-            <div>
+            <div className="px-12 text-center">
               <Image
                 src="/images/souffle/about_audrey.jpg"
-                width={260}
-                height={395}
+                width={520}
+                height={790}
                 alt="オードリー・ヘプバーン"
                 className="about-image"
               />
-              <Image
-                src="/images/souffle/about_souffle.jpg"
-                width={350}
-                height={234}
-                alt="こだわりのスフレ"
-                className="about-image"
-              />
-              <Image
-                src="/images/souffle/about_interior.jpg"
-                width={350}
-                height={234}
-                alt="スフレ専門店 ナッツベリーの店内"
-                className="about-image"
-              />
+              {/*<Image*/}
+              {/*  src="/images/souffle/about_souffle.jpg"*/}
+              {/*  width={350}*/}
+              {/*  height={234}*/}
+              {/*  alt="こだわりのスフレ"*/}
+              {/*  className="about-image"*/}
+              {/*/>*/}
+              {/*<Image*/}
+              {/*  src="/images/souffle/about_interior.jpg"*/}
+              {/*  width={350}*/}
+              {/*  height={234}*/}
+              {/*  alt="スフレ専門店 ナッツベリーの店内"*/}
+              {/*  className="about-image"*/}
+              {/*/>*/}
             </div>
           </div>
         </section>
@@ -628,7 +661,7 @@ const About: NextPage = () => {
         <footer className="site-footer alignfull bg-primary-100 py-16">
           <div className="footer-shop-information">
             <div className="container">
-              <div className="grid">
+              <div className="md:grid md:grid-cols-2 md:items-center md:gap-12">
                 <div>
                   <Image
                     src="/images/souffle/nattsberry_inside.jpg"
