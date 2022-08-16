@@ -277,13 +277,13 @@ main h6 {
 main a:not([class*="btn"]) {
   padding-right: 0.25em;
   padding-left: 0.25em;
-  color: #0070f3;
+  /*color: #0070f3;*/
   text-decoration: underline;
   text-decoration-style: dotted;
   text-underline-offset: 2px;
 }
 main a:not([class*="btn"]):hover {
-  color: #4892e8;
+  /*color: #4892e8;*/
   text-decoration: underline;
 }
 
@@ -323,4 +323,50 @@ body {
   background-repeat: repeat-x, repeat-x;
   background-position: top left;
   background-size: auto 10px, auto;
+}
+
+.header-deco {
+  padding-bottom: 15px;
+  background-image: url("../public/images/souffle/illust_flower_water.png");
+  background-repeat: no-repeat;
+  background-size: auto 15px;
+  background-position: center bottom;
+}
+
+.pickup-menu:before {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  content: "";
+  display: inline-block;
+  width: 128px;
+  height: 96px;
+  background: url("../public/images/souffle/illust_table.png") no-repeat;
+  background-size: 128px 96px;
+}
+
+.voice::before {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  content: "";
+  display: inline-block;
+  width: 122px;
+  height: 81px;
+  background: url("../public/images/souffle/illust_pot.png") no-repeat;
+  background-size: 122px 81px;
+}
+
+.footer-shop-information {
+  background-image: url("../public/images/souffle/race_circle.png");
+  background-repeat: no-repeat;
+  background-position-x: -35%;
+  background-position-y: -75%;
+}
+
+.bg-leaf {
+  background-image: url("../public/images/souffle/illust_leaf_water.png");
+  background-repeat: no-repeat;
+  background-size: 181px 110px;
+  background-position: bottom 10px right 0;
 }
