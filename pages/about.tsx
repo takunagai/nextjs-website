@@ -29,14 +29,34 @@ const About: NextPage = () => {
           スフレ専門店 ナッツベリー
         </h1>
 
-        <div className="hero-image alignfull relative mt-8 bg-cover bg-center">
-          <Image
-            src="/images/souffle/main.png"
-            width={1200}
-            height={588}
-            alt="スフレ"
-          />
-        </div>
+        {(() => {
+          if (typeof window !== "undefined") {
+            if (
+              window.matchMedia &&
+              window.matchMedia("(max-device-width: 640px)").matches
+            ) {
+              return (
+                <Image
+                  src="/images/souffle/main.png"
+                  width={732}
+                  height={869}
+                  alt="スフレ"
+                />
+              )
+            } else {
+              return (
+                <div className="hero-image alignfull relative mt-8 bg-cover bg-center">
+                  <Image
+                    src="/images/souffle/main_lg.png"
+                    width={1600}
+                    height={652}
+                    alt="スフレ"
+                  />
+                </div>
+              )
+            }
+          }
+        })()}
 
         <p className="home-catch mt-12 text-center">
           <Image
@@ -125,7 +145,7 @@ const About: NextPage = () => {
           </div>
         </section>
 
-        <section className="menu alignfull bg-craft py-16">
+        <section className="pickup-menu alignfull relative bg-craft py-16">
           <div className="container">
             <div className="text-center">
               <h2 className="text-center text-xs font-normal tracking-wide">
@@ -146,7 +166,7 @@ const About: NextPage = () => {
                 (混雑時にはさらにお時間がかかる場合があります)
               </p>
 
-              <p className="inline-block border border-primary px-3 text-sm text-primary">
+              <p className="inline-block bg-white px-3 text-xs text-primary">
                 アレルギー表示：卵、小麦、乳、一部落花生
               </p>
             </div>
@@ -168,7 +188,7 @@ const About: NextPage = () => {
                 <p className="menu__price text-center text-xs">
                   単品 730円/セット1,200円
                 </p>
-                <p className="menu__body mt-2">
+                <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                   甘さを抑えたさわやかスフレです。デンマーク産の高級クリームチーズをたっぷり使った自慢の逸品です。
                 </p>
               </div>
@@ -188,7 +208,7 @@ const About: NextPage = () => {
                 <p className="menu__price text-center text-xs">
                   単品 780円/セット1,250円
                 </p>
-                <p className="menu__body mt-2">
+                <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                   思わず笑みがこぼれちゃう！チョコレートシロップはこだわりの純チョコレート。高品質カカオ64%使用で、ちょっぴり大人な味です。
                 </p>
               </div>
@@ -208,7 +228,7 @@ const About: NextPage = () => {
                 <p className="menu__price text-center text-xs">
                   単品 780円/セット1,250円
                 </p>
-                <p className="menu__body mt-2">
+                <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                   メープル好きにはたまらない！メープルをたっぷり入れて焼き上げた風味豊かな優しい味のスフレです。
                 </p>
               </div>
@@ -228,7 +248,7 @@ const About: NextPage = () => {
                 <p className="menu__price text-center text-xs">
                   単品 930円/セット1,400円
                 </p>
-                <p className="menu__body mt-2">
+                <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                   カシスの甘ずっぱさがたまらない爽やかなスフレ。ちょっと贅沢なプレートで。あたたかいスフレを冷たいアイスクリームと一緒に。
                   <br />
                   <small>※季節によりトッピング変更</small>
@@ -250,7 +270,7 @@ const About: NextPage = () => {
                 <p className="menu__price text-center text-xs">
                   単品 930円/セット1,400円
                 </p>
-                <p className="menu__body mt-2">
+                <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                   紅茶の香りが広がる大人の味。オーガニックの紅茶を使ったこだわりの一品です。あたたかいスフレを冷たいアイスクリームと一緒に。
                   <br />
                   <small>※季節によりトッピング変更</small>
@@ -272,7 +292,7 @@ const About: NextPage = () => {
                 <p className="menu__price text-center text-xs">
                   単品 800円/セット1,270円
                 </p>
-                <p className="menu__body mt-2">
+                <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                   スープやドレッシングも手作りにこだわった美味しいサンドイッチ。他に「チキンサンド」「オムサンド」もあります。
                 </p>
               </div>
@@ -290,36 +310,102 @@ const About: NextPage = () => {
                   ドリンクメニュー
                 </h3>
                 <p className="menu__price text-center text-xs">530円〜</p>
-                <p className="menu__body mt-2">
+                <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                   コーヒー、紅茶、ハーブティ、ジュース、フロートなど、多種多様のドリンクを提供しています。
                   <br />
-                  <a href="#">» ドリンクメニューを見る</a>
+                  <div
+                    className="hs-tooltip inline-block"
+                    data-hs-tooltip-trigger="hover"
+                  >
+                    <a
+                      className="hs-tooltip-toggle block text-center"
+                      href="javascript:;"
+                    >
+                      <a className="mt-2 text-sm font-semibold">
+                        » ドリンクメニューを見る
+                      </a>
+                      <div
+                        className="hs-tooltip-content invisible absolute z-10 inline-block max-w-xs rounded-lg border border-gray-100 bg-white text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100 dark:border-gray-700 dark:bg-gray-800"
+                        role="tooltip"
+                      >
+                        <span className="block px-4 pt-3 text-center text-lg font-bold tracking-wider text-primary underline dark:text-white">
+                          Drink Menu
+                        </span>
+                        <div className="py-3 px-4 text-sm text-gray-600 dark:text-gray-400">
+                          <dl>
+                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                              Coffee:
+                            </dt>
+                            <dd className="text-gray-600 dark:text-gray-400">
+                              ライト(アメリカン)、ミドル(ブレンド)、ヘビー(濃いブレンド)、ストロング(エスプレッソ)、アイスコーヒー、カフェオレ(Hot/Ice)、カフェラテ(Hot/Ice)、ウインナーコーヒー(Hot/Ice)
+                            </dd>
+                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                              Tea:
+                            </dt>
+                            <dd className="text-gray-600 dark:text-gray-400">
+                              シンガンパティ(Hot/Ice)、アールグレイ(Hot/Ice)、ダージリン(Hot/Ice)、ハーブティー(Hot)
+                            </dd>
+                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                              Juice:
+                            </dt>
+                            <dd className="text-gray-600 dark:text-gray-400">
+                              100%生搾りオレンジ、100%生搾りグレープフルーツ、100%すりおろしリンゴ、生搾りレモンスカッシュ、マンゴージュース、コーラ、ジンジャーエール
+                            </dd>
+                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                              Float:
+                            </dt>
+                            <dd className="text-gray-600 dark:text-gray-400">
+                              コーヒーフロート、メロンフロート、いちごフロート、ラムネフロート、コーラフロート、ジンジャーフロート
+                            </dd>
+                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                              Others:
+                            </dt>
+                            <dd className="text-gray-600 dark:text-gray-400">
+                              ミルク(Hot/Ice)、ホットチョコレート(カカオ64%)、バニラアイスクリーム
+                            </dd>
+                          </dl>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
                 </p>
               </div>
-              <div className="grid__item">
+              <div className="grid__item bg-white shadow">
                 <p className="menu__img">
                   <Image
                     src="/images/souffle/drink-set-menu.jpg"
                     width={600}
                     height={400}
                     alt="ドリンク付きのセットメニュー"
-                    className="souffle-item rounded-lg"
+                    className="souffle-item"
                   />
                 </p>
-                <h3 className="menu__title mt-2 text-center text-lg text-primary">
-                  ドリンク付きのセットメニュー
-                </h3>
-                <p className="menu__body mt-2">
-                  セットメニューには、「コーヒー」「紅茶」「ハーブティー」のいずれかのドリンクが付きます。
-                </p>
-                <ul className="mt-3 list-inside list-disc text-sm font-bold text-primary">
-                  <li>ホットコーヒー(ライト/ミドル)</li>
-                  <li>アイスコーヒー</li>
-                  <li>カフェオレ (ホット/アイス)</li>
-                  <li>カフェラテ (ホット/アイス)</li>
-                  <li>本日の紅茶 (ホット/アイス)</li>
-                  <li>ハーブティー (ホットのみ)</li>
-                </ul>
+                <div className="p-2">
+                  <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    ドリンク付きセットメニュー
+                  </h3>
+                  <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
+                    セットメニューには、コーヒー、紅茶、ハーブティーのいずれかのドリンクが付きます。
+                  </p>
+                  <ul className="mt-2 list-inside list-disc text-sm font-bold text-primary marker:text-secondary-200">
+                    <li>
+                      ホットコーヒー<small>(ライト/ミドル)</small>
+                    </li>
+                    <li>アイスコーヒー</li>
+                    <li>
+                      カフェオレ<small> (Hot/Ice)</small>
+                    </li>
+                    <li>
+                      カフェラテ<small> (Hot/Ice)</small>
+                    </li>
+                    <li>
+                      本日の紅茶<small> (Hot/Ice)</small>
+                    </li>
+                    <li>
+                      ハーブティー<small> (Hot のみ)</small>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -327,7 +413,7 @@ const About: NextPage = () => {
 
         <section className="takeout py-16">
           <div className="container">
-            <h2 className="text-center text-xs font-normal tracking-wide">
+            <h2 className="header-deco text-center text-xs font-normal tracking-wide">
               <Image
                 src="/images/souffle/header_takeout.png"
                 width={147}
@@ -436,8 +522,8 @@ const About: NextPage = () => {
         </section>
         <hr className="border-dashed border-t-primary-300" />
 
-        <section className="voice alignfull bg-dots2 py-16">
-          <h2 className="text-center text-xs font-normal tracking-wide">
+        <section className="voice alignfull relative bg-dots2 py-16">
+          <h2 className="header-deco text-center text-xs font-normal tracking-wide">
             <Image
               src="/images/souffle/header_voice.png"
               width={107}
@@ -452,7 +538,7 @@ const About: NextPage = () => {
             お客様からいただいた声の一部を紹介します！
           </p>
 
-          <div className="mx-auto max-w-4xl">
+          <div className="container mx-auto max-w-4xl">
             <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
               <p className="voice__article__title font-bold text-primary">
                 ナッツベリーのチーズスフレの大ファンです！
@@ -545,10 +631,11 @@ const About: NextPage = () => {
             </div>
           </div>
         </section>
+        <hr className="border-dashed border-t-primary-300" />
 
         <section className="instagram py-16">
           <div className="container--narrow">
-            <h2 className="text-center text-xs font-normal tracking-wide">
+            <h2 className="header-deco text-center text-xs font-normal tracking-wide">
               <Image
                 src="/images/souffle/header_instagram.png"
                 width={149}
@@ -559,7 +646,7 @@ const About: NextPage = () => {
               <br />
               ギャラリー
             </h2>
-            <p>ぜひフォローしてください！</p>
+            <p className="mt-3 text-center">ぜひフォローしてください！</p>
             <p>
               <b>ナッツベリー 公式 Instagram</b>
             </p>
@@ -570,58 +657,60 @@ const About: NextPage = () => {
           </div>
         </section>
 
-        <section className="about py-16">
-          <div className="mt-10 md:grid md:grid-cols-2 md:items-center md:gap-12">
-            <div>
-              <h2 className="text-center text-xs font-normal tracking-wide">
+        <section className="about alignfull bg-dots3 py-16">
+          <div className="container">
+            <div className="mt-10 md:grid md:grid-cols-2 md:items-center md:gap-12">
+              <div>
+                <h2 className="text-center text-xs font-normal tracking-wide">
+                  <Image
+                    src="/images/souffle/header_about.png"
+                    width={88}
+                    height={24}
+                    alt="About"
+                    className="header-above-image"
+                  />
+                  <br />
+                  ナッツベリーについて
+                </h2>
+                <p className="mt-6 font-bold leading-8 tracking-wider text-primary-700">
+                  平成元年4月
+                  アステ川西にてカフェ開業。創業以来、ナッツベリーのスフレのファンが拡がっています。
+                </p>
+                <p className="font-bold leading-8 tracking-wider text-primary-700">
+                  2010年夏 宝塚花組公演のミュージカル
+                  『麗しのサブリナ』で、タカラジェンヌのトップスターが、スフレづくりのシーンを参考するために、ナッツベリーを訪問見学されました。
+                </p>
+              </div>
+              <div className="px-12 text-center">
                 <Image
-                  src="/images/souffle/header_about.png"
-                  width={88}
-                  height={24}
-                  alt="About"
-                  className="header-above-image"
+                  src="/images/souffle/about_audrey.jpg"
+                  width={520}
+                  height={790}
+                  alt="オードリー・ヘプバーン"
+                  className="about-image"
                 />
-                <br />
-                ナッツベリーについて
-              </h2>
-              <p className="mt-4 leading-8 tracking-wider">
-                平成元年4月
-                アステ川西にてカフェ開業。創業以来、ナッツベリーのスフレのファンが拡がっています。
-              </p>
-              <p className="leading-8 tracking-wider">
-                2010年夏 宝塚花組公演のミュージカル
-                『麗しのサブリナ』で、タカラジェンヌのトップスターが、スフレづくりのシーンを参考するために、ナッツベリーを訪問見学されました。
-              </p>
-            </div>
-            <div className="px-12 text-center">
-              <Image
-                src="/images/souffle/about_audrey.jpg"
-                width={520}
-                height={790}
-                alt="オードリー・ヘプバーン"
-                className="about-image"
-              />
-              {/*<Image*/}
-              {/*  src="/images/souffle/about_souffle.jpg"*/}
-              {/*  width={350}*/}
-              {/*  height={234}*/}
-              {/*  alt="こだわりのスフレ"*/}
-              {/*  className="about-image"*/}
-              {/*/>*/}
-              {/*<Image*/}
-              {/*  src="/images/souffle/about_interior.jpg"*/}
-              {/*  width={350}*/}
-              {/*  height={234}*/}
-              {/*  alt="スフレ専門店 ナッツベリーの店内"*/}
-              {/*  className="about-image"*/}
-              {/*/>*/}
+                {/*<Image*/}
+                {/*  src="/images/souffle/about_souffle.jpg"*/}
+                {/*  width={350}*/}
+                {/*  height={234}*/}
+                {/*  alt="こだわりのスフレ"*/}
+                {/*  className="about-image"*/}
+                {/*/>*/}
+                {/*<Image*/}
+                {/*  src="/images/souffle/about_interior.jpg"*/}
+                {/*  width={350}*/}
+                {/*  height={234}*/}
+                {/*  alt="スフレ専門店 ナッツベリーの店内"*/}
+                {/*  className="about-image"*/}
+                {/*/>*/}
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="access bg-leaf py-16">
-          <div className="container--narrow">
-            <h2 className="text-center text-xs font-normal tracking-wide">
+        <section className="alignfull bg-leaf access relative py-16">
+          <div className="md:container">
+            <h2 className="header-deco text-center text-xs font-normal tracking-wide">
               <Image
                 src="/images/souffle/header_access.png"
                 width={130}
@@ -629,11 +718,10 @@ const About: NextPage = () => {
                 alt="Access"
                 className="header-above-image"
               />
-              <img src="" width="" height="" alt="Access" />
               <br />
               アクセス
             </h2>
-            <p>
+            <p className="mt-5 text-center">
               ナッツベリーの店舗は、阪急川西能勢口駅より徒歩２分、JR川西池田駅より徒歩４分の「アステ川西」２階にあります。
             </p>
             <div className="embed-container mt-8">
@@ -658,8 +746,8 @@ const About: NextPage = () => {
             </p>
           </div>
         </section>
-        <footer className="site-footer alignfull bg-primary-100 py-16">
-          <div className="footer-shop-information">
+        <footer className="site-footer">
+          <div className="footer-shop-information alignfull bg-primary-100 py-16 text-primary-700">
             <div className="container">
               <div className="md:grid md:grid-cols-2 md:items-center md:gap-12">
                 <div>
@@ -673,42 +761,54 @@ const About: NextPage = () => {
                 </div>
                 <div className="text-center">
                   <Image
-                    src="/images/souffle/logo_white.png"
-                    width={200}
-                    height={72}
-                    alt="Knott's Berry ナッツベリー"
-                    className="footer-logo"
+                    src="/images/souffle/logo.png"
+                    width={140}
+                    height={47}
+                    alt="Knott's Berry"
+                    className="logo site-branding"
                   />
-                  <p className="-mt-4 text-sm font-bold text-primary">
+                  {/*<Image*/}
+                  {/*  src="/images/souffle/logo_white.png"*/}
+                  {/*  width={200}*/}
+                  {/*  height={72}*/}
+                  {/*  alt="Knott's Berry ナッツベリー"*/}
+                  {/*  className="footer-logo"*/}
+                  {/*/>*/}
+                  <p className="-mt-2 text-[10px] font-bold text-primary">
                     スフレ専門店 ナッツベリー
                   </p>
                   <address className="text text- mt-4 text-left not-italic">
                     <p>
                       電話番号{" "}
                       <b className="text-lg">
-                        <a href="tel:0727552254">072-755-2254</a>
+                        <a href="tel:0727552254" className="text-primary-800">
+                          072-755-2254
+                        </a>
                       </b>
                       <br />
                       営業時間 <b className="text-lg">10:00～22:00</b>
                     </p>
-                    <p className="mt-0 text-xs">
-                      　スフレタイム 10:00〜20:15
+                    <p className="ml-16 mt-0 text-xs">
+                      スフレタイム 10:00〜20:15
                       <br />
-                      　ラストオーダー 19:30
+                      ラストオーダー 19:30
                     </p>
                     休業日{" "}
                     <a
                       href="https://www.astekawanishi.com/sales/"
                       target="_blank"
                       rel="noreferrer"
+                      className="text-primary-800"
                     >
                       アステ川西の休館日
                     </a>
                     に準じます
-                    <p className="mt-3">
-                      住所 兵庫県川西市栄町25番1号 アステ川西TENPO175 248号
+                    <p className="mt-3 leading-snug">
+                      住所 兵庫県川西市栄町25番1号
+                      <br />
+                      　　 アステ川西TENPO175 248号
                     </p>
-                    <p className="mt-0 text-xs">
+                    <p className="ml-9 mt-1 text-xs">
                       阪急川西能勢口駅より徒歩２分
                       <br />
                       JR川西池田駅より徒歩４分
@@ -719,8 +819,8 @@ const About: NextPage = () => {
             </div>
           </div>
 
-          <div className="footer-menu">
-            <ul className="inline">
+          <div className="footer-menu mt-4 text-center text-sm">
+            <ul className="inline-flex gap-2">
               <li>
                 <a href="./index.html">Home</a>
               </li>
@@ -741,7 +841,9 @@ const About: NextPage = () => {
             </ul>
           </div>
 
-          <p className="copylight mt-3">(c) 2022 Knott's Berry</p>
+          <p className="copylight mt-3 text-center text-xs">
+            (c) 2022 Knott's Berry
+          </p>
         </footer>
 
         {/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/}
