@@ -97,6 +97,7 @@ module.exports = {
         dots: "url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png')",
         craft: "url('../public/images/souffle/bg_paper.png')",
         dots2: "url('../public/images/souffle/bg_waterdot.png')",
+        dots3: "url('../public/images/souffle/bg_waterdots3.png')",
       },
       typography: (theme) => ({
         // @tailwindcss/typography Plugin
