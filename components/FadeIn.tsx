@@ -5,14 +5,23 @@ type Props = {
   children: React.ReactNode
   repeat?: boolean
   delay?: number
+  moveX?: number
+  moveY?: number
 }
 
-export default function FadeIn({ children, repeat = true, delay = 0 }: Props) {
+export default function FadeIn({
+  children,
+  repeat = true,
+  delay = 0,
+  moveX = 0,
+  moveY = 0,
+}: Props) {
   return (
     <motion.div
       variants={{
-        offscreen: { y: 50, opacity: 0 },
+        offscreen: { x: moveX, y: moveY, opacity: 0 },
         onscreen: {
+          x: 0,
           y: 0,
           opacity: 1,
           transition: { duration: 0.7, delay: delay },
