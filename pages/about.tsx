@@ -2,25 +2,21 @@ import Image from "next/image"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
+import { useMediaQuery } from "react-responsive"
 import FadeIn from "../components/FadeIn"
 
 const About: NextPage = () => {
+  const isMobile: boolean = useMediaQuery({ query: "(max-width: 768px)" })
+
   return (
     <Layout title="About" description="About の概要です。">
       <motion.div
         initial={{ opacity: 0 }} // initial
         animate={{ opacity: 1 }} // on mount
-        // transition={{ duration: 0.5 }}
         exit={{ opacity: 0 }} // on unmount
       >
         <header className="alignfull bg-zinc-500/10">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, y: [50, 0] }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <h1 className="container">About</h1>
-          </motion.div>
+          <h1 className="container">About</h1>
         </header>
 
         {/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/}
@@ -107,7 +103,7 @@ const About: NextPage = () => {
             </div>
             <div className="grid__item">
               <div className="media--mobile-2col media--mobile--inverse text-center">
-                <FadeIn>
+                <FadeIn delay={isMobile ? 0 : 0.5}>
                   <Image
                     src="/images/souffle/feature_bake.png"
                     width={403}
@@ -132,7 +128,7 @@ const About: NextPage = () => {
             </div>
             <div className="grid__item">
               <div className="media--mobile-2col text-center">
-                <FadeIn>
+                <FadeIn delay={isMobile ? 0 : 1}>
                   <Image
                     src="/images/souffle/feature_serve.png"
                     width={403}
@@ -332,7 +328,7 @@ const About: NextPage = () => {
                   >
                     <a
                       className="hs-tooltip-toggle block text-center"
-                      href="javascript:;"
+                      href="javascript:"
                     >
                       <a className="mt-2 text-sm font-semibold">
                         » ドリンクメニューを見る
