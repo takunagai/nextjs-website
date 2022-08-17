@@ -20,47 +20,85 @@ const About: NextPage = () => {
         </header>
 
         {/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/}
-        <h1 className="site-title mt-8 text-center text-xs font-normal">
-          <Image
-            src="/images/souffle/logo.png"
-            width={140}
-            height={47}
-            alt="Knott's Berry"
-            className="logo site-branding"
-          />
-          <br />
-          スフレ専門店 ナッツベリー
-        </h1>
+
+        <header className="flex flex-col gap-10">
+          <h1 className="site-title order-2 text-center text-xs font-normal">
+            <Image
+              src="/images/souffle/logo.png"
+              width={140}
+              height={47}
+              alt="Knott's Berry"
+              className="logo site-branding"
+            />
+            <br />
+            スフレ専門店 ナッツベリー
+          </h1>
+
+          <nav className="alignfull main-menu order-1 bg-secondary-100 py-2 px-4 text-center text-sm font-bold">
+            <ul className="inline-flex flex-wrap justify-center gap-2">
+              <li className="uppercase">
+                <a className="text-primary-600 no-underline" href="">
+                  Home
+                </a>
+              </li>
+              <li className="uppercase">
+                <a className="text-primary-600 no-underline" href="">
+                  Menu
+                </a>
+              </li>
+              <li className="uppercase">
+                <a className="text-primary-600 no-underline" href="">
+                  Takeout
+                </a>
+              </li>
+              <li className="uppercase">
+                <a className="text-primary-600 no-underline" href="">
+                  Voice
+                </a>
+              </li>
+              <li className="uppercase">
+                <a className="text-primary-600 no-underline" href="">
+                  About
+                </a>
+              </li>
+              <li className="uppercase">
+                <a
+                  className="text-primary-600 no-underline"
+                  href="https://www.instagram.com/knottsberry_kawanishi/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  ■
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
         {(() => {
-          if (typeof window !== "undefined") {
-            if (
-              window.matchMedia &&
-              window.matchMedia("(max-device-width: 640px)").matches
-            ) {
-              return (
-                <div className="hero-image">
-                  <Image
-                    src="/images/souffle/main.png"
-                    width={732}
-                    height={869}
-                    alt="スフレ"
-                  />
-                </div>
-              )
-            } else {
-              return (
-                <div className="hero-image alignfull relative mt-8 text-center">
-                  <Image
-                    src="/images/souffle/main_lg.png"
-                    width={1600}
-                    height={652}
-                    layout="responsive"
-                    alt="スフレ"
-                  />
-                </div>
-              )
-            }
+          if (isMobile) {
+            return (
+              <div className="hero-image">
+                <Image
+                  src="/images/souffle/main.png"
+                  width={732}
+                  height={869}
+                  alt="スフレ"
+                />
+              </div>
+            )
+          } else {
+            return (
+              <div className="hero-image alignfull mt-8 text-center">
+                <Image
+                  src="/images/souffle/main_lg.png"
+                  width={1600}
+                  height={652}
+                  layout="responsive"
+                  alt="スフレ"
+                />
+              </div>
+            )
           }
         })()}
 
