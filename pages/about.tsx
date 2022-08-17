@@ -2,6 +2,7 @@ import Image from "next/image"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
+import FadeIn from "../components/FadeIn"
 
 const About: NextPage = () => {
   return (
@@ -13,7 +14,13 @@ const About: NextPage = () => {
         exit={{ opacity: 0 }} // on unmount
       >
         <header className="alignfull bg-zinc-500/10">
-          <h1 className="container">About</h1>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: [50, 0] }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h1 className="container">About</h1>
+          </motion.div>
         </header>
 
         {/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/}
@@ -75,13 +82,15 @@ const About: NextPage = () => {
           <div className="fadein-images grid flex-row gap-12 sm:grid-cols-3 sm:flex-col sm:gap-8 lg:gap-12">
             <div className="grid__item">
               <div className="media--mobile-2col text-center">
-                <Image
-                  src="/images/souffle/feature_dough.png"
-                  width={403}
-                  height={333}
-                  alt="スフレ生地へのこだわり"
-                  className="media__img fuwafuwa-a"
-                />
+                <FadeIn>
+                  <Image
+                    src="/images/souffle/feature_dough.png"
+                    width={403}
+                    height={333}
+                    alt="スフレ生地へのこだわり"
+                    className="media__img fuwafuwa-a"
+                  />
+                </FadeIn>
                 <div className="media__body mt-4">
                   <p className="feature__sholder text-center text-sm text-secondary">
                     感動の理由 １
@@ -98,13 +107,15 @@ const About: NextPage = () => {
             </div>
             <div className="grid__item">
               <div className="media--mobile-2col media--mobile--inverse text-center">
-                <Image
-                  src="/images/souffle/feature_bake.png"
-                  width={403}
-                  height={333}
-                  alt="スフレの焼きへのこだわり"
-                  className="media__img fuwafuwa-a"
-                />
+                <FadeIn>
+                  <Image
+                    src="/images/souffle/feature_bake.png"
+                    width={403}
+                    height={333}
+                    alt="スフレの焼きへのこだわり"
+                    className="media__img fuwafuwa-a"
+                  />
+                </FadeIn>
                 <div className="media__body mt-4">
                   <p className="feature__sholder text-center text-sm text-secondary">
                     感動の理由 2
@@ -121,13 +132,15 @@ const About: NextPage = () => {
             </div>
             <div className="grid__item">
               <div className="media--mobile-2col text-center">
-                <Image
-                  src="/images/souffle/feature_serve.png"
-                  width={403}
-                  height={333}
-                  alt="３分以内が食べごろ"
-                  className="media__img fuwafuwa-a"
-                />
+                <FadeIn>
+                  <Image
+                    src="/images/souffle/feature_serve.png"
+                    width={403}
+                    height={333}
+                    alt="３分以内が食べごろ"
+                    className="media__img fuwafuwa-a"
+                  />
+                </FadeIn>
                 <div className="media__body mt-4">
                   <p className="feature__sholder text-center text-sm text-secondary">
                     感動の理由 3
@@ -427,13 +440,15 @@ const About: NextPage = () => {
             <div className="mt-10 lg:grid lg:grid-cols-5 lg:gap-12">
               <div className="col-span-3 text-center">
                 <div className="takeout-images text-center">
-                  <Image
-                    src="/images/souffle/takeout-images.jpg"
-                    width={600}
-                    height={700}
-                    alt="サンドイッチ(テイクアウト)"
-                    className="takeout-image"
-                  />
+                  <FadeIn>
+                    <Image
+                      src="/images/souffle/takeout-images.jpg"
+                      width={600}
+                      height={700}
+                      alt="テイクアウト(サンドイッチ、スフレコーン、店頭)"
+                      className="takeout-image"
+                    />
+                  </FadeIn>
                 </div>
               </div>
               <div className="col-span-2">
@@ -668,13 +683,15 @@ const About: NextPage = () => {
                 </p>
               </div>
               <div className="mt-4 px-12 text-center md:mt-0 lg:col-span-3">
-                <Image
-                  src="/images/souffle/shop-images.jpg"
-                  width={700}
-                  height={628}
-                  alt="店舗のイメージ(オードリー・ヘプバーン、スフレ、店内風景)"
-                  className="about-image"
-                />
+                <FadeIn>
+                  <Image
+                    src="/images/souffle/shop-images.jpg"
+                    width={700}
+                    height={628}
+                    alt="店舗のイメージ(オードリー・ヘプバーン、スフレ、店内風景)"
+                    className="about-image"
+                  />
+                </FadeIn>
               </div>
             </div>
           </div>
