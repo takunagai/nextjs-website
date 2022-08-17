@@ -333,16 +333,16 @@ body {
   background-position: center bottom;
 }
 
-.pickup-menu:before {
+.pickup-menu::before {
   position: absolute;
   top: -40px;
   right: 20px;
   content: "";
   display: inline-block;
-  width: 128px;
-  height: 96px;
+  width: calc(100px + 8vw);
+  height: calc(75px + 6vw); /* 0.75 */
   background: url("../public/images/souffle/illust_table.png") no-repeat;
-  background-size: 128px 96px;
+  background-size: calc(100px + 8vw) calc(75px + 6vw);
 }
 
 .voice::before {
@@ -351,10 +351,10 @@ body {
   left: 20px;
   content: "";
   display: inline-block;
-  width: 122px;
-  height: 81px;
+  width: calc(80px + 8vw);
+  height: calc(48px + 4.8vw); /* 0.59911894 */
   background: url("../public/images/souffle/illust_pot.png") no-repeat;
-  background-size: 122px 81px;
+  background-size: calc(80px + 8vw) calc(48px + 4.8vw);
 }
 
 .footer-shop-information {
@@ -371,7 +371,7 @@ body {
   background-position: bottom 10px right 0;
 }
 
-/* TODO: メニュー写真の枠線 */
+/* ずれた枠線 */
 .image-with-border {
   position: relative;
 }
@@ -385,4 +385,12 @@ body {
   border: 1px solid #c1b199;
   z-index: 2;
   border-radius: 8px;
+}
+
+/* フッター */
+.footer-menu {
+  background-image: url("../public/images/souffle/race_line.png");
+  background-repeat: repeat-x;
+  background-size: auto 10px;
+  background-position: center bottom;
 }
