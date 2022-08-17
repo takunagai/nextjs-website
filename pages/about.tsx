@@ -424,33 +424,19 @@ const About: NextPage = () => {
               <br />
               テイクアウト・配達
             </h2>
-            <div className="mt-10 md:grid md:grid-cols-2 md:gap-12">
-              <div className="text-center">
+            <div className="mt-10 lg:grid lg:grid-cols-5 lg:gap-12">
+              <div className="col-span-3 text-center">
                 <div className="takeout-images text-center">
                   <Image
-                    src="/images/souffle/takeout_sandwitches.jpg"
-                    width={728}
-                    height={916}
+                    src="/images/souffle/takeout-images.jpg"
+                    width={600}
+                    height={700}
                     alt="サンドイッチ(テイクアウト)"
                     className="takeout-image"
                   />
-                  {/*<Image*/}
-                  {/*  src="/images/souffle/takeout_one-hand-souffle-ice.jpg"*/}
-                  {/*  width={364}*/}
-                  {/*  height={458}*/}
-                  {/*  alt="ワンハンド・スフレ３種"*/}
-                  {/*  className="takeout-image"*/}
-                  {/*/>*/}
-                  {/*<Image*/}
-                  {/*  src="/images/souffle/takeout_counter.jpg"*/}
-                  {/*  width={364}*/}
-                  {/*  height={458}*/}
-                  {/*  alt="テイクアウトのカウンター"*/}
-                  {/*  className="takeout-image"*/}
-                  {/*/>*/}
                 </div>
               </div>
-              <div>
+              <div className="col-span-2">
                 <h3 className="text-xl tracking-widest text-primary">
                   サンドイッチ
                 </h3>
@@ -509,7 +495,7 @@ const About: NextPage = () => {
                   <p>
                     <b className="text-sm">配達料無料！</b>
                   </p>
-                  <h3 className="text-lg text-primary">
+                  <h3 className="text-lg text-secondary">
                     お近くならデリバリーいたします！
                   </h3>
                   <p>
@@ -659,8 +645,8 @@ const About: NextPage = () => {
 
         <section className="about alignfull bg-dots3 py-16">
           <div className="container">
-            <div className="mt-10 md:grid md:grid-cols-2 md:items-center md:gap-12">
-              <div>
+            <div className="mt-10 md:grid md:grid-cols-2 md:items-center md:gap-12 lg:grid-cols-5">
+              <div className="lg:col-span-2">
                 <h2 className="text-center text-xs font-normal tracking-wide">
                   <Image
                     src="/images/souffle/header_about.png"
@@ -672,7 +658,7 @@ const About: NextPage = () => {
                   <br />
                   ナッツベリーについて
                 </h2>
-                <p className="mt-6 font-bold leading-8 tracking-wider text-primary-700">
+                <p className="mt-6 font-bold leading-8 tracking-wider text-primary-600">
                   平成元年4月
                   アステ川西にてカフェ開業。創業以来、ナッツベリーのスフレのファンが拡がっています。
                 </p>
@@ -681,28 +667,14 @@ const About: NextPage = () => {
                   『麗しのサブリナ』で、タカラジェンヌのトップスターが、スフレづくりのシーンを参考するために、ナッツベリーを訪問見学されました。
                 </p>
               </div>
-              <div className="px-12 text-center">
+              <div className="mt-4 px-12 text-center md:mt-0 lg:col-span-3">
                 <Image
-                  src="/images/souffle/about_audrey.jpg"
-                  width={520}
-                  height={790}
-                  alt="オードリー・ヘプバーン"
+                  src="/images/souffle/shop-images.jpg"
+                  width={700}
+                  height={628}
+                  alt="店舗のイメージ(オードリー・ヘプバーン、スフレ、店内風景)"
                   className="about-image"
                 />
-                {/*<Image*/}
-                {/*  src="/images/souffle/about_souffle.jpg"*/}
-                {/*  width={350}*/}
-                {/*  height={234}*/}
-                {/*  alt="こだわりのスフレ"*/}
-                {/*  className="about-image"*/}
-                {/*/>*/}
-                {/*<Image*/}
-                {/*  src="/images/souffle/about_interior.jpg"*/}
-                {/*  width={350}*/}
-                {/*  height={234}*/}
-                {/*  alt="スフレ専門店 ナッツベリーの店内"*/}
-                {/*  className="about-image"*/}
-                {/*/>*/}
               </div>
             </div>
           </div>
@@ -748,9 +720,9 @@ const About: NextPage = () => {
         </section>
         <footer className="site-footer">
           <div className="footer-shop-information alignfull bg-primary-100 py-16 text-primary-700">
-            <div className="container">
-              <div className="md:grid md:grid-cols-2 md:items-center md:gap-12">
-                <div>
+            <div className="container lg:mx-20">
+              <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 lg:grid-cols-5 lg:justify-center">
+                <div className="lg:col-span-3 lg:text-right">
                   <Image
                     src="/images/souffle/nattsberry_inside.jpg"
                     width={600}
@@ -759,7 +731,7 @@ const About: NextPage = () => {
                     className="footer-shop-image"
                   />
                 </div>
-                <div className="text-center">
+                <div className="mt-4 text-center md:mt-0 lg:col-span-2">
                   <Image
                     src="/images/souffle/logo.png"
                     width={140}
@@ -777,7 +749,7 @@ const About: NextPage = () => {
                   <p className="-mt-2 text-[10px] font-bold text-primary">
                     スフレ専門店 ナッツベリー
                   </p>
-                  <address className="text text- mt-4 text-left not-italic">
+                  <address className="text mt-4 inline-block text-left not-italic">
                     <p>
                       電話番号{" "}
                       <b className="text-lg">
@@ -820,7 +792,7 @@ const About: NextPage = () => {
           </div>
 
           <div className="footer-menu mt-4 text-center text-sm">
-            <ul className="inline-flex gap-2">
+            <ul className="inline-flex flex-wrap gap-2">
               <li>
                 <a href="./index.html">Home</a>
               </li>
