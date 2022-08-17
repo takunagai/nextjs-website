@@ -39,16 +39,18 @@ const About: NextPage = () => {
               window.matchMedia("(max-device-width: 640px)").matches
             ) {
               return (
-                <Image
-                  src="/images/souffle/main.png"
-                  width={732}
-                  height={869}
-                  alt="スフレ"
-                />
+                <div className="hero-image">
+                  <Image
+                    src="/images/souffle/main.png"
+                    width={732}
+                    height={869}
+                    alt="スフレ"
+                  />
+                </div>
               )
             } else {
               return (
-                <div className="hero-image alignfull relative mt-8 bg-cover bg-center">
+                <div className="hero-image alignfull relative mt-8 text-center">
                   <Image
                     src="/images/souffle/main_lg.png"
                     width={1600}
@@ -182,7 +184,7 @@ const About: NextPage = () => {
 
             <div className="fadein-images mt-8 grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <div className="grid__item">
-                <p className="menu__img">
+                <p className="image-with-border">
                   <Image
                     src="/images/souffle/souffle_cheese.jpg"
                     width={600}
@@ -202,7 +204,7 @@ const About: NextPage = () => {
                 </p>
               </div>
               <div className="grid__item">
-                <p className="menu__img">
+                <p className="image-with-border">
                   <Image
                     src="/images/souffle/souffle_chocolate.jpg"
                     width={600}
@@ -222,7 +224,7 @@ const About: NextPage = () => {
                 </p>
               </div>
               <div className="grid__item">
-                <p className="menu__img">
+                <p className="image-with-border">
                   <Image
                     src="/images/souffle/souffle_maple.jpg"
                     width={600}
@@ -242,7 +244,7 @@ const About: NextPage = () => {
                 </p>
               </div>
               <div className="grid__item">
-                <p className="menu__img">
+                <p className="image-with-border">
                   <Image
                     src="/images/souffle/souffle_plate-berry.jpg"
                     width={600}
@@ -264,7 +266,7 @@ const About: NextPage = () => {
                 </p>
               </div>
               <div className="grid__item">
-                <p className="menu__img">
+                <p className="image-with-border">
                   <Image
                     src="/images/souffle/souffle_plate-tea.jpg"
                     width={600}
@@ -286,7 +288,7 @@ const About: NextPage = () => {
                 </p>
               </div>
               <div className="grid__item">
-                <p className="menu__img">
+                <p className="image-with-border">
                   <Image
                     src="/images/souffle/mix-sandwitch.jpg"
                     width={600}
@@ -306,7 +308,7 @@ const About: NextPage = () => {
                 </p>
               </div>
               <div className="grid__item">
-                <p className="menu__img">
+                <p className="image-with-border">
                   <Image
                     src="/images/souffle/hot-chocolate.jpg"
                     width={600}
@@ -380,7 +382,7 @@ const About: NextPage = () => {
                 </p>
               </div>
               <div className="grid__item bg-white shadow">
-                <p className="menu__img">
+                <p>
                   <Image
                     src="/images/souffle/drink-set-menu.jpg"
                     width={600}
@@ -502,7 +504,7 @@ const About: NextPage = () => {
                   </li>
                 </ul>
 
-                <div className="mt-5 rounded-lg border py-3 px-5">
+                <div className="mt-5 rounded-lg border border-dashed border-secondary-300 py-3 px-5">
                   <p>
                     <b className="text-sm">配達料無料！</b>
                   </p>
@@ -536,7 +538,7 @@ const About: NextPage = () => {
           </p>
 
           <div className="container mx-auto max-w-4xl">
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 ナッツベリーのチーズスフレの大ファンです！
               </p>
@@ -545,7 +547,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 口に入れた途端、ふわっふわでとろける食感！
               </p>
@@ -554,7 +556,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 「熱々で甘さ控えめのスフレ」と「冷たくて甘いクリーム」のバランスが最高！
               </p>
@@ -564,7 +566,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 ハニーマスタードが絶妙で美味しい「チキンサンド」！
               </p>
@@ -573,7 +575,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 待つこと15分。焼きたてスフレだからこその美味しさがあります。
               </p>
@@ -582,7 +584,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 ふわふわの食感。口に含むと細かくはぜるように溶けてゆきます
               </p>
@@ -591,7 +593,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 淡く儚い食感なのに、食べ応えもあるスフレ
               </p>
@@ -600,7 +602,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 スフレのふわふわ感。濃厚だがしつこくなく、美味しかったです
               </p>
@@ -609,7 +611,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 甘さ控えめ、軽い食感がいい。男性でも美味しくいただけました
               </p>
@@ -618,7 +620,7 @@ const About: NextPage = () => {
               </p>
             </div>
 
-            <div className="voice__article mt-3 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-3">
+            <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
               <p className="voice__article__title font-bold text-primary">
                 待つこと15分。焼きたてスフレだからこその美味しさがあります。
               </p>
