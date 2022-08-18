@@ -314,7 +314,7 @@ main p + p {
  * 未整理
  */
 body {
-  padding-top: 1.5em;
+  padding-top: 7px;
   border-top: 3px solid #653c00;
   background-image: url("../public/images/souffle/race_line.png"),
     url("../public/images/souffle/bg_waterdot.png");

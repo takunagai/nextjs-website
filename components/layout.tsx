@@ -3,7 +3,6 @@ import Head from "next/head"
 import Link from "next/link"
 import Script from "next/script"
 import { useTheme } from "next-themes"
-import TopmostNotificationBar from "./TopmostNotificationBar"
 import Header from "./Header"
 import BreadCrumbs from "./BreadCrumbs"
 import Footer from "./Footer"
@@ -64,7 +63,6 @@ export default function Layout({ children, title, description, home }: Props) {
       </Head>
 
       <div className="flex h-full w-full flex-col">
-        <TopmostNotificationBar />
         <Header
           home={home}
           siteTitle={siteTitle}
@@ -72,46 +70,32 @@ export default function Layout({ children, title, description, home }: Props) {
           theme={theme}
           setTheme={setTheme}
         />
-        <div className="w-full border-b border-zinc-500/25 py-2 px-4 sm:px-6 lg:px-8">
-          <BreadCrumbs pageTitle={pageTitle} />
-        </div>
-        {/*<div className="cover__main container lg:flex lg:justify-between">*/}
+
+        {!home ? (
+          <>
+            <div className="page-title alignfull size mt-4 bg-triangle bg-25% py-6 px-4 text-center">
+              <h1 className="text-lg tracking-widest text-primary-700">
+                {pageTitle}
+              </h1>
+            </div>
+            <div className="py-2 px-4 sm:px-6 lg:px-8">
+              <BreadCrumbs pageTitle={pageTitle} />
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
+
         <div className="cover__main container">
           <main id="primary" role="main">
             {children}
           </main>
-          {/*<div id="secondary" className="w-64">*/}
-          {/*  <h3>見出し</h3>*/}
-          {/*  <ul>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目1</a>*/}
-          {/*    </li>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目2</a>*/}
-          {/*    </li>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目3</a>*/}
-          {/*    </li>*/}
-          {/*  </ul>*/}
-          {/*  <h3>見出し</h3>*/}
-          {/*  <ul>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目1</a>*/}
-          {/*    </li>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目2</a>*/}
-          {/*    </li>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目3</a>*/}
-          {/*    </li>*/}
-          {/*  </ul>*/}
-          {/*</div>*/}
         </div>
 
         {!home && (
           <p className="mt-5 text-center text-sm">
             <Link href="/" scroll={false}>
-              <a className="border-b">ホームに戻る</a>
+              <a className="border-b">» ホームに戻る</a>
             </Link>
           </p>
         )}

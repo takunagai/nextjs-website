@@ -13,22 +13,47 @@ type Props = {
 
 const Header = ({ home, siteTitle, theme, setTheme }: Props) => {
   return (
-    <header className="relative z-50 bg-zinc-100 py-2 dark:bg-zinc-800">
-      <nav
-        className="w-full px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
-        aria-label="Global"
-      >
-        <div className="flex items-center justify-between">
-          <SiteLogo home={home} siteTitle={siteTitle} />
-          <div className="flex items-center gap-2 sm:hidden">
-            <ModeSwitcher theme={theme} setTheme={setTheme} />
-            <NavbarCollapseButton />
-          </div>
-        </div>
-        <Navbar />
-        <div className="hidden md:block">
-          <ModeSwitcher theme={theme} setTheme={setTheme} />
-        </div>
+    <header className="flex flex-col gap-10">
+      <SiteLogo />
+
+      <nav className="alignfull main-menu order-1 bg-secondary-100 py-2 px-4 text-center text-xs font-bold md:text-sm">
+        <ul className="inline-flex flex-wrap justify-center gap-5 md:gap-8">
+          <li className="uppercase">
+            <a className="text-primary-400 no-underline" href="">
+              Home
+            </a>
+          </li>
+          <li className="uppercase">
+            <a className="text-primary-400 no-underline" href="">
+              Menu
+            </a>
+          </li>
+          <li className="uppercase">
+            <a className="text-primary-400 no-underline" href="">
+              Takeout
+            </a>
+          </li>
+          <li className="uppercase">
+            <a className="text-primary-400 no-underline" href="">
+              Voice
+            </a>
+          </li>
+          <li className="uppercase">
+            <a className="text-primary-400 no-underline" href="">
+              About
+            </a>
+          </li>
+          <li className="uppercase">
+            <a
+              className="text-primary-400 no-underline"
+              href="https://www.instagram.com/knottsberry_kawanishi/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ■
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
   )
