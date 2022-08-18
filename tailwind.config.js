@@ -98,6 +98,15 @@ module.exports = {
         craft: "url('../public/images/souffle/bg_paper.png')",
         dots2: "url('../public/images/souffle/bg_waterdot.png')",
         dots3: "url('../public/images/souffle/bg_waterdots3.png')",
+        triangle: "url('../public/images/souffle/bg_triangledot.png')",
+        paper: "url('../public/images/souffle/bg_paper_white.png')",
+      },
+      backgroundSize: {
+        auto: "auto",
+        cover: "cover",
+        contain: "contain",
+        "50%": "50%",
+        "25%": "25%",
       },
       typography: (theme) => ({
         // @tailwindcss/typography Plugin
