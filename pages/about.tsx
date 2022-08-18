@@ -73,17 +73,29 @@ const About: NextPage = () => {
               </li>
             </ul>
           </nav>
+          <div className="page-title alignfull size bg-triangle bg-25% py-6 px-4 text-center">
+            <h1 className="text-lg text-primary-700">スフレ レシピ開発</h1>
+          </div>
+          <div className="breadcrumbs container my-0 text-xs">
+            <ol className="inline-flex flex-wrap justify-center gap-2">
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              <li>スフレのレシピ開発</li>
+            </ol>
+          </div>
         </header>
 
         {(() => {
           if (isMobile) {
             return (
-              <div className="hero-image">
+              <div className="hero-image alignfull mt-8 p-3">
                 <Image
                   src="/images/souffle/main.png"
-                  width={732}
-                  height={869}
+                  width={733}
+                  height={876}
                   alt="スフレ"
+                  quality={85}
                 />
               </div>
             )
@@ -92,9 +104,8 @@ const About: NextPage = () => {
               <div className="hero-image alignfull mt-8 text-center">
                 <Image
                   src="/images/souffle/main_lg.png"
-                  width={1600}
-                  height={652}
-                  layout="responsive"
+                  width={1800}
+                  height={733}
                   alt="スフレ"
                 />
               </div>
@@ -110,7 +121,6 @@ const About: NextPage = () => {
             alt="あつあつ、ふわふわ。まるで夢を食べているような特別なスフレケーキ"
           />
         </p>
-        <p>↑ のメッセージを修正：すべてのお客様に感動を</p>
         <p className="lead mx-auto max-w-xl">
           オーダーを聞いてからつくる、熱々のとろける新感覚デザート。憧れの人と一緒にナッツベリーのスフレを食べれば、映画「麗しのサブリナ」のオードリー・ヘップバーンのように素敵な恋に落ちるかも…
         </p>
@@ -382,55 +392,53 @@ const About: NextPage = () => {
                     data-hs-tooltip-trigger="hover"
                   >
                     <a
-                      className="hs-tooltip-toggle block text-center"
+                      className="hs-tooltip-toggle mt-2 inline-block text-center text-sm font-semibold"
                       href="javascript:"
                     >
-                      <a className="mt-2 text-sm font-semibold">
-                        » ドリンクメニューを見る
-                      </a>
-                      <div
-                        className="hs-tooltip-content invisible absolute z-10 inline-block max-w-xs rounded-lg border border-gray-100 bg-white text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100 dark:border-gray-700 dark:bg-gray-800"
-                        role="tooltip"
-                      >
-                        <span className="block px-4 pt-3 text-center text-lg font-bold tracking-wider text-primary underline dark:text-white">
-                          Drink Menu
-                        </span>
-                        <div className="py-3 px-4 text-gray-600 dark:text-gray-400">
-                          <dl>
-                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                              Coffee:
-                            </dt>
-                            <dd className="text-sm text-gray-600 dark:text-gray-400">
-                              ライト(アメリカン)、ミドル(ブレンド)、ヘビー(濃いブレンド)、ストロング(エスプレッソ)、アイスコーヒー、カフェオレ(Hot/Ice)、カフェラテ(Hot/Ice)、ウインナーコーヒー(Hot/Ice)
-                            </dd>
-                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                              Tea:
-                            </dt>
-                            <dd className="text-sm text-gray-600 dark:text-gray-400">
-                              シンガンパティ(Hot/Ice)、アールグレイ(Hot/Ice)、ダージリン(Hot/Ice)、ハーブティー(Hot)
-                            </dd>
-                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                              Juice:
-                            </dt>
-                            <dd className="text-sm text-gray-600 dark:text-gray-400">
-                              100%生搾りオレンジ、100%生搾りグレープフルーツ、100%すりおろしリンゴ、生搾りレモンスカッシュ、マンゴージュース、コーラ、ジンジャーエール
-                            </dd>
-                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                              Float:
-                            </dt>
-                            <dd className="text-sm text-gray-600 dark:text-gray-400">
-                              コーヒーフロート、メロンフロート、いちごフロート、ラムネフロート、コーラフロート、ジンジャーフロート
-                            </dd>
-                            <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                              Others:
-                            </dt>
-                            <dd className="text-sm text-gray-600 dark:text-gray-400">
-                              ミルク(Hot/Ice)、ホットチョコレート(カカオ64%)、バニラアイスクリーム
-                            </dd>
-                          </dl>
-                        </div>
-                      </div>
+                      » ドリンクメニューを見る
                     </a>
+                    <div
+                      className="hs-tooltip-content invisible absolute z-10 inline-block max-w-xs rounded-lg border border-gray-100 bg-white text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100 dark:border-gray-700 dark:bg-gray-800"
+                      role="tooltip"
+                    >
+                      <span className="block px-4 pt-3 text-center text-lg font-bold tracking-wider text-primary underline dark:text-white">
+                        Drink Menu
+                      </span>
+                      <div className="py-3 px-4 text-gray-600 dark:text-gray-400">
+                        <dl>
+                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                            Coffee:
+                          </dt>
+                          <dd className="text-sm text-gray-600 dark:text-gray-400">
+                            ライト(アメリカン)、ミドル(ブレンド)、ヘビー(濃いブレンド)、ストロング(エスプレッソ)、アイスコーヒー、カフェオレ(Hot/Ice)、カフェラテ(Hot/Ice)、ウインナーコーヒー(Hot/Ice)
+                          </dd>
+                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                            Tea:
+                          </dt>
+                          <dd className="text-sm text-gray-600 dark:text-gray-400">
+                            シンガンパティ(Hot/Ice)、アールグレイ(Hot/Ice)、ダージリン(Hot/Ice)、ハーブティー(Hot)
+                          </dd>
+                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                            Juice:
+                          </dt>
+                          <dd className="text-sm text-gray-600 dark:text-gray-400">
+                            100%生搾りオレンジ、100%生搾りグレープフルーツ、100%すりおろしリンゴ、生搾りレモンスカッシュ、マンゴージュース、コーラ、ジンジャーエール
+                          </dd>
+                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                            Float:
+                          </dt>
+                          <dd className="text-sm text-gray-600 dark:text-gray-400">
+                            コーヒーフロート、メロンフロート、いちごフロート、ラムネフロート、コーラフロート、ジンジャーフロート
+                          </dd>
+                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
+                            Others:
+                          </dt>
+                          <dd className="text-sm text-gray-600 dark:text-gray-400">
+                            ミルク(Hot/Ice)、ホットチョコレート(カカオ64%)、バニラアイスクリーム
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
                   </div>
                 </p>
               </div>
@@ -540,7 +548,7 @@ const About: NextPage = () => {
                   ワンハンド・スフレ
                 </h3>
                 <p className="mt-2">
-                  ★★アイスに：片手で持てるスフレコーン。ふわふわのスフレの上にかわいくて美味しいトッピングを載せました。コーンの中にはクリームがたっぷり！
+                  片手で持てるスフレコーン。ふわふわのスフレの上にかわいくて美味しいトッピングを載せました。コーンの中にはアイスクリーム！
                 </p>
                 <p className="mt-0 text-sm">
                   (ショーケースの中に商品が無くてもお作りできますので、お気軽にお声がけ下さい)
