@@ -316,13 +316,17 @@ main p + p {
 body {
   padding-top: 1.5em;
   border-top: 3px solid #653c00;
-  background-position-x: 0;
-  background-position-y: 0;
   background-image: url("../public/images/souffle/race_line.png"),
     url("../public/images/souffle/bg_waterdot.png");
   background-repeat: repeat-x, repeat-x;
-  background-position: top left;
+  background-position: top left, top left;
   background-size: auto 10px, auto;
+}
+
+.breadcrumbs li:not(:first-child)::before {
+  content: "»";
+  display: inline-block;
+  margin-right: 0.5em;
 }
 
 .header-deco {
