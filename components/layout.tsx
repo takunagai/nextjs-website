@@ -75,24 +75,46 @@ export default function Layout({ children, title, description, home }: Props) {
         <div className="w-full border-b border-zinc-500/25 py-2 px-4 sm:px-6 lg:px-8">
           <BreadCrumbs pageTitle={pageTitle} />
         </div>
-        {/*<div className={`cover__main wrapper ${styles.container}`}>*/}
-        <div className="cover__main wrapper">
+        {/*<div className="cover__main container lg:flex lg:justify-between">*/}
+        <div className="cover__main container">
           <main id="primary" role="main">
             {children}
           </main>
-
-          {/* <div id="secondary">
-              <p>サイドバー</p>
-          </div> */}
-
-          {!home && (
-            <p className="mt-5 text-center text-sm">
-              <Link href="/" scroll={false}>
-                <a className="border-b">ホームに戻る</a>
-              </Link>
-            </p>
-          )}
+          {/*<div id="secondary" className="w-64">*/}
+          {/*  <h3>見出し</h3>*/}
+          {/*  <ul>*/}
+          {/*    <li>*/}
+          {/*      <a href="#">項目1</a>*/}
+          {/*    </li>*/}
+          {/*    <li>*/}
+          {/*      <a href="#">項目2</a>*/}
+          {/*    </li>*/}
+          {/*    <li>*/}
+          {/*      <a href="#">項目3</a>*/}
+          {/*    </li>*/}
+          {/*  </ul>*/}
+          {/*  <h3>見出し</h3>*/}
+          {/*  <ul>*/}
+          {/*    <li>*/}
+          {/*      <a href="#">項目1</a>*/}
+          {/*    </li>*/}
+          {/*    <li>*/}
+          {/*      <a href="#">項目2</a>*/}
+          {/*    </li>*/}
+          {/*    <li>*/}
+          {/*      <a href="#">項目3</a>*/}
+          {/*    </li>*/}
+          {/*  </ul>*/}
+          {/*</div>*/}
         </div>
+
+        {!home && (
+          <p className="mt-5 text-center text-sm">
+            <Link href="/" scroll={false}>
+              <a className="border-b">ホームに戻る</a>
+            </Link>
+          </p>
+        )}
         <Footer />
       </div>
 
