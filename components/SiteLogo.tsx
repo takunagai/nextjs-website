@@ -15,8 +15,8 @@ const SiteLogo = ({ home }: Props) => {
         >
           <Image
             src="/images/souffle/logo.png"
-            width={140}
-            height={47}
+            width={168}
+            height={56}
             alt="Knott's Berry"
             className="logo site-branding"
           />

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const Footer = () => {
   return (
@@ -72,34 +73,34 @@ const Footer = () => {
       <div className="footer-menu alignfull pt-3 pb-5 text-center text-xs md:text-sm">
         <ul className="inline-flex flex-wrap justify-center gap-5">
           <li>
-            <a className="text-primary-600" href="./index.html">
-              Home
-            </a>
+            <Link href="/">
+              <a className="text-primary-600">Home</a>
+            </Link>
           </li>
           <li>
-            <a className="text-primary-600" href="./recipe_development.php">
-              スフレをメニューにしたい方へ
-            </a>
+            <Link href="recipe-development">
+              <a className="text-primary-600">スフレをメニューにしたい方へ</a>
+            </Link>
           </li>
           <li>
-            <a className="text-primary-600" href="./recruit.html">
-              求人情報
-            </a>
+            <Link href="recruit">
+              <a className="text-primary-600">求人情報</a>
+            </Link>
           </li>
           <li>
-            <a className="text-primary-600" href="./privacy_policy.html">
-              個人情報保護方針
-            </a>
+            <Link href="privacy-policy">
+              <a className="text-primary-600">個人情報保護方針</a>
+            </Link>
           </li>
           <li>
-            <a className="text-primary-600" href="./inquiry.php">
-              お問合せ
-            </a>
+            <Link href="inquiry">
+              <a className="text-primary-600">お問合せ</a>
+            </Link>
           </li>
         </ul>
       </div>
 
-      <p className="copylight alignfull bg-primary py-3 text-center text-xs text-primary-200">
+      <p className="copyright alignfull bg-primary py-3 text-center text-xs text-primary-200">
         © 2022 Knott&apos;s Berry
       </p>
     </footer>

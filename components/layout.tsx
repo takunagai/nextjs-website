@@ -16,7 +16,7 @@ type Props = {
   home?: boolean
 }
 
-export const siteTitle = "ナガイ商店.com"
+export const siteTitle = "川西市のスフレ専門店 ナッツベリー"
 
 export default function Layout({ children, title, description, home }: Props) {
   const pageTitle = title || "タイトル未設定"
