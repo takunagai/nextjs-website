@@ -29,6 +29,7 @@ const Home: NextPage = () => {
                   height={876}
                   alt="スフレ"
                   quality={85}
+                  priority
                 />
               </div>
             )
@@ -40,6 +41,7 @@ const Home: NextPage = () => {
                   width={1800}
                   height={733}
                   alt="スフレ"
+                  priority
                 />
               </div>
             )

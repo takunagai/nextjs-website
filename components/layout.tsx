@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import { ReactNode, useState, useEffect } from "react"
 import Head from "next/head"
 import Link from "next/link"
 import Script from "next/script"
@@ -6,11 +6,9 @@ import { useTheme } from "next-themes"
 import Header from "./Header"
 import BreadCrumbs from "./BreadCrumbs"
 import Footer from "./Footer"
-// import styles from './layout.module.css'
-// import utilStyles from '../styles/utils.module.css'
 
 type Props = {
-  children: React.ReactNode // React 18 以降で、children を props として受け取るのに必要になった
+  children: ReactNode // React 18 以降で、children を props として受け取るのに必要になった
   title?: string
   description?: string
   home?: boolean

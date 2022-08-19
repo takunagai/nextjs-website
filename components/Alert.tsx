@@ -3,13 +3,12 @@
  * type が success, error でスタイルを変える例
  * https://nextjs.org/learn/basics/assets-metadata-css/styling-tips
  */
-import React from "react"
+import { ReactNode } from "react"
 import styles from "./Alert.module.css"
 import cn from "classnames"
 
-// import type {FC} from 'react'
 type Props = {
-  children: React.ReactNode
+  children: ReactNode
   type: string
 }
 
