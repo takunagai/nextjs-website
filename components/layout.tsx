@@ -61,13 +61,7 @@ export default function Layout({ children, title, description, home }: Props) {
       </Head>
 
       <div className="flex h-full w-full flex-col">
-        <Header
-          home={home}
-          siteTitle={siteTitle}
-          pageTitle={pageTitle}
-          theme={theme}
-          setTheme={setTheme}
-        />
+        <Header home={home} />
 
         {!home ? (
           <>
