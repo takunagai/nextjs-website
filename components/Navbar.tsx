@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Link as Scroll } from "react-scroll"
 
 type Props = {
   home?: boolean
@@ -11,23 +12,31 @@ const Navbar = ({ home }: Props) => {
         {home ? (
           <ul className="inline-flex flex-wrap justify-center gap-5 md:gap-8">
             <li className="uppercase">
-              <a className="text-primary-400 no-underline" href="#pickup-menu">
-                Menu
+              <a className="text-primary-400 no-underline">
+                <Scroll to="pickup-menu" smooth={true}>
+                  Menu
+                </Scroll>
               </a>
             </li>
             <li className="uppercase">
-              <a className="text-primary-400 no-underline" href="#takeout">
-                Takeout
+              <a className="text-primary-400 no-underline">
+                <Scroll to="takeout" smooth={true}>
+                  Takeout
+                </Scroll>
               </a>
             </li>
             <li className="uppercase">
-              <a className="text-primary-400 no-underline" href="#voice">
-                Voice
+              <a className="text-primary-400 no-underline">
+                <Scroll to="voice" smooth={true}>
+                  Voice
+                </Scroll>
               </a>
             </li>
             <li className="uppercase">
-              <a className="text-primary-400 no-underline" href="#about">
-                About
+              <a className="text-primary-400 no-underline">
+                <Scroll to="about" smooth={true}>
+                  About
+                </Scroll>
               </a>
             </li>
             <li className="uppercase">
@@ -49,17 +58,17 @@ const Navbar = ({ home }: Props) => {
               </Link>
             </li>
             <li className="uppercase">
-              <Link href="/">
+              <Link href="recipe-development">
                 <a className="text-primary-400 no-underline">レシピ開発</a>
               </Link>
             </li>
             <li className="uppercase">
-              <Link href="/">
+              <Link href="recruit">
                 <a className="text-primary-400 no-underline">求人情報</a>
               </Link>
             </li>
             <li className="uppercase">
-              <Link href="/">
+              <Link href="inquiry">
                 <a className="text-primary-400 no-underline">お問合せ</a>
               </Link>
             </li>
