@@ -45,12 +45,6 @@
   --font-size-base: 1rem; /* 16px */
   --font-size-biggish: 1.5rem; /* 24px */
   --font-size-big: 2rem; /* 32px */
-
-  /**
-   * Modes
-   * color-scheme: dark; オペレーティングシステムのダーク配色を使用
-   */
-  color-scheme: light dark;
 }
 
 /**

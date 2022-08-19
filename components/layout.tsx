@@ -1,8 +1,7 @@
-import { ReactNode, useState, useEffect } from "react"
+import { ReactNode } from "react"
 import Head from "next/head"
 import Link from "next/link"
 import Script from "next/script"
-import { useTheme } from "next-themes"
 import Header from "./Header"
 import BreadCrumbs from "./BreadCrumbs"
 import Footer from "./Footer"
@@ -18,14 +17,6 @@ export const siteTitle = "川西市のスフレ専門店 ナッツベリー"
 
 export default function Layout({ children, title, description, home }: Props) {
   const pageTitle = title || "タイトル未設定"
-
-  // Dark mode
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState<boolean>(false)
-
-  useEffect(() => setMounted(true), [])
-
-  if (!mounted) return null
 
   return (
     <>

@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class", // 'media'(デフォルト), false
   theme: {
     container: {
       // Preline Container デフォルト
