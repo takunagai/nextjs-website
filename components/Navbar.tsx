@@ -1,3 +1,4 @@
+// ★★TODO: ハッシュフラグメントでリンク https://zenn.dev/tera_ny/articles/94c98f1dac31de
 import Link from "next/link"
 
 const Navbar = () => {

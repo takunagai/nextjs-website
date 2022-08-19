@@ -1,4 +1,3 @@
-// ★★TODO: ブログでページタイトルが取得できていないのを修正
 import Link from "next/link"
 
 type Props = {
