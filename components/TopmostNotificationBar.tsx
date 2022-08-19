@@ -10,7 +10,7 @@ const TopmostNotificationBar = () => {
           目立たせたいお知らせが入ります！
         </p>
         <span className="mx-auto inline-block rounded-full bg-white py-1.5 px-3 text-xs font-bold text-pink-500 md:mx-0">
-          <Link href="./about">Read Here</Link>
+          <Link href="#">Read Here</Link>
         </span>
       </div>
     </aside>
