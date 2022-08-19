@@ -12,39 +12,39 @@ const Navbar = ({ home }: Props) => {
         {home ? (
           <ul className="inline-flex flex-wrap justify-center gap-5 md:gap-8">
             <li className="uppercase">
-              <a className="text-primary-400 no-underline">
+              <span className="text-primary-400 no-underline">
                 <Scroll to="pickup-menu" smooth={true}>
                   Menu
                 </Scroll>
-              </a>
+              </span>
             </li>
             <li className="uppercase">
-              <a className="text-primary-400 no-underline">
+              <span className="text-primary-400 no-underline">
                 <Scroll to="takeout" smooth={true}>
                   Takeout
                 </Scroll>
-              </a>
+              </span>
             </li>
             <li className="uppercase">
-              <a className="text-primary-400 no-underline">
+              <span className="text-primary-400 no-underline">
                 <Scroll to="voice" smooth={true}>
                   Voice
                 </Scroll>
-              </a>
+              </span>
             </li>
             <li className="uppercase">
-              <a className="text-primary-400 no-underline">
+              <span className="text-primary-400 no-underline">
                 <Scroll to="about" smooth={true}>
                   About
                 </Scroll>
-              </a>
+              </span>
             </li>
             <li className="uppercase">
               <a
                 className="text-primary-400 no-underline"
                 href="https://www.instagram.com/knottsberry_kawanishi/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
               >
                 ■
               </a>
@@ -77,7 +77,7 @@ const Navbar = ({ home }: Props) => {
                 className="text-primary-400 no-underline"
                 href="https://www.instagram.com/knottsberry_kawanishi/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer noopener"
               >
                 ■
               </a>
