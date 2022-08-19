@@ -1,9 +1,7 @@
 // ★★TODO: ハッシュフラグメントでリンク https://zenn.dev/tera_ny/articles/94c98f1dac31de
 import SiteLogo from "./SiteLogo"
 import Link from "next/link"
-import NavbarCollapseButton from "./NavbarCollapseButton"
 import Navbar from "./Navbar"
-import ModeSwitcher from "./ModeSwitcher"
 
 type Props = {
   home?: boolean
