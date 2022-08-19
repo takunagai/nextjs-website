@@ -324,61 +324,60 @@ const Home: NextPage = () => {
                 <p className="menu__price text-center text-xs">530円〜</p>
                 <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                   コーヒー、紅茶、ハーブティ、ジュース、フロートなど、多種多様のドリンクを提供しています。
-                  <br />
-                  <div
-                    className="hs-tooltip inline-block"
-                    data-hs-tooltip-trigger="hover"
+                </p>
+                <div
+                  className="hs-tooltip inline-block"
+                  data-hs-tooltip-trigger="hover"
+                >
+                  <a
+                    className="hs-tooltip-toggle mt-2 inline-block text-center text-sm font-semibold"
+                    href={undefined}
                   >
-                    <a
-                      className="hs-tooltip-toggle mt-2 inline-block text-center text-sm font-semibold"
-                      href="javascript:"
-                    >
-                      » ドリンクメニューを見る
-                    </a>
-                    <div
-                      className="hs-tooltip-content invisible absolute z-10 inline-block max-w-xs rounded-lg border border-gray-100 bg-white text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100 dark:border-gray-700 dark:bg-gray-800"
-                      role="tooltip"
-                    >
-                      <span className="block px-4 pt-3 text-center text-lg font-bold tracking-wider text-primary underline dark:text-white">
-                        Drink Menu
-                      </span>
-                      <div className="py-3 px-4 text-gray-600 dark:text-gray-400">
-                        <dl>
-                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                            Coffee:
-                          </dt>
-                          <dd className="text-sm text-gray-600 dark:text-gray-400">
-                            ライト(アメリカン)、ミドル(ブレンド)、ヘビー(濃いブレンド)、ストロング(エスプレッソ)、アイスコーヒー、カフェオレ(Hot/Ice)、カフェラテ(Hot/Ice)、ウインナーコーヒー(Hot/Ice)
-                          </dd>
-                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                            Tea:
-                          </dt>
-                          <dd className="text-sm text-gray-600 dark:text-gray-400">
-                            シンガンパティ(Hot/Ice)、アールグレイ(Hot/Ice)、ダージリン(Hot/Ice)、ハーブティー(Hot)
-                          </dd>
-                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                            Juice:
-                          </dt>
-                          <dd className="text-sm text-gray-600 dark:text-gray-400">
-                            100%生搾りオレンジ、100%生搾りグレープフルーツ、100%すりおろしリンゴ、生搾りレモンスカッシュ、マンゴージュース、コーラ、ジンジャーエール
-                          </dd>
-                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                            Float:
-                          </dt>
-                          <dd className="text-sm text-gray-600 dark:text-gray-400">
-                            コーヒーフロート、メロンフロート、いちごフロート、ラムネフロート、コーラフロート、ジンジャーフロート
-                          </dd>
-                          <dt className="pt-3 font-bold text-secondary-500 first:pt-0 dark:text-white">
-                            Others:
-                          </dt>
-                          <dd className="text-sm text-gray-600 dark:text-gray-400">
-                            ミルク(Hot/Ice)、ホットチョコレート(カカオ64%)、バニラアイスクリーム
-                          </dd>
-                        </dl>
-                      </div>
+                    » ドリンクメニューを見る
+                  </a>
+                  <div
+                    className="hs-tooltip-content invisible absolute z-10 inline-block max-w-xs rounded-lg border border-gray-100 bg-white text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100"
+                    role="tooltip"
+                  >
+                    <span className="block px-4 pt-3 text-center text-lg font-bold tracking-wider text-primary underline">
+                      Drink Menu
+                    </span>
+                    <div className="py-3 px-4 text-gray-600">
+                      <dl>
+                        <dt className="pt-3 font-bold text-secondary-500 first:pt-0">
+                          Coffee:
+                        </dt>
+                        <dd className="text-sm text-gray-600">
+                          ライト(アメリカン)、ミドル(ブレンド)、ヘビー(濃いブレンド)、ストロング(エスプレッソ)、アイスコーヒー、カフェオレ(Hot/Ice)、カフェラテ(Hot/Ice)、ウインナーコーヒー(Hot/Ice)
+                        </dd>
+                        <dt className="pt-3 font-bold text-secondary-500 first:pt-0">
+                          Tea:
+                        </dt>
+                        <dd className="text-sm text-gray-600">
+                          シンガンパティ(Hot/Ice)、アールグレイ(Hot/Ice)、ダージリン(Hot/Ice)、ハーブティー(Hot)
+                        </dd>
+                        <dt className="pt-3 font-bold text-secondary-500 first:pt-0">
+                          Juice:
+                        </dt>
+                        <dd className="text-sm text-gray-600">
+                          100%生搾りオレンジ、100%生搾りグレープフルーツ、100%すりおろしリンゴ、生搾りレモンスカッシュ、マンゴージュース、コーラ、ジンジャーエール
+                        </dd>
+                        <dt className="pt-3 font-bold text-secondary-500 first:pt-0">
+                          Float:
+                        </dt>
+                        <dd className="text-sm text-gray-600">
+                          コーヒーフロート、メロンフロート、いちごフロート、ラムネフロート、コーラフロート、ジンジャーフロート
+                        </dd>
+                        <dt className="pt-3 font-bold text-secondary-500 first:pt-0">
+                          Others:
+                        </dt>
+                        <dd className="text-sm text-gray-600">
+                          ミルク(Hot/Ice)、ホットチョコレート(カカオ64%)、バニラアイスクリーム
+                        </dd>
+                      </dl>
                     </div>
                   </div>
-                </p>
+                </div>
               </div>
               <div className="grid__item bg-white shadow">
                 <FadeIn delay={isMobile ? 0 : 1.75}>
@@ -662,7 +661,7 @@ const Home: NextPage = () => {
                     <a
                       href="https://www.instagram.com/knottsberry_kawanishi/"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noreferrer noopener"
                     >
                       ナッツベリー 公式 Instagram
                     </a>
@@ -755,7 +754,7 @@ const Home: NextPage = () => {
 
         <section id="about" className="about alignfull bg-dots3 py-20">
           <div className="container">
-            <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 lg:grid-cols-5">
+            <div className="lg:grid lg:grid-cols-2 lg:grid-cols-5 lg:items-center lg:gap-12">
               <div className="lg:col-span-2">
                 <h2 className="header-deco mb-8 text-center text-xs font-normal tracking-wide">
                   <Image
@@ -777,7 +776,7 @@ const Home: NextPage = () => {
                   『麗しのサブリナ』で、タカラジェンヌのトップスターが、スフレづくりのシーンを参考するために、ナッツベリーを訪問見学されました。
                 </p>
               </div>
-              <div className="mt-4 px-12 text-center md:mt-0 lg:col-span-3">
+              <div className="mt-8 px-12 text-center lg:col-span-3 lg:mt-0">
                 <FadeIn delay={isMobile ? 0 : 0.5}>
                   <Image
                     src="/images/souffle/shop-images.jpg"
@@ -826,7 +825,7 @@ const Home: NextPage = () => {
                 <a
                   href="https://goo.gl/maps/ZmQsXe6CbTe4kv9S6"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer noopener"
                 >
                   » Googleマップで見る
                 </a>
