@@ -48,6 +48,7 @@ export default function Layout({ children, title, description, home }: Props) {
           property="og:image"
           content="https://preline.co/preline-logo.svg"
         />
+        <link rel="apple-touch-icon" href="/favicon/favicon.ico" />
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
 
