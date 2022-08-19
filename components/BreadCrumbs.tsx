@@ -6,13 +6,15 @@ type Props = {
 
 const BreadCrumbs = ({ pageTitle }: Props) => {
   return (
-    <ol className="flex min-w-0 items-center whitespace-nowrap">
-      <li className="flex items-center text-xs">
-        <Link className="text-gray-500 hover:text-blue-600" href="/">
-          Home
+    <ol className="flex min-w-0 items-center whitespace-nowrap text-xs">
+      <li className="flex items-center">
+        <Link href="/">
+          <a className="text-gray-600 hover:text-primary hover:underline">
+            Home
+          </a>
         </Link>
         <svg
-          className="mx-3 h-2.5 w-2.5 flex-shrink-0 overflow-visible text-gray-400 dark:text-gray-600"
+          className="mx-2 h-2 w-2 flex-shrink-0 overflow-visible text-gray-300"
           width="16"
           height="16"
           viewBox="0 0 16 16"
@@ -27,10 +29,7 @@ const BreadCrumbs = ({ pageTitle }: Props) => {
           />
         </svg>
       </li>
-      <li
-        className="truncate truncate text-xs font-semibold text-gray-800 dark:text-gray-200"
-        aria-current="page"
-      >
+      <li className="truncate font-bold text-gray-800" aria-current="page">
         {pageTitle}
       </li>
     </ol>
