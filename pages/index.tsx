@@ -674,7 +674,7 @@ const Home: NextPage = () => {
                         <a
                           href="https://www.instagram.com/knottsberry_kawanishi/"
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noreferrer noopener"
                         >
                           ナッツベリー 公式 Instagram
                         </a>
@@ -838,7 +838,7 @@ const Home: NextPage = () => {
                     <a
                       href="https://goo.gl/maps/ZmQsXe6CbTe4kv9S6"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noreferrer noopener"
                     >
                       » Googleマップで見る
                     </a>
