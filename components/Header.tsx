@@ -14,7 +14,7 @@ const Header = ({ home }: Props) => {
   return (
     <header className="flex flex-col gap-10">
       <SiteLogo home={home} />
-      <Navbar />
+      <Navbar home={home} />
     </header>
   )
 }
