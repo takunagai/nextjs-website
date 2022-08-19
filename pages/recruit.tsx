@@ -17,7 +17,7 @@ const Recruit: NextPage = () => {
       >
         <p className="text-center">
           <Image
-            src="/images/souffle/img_kichen.jpg"
+            src="/images/souffle/img_kitchen.jpg"
             width={800}
             height={560}
             alt="カフェ ナッツベリーのキッチン"
