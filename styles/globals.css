@@ -70,22 +70,29 @@
 
 @layer components {
   :root {
-    --btn-padding-x: 1.5em;
-    --btn-padding-y: 0.75em;
+    --btn-padding-x: 1.25em;
+    --btn-padding-y: 0.5em;
+  }
+  .btn-small {
+    --btn-padding-x: 0.6em;
+    --btn-padding-y: 0.25em;
   }
   .btn {
-    @apply px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] transition hover:scale-105;
+    @apply inline-block px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] transition hover:scale-105;
   }
-  .btn--primary {
-    @apply bg-blue-500 text-white transition hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  .btn-primary {
+    @apply bg-primary text-white transition hover:bg-primary-300 focus:ring-2 focus:ring-primary-400 focus:ring-opacity-75;
   }
-  .btn--secondary {
+  .btn-outline-primary {
+    @apply border border-primary text-primary transition hover:bg-primary-100 focus:ring-2 focus:ring-primary-400 focus:ring-opacity-75;
+  }
+  .btn-secondary {
     @apply bg-orange-500 text-white transition hover:bg-orange-700 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75;
   }
-  .btn--icon {
+  .btn-icon {
     @apply inline-flex items-center justify-center gap-x-3.5;
   }
-  .box__alert {
+  .box-alert {
     @apply rounded-md border border-red-200 bg-red-50 p-4 text-sm text-red-600;
   }
 }

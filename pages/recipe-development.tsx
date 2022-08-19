@@ -22,6 +22,27 @@ const RecipeDevelopment: NextPage = () => {
           <br />
           あなたの店に導入しませんか？
         </p>
+        <a href="#" className="btn btn-primary">
+          ボタンです
+        </a>
+        <a href="#" className="btn btn-primary btn-small">
+          ボタンです
+        </a>
+        <a href="#" className="btn btn-outline-primary">
+          ボタンです
+        </a>
+        <a href="#" className="btn btn-primary rounded">
+          ボタンです
+        </a>
+        <a href="#" className="btn btn-primary rounded-full">
+          ボタンです
+        </a>
+        <a href="#" className="btn btn-secondary">
+          ボタンです
+        </a>
+        <a href="#" className="btn btn-secondary w-full text-center">
+          ボタンです
+        </a>
 
         <p className="text-center">
           ナッツベリーは、スフレのレシピ開発をお手伝いしています。
