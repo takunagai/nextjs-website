@@ -15,34 +15,9 @@ const RecipeDevelopment: NextPage = () => {
         animate={{ opacity: 1 }} // on mount
         exit={{ opacity: 0 }} // on unmount
       >
-        <p className="lead mx-auto mt-16 max-w-xl text-center text-secondary">
-          お客様の心をつかみ、他店と差別化できる
-          <br />
-          デザートメニュー「スフレケーキ」を
-          <br />
-          あなたの店に導入しませんか？
+        <p className="lead mx-auto mt-8 max-w-xl text-center text-secondary">
+          お客様の心をつかみ、他店と差別化できるデザートメニュー「スフレケーキ」をあなたの店に導入しませんか？
         </p>
-        <a href="#" className="btn btn-primary">
-          ボタンです
-        </a>
-        <a href="#" className="btn btn-primary btn-small">
-          ボタンです
-        </a>
-        <a href="#" className="btn btn-outline-primary">
-          ボタンです
-        </a>
-        <a href="#" className="btn btn-primary rounded">
-          ボタンです
-        </a>
-        <a href="#" className="btn btn-primary rounded-full">
-          ボタンです
-        </a>
-        <a href="#" className="btn btn-secondary">
-          ボタンです
-        </a>
-        <a href="#" className="btn btn-secondary w-full text-center">
-          ボタンです
-        </a>
 
         <p className="text-center">
           ナッツベリーは、スフレのレシピ開発をお手伝いしています。
@@ -65,7 +40,7 @@ const RecipeDevelopment: NextPage = () => {
                   className="rounded-xl"
                 />
               </FadeIn>
-              <h3 className="mt-4 text-xl text-primary">
+              <h3 className="mt-4 text-lg text-primary">
                 他店と差別化できる &quot;感動を与えるスフレ&quot;
               </h3>
               <p className="mt-3">
@@ -82,7 +57,7 @@ const RecipeDevelopment: NextPage = () => {
                   className="rounded-xl"
                 />
               </FadeIn>
-              <h3 className="mt-4 text-xl text-primary">
+              <h3 className="mt-4 text-lg text-primary">
                 インスタ映えするので SNS で拡散しやすい！
               </h3>
               <p className="mt-3">
@@ -101,8 +76,8 @@ const RecipeDevelopment: NextPage = () => {
                   className="rounded-xl"
                 />
               </FadeIn>
-              <h3 className="mt-4 text-xl text-primary">
-                オリジナル・スフレ(季節のスフレ、ご当地スフレ)も作れます
+              <h3 className="mt-4 text-lg text-primary">
+                オリジナルスフレも作れます(季節のスフレ、ご当地スフレ)
               </h3>
               <p className="mt-3">
                 地元の特産品を使った「オリジナルご当地スフレ」や、季節の食材を使ったスフレなど、オリジナルメニューが開発しやすいのもスフレケーキの特徴です。
@@ -116,7 +91,7 @@ const RecipeDevelopment: NextPage = () => {
             こんな方におすすめです！
           </h2>
           <div className="mx-auto max-w-4xl">
-            <ul className="mt-8 list-square font-bold marker:text-secondary-200 md:mt-12 md:text-xl md:leading-10">
+            <ul className="mt-8 list-square font-bold marker:text-secondary-200 md:mt-12 md:text-lg md:leading-10">
               <li>これからカフェを開業したい方</li>
               <li>店のメニューに美味しいスフレを加えたい方</li>
               <li>他店との差別化をはかれるスイーツをお探しの方</li>
