@@ -335,12 +335,9 @@ const Home: NextPage = () => {
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       コーヒー、紅茶、ハーブティ、ジュース、フロートなど、多種多様のドリンクを提供しています。
                     </p>
-                    <div
-                      className="hs-tooltip inline-block"
-                      data-hs-tooltip-trigger="hover"
-                    >
+                    <div className="hs-tooltip" data-hs-tooltip-trigger="hover">
                       <a
-                        className="hs-tooltip-toggle mt-2 inline-block text-center text-sm font-semibold"
+                        className="hs-tooltip-toggle mt-2 block text-center text-sm font-bold"
                         href={undefined}
                       >
                         » ドリンクメニューを見る
@@ -789,7 +786,7 @@ const Home: NextPage = () => {
                       『麗しのサブリナ』で、タカラジェンヌのトップスターが、スフレづくりのシーンを参考するために、ナッツベリーを訪問見学されました。
                     </p>
                   </div>
-                  <div className="mt-8 px-12 text-center lg:col-span-3 lg:mt-0">
+                  <div className="mt-8 px-6 text-center lg:col-span-3 lg:mt-0">
                     <FadeIn delay={isMobile ? 0 : 0.5}>
                       <Image
                         src="/images/souffle/shop-images.jpg"
