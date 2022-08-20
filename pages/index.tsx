@@ -18,8 +18,8 @@ const Home: NextPage = () => {
     <>
       {mounted && (
         <Layout
-          title="兵庫県川西市のスフレ専門店「ナッツベリー」"
-          description="兵庫県川西市のスフレ専門店「ナッツベリー」。カフェでは様々なメニューをお召し上がりいただけます。"
+          title="兵庫県川西市のスフレ専門店＆カフェ「ナッツベリー」"
+          description="スフレ専門店「ナッツベリー」。カフェでは様々なメニューをお召し上がりいただけます。能勢電鉄/阪急電車「川西能勢口駅」から徒歩3分 (アステ川西2階)"
           home
         >
           <motion.div
@@ -767,7 +767,7 @@ const Home: NextPage = () => {
 
             <section id="about" className="about alignfull bg-dots3 py-20">
               <div className="container">
-                <div className="lg:grid lg:grid-cols-2 lg:grid-cols-5 lg:items-center lg:gap-12">
+                <div className="lg:grid lg:grid-cols-5 lg:items-center lg:gap-12">
                   <div className="lg:col-span-2">
                     <h2 className="header-deco mb-8 text-center text-xs font-normal tracking-wide">
                       <Image
@@ -789,7 +789,7 @@ const Home: NextPage = () => {
                       『麗しのサブリナ』で、タカラジェンヌのトップスターが、スフレづくりのシーンを参考するために、ナッツベリーを訪問見学されました。
                     </p>
                   </div>
-                  <div className="mx-auto mt-8 max-w-3xl px-12 text-center lg:col-span-3 lg:mt-0">
+                  <div className="mt-8 px-12 text-center lg:col-span-3 lg:mt-0">
                     <FadeIn delay={isMobile ? 0 : 0.5}>
                       <Image
                         src="/images/souffle/shop-images.jpg"
@@ -797,7 +797,7 @@ const Home: NextPage = () => {
                         height={628}
                         layout="responsive"
                         alt="店舗のイメージ(オードリー・ヘプバーン、スフレ、店内風景)"
-                        className="about-image"
+                        className="about-image mx-auto max-w-2xl"
                       />
                     </FadeIn>
                   </div>
