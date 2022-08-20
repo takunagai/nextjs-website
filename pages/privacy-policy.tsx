@@ -1,10 +1,8 @@
-import Link from "next/link"
-import Image from "next/image"
 import { motion } from "framer-motion"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 
-const Recruit: NextPage = () => {
+const PrivacyPolicy: NextPage = () => {
   return (
     <Layout
       title="個人情報保護方針(プライバシーポリシー)"
@@ -33,11 +31,11 @@ const Recruit: NextPage = () => {
           <p className="mt-3">
             当社による個人情報の取得、利用、提供については、以下の事項を遵守します。
           </p>
-          <h3 className="mt-3 text-base">(1)個人情報の取得</h3>
+          <h3 className="mt-3 text-base text-black">(1)個人情報の取得</h3>
           <p className="mt-2">
             当社は、当社が管理するインターネットによる情報提供サイト（以下「本サイト」といいます。）の運営に必要な範囲で、本サイトの一般利用者（以下「ユーザー」といいます。）又は本サイトに広告掲載を行う者（以下「掲載主」といいます。）から、ユーザー又は掲載主に係る個人情報を取得することがあります。
           </p>
-          <h3 className="mt-3 text-base">(2)個人情報の利用目的</h3>
+          <h3 className="mt-3 text-base text-black">(2)個人情報の利用目的</h3>
           <p className="mt-2">
             当社は、当社が取得した個人情報について、法令に定める場合又は本人の同意を得た場合を除き、以下に定める利用目的の達成に必要な範囲を超えて利用することはありません。
           </p>
@@ -48,7 +46,7 @@ const Recruit: NextPage = () => {
               <li>本サイトの品質向上のためのアンケート</li>
             </ul>
           </ul>
-          <h3 className="mt-3 text-base">(3)個人情報の提供等</h3>
+          <h3 className="mt-3 text-base text-black">(3)個人情報の提供等</h3>
           <p className="mt-2">
             当社は、法令で定める場合を除き、本人の同意に基づき取得した個人情報を、本人の事前の同意なく第三者に提供することはありません。なお、本人の求めによる個人情報の開示、訂正、追加若しくは削除又は利用目的の通知については、法令に従いこれを行うとともに、ご意見、ご相談に関して適切に対応します。
           </p>
@@ -99,4 +97,4 @@ const Recruit: NextPage = () => {
   )
 }
 
-export default Recruit
+export default PrivacyPolicy
