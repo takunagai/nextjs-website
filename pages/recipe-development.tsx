@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
@@ -170,7 +171,9 @@ const RecipeDevelopment: NextPage = () => {
             <p className="mt-3">
               自動返信メールで、パンフレット（展示会で配布したもの）のダウンロードURLを送付いたします。また、折返し電話連絡させていただきます。
               <small>
-                <a href="/privacy-policy">» 個人情報保護方針</a>
+                <Link href="privacy-policy">
+                  <a>» 個人情報保護方針</a>
+                </Link>
               </small>
             </p>
             <div className="mail-form text-left">

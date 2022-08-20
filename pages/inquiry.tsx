@@ -44,7 +44,7 @@ const Inquiry: NextPage = () => {
             <p className="mt-3">
               自動返信メールで、パンフレット（展示会で配布したもの）のダウンロードURLを送付いたします。また、折返し電話連絡させていただきます。
               <small>
-                <a href="/privacy-policy">» 個人情報保護方針</a>
+                <Link href="privacy-policy">» 個人情報保護方針</Link>
               </small>
             </p>
             <div className="mail-form text-left">
