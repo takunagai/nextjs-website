@@ -447,8 +447,8 @@ const Home: NextPage = () => {
                 </h2>
                 <div className="mt-10 lg:grid lg:grid-cols-5 lg:gap-12">
                   <div className="col-span-3 text-center">
-                    <div className="takeout-images text-center">
-                      <FadeIn delay={isMobile ? 0 : 0.5}>
+                    <div className="takeout-images mx-auto max-w-xl">
+                      <FadeIn>
                         <Image
                           src="/images/souffle/takeout-images.jpg"
                           width={600}
@@ -789,7 +789,7 @@ const Home: NextPage = () => {
                       『麗しのサブリナ』で、タカラジェンヌのトップスターが、スフレづくりのシーンを参考するために、ナッツベリーを訪問見学されました。
                     </p>
                   </div>
-                  <div className="mt-8 px-12 text-center lg:col-span-3 lg:mt-0">
+                  <div className="mx-auto mt-8 max-w-3xl px-12 text-center lg:col-span-3 lg:mt-0">
                     <FadeIn delay={isMobile ? 0 : 0.5}>
                       <Image
                         src="/images/souffle/shop-images.jpg"
