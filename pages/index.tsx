@@ -346,10 +346,10 @@ const Home: NextPage = () => {
                         » ドリンクメニューを見る
                       </a>
                       <div
-                        className="hs-tooltip-content invisible absolute z-10 inline-block max-w-xs rounded-lg border border-gray-100 bg-white text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100"
+                        className="hs-tooltip-content border-1 invisible absolute z-10 inline-block max-w-xs rounded-lg border border-dashed border-primary-200 bg-white bg-paper text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100"
                         role="tooltip"
                       >
-                        <span className="block px-4 pt-3 text-center text-lg font-bold tracking-wider text-primary underline">
+                        <span className="block px-4 pt-4 text-center text-lg font-bold tracking-wider text-primary underline">
                           Drink Menu
                         </span>
                         <div className="py-3 px-4 text-gray-600">
