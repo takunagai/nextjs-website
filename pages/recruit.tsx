@@ -72,7 +72,7 @@ const Recruit: NextPage = () => {
                 <p>日祝 1,050円～、平日 1,000円～</p>
               </div>
             </div>
-            <div className="mt-lg-4">
+            <div className="mt-lg-0 mt-4">
               <div className="rounded bg-craft p-5 text-center shadow">
                 <h2 className="text-lg text-primary">
                   電話かメールフォームから
