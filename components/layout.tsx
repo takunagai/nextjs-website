@@ -33,9 +33,13 @@ export default function Layout({ children, title, description, home }: Props) {
   return (
     <>
       <Head>
-        <title>
-          {pageTitle} - {siteTitle}
-        </title>
+        {home ? (
+          <title>{pageTitle}</title>
+        ) : (
+          <title>
+            {pageTitle} - {siteTitle}
+          </title>
+        )}
         <meta name="description" content={description || "ページ概要未設定"} />
         <meta name="twitter:site" content={siteTitle} />
         <meta name="twitter:creator" content="@nagai_shouten" />
