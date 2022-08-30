@@ -8,7 +8,7 @@ const Inquiry: NextPage = () => {
   return (
     <Layout
       title="お問合せ"
-      description="川西市 アステ川西内のカフェ「スフレ専門店 ナッツベリー」の求人情報"
+      description="川西市 アステ川西内のカフェ「スフレ専門店 ナッツベリー」のお問合せフォーム"
     >
       <motion.div
         initial={{ opacity: 0 }} // initial
