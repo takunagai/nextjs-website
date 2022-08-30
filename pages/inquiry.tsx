@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Layout from "../components/layout"
+import ContactForm from "../components/ContactForm"
 import type { NextPage } from "next"
 
 const Inquiry: NextPage = () => {
@@ -48,79 +49,7 @@ const Inquiry: NextPage = () => {
               </small>
             </p>
             <div className="mail-form text-left">
-              <form
-                action="./cgi-bin/recipe_development/confirmation.php"
-                method="post"
-                encType="multipart/form-data"
-              >
-                <dl>
-                  <dt className="mt-4 font-bold text-primary">お名前(必須)</dt>
-                  <dd>
-                    <input type="hidden" name="お名前[params]" value="名前" />
-                    <input type="text" name="お名前[value]" />
-                  </dd>
-                </dl>
-                <dl>
-                  <dt className="mt-4 font-bold text-primary">
-                    メールアドレス(必須)
-                  </dt>
-                  <dd>
-                    <input
-                      type="hidden"
-                      name="メールアドレス[params]"
-                      value="メール"
-                    />
-                    <input type="text" name="メールアドレス[value]" />
-                  </dd>
-                </dl>
-                <dl>
-                  <dt className="mt-4 font-bold text-primary">
-                    メールアドレス確認(必須)
-                  </dt>
-                  <dd>
-                    <input
-                      type="hidden"
-                      name="メールアドレス確認[params]"
-                      value="再入力"
-                    />
-                    <input type="text" name="メールアドレス確認[value]" />
-                  </dd>
-                </dl>
-                <dl>
-                  <dt className="mt-4 font-bold text-primary">
-                    電話番号(必須)
-                  </dt>
-                  <dd>
-                    <input
-                      type="hidden"
-                      name="電話番号[params]"
-                      value="電話番号,必須"
-                    />
-                    <input type="text" name="電話番号[value]" />
-                  </dd>
-                </dl>
-
-                <dl>
-                  <dt className="mt-4 font-bold text-primary">
-                    お問い合わせ内容(必須)
-                  </dt>
-                  <dd>
-                    <input
-                      type="hidden"
-                      name="お問い合わせ内容[params]"
-                      value="必須"
-                    />
-                    <textarea name="お問い合わせ内容[value]"></textarea>
-                  </dd>
-                </dl>
-                <div className="submit_area mt-4 text-center">
-                  <input
-                    type="submit"
-                    value="確認する"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-transparent bg-primary py-3 px-4 text-sm font-bold text-white transition-all hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800"
-                  />
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </section>
