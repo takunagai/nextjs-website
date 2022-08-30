@@ -40,7 +40,7 @@ const Footer = () => {
                   営業時間 <b className="text-lg">10:00～22:00</b>
                 </p>
                 <p className="ml-16 mt-0 text-xs">
-                  スフレタイム 10:00〜20:15
+                  スフレタイム 10:00〜20:00
                   <br />
                   ラストオーダー 19:30
                 </p>
