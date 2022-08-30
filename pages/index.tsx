@@ -185,8 +185,8 @@ const Home: NextPage = () => {
                       <p className="image-with-border">
                         <Image
                           src="/images/souffle/souffle_cheese.jpg"
-                          width={300}
-                          height={200}
+                          width={450}
+                          height={300}
                           alt="チーズスフレ"
                           className="souffle-item rounded-lg"
                         />
@@ -207,8 +207,8 @@ const Home: NextPage = () => {
                       <p className="image-with-border">
                         <Image
                           src="/images/souffle/souffle_chocolate.jpg"
-                          width={300}
-                          height={200}
+                          width={450}
+                          height={300}
                           alt="ショコラスフレ"
                           className="souffle-item rounded-lg"
                         />
@@ -229,8 +229,8 @@ const Home: NextPage = () => {
                       <p className="image-with-border">
                         <Image
                           src="/images/souffle/souffle_maple.jpg"
-                          width={300}
-                          height={200}
+                          width={450}
+                          height={300}
                           alt="メープルスフレ"
                           className="souffle-item rounded-lg"
                         />
@@ -251,8 +251,8 @@ const Home: NextPage = () => {
                       <p className="image-with-border">
                         <Image
                           src="/images/souffle/souffle_plate-berry.jpg"
-                          width={300}
-                          height={200}
+                          width={450}
+                          height={300}
                           alt="プレート ベリースフレ"
                           className="souffle-item rounded-lg"
                         />
@@ -275,8 +275,8 @@ const Home: NextPage = () => {
                       <p className="image-with-border">
                         <Image
                           src="/images/souffle/souffle_plate-tea.jpg"
-                          width={300}
-                          height={200}
+                          width={450}
+                          height={300}
                           alt="プレート 紅茶スフレ"
                           className="souffle-item rounded-lg"
                         />
@@ -299,8 +299,8 @@ const Home: NextPage = () => {
                       <p className="image-with-border">
                         <Image
                           src="/images/souffle/mix-sandwitch.jpg"
-                          width={300}
-                          height={200}
+                          width={450}
+                          height={300}
                           alt="ワンプレートミックスサンド"
                           className="souffle-item rounded-lg"
                         />
@@ -321,8 +321,8 @@ const Home: NextPage = () => {
                       <p className="image-with-border">
                         <Image
                           src="/images/souffle/hot-chocolate.jpg"
-                          width={300}
-                          height={200}
+                          width={450}
+                          height={300}
                           alt="ドリンクメニュー"
                           className="souffle-item rounded-lg"
                         />
@@ -391,8 +391,8 @@ const Home: NextPage = () => {
                       <p>
                         <Image
                           src="/images/souffle/drink-set-menu.jpg"
-                          width={300}
-                          height={200}
+                          width={450}
+                          height={300}
                           alt="ドリンク付きのセットメニュー"
                           className="souffle-item"
                         />
