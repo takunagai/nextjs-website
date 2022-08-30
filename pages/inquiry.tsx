@@ -38,12 +38,9 @@ const Inquiry: NextPage = () => {
             <p className="mt-0">受付時間 9:00～21:00</p>
           </div>
           <div className="mx-auto mt-8 max-w-3xl rounded bg-craft py-8 px-4 text-center shadow lg:px-8">
-            <h3 className="text-lg text-primary">
-              レシピ開発 お問合せフォーム
-            </h3>
-            <p>(24H受付)</p>
+            <h3 className="text-lg text-primary">お問合せフォーム</h3>
             <p className="mt-3">
-              自動返信メールで、パンフレット（展示会で配布したもの）のダウンロードURLを送付いたします。また、折返し電話連絡させていただきます。
+              万が一、３営業日以内に返信がない場合は、メールが届いていない可能性がありますので、お手数ですが電話連絡ください。
               <small>
                 <Link href="privacy-policy">» 個人情報保護方針</Link>
               </small>
