@@ -59,38 +59,59 @@ const ContactForm = () => {
       <input type="hidden" name="form-name" value="contactForm" />
       <br />
 
-      <label htmlFor="name">名前</label>
+      <label
+        htmlFor="name"
+        className="mb-2 block text-sm font-medium text-primary"
+      >
+        名前
+      </label>
       <input
-        id="name"
         type="text"
+        id="name"
         name="name"
+        placeholder="名前を入力してください。"
         onChange={handleChange}
         value={formState.name}
-        placeholder="名前を入力してください。"
+        className="block w-full rounded-md border-gray-200 py-3 px-4 text-sm focus:border-blue-500 focus:ring-blue-500"
       />
       <br />
 
-      <label htmlFor="email">メールアドレス</label>
+      <label
+        htmlFor="email"
+        className="mb-2 block text-sm font-medium text-primary"
+      >
+        メールアドレス
+      </label>
       <input
-        id="email"
         type="email"
+        id="email"
         name="email"
+        placeholder="メールアドレスを入力してください。"
         onChange={handleChange}
         value={formState.email}
-        placeholder="メールアドレスを入力してください。"
+        className="block w-full rounded-md border-gray-200 py-3 px-4 text-sm focus:border-blue-500 focus:ring-blue-500"
       />
+      <p className="mt-1 text-sm text-gray-700">半角英数字で誤入力ください</p>
       <br />
 
-      <label htmlFor="message">メッセージ</label>
+      <label
+        htmlFor="message"
+        className="mb-2 block text-sm font-medium text-primary"
+      >
+        メッセージ
+      </label>
       <textarea
         id="message"
         name="message"
         value={formState.message}
         onChange={handleChange}
         placeholder="メッセージを入力してください。"
+        className="block w-full rounded-md border-gray-200 py-3 px-4 text-sm focus:border-blue-500 focus:ring-blue-500"
       />
 
-      <input type="submit" value="送信する" />
+      <p className="mt-6 text-center">
+        <input className="btn btn-primary" type="submit" value="送信する" />
+      </p>
     </form>
   )
 }
