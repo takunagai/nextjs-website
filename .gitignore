@@ -34,5 +34,8 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Local Netlify folder
+.netlify
+
 # Optional eslint cache
 .eslintcache
