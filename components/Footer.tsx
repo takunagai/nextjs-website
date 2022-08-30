@@ -10,8 +10,8 @@ const Footer = () => {
             <div className="lg:col-span-3 lg:text-right">
               <Image
                 src="/images/souffle/nattsberry_inside.jpg"
-                width={600}
-                height={400}
+                width={500}
+                height={333}
                 layout="responsive"
                 alt="川西市のスフレ専門店 ナッツベリー 店内"
                 className="footer-shop-image"
