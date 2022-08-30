@@ -267,7 +267,7 @@ const Home: NextPage = () => {
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       カシスの甘ずっぱさがたまらない爽やかなスフレ。ちょっと贅沢なプレートで。あたたかいスフレを冷たいアイスクリームと一緒に。
                       <br />
-                      <small>※季節によりトッピング変更</small>
+                      <small>※季節によりスフレが変わります</small>
                     </p>
                   </div>
                   <div className="grid__item">
@@ -291,7 +291,7 @@ const Home: NextPage = () => {
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       紅茶の香りが広がる大人の味。オーガニックの紅茶を使ったこだわりの一品です。あたたかいスフレを冷たいアイスクリームと一緒に。
                       <br />
-                      <small>※季節によりトッピング変更</small>
+                      <small>※季節によりスフレが変わります</small>
                     </p>
                   </div>
                   <div className="grid__item">
@@ -313,7 +313,7 @@ const Home: NextPage = () => {
                       単品 800円/セット1,270円
                     </p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
-                      スープやドレッシングも手作りにこだわった美味しいサンドイッチ。他に「チキンサンド」「オムサンド」もあります。
+                      スープやドレッシングも手作りにこだわった美味しいサンドイッチ。他にミックスサンド、チキンサンド、オムサンド、ワンプレートチキンサンドがございます。
                     </p>
                   </div>
                   <div className="grid__item">
@@ -495,7 +495,7 @@ const Home: NextPage = () => {
                       片手で持てるスフレコーン。ふわふわのスフレの上にかわいくて美味しいトッピングを載せました。コーンの中にはアイスクリーム！
                     </p>
                     <p className="mt-0 text-sm">
-                      (ショーケースの中に商品が無くてもお作りできますので、お気軽にお声がけ下さい)
+                      (ご注文を受けてからお作りします。お気軽にお声がけください)
                     </p>
                     <ul className="mt-3 list-inside list-square font-bold marker:text-primary-200">
                       <li>
