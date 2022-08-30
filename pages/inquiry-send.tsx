@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { motion } from "framer-motion"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
