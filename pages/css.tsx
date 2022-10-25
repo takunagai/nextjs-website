@@ -72,7 +72,10 @@ const CSS: NextPage = () => {
               </li>
             </ul>
             <p>
-              <Button />
+              <Button>ボタンコンポーネント</Button>
+              <Button style="outline" size="small">
+                ボタンコンポーネント
+              </Button>
             </p>
           </section>
 

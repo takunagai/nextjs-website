@@ -1,14 +1,28 @@
-import { ReactNode } from "react"
+// ★★TODO: コンポーネント引数でスタイルをコントロールできるように
 // import styles from "./Button.module.css"
 
-type Props = {
+import type { ReactNode, ComponentPropsWithoutRef } from "react"
+
+type Props = ComponentPropsWithoutRef<"button"> & {
   children: ReactNode
-  type: string
+  style?: string
+  size?: string
+  fullwidth?: boolean
 }
 
-export default function Button({ children, type }: Props) {
+export default function Button({
+  children,
+  style,
+  size,
+  fullwidth,
+  ...props
+}: Props) {
   return (
-    <button type="button" className="">
+    <button
+      type="button"
+      className={`btn (${style} === "outline") ? 'btn-outline-primary' : 'btn-primary'`}
+      {...props}
+    >
       {children}
     </button>
   )
