@@ -72,10 +72,11 @@ const CSS: NextPage = () => {
               </li>
             </ul>
             <p>
-              <Button>ボタンコンポーネント</Button>
+              <Button>ボタンコンポーネント基本</Button>
               <Button style="outline" size="small">
-                ボタンコンポーネント
+                スタイルとサイズ指定
               </Button>
+              <Button onClick={() => alert("aaa")}>onClick でアラート</Button>
             </p>
           </section>
 
