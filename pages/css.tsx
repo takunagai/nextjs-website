@@ -72,11 +72,28 @@ const CSS: NextPage = () => {
               </li>
             </ul>
             <p>
-              <Button>ボタンコンポーネント基本</Button>
-              <Button style="outline" size="small">
+              <Button type="button">ボタンコンポーネント基本</Button>
+              <Button type="submit">Submit</Button>
+              <Button type="reset">Reset</Button>
+              <Button disabled={true}>Disabled(ダメ)</Button>
+              <Button type="button" style="primary">
+                スタイル指定
+              </Button>
+              <Button type="button" style="secondary">
+                スタイル指定
+              </Button>
+              <Button type="button" style="outline-primary">
+                スタイル指定
+              </Button>
+              <Button type="button" size="small">
+                サイズ指定
+              </Button>
+              <Button type="button" style="outline-primary" size="small">
                 スタイルとサイズ指定
               </Button>
-              <Button onClick={() => alert("aaa")}>onClick でアラート</Button>
+              <Button type="button" onClick={() => alert("aaa")}>
+                onClick でアラート
+              </Button>
             </p>
           </section>
 
