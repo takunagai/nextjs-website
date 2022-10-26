@@ -6,7 +6,7 @@
  * _app.js はサーバーサイドでレンダリング（getInitialPropsの実行を含む）され、
  *     ライフサイクルのイベントはクライアントサイドでも実行される
  */
-import { useEffect } from "react"
+// import { useEffect } from "react"
 import { ThemeProvider } from "next-themes" // for Dark mode
 import { AnimatePresence } from "framer-motion"
 import "../styles/globals.css"

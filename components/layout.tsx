@@ -23,8 +23,8 @@ export default function Layout({ children, title, description, home }: Props) {
   const pageTitle = title || "タイトル未設定"
 
   // Dark mode
-  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState<boolean>(false)
+  const { theme, setTheme } = useTheme()
 
   useEffect(() => setMounted(true), [])
 
