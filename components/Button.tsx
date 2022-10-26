@@ -11,13 +11,12 @@ import type { ReactNode, ComponentPropsWithoutRef } from "react"
 
 type ButtonProps = ComponentPropsWithoutRef<"button"> & {
   children: ReactNode
-  style?: string
-  size?: string
-  fullwidth?: boolean
+  style?: "primary" | "outline-primary" | "secondary"
+  size?: "small" | "large"
 }
 
 export default function Button(props: ButtonProps) {
-  const { children, style, size, fullwidth, ...rest } = props
+  const { children, style, size, ...rest } = props
   let classNameArr = ["btn"]
 
   switch (style) {
@@ -32,8 +31,13 @@ export default function Button(props: ButtonProps) {
       break
   }
 
-  if (size === "small") {
-    classNameArr.push("btn-small")
+  switch (size) {
+    case "small":
+      classNameArr.push("btn-small")
+      break
+    case "large":
+      classNameArr.push("btn-large")
+      break
   }
 
   return (

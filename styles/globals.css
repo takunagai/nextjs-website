@@ -77,6 +77,10 @@
     --btn-padding-x: 0.6em;
     --btn-padding-y: 0.25em;
   }
+  .btn-large {
+    --btn-padding-x: 2.5em;
+    --btn-padding-y: 1em;
+  }
   .btn {
     @apply inline-block px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] transition hover:scale-105;
   }

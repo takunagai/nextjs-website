@@ -86,13 +86,16 @@ const CSS: NextPage = () => {
                 スタイル指定
               </Button>
               <Button type="button" size="small">
-                サイズ指定
+                サイズ指定(小)
               </Button>
               <Button type="button" style="outline-primary" size="small">
-                スタイルとサイズ指定
+                スタイルとサイズ指定(小)
+              </Button>
+              <Button type="button" style="primary" size="large">
+                スタイルとサイズ指定(大)
               </Button>
               <Button type="button" onClick={() => alert("aaa")}>
-                onClick でアラート
+                onClick でアラート(関数)
               </Button>
             </p>
           </section>
