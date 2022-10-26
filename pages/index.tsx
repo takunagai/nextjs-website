@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           </p>
           <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-5">
             <a
-              className="btn btn--primary btn--icon w-full rounded-full shadow-md sm:w-auto"
+              className="btn btn-primary btn-icon w-full rounded-full shadow-md sm:w-auto"
               href="https://github.com/htmlstreamofficial/preline/tree/main/examples"
             >
               <svg
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
               Get the source code
             </a>
             <a
-              className="btn btn--secondary btn--icon w-full shadow-md sm:w-auto"
+              className="btn btn-secondary btn-icon w-full shadow-md sm:w-auto"
               href="#"
             >
               <svg
@@ -64,14 +64,14 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <p className="lead container mt-8 text-center">
+        <p className="lead mt-8 text-center">
           ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。
           <br />
           それから思わ口まし勝た(50)しはでまた。
         </p>
 
-        <section className="container mt-8">
-          <div className="grid grid-cols-4 gap-4 md:gap-8">
+        <section className="mt-8">
+          <div className="grid grid-cols-2 gap-4 md:gap-8 lg:grid-cols-4">
             <div>
               <Image
                 src="/images/sample-image-1.jpg"
@@ -151,7 +151,7 @@ const Home: NextPage = () => {
             </p>
           </section>
 
-          <section className="alignfull">
+          <section className="alignfull px-4">
             <h2>全幅：見出し2です。</h2>
             <p className="mt-5">
               ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わず生意気たたという口ましだ。勝手たたのましはでまた箱のダミーコピーです上手どものときではさっさと俄たますて、みんなまでぶんを弾いがっことだまし。立っすぎそれは間がひどくたて今の夜中のかっこ動きが、たるめるで片手も一生しがこいまし。こどもは二わから狸のようを出て来う。助けはゴーシュかっこうたり何が待ってだしない。マッ子をょっとにしから虎を片手ダミーコピーですのようを教えてかっこうに云いてごうごうとゴがしててるた。ふっとダミーコピーですぶるぶる虎にゴーシュが合わですた。それそうに別をひきて諸君へいった(300文字)。
