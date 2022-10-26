@@ -23,11 +23,8 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   // }, [router.pathname])
 
   return (
-    <AnimatePresence
-      exitBeforeEnter
-      onExitComplete={() => window.scrollTo(0, 0)}
-    >
-      <ThemeProvider attribute="class" defaultTheme="system">
+    <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+      <ThemeProvider attribute="class" defaultTheme="light">
         <Component key={router.asPath} {...pageProps} />
       </ThemeProvider>
     </AnimatePresence>
