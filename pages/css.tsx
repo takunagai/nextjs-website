@@ -192,6 +192,10 @@ const CSS: NextPage = () => {
                 width={500} // Desired size with correct aspect ratio
                 height={375} // Desired size with correct aspect ratio
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <div className="space-y-2 text-center sm:text-left">
                 <div className="space-y-0.5">

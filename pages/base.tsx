@@ -348,6 +348,10 @@ const About: NextPage = () => {
                 width={400}
                 height={600}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
             <div className="frame:square">
@@ -356,6 +360,10 @@ const About: NextPage = () => {
                 width={400}
                 height={600}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </section>

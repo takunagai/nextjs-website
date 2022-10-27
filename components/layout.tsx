@@ -115,8 +115,8 @@ export default function Layout({ children, title, description, home }: Props) {
 
         {!home && (
           <p className="mt-5 text-center text-sm">
-            <Link href="/" scroll={false}>
-              <a className="border-b">ホームに戻る</a>
+            <Link href="/" scroll={false} className="border-b">
+              ホームに戻る
             </Link>
           </p>
         )}

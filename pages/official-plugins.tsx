@@ -16,7 +16,7 @@ const OfficialPlugins: NextPage = () => {
       >
         <h1 className="mt-5">Tailwind 公式プラグイン 4つ</h1>
 
-        <article className="prose prose-sm prose-zinc prose-pink max-w-none prose-headings:underline dark:prose-invert lg:prose-base">
+        <article className="prose-sm prose prose-zinc prose-pink max-w-none prose-headings:underline dark:prose-invert lg:prose-base">
           <h2>@tailwindcss/typography</h2>
           <ul>
             <li>
@@ -119,6 +119,10 @@ const OfficialPlugins: NextPage = () => {
               width={3000}
               height={2000}
               alt="代替テキスト"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
             />
           </div>
 

@@ -34,6 +34,10 @@ const Images: NextPage = () => {
               width={500} // Desired size with correct aspect ratio
               height={375} // Desired size with correct aspect ratio
               alt="代替テキスト"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
             />
           </section>
         </div>

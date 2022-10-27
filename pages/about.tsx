@@ -29,6 +29,10 @@ const About: NextPage = () => {
               height={47}
               alt="Knott's Berry"
               className="logo site-branding"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
             />
             <br />
             スフレ専門店 ナッツベリー
@@ -96,6 +100,10 @@ const About: NextPage = () => {
                   height={876}
                   alt="スフレ"
                   quality={85}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
                 />
               </div>
             )
@@ -107,6 +115,10 @@ const About: NextPage = () => {
                   width={1800}
                   height={733}
                   alt="スフレ"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
                 />
               </div>
             )
@@ -119,6 +131,10 @@ const About: NextPage = () => {
             width={280}
             height={94}
             alt="あつあつ、ふわふわ。まるで夢を食べているような特別なスフレケーキ"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
           />
         </p>
         <p className="lead mx-auto max-w-xl">
@@ -136,6 +152,10 @@ const About: NextPage = () => {
                     height={333}
                     alt="スフレ生地へのこだわり"
                     className="media__img fuwafuwa-a"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                 </FadeIn>
                 <div className="media__body mt-3">
@@ -161,6 +181,10 @@ const About: NextPage = () => {
                     height={333}
                     alt="スフレの焼きへのこだわり"
                     className="media__img fuwafuwa-a"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                 </FadeIn>
                 <div className="media__body mt-3">
@@ -186,6 +210,10 @@ const About: NextPage = () => {
                     height={333}
                     alt="３分以内が食べごろ"
                     className="media__img fuwafuwa-a"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                 </FadeIn>
                 <div className="media__body mt-3">
@@ -215,6 +243,10 @@ const About: NextPage = () => {
                   height={28}
                   alt="Menu"
                   className="header-above-image"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
                 />
                 <br />
                 スフレ メニュー
@@ -241,6 +273,10 @@ const About: NextPage = () => {
                       height={400}
                       alt="チーズスフレ"
                       className="souffle-item rounded-lg"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />
                   </p>
                 </FadeIn>
@@ -263,6 +299,10 @@ const About: NextPage = () => {
                       height={400}
                       alt="ショコラスフレ"
                       className="souffle-item rounded-lg"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />
                   </p>
                 </FadeIn>
@@ -285,6 +325,10 @@ const About: NextPage = () => {
                       height={400}
                       alt="メープルスフレ"
                       className="souffle-item rounded-lg"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />
                   </p>
                 </FadeIn>
@@ -307,6 +351,10 @@ const About: NextPage = () => {
                       height={400}
                       alt="プレート ベリースフレ"
                       className="souffle-item rounded-lg"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />
                   </p>
                 </FadeIn>
@@ -331,6 +379,10 @@ const About: NextPage = () => {
                       height={400}
                       alt="プレート 紅茶スフレ"
                       className="souffle-item rounded-lg"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />
                   </p>
                 </FadeIn>
@@ -355,6 +407,10 @@ const About: NextPage = () => {
                       height={400}
                       alt="ワンプレートミックスサンド"
                       className="souffle-item rounded-lg"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />
                   </p>
                 </FadeIn>
@@ -377,6 +433,10 @@ const About: NextPage = () => {
                       height={400}
                       alt="ドリンクメニュー"
                       className="souffle-item rounded-lg"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />
                   </p>
                 </FadeIn>
@@ -451,6 +511,10 @@ const About: NextPage = () => {
                       height={400}
                       alt="ドリンク付きのセットメニュー"
                       className="souffle-item"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
                     />
                   </p>
                 </FadeIn>
@@ -494,6 +558,10 @@ const About: NextPage = () => {
                 height={29}
                 alt="Takeout"
                 className="header-above-image"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <br />
               テイクアウト・配達
@@ -506,9 +574,13 @@ const About: NextPage = () => {
                       src="/images/souffle/takeout-images.jpg"
                       width={600}
                       height={700}
-                      layout="responsive"
                       alt="テイクアウト(サンドイッチ、スフレコーン、店頭)"
                       className="takeout-image"
+                      sizes="100vw"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                      }}
                     />
                   </FadeIn>
                 </div>
@@ -593,6 +665,10 @@ const About: NextPage = () => {
               height={28}
               alt="Voice"
               className="header-above-image"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
             />
             <br />
             お客様の声
@@ -707,6 +783,10 @@ const About: NextPage = () => {
                     height={31}
                     alt="Instagram"
                     className="header-above-image"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <br />
                   ギャラリー
@@ -718,6 +798,10 @@ const About: NextPage = () => {
                   height={100}
                   alt="ナッツベリー"
                   className="rounded-full"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                  }}
                 />
                 <p>
                   <b>
@@ -741,73 +825,109 @@ const About: NextPage = () => {
                     src="/images/souffle/instagram-01.jpg"
                     width={300}
                     height={300}
-                    layout="responsive"
                     alt=""
                     className="instagram-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/images/souffle/instagram-02.jpg"
                     width={300}
                     height={300}
-                    layout="responsive"
                     alt=""
                     className="instagram-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/images/souffle/instagram-03.jpg"
                     width={300}
                     height={300}
-                    layout="responsive"
                     alt=""
                     className="instagram-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/images/souffle/instagram-04.jpg"
                     width={300}
                     height={300}
-                    layout="responsive"
                     alt=""
                     className="instagram-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/images/souffle/instagram-05.jpg"
                     width={300}
                     height={300}
-                    layout="responsive"
                     alt=""
                     className="instagram-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/images/souffle/instagram-06.jpg"
                     width={300}
                     height={300}
-                    layout="responsive"
                     alt=""
                     className="instagram-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/images/souffle/instagram-07.jpg"
                     width={300}
                     height={300}
-                    layout="responsive"
                     alt=""
                     className="instagram-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/images/souffle/instagram-08.jpg"
                     width={300}
                     height={300}
-                    layout="responsive"
                     alt=""
                     className="instagram-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                   <Image
                     src="/images/souffle/instagram-09.jpg"
                     width={300}
                     height={300}
-                    layout="responsive"
                     alt=""
                     className="instagram-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                 </div>
               </div>
@@ -826,6 +946,10 @@ const About: NextPage = () => {
                     height={24}
                     alt="About"
                     className="header-above-image"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <br />
                   ナッツベリーについて
@@ -845,9 +969,13 @@ const About: NextPage = () => {
                     src="/images/souffle/shop-images.jpg"
                     width={700}
                     height={628}
-                    layout="responsive"
                     alt="店舗のイメージ(オードリー・ヘプバーン、スフレ、店内風景)"
                     className="about-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                 </FadeIn>
               </div>
@@ -864,6 +992,10 @@ const About: NextPage = () => {
                 height={27}
                 alt="Access"
                 className="header-above-image"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <br />
               アクセス
@@ -902,9 +1034,13 @@ const About: NextPage = () => {
                     src="/images/souffle/nattsberry_inside.jpg"
                     width={600}
                     height={400}
-                    layout="responsive"
                     alt="川西市のスフレ専門店 ナッツベリー 店内"
                     className="footer-shop-image"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
                   />
                 </div>
                 <div className="mt-4 text-center md:mt-0 lg:col-span-2">
@@ -914,6 +1050,10 @@ const About: NextPage = () => {
                     height={47}
                     alt="Knott's Berry"
                     className="logo site-branding"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                    }}
                   />
                   <p className="-mt-2 text-[10px] font-bold text-primary">
                     スフレ専門店 ナッツベリー
@@ -997,7 +1137,7 @@ const About: NextPage = () => {
 
         {/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/}
 
-        <div className="prose prose-sm prose-zinc prose-pink max-w-none dark:prose-invert lg:prose-base">
+        <div className="prose-sm prose prose-zinc prose-pink max-w-none dark:prose-invert lg:prose-base">
           <div className="mt-5">
             <p className="lead">プロフィールなど。</p>
           </div>

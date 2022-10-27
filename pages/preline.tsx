@@ -43,6 +43,10 @@ const Preline: NextPage = () => {
                 width={500}
                 height={375}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです。
@@ -54,6 +58,10 @@ const Preline: NextPage = () => {
                 width={500}
                 height={375}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです。
@@ -65,6 +73,10 @@ const Preline: NextPage = () => {
                 width={500}
                 height={375}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです。
@@ -76,6 +88,10 @@ const Preline: NextPage = () => {
                 width={500}
                 height={375}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです。
@@ -87,6 +103,10 @@ const Preline: NextPage = () => {
                 width={500}
                 height={375}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです。
@@ -485,6 +505,10 @@ const Preline: NextPage = () => {
                 alt="代替テキスト"
                 width={600}
                 height={400}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
             <div className="flex flex-wrap">
@@ -681,6 +705,10 @@ const Preline: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="h-auto max-w-full rounded-[1.25rem]"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
             </div>
           </figure>

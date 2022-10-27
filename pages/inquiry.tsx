@@ -21,8 +21,8 @@ const Inquiry: NextPage = () => {
           <p className="mt-1 text-sm">
             {" "}
             ※レシピ開発についてのお問合せは、
-            <Link href="/">
-              <a className="text-primary-400">スフレ レシピ開発</a>
+            <Link href="/" className="text-primary-400">
+              スフレ レシピ開発
             </Link>{" "}
             よりお問合せください。
           </p>

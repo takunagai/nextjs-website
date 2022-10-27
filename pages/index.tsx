@@ -78,6 +78,10 @@ const Home: NextPage = () => {
                 width={500}
                 height={375}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <h3 className="mt-2 text-lg">手はおっかさんの演奏硝</h3>
               <p className="mt-2">
@@ -90,6 +94,10 @@ const Home: NextPage = () => {
                 width={500}
                 height={375}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <h3 className="mt-2 text-lg">手はおっかさんの演奏硝</h3>
               <p className="mt-2">
@@ -102,6 +110,10 @@ const Home: NextPage = () => {
                 width={500}
                 height={375}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <h3 className="mt-2 text-lg">手はおっかさんの演奏硝</h3>
               <p className="mt-2">
@@ -114,6 +126,10 @@ const Home: NextPage = () => {
                 width={500}
                 height={375}
                 alt="代替テキスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <h3 className="mt-2 text-lg">手はおっかさんの演奏硝</h3>
               <p className="mt-2">

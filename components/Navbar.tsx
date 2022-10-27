@@ -9,13 +9,12 @@ const Navbar = () => {
         className="mx-10 hidden grow basis-full text-sm  sm:block"
       >
         <div className="mt-5 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:pl-5">
-          <Link href="/about">
-            <a
-              className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
-              aria-current="page"
-            >
-              About
-            </a>
+          <Link
+            href="/about"
+            className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+            aria-current="page"
+          >
+            About
           </Link>
 
           <div className="hs-mega-menu">
@@ -46,39 +45,45 @@ const Navbar = () => {
               className="hs-mega-menu-content top-full z-10 hidden w-full rounded-md bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:-top-5 before:left-0 before:h-5 before:w-full hs-mega-menu-open:opacity-100 dark:bg-gray-800 sm:absolute sm:w-48 sm:shadow-md sm:transition-all sm:duration-300"
               aria-labelledby="hs-mega-menu-basic-dr"
             >
-              <Link href="/wordpress">
-                <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                  WordPress
-                </a>
+              <Link
+                href="/wordpress"
+                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+              >
+                WordPress
               </Link>
-              <Link href="/jamstack-site">
-                <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                  Jamstack サイト
-                </a>
+              <Link
+                href="/jamstack-site"
+                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+              >
+                Jamstack サイト
               </Link>
-              <Link href="/spot-support">
-                <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                  スポット手伝い
-                </a>
+              <Link
+                href="/spot-support"
+                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+              >
+                スポット手伝い
               </Link>
-              <Link href="/collaboration">
-                <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                  仲間/アシスタント募集
-                </a>
+              <Link
+                href="/collaboration"
+                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+              >
+                仲間/アシスタント募集
               </Link>
             </div>
           </div>
 
-          <Link href="/works">
-            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500">
-              制作実績
-            </a>
+          <Link
+            href="/works"
+            className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+          >
+            制作実績
           </Link>
 
-          <Link href="/posts">
-            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500">
-              ブログ
-            </a>
+          <Link
+            href="/posts"
+            className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+          >
+            ブログ
           </Link>
 
           <div className="hs-mega-menu">
@@ -137,20 +142,23 @@ const Navbar = () => {
                   className="hs-mega-menu-content top-0 left-full z-10 hidden w-full bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:top-0 before:-left-5 before:h-full before:w-5 after:absolute after:top-0 after:-right-5 after:h-full after:w-5 hs-mega-menu-open:opacity-100 dark:bg-gray-800 sm:absolute sm:mx-2.5 sm:mt-2 sm:w-48 sm:rounded-md sm:shadow-md sm:transition-all sm:duration-300 sm:hs-mega-menu-open:mt-0"
                   aria-labelledby="hs-mega-menu-basic-sub-dr"
                 >
-                  <Link href="/css">
-                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                      CSS 基本
-                    </a>
+                  <Link
+                    href="/css"
+                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    CSS 基本
                   </Link>
-                  <Link href="/official-plugins">
-                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                      Tailwind プラグイン
-                    </a>
+                  <Link
+                    href="/official-plugins"
+                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    Tailwind プラグイン
                   </Link>
-                  <Link href="/css">
-                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                      Preline
-                    </a>
+                  <Link
+                    href="/css"
+                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    Preline
                   </Link>
                 </div>
               </div>
@@ -182,20 +190,23 @@ const Navbar = () => {
                   className="hs-mega-menu-content top-0 left-full z-10 hidden w-full bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:top-0 before:-left-5 before:h-full before:w-5 after:absolute after:top-0 after:-right-5 after:h-full after:w-5 hs-mega-menu-open:opacity-100 dark:bg-gray-800 sm:absolute sm:mx-2.5 sm:mt-2 sm:w-48 sm:rounded-md sm:shadow-md sm:transition-all sm:duration-300 sm:hs-mega-menu-open:mt-0"
                   aria-labelledby="hs-mega-menu-basic-sub-dr"
                 >
-                  <Link href="/images">
-                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                      画像
-                    </a>
+                  <Link
+                    href="/images"
+                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    画像
                   </Link>
-                  <Link href="/base">
-                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                      レイアウトのベース
-                    </a>
+                  <Link
+                    href="/base"
+                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    レイアウトのベース
                   </Link>
-                  <Link href="/tutorial1">
-                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                      Tutorial1
-                    </a>
+                  <Link
+                    href="/tutorial1"
+                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    Tutorial1
                   </Link>
                 </div>
               </div>
@@ -227,22 +238,25 @@ const Navbar = () => {
                   className="hs-mega-menu-content top-0 left-full z-10 hidden w-full bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:top-0 before:-left-5 before:h-full before:w-5 after:absolute after:top-0 after:-right-5 after:h-full after:w-5 hs-mega-menu-open:opacity-100 dark:bg-gray-800 sm:absolute sm:mx-2.5 sm:mt-2 sm:w-48 sm:rounded-md sm:shadow-md sm:transition-all sm:duration-300 sm:hs-mega-menu-open:mt-0"
                   aria-labelledby="hs-mega-menu-basic-sub-dr"
                 >
-                  <Link href="/fetch">
-                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                      fetch メソッド
-                    </a>
+                  <Link
+                    href="/fetch"
+                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    fetch メソッド
                   </Link>
-                  <Link href="/swr">
-                    <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                      swr
-                    </a>
+                  <Link
+                    href="/swr"
+                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    swr
                   </Link>
                 </div>
               </div>
-              <Link href="/work-history">
-                <a className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">
-                  作業記録、気づき
-                </a>
+              <Link
+                href="/work-history"
+                className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+              >
+                作業記録、気づき
               </Link>
             </div>
           </div>
@@ -336,10 +350,11 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Link href="/inquiry">
-            <a className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500">
-              相談・問合せ
-            </a>
+          <Link
+            href="/inquiry"
+            className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+          >
+            相談・問合せ
           </Link>
         </div>
       </div>

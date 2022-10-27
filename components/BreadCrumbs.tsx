@@ -9,10 +9,11 @@ const BreadCrumbs = ({ pageTitle }: Props) => {
   return (
     <ol className="flex min-w-0 items-center whitespace-nowrap text-xs">
       <li className="flex items-center">
-        <Link href="/">
-          <a className="text-gray-600 hover:text-primary hover:underline">
-            Home
-          </a>
+        <Link
+          href="/"
+          className="text-gray-600 hover:text-primary hover:underline"
+        >
+          Home
         </Link>
         <svg
           className="mx-2 h-2 w-2 flex-shrink-0 overflow-visible text-gray-300"

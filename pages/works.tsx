@@ -22,6 +22,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
@@ -57,6 +61,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
@@ -92,6 +100,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
@@ -127,6 +139,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
@@ -159,6 +175,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
@@ -194,6 +214,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
@@ -229,6 +253,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
@@ -258,6 +286,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
@@ -290,6 +322,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
@@ -322,6 +358,10 @@ const Works: NextPage = () => {
                 height={900}
                 alt="代替テキスト"
                 className="border border-zinc-300"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
               />
               <p>
                 <a
