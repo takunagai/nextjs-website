@@ -3,7 +3,7 @@
     "target": "ES2015", // es5
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true, // 型定義ファイル(*.d.ts)のチェックをスキップ。精度は下がるが、コンパイル時間を削減
     "strict": true, // false
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,

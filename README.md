@@ -63,8 +63,8 @@ TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/abo
     - tailwindcss: Tailwind CSS をプラグインとして使う
     - autoprefixer: ベンダープレフィックス自動付加。対応ブラウザは、package.json の"browserslist" に指定
 * tailwind.config.js
-    - darkMode: デフォルトの 'media' のままの実装なので不要
-    - theme.container: デフォルトで center に、レスポンシブ余白
+    - darkMode: デフォルトの 'media' のままの実装なので不要 → 'class' に変更
+    - theme.container: デフォルトで center に。レスポンシブ余白
     - extend でデフォルト値を保持しつつ、新しい値を追加
       + theme.extend: テーマカラー "primary", "secondary"等を追加。グラデーションも作れる (暫定)
       + 既存プロパティの再設定でオーバーライド
@@ -76,8 +76,29 @@ TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/abo
     - forms 公式プラグイン(読み込みのみ)
       + form 要素をユーティリティで簡単にオーバーライドできるようにするフォームスタイルの基本的なリセットを提供
     - preline (Tailwind 用 UI ライブラリ集)
-    - mode: "jit" で Just in Time モードに
+    - mode: "jit" で Just in Time モードに (例：text-[#926a6a], before:content-['›'])
     - content で、コンパイルするファイルのパス(パターン)を指定
+
+## ダークテーマの実装
+
+* ダークテーマの状態は、layout.tsx に持たせてある
+    - → Header.tsx → ModeSwicher.tsx (切り替えボタンコンポーネント)
+* デフォルトは color-scheme: normal; (サポートしない→ブラウザデフォルトテーマに)
+* color-scheme(ページ側の主張) > prefers-color-scheme(ユーザー側の主張)
+* デフォルトテーマは "system" (デフォルト)
+* html 要素(:root) にダークなら `class="dark style="color-scheme: dark;"`、ライトなら `class="light style="color-scheme: light;"` が付く
+    - → ダークモードなら、`dark:bg-black` などが有効になる
+
+### 参照
+
+* [color-scheme - CSS - MDN](https://developer.mozilla.org/ja/docs/Web/CSS/color-scheme)
+* [このページの色をかけた魂の戦い - Zenn](https://zenn.dev/uhyo/articles/css-color-adjustment-1) color-scheme の詳細
+* [Dark Mode - Tailwind CSS](https://tailwindcss.com/docs/dark-mode#basic-usage)
+* [next-themes - npm](https://www.npmjs.com/package/next-themes) Tailwind 用設定の説明もあり
+* [Next.js と Tailwind でモード切替えボタンを作成 - Zenn](https://zenn.dev/taka_shino/articles/a6c176da799c91)
+* [Next.js と tailwind でダークモードを実装する - Qiita](https://qiita.com/10mi8o/items/4be3a69731aed0692e40)
+
+import { useTheme }
 
 ## Documentation
 
