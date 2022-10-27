@@ -124,6 +124,11 @@ const Home: NextPage = () => {
         </section>
 
         <div className="stack-large mt-10">
+          <div className="mx-auto max-w-prose border border-primary-100 p-4">
+            <p>
+              ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです上手どもっさと俄たますて、みんなまでぶんを弾いとだまし(100文字)。
+            </p>
+          </div>
           <section>
             <h2>見出し2です。</h2>
             <p className="lead mt-5">
