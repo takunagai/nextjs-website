@@ -24,6 +24,7 @@
     "date-fns": "^2.29.3",
     "framer-motion": "^7.6.1",
     "gray-matter": "^4.0.3",
+    "microcms-js-sdk": "^2.3.0",
     "next": "^13.0.0",
     "next-themes": "^0.2.1",
     "preline": "^1.2.1",
