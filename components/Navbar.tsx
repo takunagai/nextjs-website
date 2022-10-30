@@ -17,6 +17,14 @@ const Navbar = () => {
             About
           </Link>
 
+          <Link
+            href="/parts"
+            className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+            aria-current="page"
+          >
+            パーツ
+          </Link>
+
           <div className="hs-mega-menu">
             <button
               id="hs-mega-menu-basic-dr"
@@ -155,7 +163,7 @@ const Navbar = () => {
                     Tailwind プラグイン
                   </Link>
                   <Link
-                    href="/css"
+                    href="/preline"
                     className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                   >
                     Preline
@@ -249,6 +257,12 @@ const Navbar = () => {
                     className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                   >
                     swr
+                  </Link>
+                  <Link
+                    href="/fetch-microcms"
+                    className="flex items-center gap-x-3.5 rounded-md py-2 px-3 text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    microCMS API
                   </Link>
                 </div>
               </div>
