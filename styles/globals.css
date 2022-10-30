@@ -82,10 +82,11 @@
     --btn-padding-y: 1em;
   }
   .btn {
-    @apply inline-block px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] transition hover:scale-105;
+    @apply mb-2 inline-block px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] transition hover:scale-105;
   }
   .btn + .btn {
-    margin-left: 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
   }
   .btn-primary {
     @apply bg-primary text-white transition hover:bg-primary-300 focus:ring-2 focus:ring-primary-400 focus:ring-opacity-75;
