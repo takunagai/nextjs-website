@@ -7,6 +7,10 @@ import TopmostNotificationBar from "./TopmostNotificationBar"
 import Header from "./Header"
 import BreadCrumbs from "./BreadCrumbs"
 import Footer from "./Footer"
+
+import { Yomogi } from "@next/font/google"
+const yomogi = Yomogi({ weight: "400" })
+
 // import styles from './layout.module.css'
 // import utilStyles from '../styles/utils.module.css'
 
@@ -31,7 +35,7 @@ export default function Layout({ children, title, description, home }: Props) {
   if (!mounted) return null
 
   return (
-    <>
+    <html className={yomogi.className}>
       <Head>
         {home ? (
           <title>{pageTitle}</title>
@@ -125,6 +129,6 @@ export default function Layout({ children, title, description, home }: Props) {
 
       {/* preline UI */}
       <Script src="/js/hs-ui.bundle.js"></Script>
-    </>
+    </html>
   )
 }

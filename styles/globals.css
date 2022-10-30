@@ -273,9 +273,12 @@ main {
  - - - - - - - - - - - - - - - - - - - - - - - - */
 main h1 {
   font-size: 2rem;
+  font-family: "Yomogi", cursive;
 }
 main h2 {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
+  font-family: "Yomogi", cursive;
+  @apply text-center tracking-wider;
 }
 main h3 {
   font-size: 1.5rem;
