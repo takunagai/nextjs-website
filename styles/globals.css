@@ -262,10 +262,10 @@ h6 {
 /* .site-wrapper > .wrapper */
 main {
 }
-main > * {
-  margin-inline-start: 1rem;
-  margin-inline-end: 1rem;
-}
+/*main > * {*/
+/*  margin-inline-start: 1rem;*/
+/*  margin-inline-end: 1rem;*/
+/*}*/
 
 /* - - - - - - - - - - - - - - - - - - - - - - - -
   メインコンテンツ
