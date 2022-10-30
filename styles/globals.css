@@ -271,6 +271,20 @@ main {
 /* - - - - - - - - - - - - - - - - - - - - - - - -
   メインコンテンツ
  - - - - - - - - - - - - - - - - - - - - - - - - */
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  @apply leading-tight text-primary;
+}
+main h1,
+main h2,
+main h3,
+main h4 {
+  @apply text-center;
+}
 main h1 {
   font-size: 2rem;
   font-family: "Yomogi", cursive;
@@ -281,10 +295,10 @@ main h2 {
   @apply text-center tracking-wider;
 }
 main h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 main h4 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 main h5 {
   font-size: 1.1rem;
