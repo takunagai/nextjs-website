@@ -88,14 +88,28 @@
     margin-right: 0.5em;
     margin-left: 0.5em;
   }
+  .btn-primary:after,
+  .btn-secondary:after {
+    position: absolute;
+    top: 3px;
+    left: -3px;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    content: "";
+    border: 1px solid #696969;
+  }
   .btn-primary {
-    @apply bg-primary text-white transition hover:bg-primary-300 focus:ring-2 focus:ring-primary-400 focus:ring-opacity-75;
+    position: relative;
+    @apply bg-tertiary-400 transition hover:bg-tertiary-600 focus:ring-2 focus:ring-primary-400 focus:ring-opacity-75;
   }
   .btn-outline-primary {
     @apply border border-primary text-primary transition hover:bg-primary-100 focus:ring-2 focus:ring-primary-400 focus:ring-opacity-75;
   }
   .btn-secondary {
-    @apply bg-orange-500 text-white transition hover:bg-orange-700 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75;
+    position: relative;
+    @apply bg-secondary-300 transition hover:bg-secondary focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75;
   }
   .btn-icon {
     @apply inline-flex items-center justify-center gap-x-3.5;
