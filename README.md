@@ -4,6 +4,10 @@ TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/abo
 
 [» デモ](https://nextjs-website-lemon.vercel.app/)
 
+## ToDo
+
+* 修正：ページネーション (@etchteam/next-pagination) a タグ重複、表示崩れ
+
 ## Dependency
 
 * typescript
