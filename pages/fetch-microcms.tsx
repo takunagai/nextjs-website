@@ -33,7 +33,10 @@ type Groups = { groups: Array<Group> }
 export const getStaticProps: GetStaticProps = async (
   context: GetStaticPropsContext,
 ) => {
-  const data = await client.get({ endpoint: "group" })
+  const data = await client.get({
+    endpoint: "group",
+    queries: { limit: 50 },
+  })
 
   return {
     props: {
