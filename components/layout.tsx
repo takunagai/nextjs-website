@@ -37,7 +37,7 @@ export default function Layout({ children, title, description, home }: Props) {
   if (!mounted) return null
 
   return (
-    <html className={yomogi.className}>
+    <>
       <Head>
         {home ? (
           <title>{pageTitle}</title>
@@ -74,7 +74,7 @@ export default function Layout({ children, title, description, home }: Props) {
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
 
-      <div className="flex h-full w-full flex-col">
+      <div className={`${yomogi.className} flex h-full w-full flex-col`}>
         <TopmostNotificationBar />
         <Header
           home={home}
@@ -131,6 +131,6 @@ export default function Layout({ children, title, description, home }: Props) {
 
       {/* preline UI */}
       <Script src="/js/hs-ui.bundle.js"></Script>
-    </html>
+    </>
   )
 }
