@@ -10,14 +10,14 @@ const SiteLogo = ({ home, siteTitle }: Props) => {
     <>
       {home ? (
         <h1
-          className="flex-none text-xl font-bold text-zinc-800 dark:text-white"
+          className="site-title flex-none text-xl font-bold text-primary dark:text-white"
           aria-label="Brand"
         >
           {siteTitle}
         </h1>
       ) : (
         <p
-          className="flex-none text-xl font-bold text-zinc-800 dark:text-white"
+          className="site-title flex-none text-xl font-bold text-primary dark:text-white"
           aria-label="Brand"
         >
           <Link href="/">{siteTitle}</Link>
