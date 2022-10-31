@@ -13,7 +13,7 @@ type Props = {
 
 const Header = ({ home, siteTitle, theme, setTheme }: Props) => {
   return (
-    <header className="relative z-50 bg-zinc-100 py-2 dark:bg-zinc-800">
+    <header className="relative z-50 bg-tertiary-200 py-2 dark:bg-zinc-800">
       <nav
         className="w-full px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
         aria-label="Global"

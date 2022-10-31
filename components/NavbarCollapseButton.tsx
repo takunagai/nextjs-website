@@ -2,13 +2,13 @@ const NavbarCollapseButton = () => {
   return (
     <button
       type="button"
-      className="hs-collapse-toggle inline-flex items-center justify-center gap-2 rounded-md border bg-white p-2 align-middle text-sm font-medium text-gray-700 shadow-sm transition-all hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white dark:focus:ring-offset-gray-800"
+      className="hs-collapse-toggle inline-flex items-center justify-center gap-2 rounded bg-white p-2 align-middle text-primary shadow-sm transition-all hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-secondary-200 focus:ring-offset-2 focus:ring-offset-white dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-slate-800 dark:hover:text-white dark:focus:ring-offset-gray-800"
       data-hs-collapse="#navbar-collapse"
       aria-controls="navbar-collapse"
       aria-label="Toggle navigation"
     >
       <svg
-        className="h-4 w-4 hs-collapse-open:hidden"
+        className="h-5 w-5 hs-collapse-open:hidden"
         width="16"
         height="16"
         fill="currentColor"
@@ -20,7 +20,7 @@ const NavbarCollapseButton = () => {
         />
       </svg>
       <svg
-        className="hidden h-4 w-4 hs-collapse-open:block"
+        className="hidden h-5 w-5 hs-collapse-open:block"
         width="16"
         height="16"
         fill="currentColor"
