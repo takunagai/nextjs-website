@@ -21,7 +21,9 @@ type Props = {
   home?: boolean
 }
 
-export const siteTitle = "ナガイ商店.com"
+export const siteTitle =
+  process.env.NEXT_PUBLIC_SITE_TITLE ||
+  ".env NEXT_PUBLIC_SITE_TITLE で設定してください"
 
 export default function Layout({ children, title, description, home }: Props) {
   const pageTitle = title || "タイトル未設定"
