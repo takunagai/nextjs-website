@@ -235,6 +235,10 @@ h6 {
 /**
  * General purpose classes
  */
+.site-title {
+  font-family: "Yomogi", cursive;
+  font-size: clamp(0.8rem, 3vw, 1.3rem);
+}
 .alignwide {
   --measure: 80rem; /* 100ch */
 }
