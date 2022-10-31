@@ -40,8 +40,10 @@ TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/abo
   - classnames: クラス名を条件付きで結合
 * コンポーネント
   - @etchteam/next-pagination: ページネーション
+  - yet-another-react-lightbox: Lightbox風
 * 素材
   - @heroicons/react: アイコンフォント
+  - react-icons: アイコンフォント(色んなアイコン内包)
 
 ## 設定ファイル
 

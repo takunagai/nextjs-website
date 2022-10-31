@@ -13,6 +13,8 @@ import {
   ChatBubbleOvalLeftIcon,
 } from "@heroicons/react/24/outline"
 
+import { FaInfoCircle } from "react-icons/fa"
+
 import type {
   GetStaticProps,
   GetStaticPropsContext,
@@ -62,18 +64,57 @@ const FetchMicroCms: NextPage<Props> = ({ groups }) => {
           fetch() メソッドで microCMS API
           からデータをフェッチして表示するサンプル
         </p>
-        <section className="mt-5">
+        <div className="mx-auto mt-8 max-w-2xl">
+          <p className="font-bold text-primary">
+            なかなか探しにくい、阪神地域でされているひきこもりの方の居場所、不登校の方の居場所、親の会、学習支援、教育支援センター、相談機関などの情報を集めました。
+          </p>
+
+          <div className="bubble mt-4">
+            <img src="https://picsum.photos/id/1/70/70.webp" />
+            <div className="bubble__body text-sm">
+              <p>
+                ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミー。
+              </p>
+              <p>
+                コピーです上手どもっさと俄たますて、みんなまでぶんを弾いとだまし(100文字)
+              </p>
+            </div>
+          </div>
+
+          <div
+            className="mt-4 rounded-md border border-yellow-200 bg-yellow-50 p-2"
+            role="alert"
+          >
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <FaInfoCircle className="inline align-baseline text-yellow-400" />
+              </div>
+              <div className="ml-2">
+                <div className="text-sm text-yellow-800">
+                  中には有償のものや、合わない所があるかもしれません。
+                  <br />
+                  ホームページやチラシに載っている情報や、説明をよく聞いてから利用する様にしてください。
+                </div>
+              </div>
+            </div>
+          </div>
+          <p className="mt-4 text-center">
+            <a href="#" className="btn btn-primary">
+              運営者の方へ<small> (掲載希望、情報変更)</small>
+            </a>
+          </p>
+        </div>
+        <section className="mt-8">
           <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {groups.map((group: Group, index: number) => (
-              <li
-                key={index}
-                className="rounded bg-secondary-100/25 p-6 shadow"
-              >
-                <h2 className="text-xl text-primary">{group.title}</h2>
+              <li key={index} className="rounded bg-tertiary-100/50 p-6 shadow">
+                <h2 className="text-left text-[1.4rem] text-primary">
+                  {group.title}
+                </h2>
                 {group.mainImage && group.mainImage.url}
                 {group.mainImage && group.mainImage.width}
                 {group.mainImage && group.mainImage.height}
-                <ul className="mt-2 inline-flex flex-wrap gap-1">
+                <ul className="mt-4 inline-flex flex-wrap gap-1">
                   {group.locationType.map((x, i) => (
                     <li
                       className="inline-block border border-primary-200 py-0 px-1 text-sm text-primary"
@@ -135,7 +176,7 @@ const FetchMicroCms: NextPage<Props> = ({ groups }) => {
                   </p>
                 )}
 
-                <p className="mt-0 flex gap-2">
+                <p className="mt-1 flex gap-2">
                   {group.contactEmail && (
                     <b>
                       <EnvelopeIcon className="inline h-4 w-4 text-secondary" />

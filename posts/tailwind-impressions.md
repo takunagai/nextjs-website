@@ -30,6 +30,10 @@ tag: 'tailwind'
 	ファイルを必要最小限に抑えてくれる
 * **カスタマイズ性、拡張性が高い**
   - 設定ファイル(tailwind.config.js)で、かなり自由にカスタマイズできる。[機能拡張できるプラグイン](https://github.com/aniftyco/awesome-tailwindcss#useful-links)もたくさんリリースされている
+  - 公式プラグイン @tailwindcss/typography を導入すると、プレーンな HTML をよしなにスタイリングしてくれる prose クラスが使えるようになる。使用例：[Markdoc（Tailwind UI の 
+    Syntax 
+    ベース）による Markdown Viewer の実装 - fwywd by キカガク](https://fwywd.
+    com/tech/markdown-viewer-by-markdoc)
 
 ## CSS 初心者にはお勧めできない
 
