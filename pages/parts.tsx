@@ -270,9 +270,9 @@ const Parts: NextPage = () => {
             ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです上手どもっさと俄たますて、みんなまでぶんを弾いとだまし(100文字)。
           </p>
           <p className="text-center">
-            <a href="#" className="btn btn-primary px-10">
+            <Link href="/flow" className="btn btn-primary px-10">
               相談の流れ
-            </a>
+            </Link>
           </p>
         </section>
 
