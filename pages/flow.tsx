@@ -6,10 +6,11 @@ import { motion } from "framer-motion"
 import Lightbox from "yet-another-react-lightbox"
 import "yet-another-react-lightbox/styles.css"
 
-import image1 from "../public/images/hanshin-branch/sample1.jpg"
-import image2 from "../public/images/hanshin-branch/sample2.jpg"
+import image1 from "../public/images/hanshin-branch/dummy-600x400.png"
+import image2 from "../public/images/hanshin-branch/sample1.jpg"
 
 import {
+  FaPhoneAlt,
   FaLine,
   FaTwitter,
   FaLock,
@@ -25,6 +26,8 @@ import {
   FaHorse,
   FaFrog,
 } from "react-icons/fa"
+
+// import type { LightboxProps } from "yet-another-react-lightbox/types.d.ts"
 
 const Flow: NextPage = () => {
   const [open, setOpen] = useState(false)
@@ -43,11 +46,25 @@ const Flow: NextPage = () => {
             <FaDove className="mr-2 inline align-baseline text-secondary-300" />
             相談の流れ
           </h2>
-          <div className="mx-auto mt-6 max-w-2xl text-center">[★★図が入る]</div>
+          <div className="mx-auto mt-6 max-w-2xl text-center">
+            <Image
+              src="/images/hanshin-branch/dummy-600x400.png"
+              width={600}
+              height={400}
+              alt="写真"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+              className="inline rounded-2xl"
+            />
+            <br />
+            [★★図が入ります]
+          </div>
         </section>
 
         <section className="py-12">
-          <h2>
+          <h2 id="telephone-counseling">
             <FaCat className="mr-2 inline align-baseline text-secondary-300" />
             電話相談
           </h2>
@@ -55,194 +72,109 @@ const Flow: NextPage = () => {
             <p>
               ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです
             </p>
-            <div className="mt-6 bg-tertiary-100 p-4">
-              <p className="text-primary">
-                <b>電話での相談先</b>
-              </p>
-              <p className="mt-2 text-2xl">
-                <b>050-3749-1227</b>
-              </p>
-              <p className="mt-0 text-sm">受付時間 火・水・木　10〜16時</p>
+            <div className="mx-auto mt-6 max-w-md rounded-2xl bg-tertiary-100 py-4 px-8 shadow">
               <p>
-                <a href="#" className="btn btn-secondary px-7">
-                  青少年用「ほっとらいん相談」はコチラ
+                <h3 className="text-lg">電話での相談先</h3>
+              </p>
+              <p>
+                <b>
+                  兵庫ひきこもり相談支援センター
+                  <br />
+                  阪神ブランチ
+                </b>
+              </p>
+              <p className="mt-1 text-2xl">
+                <b>
+                  <FaPhoneAlt className=" inline align-baseline text-primary-300" />
+                  <a href="tel:050-3749-1227">050-3749-1227</a>
+                </b>
+              </p>
+              <p className="mt-1 text-sm">受付時間 火・水・木　10〜16時</p>
+              <p>
+                <a
+                  type="button"
+                  onClick={() => setOpen(true)}
+                  className="btn btn-secondary"
+                >
+                  青少年用「ほっとらいん相談」
                 </a>
+                <Lightbox
+                  open={open}
+                  close={() => setOpen(false)}
+                  slides={[image1, image2]}
+                  render={{
+                    slide: (image, offset, rect) => {
+                      const width = Math.round(
+                        Math.min(
+                          rect.width,
+                          (rect.height / image.height) * image.width,
+                        ),
+                      )
+                      const height = Math.round(
+                        Math.min(
+                          rect.height,
+                          (rect.width / image.width) * image.height,
+                        ),
+                      )
+
+                      return (
+                        <div style={{ position: "relative", width, height }}>
+                          <Image
+                            fill
+                            src={image}
+                            loading="eager"
+                            placeholder="blur"
+                            alt={"alt" in image ? image.alt : ""}
+                            sizes={
+                              typeof window !== "undefined"
+                                ? `${Math.ceil(
+                                    (width / window.innerWidth) * 100,
+                                  )}vw`
+                                : `${width}px`
+                            }
+                          />
+                        </div>
+                      )
+                    },
+                  }}
+                />
               </p>
             </div>
           </div>
         </section>
-
-        <button type="button" onClick={() => setOpen(true)}>
-          Open Lightbox
-        </button>
-
-        <Lightbox
-          open={open}
-          close={() => setOpen(false)}
-          slides={[image1, image2]}
-          render={{
-            slide: (image, offset, rect) => {
-              const width = Math.round(
-                Math.min(
-                  rect.width,
-                  (rect.height / image.height) * image.width,
-                ),
-              )
-              const height = Math.round(
-                Math.min(
-                  rect.height,
-                  (rect.width / image.width) * image.height,
-                ),
-              )
-
-              return (
-                <div style={{ position: "relative", width, height }}>
-                  <Image
-                    fill
-                    src={image}
-                    loading="eager"
-                    placeholder="blur"
-                    alt={"alt" in image ? image.alt : ""}
-                    sizes={
-                      typeof window !== "undefined"
-                        ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
-                        : `${width}px`
-                    }
-                  />
-                </div>
-              )
-            },
-          }}
-        />
 
         <hr />
 
         <section className="my-12">
           <h2>
-            <FaHorse className="mr-2 inline align-baseline text-secondary-300" />
-            ひきこもりのお悩みを
-            <br />
-            抱えておられる方へ
+            <FaDemocrat className="mr-2 inline align-baseline text-secondary-300" />
+            訪問相談/セミナー
           </h2>
-          <p className="mt-1 text-center text-sm">(ご本人、ご家族のサポート)</p>
-          <p className="mx-auto max-w-xl text-center">
-            当事者の気持ちに十分な配慮を行い、社会参加へのはじめの一歩を踏み出せるよう支援いたします。お気軽にご相談ください。
+          <p className="mx-auto mt-6 max-w-xl text-center">
+            ★★西宮市名塩にある施設で。。ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです
           </p>
 
-          <h3 className="marker-underlined mt-10 text-center">
-            このような方、ご相談ください
-          </h3>
-          <div className="mx-auto mt-6 flex max-w-fit flex-col gap-4 md:flex-row">
-            <div className="rounded-lg border border-4 border-dotted border-secondary-300 p-3">
-              <h4 className="text-primary">ご本人</h4>
-              <ul className="mt-2 list-square pl-5 marker:text-secondary-400">
-                <li>このままではいけないと思ってはいるが…</li>
-                <li>人と接する練習をする場所があれば行きたい</li>
-                <li>働くのは難しいが、このままではいけない</li>
-              </ul>
-            </div>
-            <div className="rounded-lg border border-4 border-dotted border-secondary-300 p-3">
-              <h4 className="text-primary">ご家族さま</h4>
-              <ul className="mt-2 list-square pl-5 marker:text-secondary-400">
-                <li>ひきこもったままの、子どもの将来が心配</li>
-                <li>ひきこもっている子への接し方がわからない</li>
-                <li>子どもの居場所や親の会を紹介して欲しい</li>
-              </ul>
-            </div>
-          </div>
-
-          <h3 className="marker-underlined mt-10">
-            当支援センターが
-            <br className="lg:hidden" />
-            お手伝いできること
-          </h3>
-          <div className="container">
-            <ul className="mt-6 flex flex-wrap">
-              <li className="flex-basis basis-1/2 rounded-xl border-4 border border-white bg-tertiary-100 p-6 text-center md:basis-1/4">
-                <p>
-                  <FaUserFriends className="inline text-[50px] text-primary-200" />
-                </p>
-                <p className="font-bold text-primary-600">
-                  ご本人はもちろん、ご家族からのご相談もお受けします
-                </p>
-              </li>
-              <li className="flex-basis basis-1/2 rounded-xl border-4 border border-white bg-tertiary-100 p-6 text-center md:basis-1/4">
-                <p className="">
-                  <FaHandshake className="inline text-[50px] text-primary-200" />
-                </p>
-                <p className="font-bold text-primary-600">
-                  相談内容に応じ、適切な関係機関を紹介します
-                </p>
-              </li>
-              <li className="flex-basis basis-1/2 rounded-xl border-4 border border-white bg-tertiary-100 p-6 text-center md:basis-1/4">
-                <p className="">
-                  <FaLock className="inline text-[50px] text-primary-200" />
-                </p>
-                <p className="font-bold text-primary-600">
-                  秘密を守ります。同意なしに相談内容を口外しません
-                </p>
-              </li>
-              <li className="flex-basis basis-1/2 rounded-xl border-4 border border-white bg-tertiary-100 p-6 text-center md:basis-1/4">
-                <p className="">
-                  <FaHandHoldingHeart className="inline text-[50px] text-primary-200" />
-                </p>
-                <p className="font-bold text-primary-700">
-                  電話、面談などで親身に相談に乗ります。相談費用は無料です
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <h3 className="marker-underlined mt-10">利用してるのはどんな人？</h3>
-          <div className="mx-auto mt-6 max-w-fit border border-primary-200 py-3 px-5 font-bold text-primary-700">
-            <p>
-              利用人数：１日★★名程度
-              <br />
-              男女比：５：５ / 年齢層：20～60代{" "}
-            </p>
-          </div>
-          <div className="mx-auto max-w-fit">
-            <ul className="mt-4 list-square pl-5 marker:text-secondary-400">
-              <li>
-                長期間ひきこもりで外に出られなかったが、就職を目指して昼夜逆転などの乱れた生活リズムを整えたい
-              </li>
-              <li>
-                病気で入院して体力が落ちたので、復職へ向けて体力づくりやリハビリの最初のステップとして通いたい
-              </li>
-              <li>
-                人が怖い、緊張してしまうので、会話や交流など人と関わる練習をしたい
-              </li>
-            </ul>
-          </div>
-
-          <h3 className="marker-underlined mt-10">
-            どうやって利用や相談をするの？
-          </h3>
-          <p className="mx-auto mt-6 max-w-3xl">
-            ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです上手どもっさと俄たますて、みんなまでぶんを弾いとだまし(100文字)。
+          <p className="mt-6 text-center font-bold text-primary">
+            まずは<a href="#telephone-counseling">電話相談</a>をご利用ください
           </p>
-          <p className="text-center">
-            <a href="#" className="btn btn-primary px-10">
-              相談の流れ
-            </a>
-          </p>
-        </section>
-
-        <hr />
-
-        <section className="py-12">
-          <h2>
-            <FaFrog className="mr-2 inline align-baseline text-secondary-300" />
-            兵庫県阪神地区の
+          <p className="mt-6 text-center">
+            <Image
+              src="/images/hanshin-branch/dummy-600x400.png"
+              width={600}
+              height={400}
+              alt="写真"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+              className="inline rounded-2xl"
+            />
             <br />
-            居場所情報
-          </h2>
-          <p className="mx-auto mt-6 max-w-3xl">
-            なかなか探しにくい、阪神地域でされているひきこもりの方の居場所、不登校の方の居場所、親の会、学習支援、教育支援センター、相談機関などの情報を集めました。
+            [★★イメージ写真]
           </p>
-          <p className="text-center">
-            <a href="#" className="btn btn-secondary">
-              居場所情報を見る
+          <p className="mt-6 text-center">
+            <a href="#" className="btn btn-primary px-7">
+              アクセス地図
             </a>
           </p>
         </section>

@@ -30,7 +30,7 @@ const Parts: NextPage = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <h1>Parts (パーツ集)</h1>
+        <h1>トップページ</h1>
         <div className="alignfull flex flex-col items-center justify-center bg-tertiary-100 py-8 px-4 text-center sm:px-6 lg:py-24 lg:px-8">
           <div className="">
             <div className="flex flex-col lg:flex-row">
@@ -295,7 +295,7 @@ const Parts: NextPage = () => {
         <footer className="alignfull bg-tertiary-100 py-8">
           <div className="container">
             <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:items-center">
-              <p className="basis-1/2">
+              <p className="md:basis-1/2 lg:basis-3/5">
                 <Image
                   src="/images/hanshin-branch/sample.png"
                   width={1089}
@@ -307,8 +307,8 @@ const Parts: NextPage = () => {
                   }}
                 />
               </p>
-              <div className="basis-1/2">
-                <p className="text-lg font-bold text-primary-700">
+              <div className="text-center text-primary md:basis-1/2 md:text-left lg:basis-2/5">
+                <p className="text-lg font-bold">
                   兵庫ひきこもり相談支援センター
                   <br />
                   阪神ブランチ
@@ -333,17 +333,17 @@ const Parts: NextPage = () => {
                     href="https://www.facebook.com/people/%E5%9C%B0%E5%9F%9F%E6%B4%BB%E5%8B%95%E6%94%AF%E6%8F%B4%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BCnecoris/100063692420182/"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-primary-400 hover:text-primary-200"
+                    className="text-primary-300 hover:text-primary-200"
                   >
-                    <FaLine className="text-[30px]" />
+                    <FaLine className="text-[1.75rem]" />
                   </a>
                   <a
                     href="https://twitter.com/necoris1"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-primary-400 hover:text-primary-200"
+                    className="text-primary-300 hover:text-primary-200"
                   >
-                    <FaTwitter className="text-[30px]" />
+                    <FaTwitter className="text-[1.75rem]" />
                   </a>
                 </p>
               </div>
