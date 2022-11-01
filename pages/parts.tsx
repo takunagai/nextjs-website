@@ -289,9 +289,9 @@ const Parts: NextPage = () => {
             なかなか探しにくい、阪神地域でされているひきこもりの方の居場所、不登校の方の居場所、親の会、学習支援、教育支援センター、相談機関などの情報を集めました。
           </p>
           <p className="text-center">
-            <a href="#" className="btn btn-secondary">
+            <Link href="/places-and-groups" className="btn btn-secondary">
               居場所情報を見る
-            </a>
+            </Link>
           </p>
         </section>
       </motion.div>
