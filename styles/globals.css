@@ -304,8 +304,7 @@ main h4 {
   @apply text-center;
 }
 main h1 {
-  font-size: 1.4rem;
-  @apply py-4;
+  @apply border-b border-primary-100 py-6 text-xl tracking-widest;
 }
 main h2 {
   font-size: 1.6rem;
