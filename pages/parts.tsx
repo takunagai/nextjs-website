@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
@@ -54,12 +55,15 @@ const Parts: NextPage = () => {
                   ひきこもりの当事者やご家族を支援する相談窓口。専門の相談員による相談(電話、訪問、地域相談会)、居場所の提供。ひきこもりに関するセミナーや研修会などのイベントも開催しています。
                 </p>
                 <p>
-                  <a href="#" className="btn btn-primary">
+                  <Link href="/flow" className="btn btn-primary">
                     相談する<small> (電話、訪問)</small>
-                  </a>
-                  <a href="#" className="btn btn-secondary px-7">
+                  </Link>
+                  <Link
+                    href="/places-and-groups"
+                    className="btn btn-secondary px-7"
+                  >
                     居場所情報を見る
-                  </a>
+                  </Link>
                 </p>
               </div>
               <p className="mx-auto mt-6 max-w-fit lg:mt-0">
