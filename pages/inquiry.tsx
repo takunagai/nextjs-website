@@ -106,9 +106,9 @@ const Inquiry: NextPage = () => {
                 送信後すぐに、自動返信メールが届きます。内容を確認次第、スタッフより連絡させていただきます。
               </p>
               <p className="mt-1">
-                <a href="/privacy-policy" className="text-sm text-primary">
+                <Link href="/privacy-policy" className="text-sm text-primary">
                   » 個人情報保護方針
-                </a>
+                </Link>
               </p>
               <p className="text-sm font-bold">
                 ※

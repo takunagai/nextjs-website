@@ -2,6 +2,7 @@
  * microcms フェッチ
  * @ref https://document.microcms.io/tutorial/next/next-getting-started
  */
+import Image from "next/image"
 import Layout from "../components/layout"
 import AfterContent from "../components/after-content"
 import { motion } from "framer-motion"
@@ -318,7 +319,7 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
                 </p>
                 {group.leafletImage1 && (
                   <p>
-                    <img
+                    <Image
                       src={group.leafletImage1.url}
                       width={group.leafletImage1.width}
                       height={group.leafletImage1.height}
@@ -328,7 +329,7 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
                 )}
                 {group.leafletImage2 && (
                   <p>
-                    <img
+                    <Image
                       src={group.leafletImage2.url}
                       width={group.leafletImage2.width}
                       height={group.leafletImage2.height}
