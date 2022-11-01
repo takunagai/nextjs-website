@@ -3,6 +3,7 @@
  * @ref https://document.microcms.io/tutorial/next/next-getting-started
  */
 import Layout from "../components/layout"
+import AfterContent from "../components/after-content"
 import { motion } from "framer-motion"
 import { client } from "../lib/client" // microcms-js-sdkの初期化
 import {
@@ -47,8 +48,8 @@ export const getStaticProps: GetStaticProps = async (
   }
 }
 
-// const FetchMicroCms: NextPage<Props> = ({ groups }: Groups) => { // 型付けるとエラー
-const FetchMicroCms: NextPage<Props> = ({ groups }) => {
+// const PlacesAndGroups: NextPage<Props> = ({ groups }: Groups) => { // 型付けるとエラー
+const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
   return (
     <Layout
       title="fetch() メソッドで microCMS API からフェッチ"
@@ -59,27 +60,11 @@ const FetchMicroCms: NextPage<Props> = ({ groups }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <h1>fetch() メソッドで microCMS API からフェッチ</h1>
-        <p>
-          fetch() メソッドで microCMS API
-          からデータをフェッチして表示するサンプル
-        </p>
+        <h1>居場所・親の会の情報</h1>
         <div className="mx-auto mt-8 max-w-2xl">
           <p className="font-bold text-primary">
             なかなか探しにくい、阪神地域でされているひきこもりの方の居場所、不登校の方の居場所、親の会、学習支援、教育支援センター、相談機関などの情報を集めました。
           </p>
-
-          <div className="bubble mt-4">
-            <img src="https://picsum.photos/id/1/70/70.webp" />
-            <div className="bubble__body text-sm">
-              <p>
-                ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミー。
-              </p>
-              <p>
-                コピーです上手どもっさと俄たますて、みんなまでぶんを弾いとだまし(100文字)
-              </p>
-            </div>
-          </div>
 
           <div
             className="mt-4 rounded-md border border-yellow-200 bg-yellow-50 p-2"
@@ -105,7 +90,124 @@ const FetchMicroCms: NextPage<Props> = ({ groups }) => {
           </p>
         </div>
         <section className="mt-8">
-          <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto max-w-lg rounded-2xl bg-gray-100 p-3">
+            <p className="text-center font-bold text-primary">
+              場所で絞り込む ★★機能実装
+            </p>
+            <fieldset className="mt-3">
+              <ul className="flex flex-wrap gap-3">
+                <li>
+                  <input
+                    type="radio"
+                    id="amagasaki"
+                    name="city"
+                    value="尼崎市"
+                    checked
+                  />
+                  <label className="ml-1" htmlFor="amagasaki">
+                    尼崎市
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="nishinomiya"
+                    name="city"
+                    value="西宮市"
+                    checked
+                  />
+                  <label className="ml-1" htmlFor="nishinomiya">
+                    西宮市
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="ashiya"
+                    name="city"
+                    value="芦屋市"
+                    checked
+                  />
+                  <label className="ml-1" htmlFor="ashiya">
+                    芦屋市
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="itami"
+                    name="city"
+                    value="伊丹市"
+                    checked
+                  />
+                  <label className="ml-1" htmlFor="itami">
+                    伊丹市
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="takarazuka"
+                    name="city"
+                    value="宝塚市"
+                    checked
+                  />
+                  <label className="ml-1" htmlFor="takarazuka">
+                    宝塚市
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="kawanishi"
+                    name="city"
+                    value="川西市"
+                    checked
+                  />
+                  <label className="ml-1" htmlFor="kawanishi">
+                    川西市
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="sanda"
+                    name="city"
+                    value="三田市"
+                    checked
+                  />
+                  <label className="ml-1" htmlFor="sanda">
+                    三田市
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="inagawa"
+                    name="city"
+                    value="川辺郡猪名川町"
+                    checked
+                  />
+                  <label className="ml-1" htmlFor="inagawa">
+                    川辺郡猪名川町
+                  </label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="online"
+                    name="city"
+                    value="オンライン"
+                    checked
+                  />
+                  <label className="ml-1" htmlFor="online">
+                    オンライン
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <ul className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {groups.map((group: Group, index: number) => (
               <li key={index} className="rounded bg-tertiary-100/50 p-6 shadow">
                 <h2 className="text-left text-[1.4rem] text-primary">
@@ -238,9 +340,11 @@ const FetchMicroCms: NextPage<Props> = ({ groups }) => {
             ))}
           </ul>
         </section>
+
+        <AfterContent />
       </motion.div>
     </Layout>
   )
 }
 
-export default FetchMicroCms
+export default PlacesAndGroups

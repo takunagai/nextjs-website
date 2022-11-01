@@ -98,46 +98,46 @@ const Flow: NextPage = () => {
                 >
                   青少年用「ほっとらいん相談」
                 </a>
-                <Lightbox
-                  open={open}
-                  close={() => setOpen(false)}
-                  slides={[image1, image2]}
-                  render={{
-                    slide: (image, offset, rect) => {
-                      const width = Math.round(
-                        Math.min(
-                          rect.width,
-                          (rect.height / image.height) * image.width,
-                        ),
-                      )
-                      const height = Math.round(
-                        Math.min(
-                          rect.height,
-                          (rect.width / image.width) * image.height,
-                        ),
-                      )
+                {/*<Lightbox*/}
+                {/*  open={open}*/}
+                {/*  close={() => setOpen(false)}*/}
+                {/*  slides={[image1, image2]}*/}
+                {/*  render={{*/}
+                {/*    slide: (image, offset, rect) => {*/}
+                {/*      const width = Math.round(*/}
+                {/*        Math.min(*/}
+                {/*          rect.width,*/}
+                {/*          (rect.height / image.height) * image.width,*/}
+                {/*        ),*/}
+                {/*      )*/}
+                {/*      const height = Math.round(*/}
+                {/*        Math.min(*/}
+                {/*          rect.height,*/}
+                {/*          (rect.width / image.width) * image.height,*/}
+                {/*        ),*/}
+                {/*      )*/}
 
-                      return (
-                        <div style={{ position: "relative", width, height }}>
-                          <Image
-                            fill
-                            src={image}
-                            loading="eager"
-                            placeholder="blur"
-                            alt={"alt" in image ? image.alt : ""}
-                            sizes={
-                              typeof window !== "undefined"
-                                ? `${Math.ceil(
-                                    (width / window.innerWidth) * 100,
-                                  )}vw`
-                                : `${width}px`
-                            }
-                          />
-                        </div>
-                      )
-                    },
-                  }}
-                />
+                {/*      return (*/}
+                {/*        <div style={{ position: "relative", width, height }}>*/}
+                {/*          <Image*/}
+                {/*            fill*/}
+                {/*            src={image}*/}
+                {/*            loading="eager"*/}
+                {/*            placeholder="blur"*/}
+                {/*            alt={"alt" in image ? image.alt : ""}*/}
+                {/*            sizes={*/}
+                {/*              typeof window !== "undefined"*/}
+                {/*                ? `${Math.ceil(*/}
+                {/*                    (width / window.innerWidth) * 100,*/}
+                {/*                  )}vw`*/}
+                {/*                : `${width}px`*/}
+                {/*            }*/}
+                {/*          />*/}
+                {/*        </div>*/}
+                {/*      )*/}
+                {/*    },*/}
+                {/*  }}*/}
+                {/*/>*/}
               </p>
             </div>
           </div>
@@ -178,122 +178,6 @@ const Flow: NextPage = () => {
             </a>
           </p>
         </section>
-
-        <footer className="alignfull bg-tertiary-100 py-8">
-          <div className="container">
-            <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:items-center">
-              <p className="md:basis-1/2 lg:basis-3/5">
-                <Image
-                  src="/images/hanshin-branch/sample.png"
-                  width={1089}
-                  height={566}
-                  alt="イラスト"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
-                />
-              </p>
-              <div className="text-center text-primary md:basis-1/2 md:text-left lg:basis-2/5">
-                <p className="text-lg font-bold">
-                  兵庫ひきこもり相談支援センター
-                  <br />
-                  阪神ブランチ
-                </p>
-                <p className="mt-0 text-xs">
-                  (運営：一般社団法人いきがいさがし)
-                </p>
-                <p>
-                  電話番号：
-                  <span>
-                    <b>
-                      <a href="tel:050-3749-1227">050-3749-1227</a>
-                    </b>
-                  </span>
-                  <br />
-                  開所日時：火・水・木 10〜16時
-                  <br />
-                  所在地：兵庫県西宮市名塩山荘 8-10
-                </p>
-                <p className="flex justify-center gap-1 lg:justify-start">
-                  <a
-                    href="https://www.facebook.com/people/%E5%9C%B0%E5%9F%9F%E6%B4%BB%E5%8B%95%E6%94%AF%E6%8F%B4%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BCnecoris/100063692420182/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-primary-300 hover:text-primary-200"
-                  >
-                    <FaLine className="text-[1.75rem]" />
-                  </a>
-                  <a
-                    href="https://twitter.com/necoris1"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-primary-300 hover:text-primary-200"
-                  >
-                    <FaTwitter className="text-[1.75rem]" />
-                  </a>
-                </p>
-              </div>
-            </div>
-            <ul>
-              <li>
-                <a
-                  href="https://twitter.com/necoris1"
-                  target="_blank"
-                  rel="noreferrer"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/people/%E5%9C%B0%E5%9F%9F%E6%B4%BB%E5%8B%95%E6%94%AF%E6%8F%B4%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BCnecoris/100063692420182/"
-                  target="_blank"
-                  rel="noreferrer"
-                ></a>
-              </li>
-            </ul>
-            <div className="alignfull bg-white py-4">
-              <div className="container">
-                <ul className="flex flex-wrap justify-center gap-2 text-sm">
-                  <li>
-                    <a href="#" className="text-primary hover:text-primary-300">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary hover:text-primary-300">
-                      相談する
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary hover:text-primary-300">
-                      ご利用者様の声
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary hover:text-primary-300">
-                      居場所・親の会
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary hover:text-primary-300">
-                      個人情報保護方針
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary hover:text-primary-300">
-                      よくある質問
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="text-primary hover:text-primary-300">
-                      お問合せ
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
       </motion.div>
     </Layout>
   )
