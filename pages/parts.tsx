@@ -31,7 +31,6 @@ const Parts: NextPage = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <h1>トップページ</h1>
         <div className="alignfull flex flex-col items-center justify-center bg-tertiary-100 py-8 px-4 text-center sm:px-6 lg:py-24 lg:px-8">
           <div className="">
             <div className="flex flex-col lg:flex-row">
