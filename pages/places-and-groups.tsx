@@ -1,5 +1,5 @@
 /**
- * microcms フェッチ
+ * microcms API からフェッチ
  * @ref https://document.microcms.io/tutorial/next/next-getting-started
  */
 import Image from "next/image"
