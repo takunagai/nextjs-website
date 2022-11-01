@@ -304,8 +304,8 @@ main h4 {
   @apply text-center;
 }
 main h1 {
-  font-size: 2rem;
-  font-family: "Yomogi", cursive;
+  font-size: 1.4rem;
+  @apply py-4;
 }
 main h2 {
   font-size: 1.6rem;
@@ -395,4 +395,10 @@ main hr {
   top: 35px;
   left: -12px;
   margin-top: -8px;
+}
+
+/**
+ * Background 背景
+ */
+.bg-dot {
 }
