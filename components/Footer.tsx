@@ -71,19 +71,17 @@ const Footer = () => {
                   <br />
                   開所日時：火・水・木 10〜16時
                   <br />
-                  所在地：兵庫県西宮市名塩山荘 8-10
+                  所在地：兵庫県西宮市名塩山荘 8-10 ※1
+                  <br />
+                  <span className="mt-1 block text-xs leading-tight">
+                    ※1 同住所に数軒の家が存在します。
+                    <br />
+                    <b>いきがいさがし/necoris</b>の表札がある茶色の家です
+                  </span>
                 </p>
                 <p className="mt-3 flex justify-center gap-2 lg:justify-start">
                   <a
-                    href="https://www.facebook.com/people/%E5%9C%B0%E5%9F%9F%E6%B4%BB%E5%8B%95%E6%94%AF%E6%8F%B4%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BCnecoris/100063692420182/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-primary-300 hover:text-primary-200"
-                  >
-                    <FaLine className="text-[1.75rem]" />
-                  </a>
-                  <a
-                    href="https://twitter.com/necoris1"
+                    href="https://twitter.com/ikigaisagashi1"
                     target="_blank"
                     rel="noreferrer"
                     className="text-primary-300 hover:text-primary-200"
