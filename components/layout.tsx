@@ -83,9 +83,9 @@ export default function Layout({ children, title, description, home }: Props) {
           theme={theme}
           setTheme={setTheme}
         />
-        <div className="w-full border-b border-zinc-500/25 py-2 px-4 sm:px-6 lg:px-8">
-          <BreadCrumbs pageTitle={pageTitle} />
-        </div>
+        {/*<div className="w-full border-b border-zinc-500/25 py-2 px-4 sm:px-6 lg:px-8">*/}
+        {/*  <BreadCrumbs pageTitle={pageTitle} />*/}
+        {/*</div>*/}
         {/*<div className="cover__main container lg:flex lg:justify-between">*/}
         <div className="cover__main container">
           <main id="primary" role="main">
@@ -119,13 +119,6 @@ export default function Layout({ children, title, description, home }: Props) {
           {/*</div>*/}
         </div>
 
-        {!home && (
-          <p className="mt-5 text-center text-sm">
-            <Link href="/" scroll={false} className="border-b">
-              ホームに戻る
-            </Link>
-          </p>
-        )}
         <Footer />
       </div>
 
