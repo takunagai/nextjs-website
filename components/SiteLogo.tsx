@@ -20,7 +20,7 @@ const SiteLogo = ({ home, siteTitle }: Props) => {
           className="site-title flex-none text-xl font-bold text-primary dark:text-white"
           aria-label="Brand"
         >
-          <Link href="/">{siteTitle}</Link>
+          <Link href="/parts">{siteTitle}</Link>
         </p>
       )}
     </>
