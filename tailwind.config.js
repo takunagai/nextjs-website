@@ -109,11 +109,11 @@ module.exports = {
       },
       backgroundImage: {
         dots: "url('https://www.toptal.com/designers/subtlepatterns/uploads/watercolor.png')",
-        craft: "url('../public/images/souffle/bg_paper.png')",
-        dots2: "url('../public/images/souffle/bg_waterdot.png')",
-        dots3: "url('../public/images/souffle/bg_waterdots3.png')",
-        triangle: "url('../public/images/souffle/bg_triangledot.png')",
-        paper: "url('../public/images/souffle/bg_paper_white.png')",
+        craft: "url('../public/images/hanshin-branch/bg_paper.png')",
+        dots2: "url('../public/images/hanshin-branch/bg_waterdot.png')",
+        dots3: "url('../public/images/hanshin-branch/bg_waterdots3.png')",
+        triangle: "url('../public/images/hanshin-branch/bg_triangledot.png')",
+        paper: "url('../public/images/hanshin-branch/bg_paper_white.png')",
       },
       backgroundSize: {
         auto: "auto",
