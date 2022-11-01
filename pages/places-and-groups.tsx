@@ -237,7 +237,7 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
                 </p>
                 <p className="pl-12 -indent-12">
                   <b className="text-primary">場所：</b>
-                  {group.place}
+                  {group.place} {group.address && `(${group.address})`}
                 </p>
                 <p className="mt-0 pl-12 -indent-12">
                   <b className="text-primary">日時：</b>

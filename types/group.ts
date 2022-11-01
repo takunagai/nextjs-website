@@ -17,6 +17,7 @@ export type Group = {
   }
   locationType: string[]
   city: string[]
+  address: string
   summary: string
   objectPerson: string
   place: string
