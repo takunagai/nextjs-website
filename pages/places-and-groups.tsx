@@ -257,8 +257,13 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
                   </p>
                 )}
                 <p>
-                  <b className="text-primary">問合せ先：</b>{" "}
-                  {group.contactName && `(${group.contactName})`}
+                  <b className="text-primary">
+                    問合せ先
+                    <small className="font-normal">
+                      {group.contactName && ` (${group.contactName})`}
+                    </small>
+                    ：
+                  </b>
                 </p>
 
                 {group.contactTel && (
