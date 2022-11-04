@@ -11,12 +11,11 @@ const AfterContent = () => {
         </h3>
         <p className="text-xs">(ご本人、ご家族)</p>
         <p>
-          ★★兵庫県ひきこもり相談支援センター
-          阪神ブランチは、、ダミーコピーです手はおっかさんの演奏硝子屋口ましはでまた箱のダミーコピー。
+          兵庫ひきこもり支援センターでは、ひきこもりに悩むご本人や家族からの相談を受け付けています。
         </p>
         <p>
-          <Link href="/inquiry" className="btn btn-primary">
-            相談する<small> (電話、訪問)</small>
+          <Link href="/flow" className="btn btn-primary">
+            相談する<small> (電話、来所、訪問)</small>
           </Link>
         </p>
       </div>
