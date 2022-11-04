@@ -48,7 +48,7 @@ const Inquiry: NextPage = () => {
         <section className="py-8">
           <div className="mx-auto mt-8 max-w-3xl gap-8 lg:flex">
             <div className="mx-auto basis-1/2 rounded bg-craft p-4 text-center shadow">
-              <h2 className="text-xl text-primary">電話でのお問合せ</h2>
+              <h2 className="text-primary">電話でのお問合せ</h2>
               <p className="mt-2">
                 <b>
                   兵庫ひきこもり相談支援センター
@@ -62,38 +62,31 @@ const Inquiry: NextPage = () => {
                   <a href="tel:050-3749-1227">050-3749-1227</a>
                 </b>
               </p>
-              <p className="mt-1 text-sm">受付時間 火・水・木　10〜16時</p>
+              <p className="mt-1 text-sm">対応時間 火・水・木　10〜16時</p>
             </div>
 
-            <div className="mx-auto mt-8 basis-1/2 rounded bg-craft p-4 text-center shadow">
-              <h2 className="text-xl text-primary">SNS でお問合せ</h2>
-              <p>メッセージでお問合せください。</p>
-              <div className="mt-3 flex justify-center gap-4">
-                <div>
-                  <FaTwitter className=" mr-1 inline align-baseline text-primary-300" />
+            <div className="mx-auto mt-8 basis-1/2 rounded bg-craft p-4 text-center shadow lg:mt-0">
+              <h2 className="text-primary">SNS でお問合せ</h2>
+              <p className="mt-2">
+                メッセージでお問合せください。
+                <br />
+                対応時間内に順次ご連絡いたします。
+              </p>
+              <div className="mt-3 justify-center">
+                <p>
+                  <FaTwitter className="inline align-baseline text-primary-300" />
                   <b>Twitter</b>
                   <br />
                   ID:
                   <a
-                    href="https://twitter.com/necoris1"
+                    href="https://twitter.com/ikigaisagashi1"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    @necoris1
+                    @ikigaisagashi1
                   </a>
-                </div>
-                <div>
-                  <FaTwitter className=" mr-1 inline align-baseline text-primary-300" />
-                  <b>Facebook</b>
-                  <br />
-                  <a
-                    href="https://www.facebook.com/people/%E5%9C%B0%E5%9F%9F%E6%B4%BB%E5%8B%95%E6%94%AF%E6%8F%B4%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BCnecoris/100063692420182/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Facebook ページ
-                  </a>
-                </div>
+                </p>
+                <p className="mt-1 text-sm">対応時間 火・水・木　10〜16時</p>
               </div>
             </div>
           </div>
