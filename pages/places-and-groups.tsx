@@ -61,7 +61,7 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <h1>居場所・親の会の情報</h1>
+        <h1 className="alignfull bg-dots3">居場所・親の会の情報</h1>
         <div className="mx-auto mt-8 max-w-2xl">
           <p className="font-bold text-primary">
             なかなか探しにくい、阪神地域でされているひきこもりの方の居場所、不登校の方の居場所、親の会、学習支援、教育支援センター、相談機関などの情報を集めました。
