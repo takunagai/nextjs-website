@@ -21,6 +21,7 @@
     "@hashicorp/platform-code-highlighting": "^0.1.2",
     "@heroicons/react": "^2.0.12",
     "@next/font": "^13.0.0",
+    "@types/google.maps": "^3.50.5",
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
     "framer-motion": "^7.6.1",
