@@ -208,9 +208,12 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
               </ul>
             </fieldset>
           </div>
-          <ul className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
             {groups.map((group: Group, index: number) => (
-              <li key={index} className="rounded bg-tertiary-100/50 p-6 shadow">
+              <li
+                key={index}
+                className="mb-8 rounded bg-tertiary-100/50 p-6 shadow md:mb-0"
+              >
                 <h2 className="text-left text-[1.4rem] text-primary">
                   {group.title}
                 </h2>
