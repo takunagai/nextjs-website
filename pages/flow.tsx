@@ -102,7 +102,7 @@ const Flow: NextPage = () => {
             </div>
           </div>
 
-          <hr className="lg:hidden" />
+          <hr className="my-12 lg:hidden" />
 
           <div className="lg:basis-1/3">
             <h2>
@@ -130,7 +130,7 @@ const Flow: NextPage = () => {
             </p>
           </div>
 
-          <hr className="lg:hidden" />
+          <hr className="my-12 lg:hidden" />
 
           <div className="lg:basis-1/3">
             <h2>
