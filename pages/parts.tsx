@@ -31,53 +31,51 @@ const Parts: NextPage = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="alignfull flex flex-col items-center justify-center bg-tertiary-100 py-8 px-4 text-center sm:px-6 lg:py-24 lg:px-8">
-          <div className="">
-            <div className="flex flex-col lg:flex-row">
-              <div className="mx-auto max-w-lg lg:order-1 lg:px-8">
-                <div className="mx-auto max-w-fit rounded-xl border border-2 border-dashed border-primary-300 bg-white/75 p-4 shadow ring ring-white/75">
-                  <p className="text-sm font-bold text-secondary">
-                    相談 / セミナー / 居場所 / 訪問支援
-                  </p>
-                  <h1 className="mt-2 text-[17px] text-primary lg:text-xl">
-                    兵庫ひきこもり相談支援センター
-                    <br />
-                    阪神ブランチ
-                  </h1>
-                  <p className="mt-2 text-xs">
-                    尼崎市、西宮市、芦屋市、伊丹市、宝塚市、
-                    <br />
-                    三田市、川辺郡猪名川町
-                  </p>
-                </div>
-                <p className="mt-6 font-bold leading-7 tracking-wide text-primary-700">
-                  ひきこもりの当事者やご家族を支援する相談窓口。専門の相談員による相談(電話、訪問、地域相談会)、居場所の提供。ひきこもりに関するセミナーや研修会などのイベントも開催しています。
+        <div className="alignfull bg-tertiary-100 py-8 px-4 text-center sm:px-6 lg:py-24 lg:px-8">
+          <div className="container flex flex-col items-center justify-center lg:flex-row">
+            <div className="mx-auto max-w-lg lg:order-1 lg:px-8">
+              <div className="mx-auto max-w-fit rounded-xl border border-2 border-dashed border-primary-300 bg-white/75 p-4 shadow ring ring-white/75">
+                <p className="text-sm font-bold text-secondary">
+                  相談 / セミナー / 居場所 / 訪問支援
                 </p>
-                <p>
-                  <Link href="/flow" className="btn btn-primary px-16">
-                    相談する
-                  </Link>
-                  <Link
-                    href="/places-and-groups"
-                    className="btn btn-secondary px-7"
-                  >
-                    居場所情報を見る
-                  </Link>
+                <h1 className="mt-2 text-[17px] text-primary lg:text-xl">
+                  兵庫ひきこもり相談支援センター
+                  <br />
+                  阪神ブランチ
+                </h1>
+                <p className="mt-2 text-xs">
+                  尼崎市、西宮市、芦屋市、伊丹市、宝塚市、
+                  <br />
+                  三田市、川辺郡猪名川町
                 </p>
               </div>
-              <p className="mx-auto mt-6 max-w-fit lg:mt-0">
-                <Image
-                  src="/images/hanshin-branch/sample.png"
-                  width={762}
-                  height={396}
-                  alt="イラスト"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
-                />
+              <p className="mt-6 font-bold leading-7 tracking-wide text-primary-700">
+                ひきこもりの当事者やご家族を支援する相談窓口。専門の相談員による相談(電話、訪問、地域相談会)、居場所の提供。ひきこもりに関するセミナーや研修会などのイベントも開催しています。
+              </p>
+              <p>
+                <Link href="/flow" className="btn btn-primary px-16">
+                  相談する
+                </Link>
+                <Link
+                  href="/places-and-groups"
+                  className="btn btn-secondary px-7"
+                >
+                  居場所情報を見る
+                </Link>
               </p>
             </div>
+            <p className="mx-auto mt-6 max-w-fit lg:mt-0">
+              <Image
+                src="/images/hanshin-branch/sample.png"
+                width={762}
+                height={396}
+                alt="イラスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+              />
+            </p>
           </div>
         </div>
         <section className="py-12">
