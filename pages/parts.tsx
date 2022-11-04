@@ -54,8 +54,8 @@ const Parts: NextPage = () => {
                   ひきこもりの当事者やご家族を支援する相談窓口。専門の相談員による相談(電話、訪問、地域相談会)、居場所の提供。ひきこもりに関するセミナーや研修会などのイベントも開催しています。
                 </p>
                 <p>
-                  <Link href="/flow" className="btn btn-primary">
-                    相談する<small> (電話、訪問)</small>
+                  <Link href="/flow" className="btn btn-primary px-16">
+                    相談する
                   </Link>
                   <Link
                     href="/places-and-groups"
