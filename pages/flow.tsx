@@ -33,16 +33,6 @@ import {
 const Flow: NextPage = () => {
   const [open, setOpen] = useState(false)
 
-  const googleMap = `<iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3275.146335594916!2d135.29066905754377!3d34.82741307410644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ab02690f3a3%3A0x355008903425457!2z44CSNjY5LTExNDIg5YW15bqr55yM6KW_5a6u5biC5ZCN5aGp5bGx6I2Y77yY4oiS77yR77yQ!5e0!3m2!1sja!2sjp!4v1667532277511!5m2!1sja!2sjp"
-          width="600"
-          height="450"
-          style="border:0;"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>`
-
   return (
     <Layout title="相談する" description="Flow の概要です。">
       <motion.div
@@ -249,10 +239,15 @@ const Flow: NextPage = () => {
             <br />
             〒669-1142 西宮市名塩山荘8-10
           </p>
-          <div
-            className="mt-8"
-            dangerouslySetInnerHTML={{ __html: googleMap }}
-          />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3275.146335594916!2d135.29066905754377!3d34.82741307410644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ab02690f3a3%3A0x355008903425457!2z44CSNjY5LTExNDIg5YW15bqr55yM6KW_5a6u5biC5ZCN5aGp5bGx6I2Y77yY4oiS77yR77yQ!5e0!3m2!1sja!2sjp!4v1667532277511!5m2!1sja!2sjp"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </motion.div>
     </Layout>
