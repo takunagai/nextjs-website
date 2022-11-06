@@ -11,4 +11,9 @@ export type NewsItem = {
   date: string
   title: string
   body: string
+  postThumbnail?: {
+    url: string
+    width: number
+    height: number
+  }
 }

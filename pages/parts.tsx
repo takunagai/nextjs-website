@@ -1,31 +1,70 @@
 import Image from "next/image"
 import Link from "next/link"
+import Date from "../components/date"
 import Layout from "../components/layout"
 import AccessMap from "../components/AccessMap"
+import { client } from "../lib/client"
 import { motion } from "framer-motion"
 import Lightbox from "yet-another-react-lightbox"
 // import "yet-another-react-lightbox/styles.css"
 
 import {
-  FaLine,
-  FaTwitter,
   FaLock,
   FaHandHoldingHeart,
   FaUserFriends,
   FaHandshake,
   FaDove,
-  FaCat,
-  FaCrow,
-  FaDemocrat,
-  FaDog,
-  FaFish,
   FaHorse,
   FaFrog,
 } from "react-icons/fa"
 
-import type { NextPage } from "next"
+import type {
+  GetStaticProps,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+  NextPage,
+} from "next" // TypeScript の型データ
 
-const Parts: NextPage = () => {
+/**
+ * Settings
+ */
+// ニュース表示件数
+const numberOfNewsItemsToFetch = 20
+const numberOfNewsItemsDisplayed = 5
+const numberOfNewsLeafletDisplayed = 4
+
+/**
+ * getStaticProps (from microCMS API)
+ */
+// https://zenn.dev/catnose99/articles/7201a6c56d3c88
+type Props = InferGetStaticPropsType<typeof getStaticProps>
+
+// microCMS - news
+import type { NewsItem } from "../types/news"
+type NewsItemsTypes = { newsItems: Array<NewsItem> }
+
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext,
+) => {
+  const data = await client.get({
+    endpoint: "news",
+    queries: { limit: numberOfNewsItemsToFetch },
+  })
+
+  return {
+    props: {
+      newsItems: data.contents,
+    },
+  }
+}
+
+/**
+ * Component
+ */
+// const Parts: NextPage<Props> = ({ newsItems }: : NewsItemsTypes) => { // 型付けるとエラー
+const Parts: NextPage = ({ newsItems }: any) => {
+  console.log(newsItems)
+
   return (
     <Layout title="Parts" description="Parts の概要です。">
       <motion.div
@@ -86,81 +125,47 @@ const Parts: NextPage = () => {
             お知らせ
           </h2>
           <div className="mx-auto max-w-2xl">
-            <ul className="mt-8 flex list-square flex-col gap-3 pl-5 marker:text-secondary-400">
-              <li>
-                <span className="block text-xs md:inline-block">
-                  2022年7月23日
-                </span>
-                <a href="#" className="text-primary">
-                  ◯◯◯◯◯◯◯◯◯◯◯◯を開催します！
-                </a>
-              </li>
-              <li>
-                <span className="block text-xs md:inline-block">
-                  2022年7月20日
-                </span>
-                <a href="#" className="text-primary">
-                  ◯◯◯◯◯◯◯◯◯を更新しました。
-                </a>
-              </li>
-              <li>
-                <span className="block text-xs md:inline-block">
-                  2022年7月15日
-                </span>
-                <a href="#" className="text-primary">
-                  ホームページをオープンしました！
-                </a>
-              </li>
+            {/* ★★TODO: 記事がない場合の分岐処理を追加 */}
+            <ul className="mt-8 list-square pl-5 marker:text-secondary-400">
+              {newsItems
+                .slice(0, numberOfNewsItemsDisplayed)
+                .map((newsItem: NewsItem, index: number) => (
+                  <li
+                    key={index}
+                    className="border-b border-dashed border-primary-100 py-2"
+                  >
+                    <span className="block text-xs md:inline-block">
+                      <Date dateString={newsItem.date} />
+                    </span>
+                    <a href="#" className="text-primary">
+                      {newsItem.title}
+                    </a>
+                  </li>
+                ))}
             </ul>
           </div>
 
-          <div className="mx-4 mt-8 flex flex-wrap">
-            <div className="basis-1/2 px-3 md:basis-1/4">
-              <a href="#">
-                <Image
-                  src="/images/hanshin-branch/sample-leaflet-1.jpg"
-                  width={400}
-                  height={548}
-                  alt="リーフレット"
-                  className="shadow"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
-                />
-              </a>
-            </div>
-            <div className="basis-1/2 px-3 md:basis-1/4">
-              <a href="#">
-                <Image
-                  src="/images/hanshin-branch/sample-leaflet-2.jpg"
-                  width={400}
-                  height={548}
-                  alt="リーフレット"
-                  className="shadow"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
-                />
-              </a>
-            </div>
-            <div className="basis-1/2 px-3 md:basis-1/4">
-              <a href="#">
-                <Image
-                  src="/images/hanshin-branch/sample-leaflet-1.jpg"
-                  width={400}
-                  height={548}
-                  alt="リーフレット"
-                  className="shadow"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                  }}
-                />
-              </a>
-            </div>
-          </div>
+          <ul className="mx-4 mt-8 flex flex-wrap">
+            {newsItems
+              .slice(0, numberOfNewsLeafletDisplayed)
+              .map((newsItem: NewsItem, index: number) => (
+                <li key={index} className="basis-1/2 px-3 md:basis-1/4">
+                  {newsItem.postThumbnail && (
+                    <Image
+                      src={`${newsItem.postThumbnail.url}`}
+                      width={`${newsItem.postThumbnail.width}`}
+                      height={`${newsItem.postThumbnail.height}`}
+                      alt={`${newsItem.title}`}
+                      className="shadow-lg"
+                      style={{
+                        maxWidth: "100%",
+                        height: "auto",
+                      }}
+                    />
+                  )}
+                </li>
+              ))}
+          </ul>
         </section>
 
         <hr />
@@ -267,7 +272,9 @@ const Parts: NextPage = () => {
             どうやって利用や相談をするの？
           </h3>
           <p className="mx-auto mt-6 max-w-3xl">
-            ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです上手どもっさと俄たますて、みんなまでぶんを弾いとだまし(100文字)。
+            専門の相談員による相談 (電話相談、来所相談、訪問相談)
+            を行っています。
+            まずは各相談の予約を取らせていただきますので、お気軽にお電話ください。
           </p>
           <p className="text-center">
             <Link href="/flow" className="btn btn-primary px-10">
