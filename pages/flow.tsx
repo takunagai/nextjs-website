@@ -1,13 +1,10 @@
 import { useState } from "react"
 import Image from "next/image"
 import Layout from "../components/layout"
-import type { NextPage } from "next"
+import AccessMap from "../components/AccessMap"
 import { motion } from "framer-motion"
 import Lightbox from "yet-another-react-lightbox"
 import "yet-another-react-lightbox/styles.css"
-
-import image1 from "../public/images/hanshin-branch/dummy-600x400.png"
-import image2 from "../public/images/hanshin-branch/sample1.jpg"
 
 import {
   FaPhoneAlt,
@@ -25,9 +22,9 @@ import {
   FaFish,
   FaHorse,
   FaFrog,
-  FaMapMarkedAlt,
 } from "react-icons/fa"
 
+import type { NextPage } from "next"
 // import type { LightboxProps } from "yet-another-react-lightbox/types.d.ts"
 
 const Flow: NextPage = () => {
@@ -230,24 +227,7 @@ const Flow: NextPage = () => {
         <hr />
 
         <div className="mt-12">
-          <h2 id="access-map">
-            <FaMapMarkedAlt className="mr-2 inline align-baseline text-secondary-300" />
-            アクセス
-          </h2>
-          <p className="mt-8 text-center">
-            <b>地域活動支援センター necoris</b>
-            <br />
-            〒669-1142 西宮市名塩山荘8-10
-          </p>
-          <div className="iframe-wrapper iframe-wrapper--golden-ratio alignfull mt-6 md:container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3275.146335594916!2d135.29066905754377!3d34.82741307410644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008ab02690f3a3%3A0x355008903425457!2z44CSNjY5LTExNDIg5YW15bqr55yM6KW_5a6u5biC5ZCN5aGp5bGx6I2Y77yY4oiS77yR77yQ!5e0!3m2!1sja!2sjp!4v1667532277511!5m2!1sja!2sjp"
-              style={{ border: 0 }}
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+          <AccessMap />
         </div>
       </motion.div>
     </Layout>

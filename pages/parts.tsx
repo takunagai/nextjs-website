@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 import Layout from "../components/layout"
-import type { NextPage } from "next"
+import AccessMap from "../components/AccessMap"
 import { motion } from "framer-motion"
 import Lightbox from "yet-another-react-lightbox"
-import "yet-another-react-lightbox/styles.css"
+// import "yet-another-react-lightbox/styles.css"
 
 import {
   FaLine,
@@ -22,6 +22,8 @@ import {
   FaHorse,
   FaFrog,
 } from "react-icons/fa"
+
+import type { NextPage } from "next"
 
 const Parts: NextPage = () => {
   return (
@@ -273,6 +275,12 @@ const Parts: NextPage = () => {
             </Link>
           </p>
         </section>
+
+        <hr />
+
+        <div className="py-12">
+          <AccessMap />
+        </div>
 
         <hr />
 
