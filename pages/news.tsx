@@ -29,7 +29,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 // microCMS - news
 import type { NewsItem } from "../types/news"
-type NewsItemsTypes = { groups: Array<NewsItem> }
+type NewsItemsTypes = { newsItems: Array<NewsItem> }
 
 // getStaticProps は、実装者が大きな変更をしない限り Promise を返却する = 条件は必ず真に流れる
 // ★★TODO: エラー消す (参考：https://zenn.dev/eitches/articles/2021-0424-getstaticprops-type)
