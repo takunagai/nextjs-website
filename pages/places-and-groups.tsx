@@ -31,7 +31,10 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 import type { Group } from "../types/group"
 type Groups = { groups: Array<Group> }
 
-// getStaticProps は、実装者が大きな変更をしない限り Promise を返却する = 条件は必ず真に流れる
+/**
+ * getStaticProps (from microCMS API)
+ *   getStaticProps は、実装者が大きな変更をしない限り Promise を返却する = 条件は必ず真に流れる
+ */
 // ★★TODO: エラー消す (参考：https://zenn.dev/eitches/articles/2021-0424-getstaticprops-type)
 // export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext<{ slug: string }>) => {
 export const getStaticProps: GetStaticProps = async (
@@ -49,6 +52,9 @@ export const getStaticProps: GetStaticProps = async (
   }
 }
 
+/**
+ * Main Component
+ */
 // const PlacesAndGroups: NextPage<Props> = ({ groups }: Groups) => { // 型付けるとエラー
 const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
   return (
@@ -91,263 +97,8 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
           </p>
         </div>
         <section className="mt-8">
-          <div className="mx-auto max-w-lg rounded-2xl bg-gray-100 p-3">
-            <p className="text-center font-bold text-primary">
-              場所で絞り込む ★★機能実装
-            </p>
-            <fieldset className="mt-3">
-              <ul className="flex flex-wrap gap-3">
-                <li>
-                  <input
-                    type="radio"
-                    id="amagasaki"
-                    name="city"
-                    value="尼崎市"
-                    checked
-                  />
-                  <label className="ml-1" htmlFor="amagasaki">
-                    尼崎市
-                  </label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    id="nishinomiya"
-                    name="city"
-                    value="西宮市"
-                    checked
-                  />
-                  <label className="ml-1" htmlFor="nishinomiya">
-                    西宮市
-                  </label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    id="ashiya"
-                    name="city"
-                    value="芦屋市"
-                    checked
-                  />
-                  <label className="ml-1" htmlFor="ashiya">
-                    芦屋市
-                  </label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    id="itami"
-                    name="city"
-                    value="伊丹市"
-                    checked
-                  />
-                  <label className="ml-1" htmlFor="itami">
-                    伊丹市
-                  </label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    id="takarazuka"
-                    name="city"
-                    value="宝塚市"
-                    checked
-                  />
-                  <label className="ml-1" htmlFor="takarazuka">
-                    宝塚市
-                  </label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    id="kawanishi"
-                    name="city"
-                    value="川西市"
-                    checked
-                  />
-                  <label className="ml-1" htmlFor="kawanishi">
-                    川西市
-                  </label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    id="sanda"
-                    name="city"
-                    value="三田市"
-                    checked
-                  />
-                  <label className="ml-1" htmlFor="sanda">
-                    三田市
-                  </label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    id="inagawa"
-                    name="city"
-                    value="川辺郡猪名川町"
-                    checked
-                  />
-                  <label className="ml-1" htmlFor="inagawa">
-                    川辺郡猪名川町
-                  </label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    id="online"
-                    name="city"
-                    value="オンライン"
-                    checked
-                  />
-                  <label className="ml-1" htmlFor="online">
-                    オンライン
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-          </div>
-          <ul className="mt-8 gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
-            {groups.map((group: Group, index: number) => (
-              <li
-                key={index}
-                className="mb-8 rounded bg-tertiary-100/50 p-6 shadow md:mb-0"
-              >
-                <h2 className="text-left text-[1.4rem] text-primary">
-                  {group.title}
-                </h2>
-                {group.mainImage && group.mainImage.url}
-                {group.mainImage && group.mainImage.width}
-                {group.mainImage && group.mainImage.height}
-                <ul className="mt-4 inline-flex flex-wrap gap-1">
-                  {group.locationType.map((x, i) => (
-                    <li
-                      className="inline-block border border-primary-200 py-0 px-1 text-sm text-primary"
-                      key={i}
-                    >
-                      {x}
-                    </li>
-                  ))}
-                  <li className="inline-block rounded-full bg-secondary-200 py-0 px-2 text-sm text-primary">
-                    {group.city.join(", ")}
-                  </li>
-                </ul>
-                <p className="mt-4">{group.summary}</p>
-                <p>
-                  <b className="text-primary">対象者:</b> <br />
-                  {group.objectPerson}
-                </p>
-                <p className="pl-12 -indent-12">
-                  <b className="text-primary">場所：</b>
-                  {group.place} {group.address && `(${group.address})`}
-                </p>
-                <p className="mt-0 pl-12 -indent-12">
-                  <b className="text-primary">日時：</b>
-                  {group.activityDate}
-                </p>
-                <p className="mt-0 pl-16 -indent-16">
-                  <b className="text-primary">参加費：</b>
-                  {group.cost}
-                </p>
-                <p className="mt-0 pl-16 -indent-16">
-                  <b className="text-primary">主催者：</b>
-                  {group.manager}
-                </p>
-                {group.notice && (
-                  <p className="text-red-500">
-                    <small>{group.notice}</small>
-                  </p>
-                )}
-                <p>
-                  <b className="text-primary">
-                    問合せ先
-                    <small className="font-normal">
-                      {group.contactName && ` (${group.contactName})`}
-                    </small>
-                    ：
-                  </b>
-                </p>
-
-                {group.contactTel && (
-                  <p className="mt-0">
-                    <PhoneIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
-                    Tel:{" "}
-                    <span className="text-xl font-bold">
-                      <a href={`tel:${group.contactTel}`}>{group.contactTel}</a>
-                    </span>
-                    {group.contactHours && <small> {group.contactHours}</small>}
-                  </p>
-                )}
-
-                {group.contactFax && (
-                  <p className="mt-0">
-                    <PrinterIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
-                    Fax: {group.contactFax}
-                  </p>
-                )}
-
-                <p className="mt-1 flex gap-2">
-                  {group.contactEmail && (
-                    <b>
-                      <EnvelopeIcon className="inline h-4 w-4 text-secondary" />
-                      <a
-                        href={`mailto:${group.contactEmail}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Email
-                      </a>
-                    </b>
-                  )}
-                  {group.contactLine && (
-                    <b>
-                      <ChatBubbleOvalLeftIcon className="inline h-4 w-4 text-secondary" />
-                      <a
-                        href={`https://lin.ee/${group.contactLine}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        LINE
-                      </a>
-                    </b>
-                  )}
-                  {group.webUrl && (
-                    <b>
-                      <GlobeAltIcon className="inline h-4 w-4 text-secondary" />
-                      <a
-                        href={`${group.webUrl}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Web
-                      </a>
-                    </b>
-                  )}
-                </p>
-                {group.leafletImage1 && (
-                  <p>
-                    <Image
-                      src={group.leafletImage1.url}
-                      width={group.leafletImage1.width}
-                      height={group.leafletImage1.height}
-                      alt="リーフレット"
-                    />
-                  </p>
-                )}
-                {group.leafletImage2 && (
-                  <p>
-                    <Image
-                      src={group.leafletImage2.url}
-                      width={group.leafletImage2.width}
-                      height={group.leafletImage2.height}
-                      alt="リーフレット"
-                    />
-                  </p>
-                )}
-              </li>
-            ))}
-          </ul>
+          <RadioButtonsForFilter />
+          <GroupList groups={groups} />
         </section>
 
         <AfterContent />
@@ -357,3 +108,260 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
 }
 
 export default PlacesAndGroups
+
+/**
+ * ラジオボタンエリア
+ */
+const RadioButtonsForFilter = () => {
+  return (
+    <div className="mx-auto max-w-lg rounded-2xl bg-gray-100 p-3">
+      <p className="text-center font-bold text-primary">
+        場所で絞り込む ★★機能実装
+      </p>
+      <fieldset className="mt-3">
+        <ul className="flex flex-wrap gap-3">
+          <li>
+            <input
+              type="radio"
+              id="amagasaki"
+              name="city"
+              value="尼崎市"
+              checked
+            />
+            <label className="ml-1" htmlFor="amagasaki">
+              尼崎市
+            </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              id="nishinomiya"
+              name="city"
+              value="西宮市"
+              checked
+            />
+            <label className="ml-1" htmlFor="nishinomiya">
+              西宮市
+            </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              id="ashiya"
+              name="city"
+              value="芦屋市"
+              checked
+            />
+            <label className="ml-1" htmlFor="ashiya">
+              芦屋市
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="itami" name="city" value="伊丹市" checked />
+            <label className="ml-1" htmlFor="itami">
+              伊丹市
+            </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              id="takarazuka"
+              name="city"
+              value="宝塚市"
+              checked
+            />
+            <label className="ml-1" htmlFor="takarazuka">
+              宝塚市
+            </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              id="kawanishi"
+              name="city"
+              value="川西市"
+              checked
+            />
+            <label className="ml-1" htmlFor="kawanishi">
+              川西市
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="sanda" name="city" value="三田市" checked />
+            <label className="ml-1" htmlFor="sanda">
+              三田市
+            </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              id="inagawa"
+              name="city"
+              value="川辺郡猪名川町"
+              checked
+            />
+            <label className="ml-1" htmlFor="inagawa">
+              川辺郡猪名川町
+            </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              id="online"
+              name="city"
+              value="オンライン"
+              checked
+            />
+            <label className="ml-1" htmlFor="online">
+              オンライン
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+  )
+}
+
+/**
+ * 居場所&グループのリスト
+ */
+const GroupList = ({ groups }: Groups) => {
+  return (
+    <ul className="mt-8 gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+      {groups.map((group: Group, index: number) => (
+        <li
+          key={index}
+          className="mb-8 rounded bg-tertiary-100/50 p-6 shadow md:mb-0"
+        >
+          <h2 className="text-left text-[1.4rem] text-primary">
+            {group.title}
+          </h2>
+          {group.mainImage && group.mainImage.url}
+          {group.mainImage && group.mainImage.width}
+          {group.mainImage && group.mainImage.height}
+          <ul className="mt-4 inline-flex flex-wrap gap-1">
+            {group.locationType.map((x, i) => (
+              <li
+                className="inline-block border border-primary-200 py-0 px-1 text-sm text-primary"
+                key={i}
+              >
+                {x}
+              </li>
+            ))}
+            <li className="inline-block rounded-full bg-secondary-200 py-0 px-2 text-sm text-primary">
+              {group.city.join(", ")}
+            </li>
+          </ul>
+          <p className="mt-4">{group.summary}</p>
+          <p>
+            <b className="text-primary">対象者:</b> <br />
+            {group.objectPerson}
+          </p>
+          <p className="pl-12 -indent-12">
+            <b className="text-primary">場所：</b>
+            {group.place} {group.address && `(${group.address})`}
+          </p>
+          <p className="mt-0 pl-12 -indent-12">
+            <b className="text-primary">日時：</b>
+            {group.activityDate}
+          </p>
+          <p className="mt-0 pl-16 -indent-16">
+            <b className="text-primary">参加費：</b>
+            {group.cost}
+          </p>
+          <p className="mt-0 pl-16 -indent-16">
+            <b className="text-primary">主催者：</b>
+            {group.manager}
+          </p>
+          {group.notice && (
+            <p className="text-red-500">
+              <small>{group.notice}</small>
+            </p>
+          )}
+          <p>
+            <b className="text-primary">
+              問合せ先
+              <small className="font-normal">
+                {group.contactName && ` (${group.contactName})`}
+              </small>
+              ：
+            </b>
+          </p>
+
+          {group.contactTel && (
+            <p className="mt-0">
+              <PhoneIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
+              Tel:{" "}
+              <span className="text-xl font-bold">
+                <a href={`tel:${group.contactTel}`}>{group.contactTel}</a>
+              </span>
+              {group.contactHours && <small> {group.contactHours}</small>}
+            </p>
+          )}
+
+          {group.contactFax && (
+            <p className="mt-0">
+              <PrinterIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
+              Fax: {group.contactFax}
+            </p>
+          )}
+
+          <p className="mt-1 flex gap-2">
+            {group.contactEmail && (
+              <b>
+                <EnvelopeIcon className="inline h-4 w-4 text-secondary" />
+                <a
+                  href={`mailto:${group.contactEmail}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Email
+                </a>
+              </b>
+            )}
+            {group.contactLine && (
+              <b>
+                <ChatBubbleOvalLeftIcon className="inline h-4 w-4 text-secondary" />
+                <a
+                  href={`https://lin.ee/${group.contactLine}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LINE
+                </a>
+              </b>
+            )}
+            {group.webUrl && (
+              <b>
+                <GlobeAltIcon className="inline h-4 w-4 text-secondary" />
+                <a href={`${group.webUrl}`} target="_blank" rel="noreferrer">
+                  Web
+                </a>
+              </b>
+            )}
+          </p>
+          {group.leafletImage1 && (
+            <p>
+              <Image
+                src={group.leafletImage1.url}
+                width={group.leafletImage1.width}
+                height={group.leafletImage1.height}
+                alt="リーフレット"
+              />
+            </p>
+          )}
+          {group.leafletImage2 && (
+            <p>
+              <Image
+                src={group.leafletImage2.url}
+                width={group.leafletImage2.width}
+                height={group.leafletImage2.height}
+                alt="リーフレット"
+              />
+            </p>
+          )}
+        </li>
+      ))}
+    </ul>
+  )
+}
