@@ -4,7 +4,7 @@
  */
 import Date from "../components/date"
 import Layout from "../components/layout"
-import AfterContent from "../components/after-content"
+import AfterContentArea from "../components/AfterContentArea"
 import { motion } from "framer-motion"
 import { client } from "../lib/client" // microcms-js-sdkの初期化
 import {
@@ -86,7 +86,7 @@ const NewsItems: NextPage<Props> = ({ newsItems }) => {
           </ul>
         </section>
 
-        <AfterContent />
+        <AfterContentArea />
       </motion.div>
     </Layout>
   )

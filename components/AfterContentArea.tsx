@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-const AfterContent = () => {
+const AfterContentArea = () => {
   return (
     <>
       <div className="mx-auto mt-8 max-w-xl rounded-xl bg-tertiary-100 p-4 text-center shadow">
@@ -23,4 +23,4 @@ const AfterContent = () => {
   )
 }
 
-export default AfterContent
+export default AfterContentArea

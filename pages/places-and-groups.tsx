@@ -4,7 +4,7 @@
  */
 import Image from "next/image"
 import Layout from "../components/layout"
-import AfterContent from "../components/after-content"
+import AfterContentArea from "../components/AfterContentArea"
 import { motion } from "framer-motion"
 import { client } from "../lib/client" // microcms-js-sdkの初期化
 import {
@@ -117,7 +117,7 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
           <GroupList groups={groups} />
         </section>
 
-        <AfterContent />
+        <AfterContentArea />
       </motion.div>
     </Layout>
   )

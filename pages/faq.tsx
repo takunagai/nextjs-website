@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Layout from "../components/layout"
-import AfterContent from "../components/after-content"
+import AfterContentArea from "../components/AfterContentArea"
 import type { NextPage } from "next"
 
 import {
@@ -339,7 +339,7 @@ const Faq: NextPage = () => {
           </div>
         </section>
 
-        <AfterContent />
+        <AfterContentArea />
       </motion.div>
     </Layout>
   )
