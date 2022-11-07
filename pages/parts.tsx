@@ -137,9 +137,13 @@ const Parts: NextPage = ({ newsItems }: any) => {
                     <span className="block text-xs md:inline-block">
                       <Date dateString={newsItem.date} />
                     </span>
-                    <a href="#" className="text-primary">
+                    <Link
+                      href={`/news/${newsItem.id}`}
+                      passHref
+                      className="text-primary"
+                    >
                       {newsItem.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
             </ul>
@@ -151,17 +155,23 @@ const Parts: NextPage = ({ newsItems }: any) => {
               .map((newsItem: NewsItem, index: number) => (
                 <li key={index} className="basis-1/2 px-3 md:basis-1/4">
                   {newsItem.postThumbnail && (
-                    <Image
-                      src={`${newsItem.postThumbnail.url}`}
-                      width={`${newsItem.postThumbnail.width}`}
-                      height={`${newsItem.postThumbnail.height}`}
-                      alt={`${newsItem.title}`}
-                      className="shadow-lg"
-                      style={{
-                        maxWidth: "100%",
-                        height: "auto",
-                      }}
-                    />
+                    <Link
+                      href={`/news/${newsItem.id}`}
+                      passHref
+                      className="text-primary"
+                    >
+                      <Image
+                        src={`${newsItem.postThumbnail.url}`}
+                        width={`${newsItem.postThumbnail.width}`}
+                        height={`${newsItem.postThumbnail.height}`}
+                        alt={`${newsItem.title}`}
+                        className="shadow-lg hover:opacity-80"
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto",
+                        }}
+                      />
+                    </Link>
                   )}
                 </li>
               ))}

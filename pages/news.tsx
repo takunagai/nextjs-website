@@ -2,6 +2,7 @@
  * microcms フェッチ
  * @ref https://document.microcms.io/tutorial/next/next-getting-started
  */
+import Link from "next/link"
 import Date from "../components/date"
 import Layout from "../components/layout"
 import AfterContentArea from "../components/AfterContentArea"
@@ -71,16 +72,21 @@ const NewsItems: NextPage<Props> = ({ newsItems }) => {
             {newsItems.map((newsItem: NewsItem, index: number) => (
               <li
                 key={index}
-                className="border-b border-dashed border-primary-100 py-8"
+                className="border-b border-dashed border-primary-100 py-4"
               >
-                <h2 className="text-left text-2xl">{newsItem.title}</h2>
+                <h2 className="inline text-left text-xl">
+                  <Link
+                    href={`/news/${newsItem.id}`}
+                    passHref
+                    className="!px-0 text-primary"
+                  >
+                    {newsItem.title}
+                  </Link>
+                </h2>
                 <p className="mt-1 text-sm text-gray-700">
+                  投稿日：
                   <Date dateString={newsItem.date} />
                 </p>
-                <p
-                  className="mt-4"
-                  dangerouslySetInnerHTML={{ __html: newsItem.body }}
-                />
               </li>
             ))}
           </ul>
