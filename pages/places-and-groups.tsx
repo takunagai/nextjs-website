@@ -68,7 +68,23 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
         exit={{ opacity: 0 }}
       >
         <h1 className="alignfull bg-dots3">居場所・親の会の情報</h1>
+
         <div className="mx-auto mt-8 max-w-2xl">
+          <div className="mb-4 border border-4 border-pink-500 p-2 font-bold text-pink-500">
+            <p>
+              <strong>【内容をご確認される方へ】</strong>
+            </p>
+            <ul className="list-disc pl-6">
+              <li>
+                チラシの画像の箇所はボタンにし、クリックで大きい画像が表示されるようにします
+              </li>
+              <li>
+                問合せ先は代表１つのみ。2つ以上記入された方は下部の備考に載せました
+              </li>
+              <li>グループ説明が長過ぎるものは、カットしています。</li>
+              <li>市ごとに絞り込み表示ができるようにします</li>
+            </ul>
+          </div>
           <p className="font-bold text-primary">
             なかなか探しにくい、阪神地域でされているひきこもりの方の居場所、不登校の方の居場所、親の会、学習支援、教育支援センター、相談機関などの情報を集めました。
           </p>
