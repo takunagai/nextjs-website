@@ -42,7 +42,10 @@ export const getStaticProps: GetStaticProps = async (
 ) => {
   const data = await client.get({
     endpoint: "group",
-    queries: { limit: 50 },
+    queries: {
+      // filters: "city[contains]宝塚市[or]city[contains]伊丹市",
+      limit: 50,
+    },
   })
 
   return {
@@ -137,73 +140,49 @@ const RadioButtonsForFilter = () => {
       <fieldset className="mt-3">
         <ul className="flex flex-wrap gap-3">
           <li>
-            <input
-              type="radio"
-              id="amagasaki"
-              name="city"
-              value="尼崎市"
-              checked
-            />
+            <input type="radio" id="all" name="city" value="全表示" checked />
+            <label className="ml-1" htmlFor="all">
+              全表示
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="amagasaki" name="city" value="尼崎市" />
             <label className="ml-1" htmlFor="amagasaki">
               尼崎市
             </label>
           </li>
           <li>
-            <input
-              type="radio"
-              id="nishinomiya"
-              name="city"
-              value="西宮市"
-              checked
-            />
+            <input type="radio" id="nishinomiya" name="city" value="西宮市" />
             <label className="ml-1" htmlFor="nishinomiya">
               西宮市
             </label>
           </li>
           <li>
-            <input
-              type="radio"
-              id="ashiya"
-              name="city"
-              value="芦屋市"
-              checked
-            />
+            <input type="radio" id="ashiya" name="city" value="芦屋市" />
             <label className="ml-1" htmlFor="ashiya">
               芦屋市
             </label>
           </li>
           <li>
-            <input type="radio" id="itami" name="city" value="伊丹市" checked />
+            <input type="radio" id="itami" name="city" value="伊丹市" />
             <label className="ml-1" htmlFor="itami">
               伊丹市
             </label>
           </li>
           <li>
-            <input
-              type="radio"
-              id="takarazuka"
-              name="city"
-              value="宝塚市"
-              checked
-            />
+            <input type="radio" id="takarazuka" name="city" value="宝塚市" />
             <label className="ml-1" htmlFor="takarazuka">
               宝塚市
             </label>
           </li>
           <li>
-            <input
-              type="radio"
-              id="kawanishi"
-              name="city"
-              value="川西市"
-              checked
-            />
+            <input type="radio" id="kawanishi" name="city" value="川西市" />
             <label className="ml-1" htmlFor="kawanishi">
               川西市
             </label>
           </li>
           <li>
-            <input type="radio" id="sanda" name="city" value="三田市" checked />
+            <input type="radio" id="sanda" name="city" value="三田市" />
             <label className="ml-1" htmlFor="sanda">
               三田市
             </label>
@@ -214,20 +193,13 @@ const RadioButtonsForFilter = () => {
               id="inagawa"
               name="city"
               value="川辺郡猪名川町"
-              checked
             />
             <label className="ml-1" htmlFor="inagawa">
               川辺郡猪名川町
             </label>
           </li>
           <li>
-            <input
-              type="radio"
-              id="online"
-              name="city"
-              value="オンライン"
-              checked
-            />
+            <input type="radio" id="online" name="city" value="オンライン" />
             <label className="ml-1" htmlFor="online">
               オンライン
             </label>
