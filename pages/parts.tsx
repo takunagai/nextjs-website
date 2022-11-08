@@ -79,7 +79,7 @@ const Parts: NextPage = ({ newsItems }: any) => {
                 <p className="text-sm font-bold text-secondary">
                   相談 / セミナー / 居場所 / 訪問支援
                 </p>
-                <h1 className="mt-2 text-[17px] text-primary lg:text-xl">
+                <h1 className="mt-2 pt-0 pb-2 text-[17px] text-primary lg:text-xl">
                   兵庫ひきこもり相談支援センター
                   <br />
                   阪神ブランチ
