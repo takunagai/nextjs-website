@@ -136,6 +136,14 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
+                      href="/reference"
+                      className="border-b border-dotted border-primary-200 text-primary hover:text-primary-300"
+                    >
+                      相談窓口
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       href="/user-comments"
                       className="border-b border-dotted border-primary-200 text-primary hover:text-primary-300"
                     >
