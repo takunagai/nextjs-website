@@ -109,7 +109,7 @@ const Reference: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    川西市こども・若者総合相談センター
+                    川西市こども若者相談センター
                   </a>
                 </li>
                 <li>
@@ -127,7 +127,7 @@ const Reference: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    三田市生活サポートセンター
+                    三田市生活安心サポートセンター
                   </a>
                 </li>
                 <li>

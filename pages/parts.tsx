@@ -91,7 +91,9 @@ const Parts: NextPage = ({ newsItems }: any) => {
                 </p>
               </div>
               <p className="mt-6 font-bold leading-7 tracking-wide text-primary-700">
-                ひきこもりの当事者やご家族を支援する相談窓口。専門の相談員による相談(電話、訪問、地域相談会)、居場所の提供。ひきこもりに関するセミナーや研修会などのイベントも開催しています。
+                ひきこもりの当事者やご家族を支援する相談窓口。
+                <br className="hidden md:inline" />
+                専門の相談員による相談(電話・来所・訪問)、居場所の提供、ひきこもりに関するセミナーや研修会なども開催しています。
               </p>
               <p>
                 <Link href="/flow" className="btn btn-primary px-16">
