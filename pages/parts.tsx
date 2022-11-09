@@ -282,9 +282,9 @@ const Parts: NextPage = ({ newsItems }: any) => {
             どうやって利用や相談をするの？
           </h3>
           <p className="mx-auto mt-6 max-w-3xl">
-            専門の相談員による相談 (電話相談、来所相談、訪問相談)
-            を行っています。
-            まずは各相談の予約を取らせていただきますので、お気軽にお電話ください。
+            専門の相談員による相談（電話・来所・訪問）、ひきこもりに関する地域相談会や研修会などを開催しています。
+            <br />
+            まずはお電話ください。スタッフが相談可能日をご案内します。
           </p>
           <p className="text-center">
             <Link href="/flow" className="btn btn-primary px-10">

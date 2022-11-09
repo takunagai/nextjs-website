@@ -11,7 +11,9 @@ const AfterContentArea = () => {
         </h3>
         <p className="text-xs">(ご本人、ご家族)</p>
         <p>
-          兵庫ひきこもり支援センターでは、ひきこもりに悩むご本人や家族からの相談を受け付けています。
+          兵庫ひきこもり相談支援センターでは、
+          <br />
+          ひきこもりに悩むご本人やご家族からの相談を受け付けています。
         </p>
         <p>
           <Link href="/flow" className="btn btn-primary">

@@ -74,7 +74,7 @@ const Footer = () => {
                   所在地：兵庫県西宮市名塩山荘 8-10 ※1
                   <br />
                   <span className="mt-1 block text-xs leading-tight">
-                    ※1 同住所に数軒の家が存在します。
+                    ※1 近隣に同住所の家があります。
                     <br />
                     <b>いきがいさがし/necoris</b>の表札がある茶色の家です
                   </span>

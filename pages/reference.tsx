@@ -61,6 +61,15 @@ const Reference: NextPage = () => {
                 </li>
                 <li>
                   <a
+                    href="https://web.pref.hyogo.lg.jp/kf21/hikikomori.html"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    兵庫県ひきこもり総合支援センター
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://ashiya-shakyo.com/"
                     target="_blank"
                     rel="noreferrer"
@@ -101,6 +110,15 @@ const Reference: NextPage = () => {
                     rel="noreferrer"
                   >
                     川西市こども・若者総合相談センター
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.city.kawanishi.hyogo.jp/1006637/1006663/1006664.html"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    川西市地域福祉課
                   </a>
                 </li>
                 <li>

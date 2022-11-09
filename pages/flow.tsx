@@ -54,7 +54,7 @@ const Flow: NextPage = () => {
             専門の相談員による相談 (電話相談、来所相談、訪問相談)
             を行っています。
             <br className="hidden md:inline" />
-            まずは各相談の予約を取らせていただきますので、お気軽にお電話ください
+            まずはお電話ください。スタッフが相談可能日をご案内します。
           </p>
           <div className="mx-auto mt-6 max-w-2xl text-center">
             <Image

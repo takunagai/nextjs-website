@@ -163,11 +163,11 @@ const Faq: NextPage = () => {
                 <div className="px-5 pb-4">
                   <p className="text-gray-800 dark:text-gray-200">
                     神戸以外の阪神地区在住の方が対象です。
-                    兵庫県の他の地域の方は、兵庫県ひきこもり相談支援センターの地元のブランチをご利用ください。
+                    兵庫県の他の地域の方は、兵庫ひきこもり相談支援センターの地域のブランチをご利用ください。
                   </p>
                   <div className="mt-3 max-w-fit rounded border border-dashed border-primary-200 p-3">
                     <p className="font-bold text-primary">
-                      兵庫県ひきこもり相談支援センター
+                      兵庫ひきこもり相談支援センター
                     </p>
                     <p className="mt-0 text-xs">
                       ※リンクは運営している団体のホームページ

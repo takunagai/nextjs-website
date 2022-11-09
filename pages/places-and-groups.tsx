@@ -132,6 +132,10 @@ export default PlacesAndGroups
  * ラジオボタンエリア
  */
 const RadioButtonsForFilter = () => {
+  // ★★TODO: フィルター実装途中
+  // const handleChange = (e: any) => {
+  //   setVal(e.target.value)
+  // }
   return (
     <div className="mx-auto max-w-lg rounded-2xl bg-gray-100 p-3">
       <p className="text-center font-bold text-primary">
@@ -214,142 +218,150 @@ const RadioButtonsForFilter = () => {
  * 居場所&グループのリスト
  */
 const GroupList = ({ groups }: Groups) => {
+  // フィルター関数 ★★TODO:途中
+  // const extractCategoryMatches = (item: any) => {
+  //   return item.city[0] === "西宮市"
+  // }
+
+  console.dir(groups)
   return (
     <ul className="mt-8 gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
-      {groups.map((group: Group, index: number) => (
-        <li
-          key={index}
-          className="mb-8 rounded bg-tertiary-100/50 p-6 shadow md:mb-0"
-        >
-          <h2 className="text-left text-[1.4rem] text-primary">
-            {group.title}
-          </h2>
-          {group.mainImage && group.mainImage.url}
-          {group.mainImage && group.mainImage.width}
-          {group.mainImage && group.mainImage.height}
-          <ul className="mt-4 inline-flex flex-wrap gap-1">
-            {group.locationType.map((x, i) => (
-              <li
-                className="inline-block border border-primary-200 py-0 px-1 text-sm text-primary"
-                key={i}
-              >
-                {x}
+      {groups
+        // .filter(extractCategoryMatches)
+        .map((group: Group, index: number) => (
+          <li
+            key={index}
+            className="mb-8 rounded bg-tertiary-100/50 p-6 shadow md:mb-0"
+          >
+            <h2 className="text-left text-[1.4rem] text-primary">
+              {group.title}
+            </h2>
+            {group.mainImage && group.mainImage.url}
+            {group.mainImage && group.mainImage.width}
+            {group.mainImage && group.mainImage.height}
+            <ul className="mt-4 inline-flex flex-wrap gap-1">
+              {group.locationType.map((x, i) => (
+                <li
+                  className="inline-block border border-primary-200 py-0 px-1 text-sm text-primary"
+                  key={i}
+                >
+                  {x}
+                </li>
+              ))}
+              <li className="inline-block rounded-full bg-secondary-200 py-0 px-2 text-sm text-primary">
+                {group.city.join(", ")}
               </li>
-            ))}
-            <li className="inline-block rounded-full bg-secondary-200 py-0 px-2 text-sm text-primary">
-              {group.city.join(", ")}
-            </li>
-          </ul>
-          <p className="mt-4">{group.summary}</p>
-          <p>
-            <b className="text-primary">対象者:</b> <br />
-            {group.objectPerson}
-          </p>
-          <p className="pl-12 -indent-12">
-            <b className="text-primary">場所：</b>
-            {group.place} {group.address && `(${group.address})`}
-          </p>
-          <p className="mt-0 pl-12 -indent-12">
-            <b className="text-primary">日時：</b>
-            {group.activityDate}
-          </p>
-          <p className="mt-0 pl-16 -indent-16">
-            <b className="text-primary">参加費：</b>
-            {group.cost}
-          </p>
-          <p className="mt-0 pl-16 -indent-16">
-            <b className="text-primary">主催者：</b>
-            {group.manager}
-          </p>
-          {group.notice && (
-            <p className="text-red-500">
-              <small>{group.notice}</small>
-            </p>
-          )}
-          <p>
-            <b className="text-primary">
-              問合せ先
-              <small className="font-normal">
-                {group.contactName && ` (${group.contactName})`}
-              </small>
-              ：
-            </b>
-          </p>
-
-          {group.contactTel && (
-            <p className="mt-0">
-              <PhoneIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
-              Tel:{" "}
-              <span className="text-xl font-bold">
-                <a href={`tel:${group.contactTel}`}>{group.contactTel}</a>
-              </span>
-              {group.contactHours && <small> {group.contactHours}</small>}
-            </p>
-          )}
-
-          {group.contactFax && (
-            <p className="mt-0">
-              <PrinterIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
-              Fax: {group.contactFax}
-            </p>
-          )}
-
-          <p className="mt-1 flex gap-2">
-            {group.contactEmail && (
-              <b>
-                <EnvelopeIcon className="inline h-4 w-4 text-secondary" />
-                <a
-                  href={`mailto:${group.contactEmail}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Email
-                </a>
-              </b>
-            )}
-            {group.contactLine && (
-              <b>
-                <ChatBubbleOvalLeftIcon className="inline h-4 w-4 text-secondary" />
-                <a
-                  href={`https://lin.ee/${group.contactLine}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LINE
-                </a>
-              </b>
-            )}
-            {group.webUrl && (
-              <b>
-                <GlobeAltIcon className="inline h-4 w-4 text-secondary" />
-                <a href={`${group.webUrl}`} target="_blank" rel="noreferrer">
-                  Web
-                </a>
-              </b>
-            )}
-          </p>
-          {group.leafletImage1 && (
+            </ul>
+            <p className="mt-4">{group.summary}</p>
             <p>
-              <Image
-                src={group.leafletImage1.url}
-                width={group.leafletImage1.width}
-                height={group.leafletImage1.height}
-                alt="リーフレット"
-              />
+              <b className="text-primary">対象者:</b> <br />
+              {group.objectPerson}
             </p>
-          )}
-          {group.leafletImage2 && (
+            <p className="pl-12 -indent-12">
+              <b className="text-primary">場所：</b>
+              {group.place} {group.address && `(${group.address})`}
+            </p>
+            <p className="mt-0 pl-12 -indent-12">
+              <b className="text-primary">日時：</b>
+              {group.activityDate}
+            </p>
+            <p className="mt-0 pl-16 -indent-16">
+              <b className="text-primary">参加費：</b>
+              {group.cost}
+            </p>
+            <p className="mt-0 pl-16 -indent-16">
+              <b className="text-primary">主催者：</b>
+              {group.manager}
+            </p>
+            {group.notice && (
+              <p className="text-red-500">
+                <small>{group.notice}</small>
+              </p>
+            )}
             <p>
-              <Image
-                src={group.leafletImage2.url}
-                width={group.leafletImage2.width}
-                height={group.leafletImage2.height}
-                alt="リーフレット"
-              />
+              <b className="text-primary">
+                問合せ先
+                <small className="font-normal">
+                  {group.contactName && ` (${group.contactName})`}
+                </small>
+                ：
+              </b>
             </p>
-          )}
-        </li>
-      ))}
+
+            {group.contactTel && (
+              <p className="mt-0">
+                <PhoneIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
+                Tel:{" "}
+                <span className="text-xl font-bold">
+                  <a href={`tel:${group.contactTel}`}>{group.contactTel}</a>
+                </span>
+                {group.contactHours && <small> {group.contactHours}</small>}
+              </p>
+            )}
+
+            {group.contactFax && (
+              <p className="mt-0">
+                <PrinterIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
+                Fax: {group.contactFax}
+              </p>
+            )}
+
+            <p className="mt-1 flex gap-2">
+              {group.contactEmail && (
+                <b>
+                  <EnvelopeIcon className="inline h-4 w-4 text-secondary" />
+                  <a
+                    href={`mailto:${group.contactEmail}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Email
+                  </a>
+                </b>
+              )}
+              {group.contactLine && (
+                <b>
+                  <ChatBubbleOvalLeftIcon className="inline h-4 w-4 text-secondary" />
+                  <a
+                    href={`https://lin.ee/${group.contactLine}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LINE
+                  </a>
+                </b>
+              )}
+              {group.webUrl && (
+                <b>
+                  <GlobeAltIcon className="inline h-4 w-4 text-secondary" />
+                  <a href={`${group.webUrl}`} target="_blank" rel="noreferrer">
+                    Web
+                  </a>
+                </b>
+              )}
+            </p>
+            {group.leafletImage1 && (
+              <p>
+                <Image
+                  src={group.leafletImage1.url}
+                  width={group.leafletImage1.width}
+                  height={group.leafletImage1.height}
+                  alt="リーフレット"
+                />
+              </p>
+            )}
+            {group.leafletImage2 && (
+              <p>
+                <Image
+                  src={group.leafletImage2.url}
+                  width={group.leafletImage2.width}
+                  height={group.leafletImage2.height}
+                  alt="リーフレット"
+                />
+              </p>
+            )}
+          </li>
+        ))}
     </ul>
   )
 }
