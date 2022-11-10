@@ -87,21 +87,13 @@ const Reference: NextPage = () => {
                   </a>
                 </li>
                 <li>
-                  あまりす事業部
-                  <br />
-                  <FaPhoneAlt className="mr-1 inline h-4 w-4 text-secondary" />
-                  06-6415-8829
-                  <small> (平日10:00～16:00)</small>
-                  <br />
-                  <span className="inline-block rounded bg-secondary py-0.5 px-1 text-xs shadow hover:bg-secondary-400">
-                    <FaEnvelope className="mr-1 inline h-4 w-4 text-white" />
-                    <a
-                      href="mailto:ama.risu902@gmail.com"
-                      className="text-white"
-                    >
-                      Email
-                    </a>
-                  </span>
+                  <a
+                    href="https://c1mdb.hp.peraichi.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    NPO法人ゲートキーパー支援センター あまりす事業部
+                  </a>
                 </li>
                 <li>
                   <a
