@@ -10,7 +10,7 @@ const Navbar = () => {
       >
         <div className="mt-5 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:pl-5">
           <Link
-            href="/parts"
+            href="/"
             className="font-medium text-primary-700 hover:text-primary-400 dark:text-gray-400 dark:hover:text-gray-500"
             aria-current="page"
           >

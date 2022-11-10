@@ -54,7 +54,7 @@ export default function BlogId({ newsArticle }: any) {
           />
         </main>
         <p className="text-center">
-          <Link href="/parts" className="btn btn-primary px-16">
+          <Link href="/" className="btn btn-primary px-16">
             トップページへ
           </Link>
           <Link href="/news" className="btn btn-secondary px-7">

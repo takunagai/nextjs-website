@@ -1,215 +1,321 @@
 import Image from "next/image"
+import Link from "next/link"
+import Date from "../components/date"
 import Layout from "../components/layout"
+import AccessMap from "../components/AccessMap"
+import { client } from "../lib/client"
 import { motion } from "framer-motion"
-import type { NextPage } from "next"
-// import styles from '../styles/Home.module.css'
+import Lightbox from "yet-another-react-lightbox"
+// import "yet-another-react-lightbox/styles.css"
 
-const Home: NextPage = () => {
+import {
+  FaLock,
+  FaHandHoldingHeart,
+  FaUserFriends,
+  FaHandshake,
+  FaDove,
+  FaHorse,
+  FaFrog,
+} from "react-icons/fa"
+
+import type {
+  GetStaticProps,
+  GetStaticPropsContext,
+  InferGetStaticPropsType,
+  NextPage,
+} from "next" // TypeScript の型データ
+
+/**
+ * Settings
+ */
+// ニュース表示件数
+const numberOfNewsItemsToFetch = 20
+const numberOfNewsItemsDisplayed = 5
+const numberOfNewsLeafletDisplayed = 4
+
+/**
+ * getStaticProps (from microCMS API)
+ */
+// https://zenn.dev/catnose99/articles/7201a6c56d3c88
+type Props = InferGetStaticPropsType<typeof getStaticProps>
+
+// microCMS - news
+import type { NewsItem } from "../types/news"
+type NewsItemsTypes = { newsItems: Array<NewsItem> }
+
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext,
+) => {
+  const data = await client.get({
+    endpoint: "news",
+    queries: { limit: numberOfNewsItemsToFetch },
+  })
+
+  return {
+    props: {
+      newsItems: data.contents,
+    },
+  }
+}
+
+/**
+ * Component
+ */
+// const Index: NextPage<Props> = ({ newsItems }: : NewsItemsTypes) => { // 型付けるとエラー
+const Home: NextPage = ({ newsItems }: any) => {
+  console.log(newsItems)
+
   return (
-    <Layout
-      home
-      title="ナガイ商店.com - 兵庫県川西市 Web 制作"
-      description="概要です。"
-    >
+    <Layout title="Home" description="Home の概要です。">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="alignfull flex h-[80vh] flex-col items-center justify-center bg-zinc-700 py-10 px-4 text-center sm:px-6 md:h-[60vh] lg:h-[70vh] lg:px-8">
-          <h1 className="text-2xl font-bold text-white sm:text-4xl">
-            Cover Page
-          </h1>
-          <p className="mt-3 text-lg text-gray-300">
-            Cover is a one-page template for building simple and beautiful home
-            pages using Tailwind CSS.
-          </p>
-          <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-5">
-            <a
-              className="btn btn-primary btn-icon w-full rounded-full shadow-md sm:w-auto"
-              href="https://github.com/htmlstreamofficial/preline/tree/main/examples"
-            >
-              <svg
-                className="h-4 w-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-              </svg>
-              Get the source code
-            </a>
-            <a
-              className="btn btn-secondary btn-icon w-full shadow-md sm:w-auto"
-              href="#"
-            >
-              <svg
-                className="h-2.5 w-2.5"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M11.2792 1.64001L5.63273 7.28646C5.43747 7.48172 5.43747 7.79831 5.63273 7.99357L11.2792 13.64"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-              Back to examples
-            </a>
+        <div className="alignfull bg-tertiary-100 py-8 px-4 text-center sm:px-6 lg:py-24 lg:px-8">
+          <div className="container flex flex-col items-center justify-center lg:flex-row">
+            <div className="mx-auto max-w-lg lg:order-1 lg:px-8">
+              <div className="mx-auto max-w-fit rounded-xl border border-2 border-dashed border-primary-300 bg-white/75 p-4 shadow ring ring-white/75">
+                <p className="text-sm font-bold text-secondary">
+                  相談 / セミナー / 居場所 / 訪問支援
+                </p>
+                <h1 className="mt-2 pt-0 pb-2 text-[17px] text-primary lg:text-xl">
+                  兵庫ひきこもり相談支援センター
+                  <br />
+                  阪神ブランチ
+                </h1>
+                <p className="mt-2 text-xs">
+                  尼崎市、西宮市、芦屋市、伊丹市、宝塚市、
+                  <br />
+                  三田市、川辺郡猪名川町
+                </p>
+              </div>
+              <p className="mt-6 font-bold leading-7 tracking-wide text-primary-700">
+                ひきこもりの当事者やご家族を支援する相談窓口。
+                <br className="hidden md:inline" />
+                専門の相談員による相談(電話・来所・訪問)、居場所の提供、ひきこもりに関するセミナーや研修会なども開催しています。
+              </p>
+              <p>
+                <Link href="/flow" className="btn btn-primary px-16">
+                  相談する
+                </Link>
+                <Link
+                  href="/places-and-groups"
+                  className="btn btn-secondary px-7"
+                >
+                  居場所情報を見る
+                </Link>
+              </p>
+            </div>
+            <p className="mx-auto mt-6 max-w-fit lg:mt-0">
+              <Image
+                src="/images/hanshin-branch/sample.png"
+                width={762}
+                height={396}
+                alt="イラスト"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+              />
+            </p>
           </div>
         </div>
-
-        <p className="lead mt-8 text-center">
-          ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。
-          <br />
-          それから思わ口まし勝た(50)しはでまた。
-        </p>
-
-        <section className="mt-8">
-          <div className="grid grid-cols-2 gap-4 md:gap-8 lg:grid-cols-4">
-            <div>
-              <Image
-                src="/images/sample-image-1.jpg"
-                width={500}
-                height={375}
-                alt="代替テキスト"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
-              <h3 className="mt-2 text-lg">手はおっかさんの演奏硝</h3>
-              <p className="mt-2">
-                ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです。
-              </p>
-            </div>
-            <div>
-              <Image
-                src="/images/sample-image-1.jpg"
-                width={500}
-                height={375}
-                alt="代替テキスト"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
-              <h3 className="mt-2 text-lg">手はおっかさんの演奏硝</h3>
-              <p className="mt-2">
-                ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです。
-              </p>
-            </div>
-            <div>
-              <Image
-                src="/images/sample-image-1.jpg"
-                width={500}
-                height={375}
-                alt="代替テキスト"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
-              <h3 className="mt-2 text-lg">手はおっかさんの演奏硝</h3>
-              <p className="mt-2">
-                ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです。
-              </p>
-            </div>
-            <div>
-              <Image
-                src="/images/sample-image-1.jpg"
-                width={500}
-                height={375}
-                alt="代替テキスト"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                }}
-              />
-              <h3 className="mt-2 text-lg">手はおっかさんの演奏硝</h3>
-              <p className="mt-2">
-                ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです。
-              </p>
-            </div>
+        <section className="py-12">
+          <h2>
+            <FaDove className="mr-2 inline align-baseline text-secondary-300" />
+            お知らせ
+          </h2>
+          <div className="mx-auto max-w-2xl">
+            {/* ★★TODO: 記事がない場合の分岐処理を追加 */}
+            <ul className="mt-8 list-square pl-5 marker:text-secondary-400">
+              {newsItems
+                .slice(0, numberOfNewsItemsDisplayed)
+                .map((newsItem: NewsItem, index: number) => (
+                  <li
+                    key={index}
+                    className="border-b border-dashed border-primary-100 py-2"
+                  >
+                    <span className="block text-xs md:inline-block">
+                      <Date dateString={newsItem.date} />
+                    </span>
+                    <Link
+                      href={`/news/${newsItem.id}`}
+                      passHref
+                      className="text-primary"
+                    >
+                      {newsItem.title}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
           </div>
+
+          <ul className="mx-4 mt-8 flex flex-wrap">
+            {newsItems
+              .slice(0, numberOfNewsLeafletDisplayed)
+              .map((newsItem: NewsItem, index: number) => (
+                <li key={index} className="basis-1/2 px-3 md:basis-1/4">
+                  {newsItem.postThumbnail && (
+                    <Link
+                      href={`/news/${newsItem.id}`}
+                      passHref
+                      className="text-primary"
+                    >
+                      <Image
+                        src={`${newsItem.postThumbnail.url}`}
+                        width={`${newsItem.postThumbnail.width}`}
+                        height={`${newsItem.postThumbnail.height}`}
+                        alt={`${newsItem.title}`}
+                        className="shadow-lg hover:opacity-80"
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto",
+                        }}
+                      />
+                    </Link>
+                  )}
+                </li>
+              ))}
+          </ul>
         </section>
 
-        <div className="stack-large mt-10">
-          <div className="mx-auto max-w-prose border border-primary-100 p-4">
-            <p>
-              ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わ口まし勝た(50)しはでまた箱のダミーコピーです上手どもっさと俄たますて、みんなまでぶんを弾いとだまし(100文字)。
-            </p>
-          </div>
-          <section>
-            <h2>見出し2です。</h2>
-            <p className="lead mt-5">
-              ★★ダミーコピーです手は<a href="#">おっかさんの演奏硝子屋</a>
-              をセロに思ったばこだた。
-            </p>
-            <p>
-              <ruby>
-                <strong>重ね合わせコンテキスト</strong>
-                <rp> (</rp>
-                <rt>Stacking context</rt>
-                <rp>)</rp>
-              </ruby>
-              それから思わず生意気たたという口ましだ。勝手たたのましはでまた箱のダミーコピーです上手どものときではさっさと俄たますて、みんなまでぶんを弾いがっことだまし。立っすぎそれは間がひどくたて今の夜中のかっこ動きが、たるめるで片手も一生しがこいまし。こどもは二わから狸のようを出て来う。
-            </p>
-            <p>
-              それから思わず生意気たたという口ましだ。勝手たたのましはでまた箱のダミーコピーです上手どものときではさっさと俄たますて、みんなまでぶんを弾いがっことだまし。立っすぎそれは間がひどくたて今の夜中のかっこ動きが、たるめるで片手も一生しがこいまし。こどもは二わから狸のようを出て来う。
-            </p>
-          </section>
+        <hr />
 
-          <section className="alignwide">
-            <h2>幅広：見出し2です。</h2>
-            <p className="mt-5">
-              ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わず生意気たたという口ましだ。勝手たたのましはでまた箱のダミーコピーです上手どものときではさっさと俄たますて、みんなまでぶんを弾いがっことだまし。立っすぎそれは間がひどくたて今の夜中のかっこ動きが、たるめるで片手も一生しがこいまし。こどもは二わから狸のようを出て来う。助けはゴーシュかっこうたり何が待ってだしない。マッ子をょっとにしから虎を片手ダミーコピーですのようを教えてかっこうに云いてごうごうとゴがしててるた。ふっとダミーコピーですぶるぶる虎にゴーシュが合わですた。それそうに別をひきて諸君へいった(300文字)。
-            </p>
-          </section>
+        <section className="my-12">
+          <h2>
+            <FaHorse className="mr-2 inline align-baseline text-secondary-300" />
+            ひきこもりのお悩みを
+            <br />
+            抱えておられる方へ
+          </h2>
+          <p className="mt-1 text-center text-sm">(ご本人、ご家族のサポート)</p>
+          <p className="mx-auto max-w-xl text-center">
+            当事者の気持ちに十分な配慮を行い、社会参加へのはじめの一歩を踏み出せるよう支援いたします。お気軽にご相談ください。
+          </p>
 
-          <section className="alignfull px-4">
-            <h2>全幅：見出し2です。</h2>
-            <p className="mt-5">
-              ★★ダミーコピーです手はおっかさんの演奏硝子屋をセロに思ったばこだた。それから思わず生意気たたという口ましだ。勝手たたのましはでまた箱のダミーコピーです上手どものときではさっさと俄たますて、みんなまでぶんを弾いがっことだまし。立っすぎそれは間がひどくたて今の夜中のかっこ動きが、たるめるで片手も一生しがこいまし。こどもは二わから狸のようを出て来う。助けはゴーシュかっこうたり何が待ってだしない。マッ子をょっとにしから虎を片手ダミーコピーですのようを教えてかっこうに云いてごうごうとゴがしててるた。ふっとダミーコピーですぶるぶる虎にゴーシュが合わですた。それそうに別をひきて諸君へいった(300文字)。
-            </p>
-          </section>
-
-          <section className="alignfull bg-pink-50/50 bg-dots bg-fixed py-10 text-black bg-blend-multiply">
-            <div className="container">
-              <h2>メモ</h2>
-              <ul className="list-disc">
-                <li>PostCSS</li>
-                <li>
-                  TailwindCSS
-                  <ul className="ml-5 list-square">
-                    <li>
-                      jit ([] で個別の値で設定できる、calc()
-                      も使える、疑似要素使える)
-                    </li>
-                    <li>preline (UI ライブラリ)</li>
-                    <li>heroicons (アイコンフォント)</li>
-                    <li>ダークモード</li>
-                    <li>テーマカラー、そのグラデーション</li>
-                  </ul>
-                </li>
-                <li>autoprefixer, import, nesting</li>
-                <li>Every Layout</li>
-                <li>
-                  Markdown で投稿 →
-                  HTML化して表示(remark)、フロントマター(gray-matter)
-                </li>
-                <li>フェッチ</li>
-                <li>fetch メソッド</li>
-                <li>swr</li>
+          <h3 className="marker-underlined mt-10 text-center">
+            このような方、ご相談ください
+          </h3>
+          <div className="mx-auto mt-6 flex max-w-fit flex-col gap-4 md:flex-row">
+            <div className="rounded-lg border border-4 border-dotted border-secondary-300 p-3">
+              <h4 className="text-primary">ご本人</h4>
+              <ul className="mt-2 list-square pl-5 marker:text-secondary-400">
+                <li>このままではいけないと思ってはいるが…</li>
+                <li>人と接する練習をする場所があれば行きたい</li>
+                <li>働くのは難しいが、このままではいけない</li>
               </ul>
             </div>
-          </section>
+            <div className="rounded-lg border border-4 border-dotted border-secondary-300 p-3">
+              <h4 className="text-primary">ご家族さま</h4>
+              <ul className="mt-2 list-square pl-5 marker:text-secondary-400">
+                <li>ひきこもったままの、子どもの将来が心配</li>
+                <li>ひきこもっている子への接し方がわからない</li>
+                <li>子どもの居場所や親の会を紹介して欲しい</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 className="marker-underlined mt-10">
+            当支援センターが
+            <br className="lg:hidden" />
+            お手伝いできること
+          </h3>
+          <div className="container">
+            <ul className="mt-6 flex flex-wrap">
+              <li className="flex-basis basis-1/2 rounded-xl border-4 border border-white bg-tertiary-100 p-6 text-center md:basis-1/4">
+                <p>
+                  <FaUserFriends className="inline text-[50px] text-primary-200" />
+                </p>
+                <p className="font-bold text-primary-600">
+                  ご本人はもちろん、ご家族からのご相談もお受けします
+                </p>
+              </li>
+              <li className="flex-basis basis-1/2 rounded-xl border-4 border border-white bg-tertiary-100 p-6 text-center md:basis-1/4">
+                <p className="">
+                  <FaHandshake className="inline text-[50px] text-primary-200" />
+                </p>
+                <p className="font-bold text-primary-600">
+                  相談内容に応じ、適切な関係機関を紹介します
+                </p>
+              </li>
+              <li className="flex-basis basis-1/2 rounded-xl border-4 border border-white bg-tertiary-100 p-6 text-center md:basis-1/4">
+                <p className="">
+                  <FaLock className="inline text-[50px] text-primary-200" />
+                </p>
+                <p className="font-bold text-primary-600">
+                  秘密を守ります。同意なしに相談内容を口外しません
+                </p>
+              </li>
+              <li className="flex-basis basis-1/2 rounded-xl border-4 border border-white bg-tertiary-100 p-6 text-center md:basis-1/4">
+                <p className="">
+                  <FaHandHoldingHeart className="inline text-[50px] text-primary-200" />
+                </p>
+                <p className="font-bold text-primary-700">
+                  電話、面談などで親身に相談に乗ります。相談費用は無料です
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <h3 className="marker-underlined mt-10">利用してるのはどんな人？</h3>
+          <div className="mx-auto mt-6 max-w-fit border border-primary-200 py-3 px-5 font-bold text-primary-700">
+            <p>
+              利用人数：１日２〜８名程度
+              <br />
+              男女比：８：２ / 年齢層：20～50代{" "}
+            </p>
+          </div>
+          <div className="mx-auto max-w-fit">
+            <ul className="mt-4 list-square pl-5 marker:text-secondary-400">
+              <li>
+                病気で入院して体力が落ちたので、復職へ向けて体力づくりやリハビリの最初のステップとして通いたい
+              </li>
+              <li>
+                人が怖い、緊張してしまうので、会話や交流など人と関わる練習をしたい
+              </li>
+            </ul>
+          </div>
+
+          <h3 className="marker-underlined mt-10">
+            どうやって利用や相談をするの？
+          </h3>
+          <p className="mx-auto mt-6 max-w-3xl">
+            専門の相談員による相談（電話・来所・訪問）、ひきこもりに関する地域相談会や研修会などを開催しています。
+            <br />
+            まずはお電話ください。スタッフが相談可能日をご案内します。
+          </p>
+          <p className="text-center">
+            <Link href="/flow" className="btn btn-primary px-10">
+              相談の流れ
+            </Link>
+          </p>
+        </section>
+
+        <hr />
+
+        <div className="py-12">
+          <AccessMap />
         </div>
+
+        <hr />
+
+        <section className="py-12">
+          <h2>
+            <FaFrog className="mr-2 inline align-baseline text-secondary-300" />
+            兵庫県阪神地区の
+            <br />
+            居場所情報
+          </h2>
+          <p className="mx-auto mt-6 max-w-3xl">
+            なかなか探しにくい、阪神地域でされているひきこもりの方の居場所、不登校の方の居場所、親の会、学習支援、教育支援センター、相談機関などの情報を集めました。
+          </p>
+          <p className="text-center">
+            <Link href="/places-and-groups" className="btn btn-secondary">
+              居場所情報を見る
+            </Link>
+          </p>
+        </section>
       </motion.div>
     </Layout>
   )
