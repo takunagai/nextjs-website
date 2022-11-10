@@ -261,16 +261,13 @@ const Parts: NextPage = ({ newsItems }: any) => {
           <h3 className="marker-underlined mt-10">利用してるのはどんな人？</h3>
           <div className="mx-auto mt-6 max-w-fit border border-primary-200 py-3 px-5 font-bold text-primary-700">
             <p>
-              利用人数：１日★★名程度
+              利用人数：１日２〜８名程度
               <br />
-              男女比：５：５ / 年齢層：20～60代{" "}
+              男女比：８：２ / 年齢層：20～50代{" "}
             </p>
           </div>
           <div className="mx-auto max-w-fit">
             <ul className="mt-4 list-square pl-5 marker:text-secondary-400">
-              <li>
-                長期間ひきこもりで外に出られなかったが、就職を目指して昼夜逆転などの乱れた生活リズムを整えたい
-              </li>
               <li>
                 病気で入院して体力が落ちたので、復職へ向けて体力づくりやリハビリの最初のステップとして通いたい
               </li>

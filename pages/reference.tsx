@@ -217,7 +217,7 @@ const Reference: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    STEP いながわ
+                    猪名川町教育支援センター「STEP いながわ」
                   </a>
                 </li>
               </ul>
