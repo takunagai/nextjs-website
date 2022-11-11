@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
@@ -16,7 +16,7 @@ const Works: NextPage = () => {
           <p>Works の内容</p>
           <div className="grid grid-cols-2 gap-5 text-center md:grid-cols-3 lg:grid-cols-5">
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-wacca.jpg"
                 width={600}
                 height={900}
@@ -55,7 +55,7 @@ const Works: NextPage = () => {
               </p>
             </div>
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-kingoma.jpg"
                 width={600}
                 height={900}
@@ -94,7 +94,7 @@ const Works: NextPage = () => {
               </p>
             </div>
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-goodon-life.jpg"
                 width={600}
                 height={900}
@@ -133,7 +133,7 @@ const Works: NextPage = () => {
               </p>
             </div>
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-alafarine.jpg"
                 width={600}
                 height={900}
@@ -169,7 +169,7 @@ const Works: NextPage = () => {
               </p>
             </div>
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-anvil.jpg"
                 width={600}
                 height={900}
@@ -208,7 +208,7 @@ const Works: NextPage = () => {
               </p>
             </div>
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-dacapo.jpg"
                 width={600}
                 height={900}
@@ -247,7 +247,7 @@ const Works: NextPage = () => {
               </p>
             </div>
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-knots-berry.jpg"
                 width={600}
                 height={900}
@@ -280,7 +280,7 @@ const Works: NextPage = () => {
               </p>
             </div>
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-harapeco-morimushi.jpg"
                 width={600}
                 height={900}
@@ -316,7 +316,7 @@ const Works: NextPage = () => {
               </p>
             </div>
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-mimibridal.jpg"
                 width={600}
                 height={900}
@@ -352,7 +352,7 @@ const Works: NextPage = () => {
               </p>
             </div>
             <div className="relative hover:opacity-95">
-              <Image
+              <img
                 src="/images/work/work-kanami.jpg"
                 width={600}
                 height={900}

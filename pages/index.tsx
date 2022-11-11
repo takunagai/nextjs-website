@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Link from "next/link"
 import Date from "../components/date"
 import Layout from "../components/layout"
@@ -108,7 +108,7 @@ const Home: NextPage = ({ newsItems }: any) => {
               </p>
             </div>
             <p className="mx-auto mt-6 max-w-fit lg:mt-0">
-              <Image
+              <img
                 src="/images/hanshin-branch/sample.png"
                 width={762}
                 height={396}
@@ -162,7 +162,7 @@ const Home: NextPage = ({ newsItems }: any) => {
                       passHref
                       className="text-primary"
                     >
-                      <Image
+                      <img
                         src={`${newsItem.postThumbnail.url}`}
                         width={`${newsItem.postThumbnail.width}`}
                         height={`${newsItem.postThumbnail.height}`}

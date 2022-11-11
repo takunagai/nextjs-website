@@ -22,7 +22,7 @@ Tailwind の疑似要素クラスを使うと簡単。
 
 ```ConponentName.tsx
 <div className="relative hover:opacity-95">
-  <Image src="画像パス.jpg" width={600} height={400} alt="代替テキスト" />
+  Image src="画像パス.jpg" width={600} height={400} alt="代替テキスト" />
   <p>
     <a href="#" className="after:absolute after:inset-0">リンクテキスト</a>
   </p>

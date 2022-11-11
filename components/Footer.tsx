@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Link from "next/link"
 import {
   FaLine,
@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="container">
             <div className="flex flex-col gap-4 py-8 md:flex-row md:gap-8 lg:items-center">
               <p className="md:basis-1/2 lg:basis-3/5">
-                <Image
+                <img
                   src="/images/hanshin-branch/sample.png"
                   width={1089}
                   height={566}

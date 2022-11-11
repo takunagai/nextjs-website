@@ -2,7 +2,7 @@
  * microcms API からフェッチ
  * @ref https://document.microcms.io/tutorial/next/next-getting-started
  */
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import AfterContentArea from "../components/AfterContentArea"
 import { motion } from "framer-motion"
@@ -342,7 +342,7 @@ const GroupList = ({ groups }: Groups) => {
             </p>
             {group.leafletImage1 && (
               <p>
-                <Image
+                <img
                   src={group.leafletImage1.url}
                   width={group.leafletImage1.width}
                   height={group.leafletImage1.height}
@@ -352,7 +352,7 @@ const GroupList = ({ groups }: Groups) => {
             )}
             {group.leafletImage2 && (
               <p>
-                <Image
+                <img
                   src={group.leafletImage2.url}
                   width={group.leafletImage2.width}
                   height={group.leafletImage2.height}

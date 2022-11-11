@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import AccessMap from "../components/AccessMap"
 import { motion } from "framer-motion"
@@ -57,7 +57,7 @@ const Flow: NextPage = () => {
             まずはお電話ください。スタッフが相談可能日をご案内します。
           </p>
           <div className="mx-auto mt-6 max-w-2xl text-center">
-            <Image
+            <img
               src="/images/hanshin-branch/dummy-600x400.png"
               width={600}
               height={400}
@@ -84,7 +84,7 @@ const Flow: NextPage = () => {
                 来所が難しい方には、専門の相談員による電話相談を行っています。
               </p>
               <p className="mt-4 text-center">
-                <Image
+                <img
                   src="/images/hanshin-branch/illust-telephone.png"
                   width={200}
                   height={155}
@@ -113,7 +113,7 @@ const Flow: NextPage = () => {
               </a>
             </p>
             <p className="mt-4 text-center">
-              <Image
+              <img
                 src="/images/hanshin-branch/consultation.jpg"
                 width={200}
                 height={161}
@@ -138,7 +138,7 @@ const Flow: NextPage = () => {
               来所が難しい方は、ご本人の同意を得て家庭訪問をします。
             </p>
             <p className="mt-4 text-center">
-              <Image
+              <img
                 src="/images/hanshin-branch/illust-house.png"
                 width={200}
                 height={161}
@@ -201,7 +201,7 @@ const Flow: NextPage = () => {
 
               {/*      return (*/}
               {/*        <div style={{ position: "relative", width, height }}>*/}
-              {/*          <Image*/}
+              {/*          <img*/}
               {/*            fill*/}
               {/*            src={image}*/}
               {/*            loading="eager"*/}

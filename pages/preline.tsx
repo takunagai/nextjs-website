@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
@@ -38,7 +38,7 @@ const Preline: NextPage = () => {
           <h2>Grid</h2>
           <div className="grid grid-cols-4 gap-4">
             <div>
-              <Image
+              <img
                 src="/images/sample-image-1.jpg"
                 width={500}
                 height={375}
@@ -53,7 +53,7 @@ const Preline: NextPage = () => {
               </p>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/sample-image-1.jpg"
                 width={500}
                 height={375}
@@ -68,7 +68,7 @@ const Preline: NextPage = () => {
               </p>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/sample-image-1.jpg"
                 width={500}
                 height={375}
@@ -83,7 +83,7 @@ const Preline: NextPage = () => {
               </p>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/sample-image-1.jpg"
                 width={500}
                 height={375}
@@ -98,7 +98,7 @@ const Preline: NextPage = () => {
               </p>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/sample-image-1.jpg"
                 width={500}
                 height={375}
@@ -499,7 +499,7 @@ const Preline: NextPage = () => {
         <section>
           <div className="mx-3 rounded-xl border bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:shadow-slate-700/[.7] sm:flex md:mx-0">
             <div className="relative w-full flex-shrink-0 overflow-hidden rounded-t-xl sm:max-w-[15rem] sm:rounded-l-xl md:max-w-xs md:rounded-tr-none">
-              <Image
+              <img
                 className="absolute top-0 left-0 h-full w-full object-cover"
                 src="https://picsum.photos/id/1/600/400.webp"
                 alt="代替テキスト"
@@ -699,7 +699,7 @@ const Preline: NextPage = () => {
           <h3>Smartphone</h3>
           <figure className="mx-auto h-auto w-60 max-w-full">
             <div className="rounded-3xl bg-gray-800 p-1.5 shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(45_55_75_/_20%),_0_2rem_4rem_-2rem_rgb(45_55_75_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(45_55_75_/_20%)] dark:bg-gray-600 dark:shadow-[0_2.75rem_5.5rem_-3.5rem_rgb(0_0_0_/_20%),_0_2rem_4rem_-2rem_rgb(0_0_0_/_30%),_inset_0_-0.1875rem_0.3125rem_0_rgb(0_0_0_/_20%)]">
-              <Image
+              <img
                 src="/images/work-wacca.jpg"
                 width={600}
                 height={900}
