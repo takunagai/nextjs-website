@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["picsum.photos"],
+    domains: ["images.microcms-assets.io", "picsum.photos"],
   },
   unoptimized: true,
 }
