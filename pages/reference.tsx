@@ -181,7 +181,7 @@ const Reference: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    ほっぷすてっぷ
+                    ほっとすてっぷ
                   </a>
                 </li>
               </ul>
