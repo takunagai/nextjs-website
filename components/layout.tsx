@@ -9,7 +9,7 @@ import BreadCrumbs from "./BreadCrumbs"
 import Footer from "./Footer"
 
 import { Yomogi } from "@next/font/google"
-const yomogi = Yomogi({ weight: "400" })
+const yomogi = Yomogi({ weight: "400", subsets: ["japanese"] })
 
 // import styles from './layout.module.css'
 // import utilStyles from '../styles/utils.module.css'
@@ -75,7 +75,7 @@ export default function Layout({ children, title, description, home }: Props) {
       </Head>
 
       {/*<div className={`${yomogi.className} flex h-full w-full flex-col`}>*/}
-      <div className={`flex h-full w-full flex-col`}>
+      <div className={`${yomogi.className} flex h-full w-full flex-col`}>
         {/*<TopmostNotificationBar />*/}
         <Header
           home={home}
