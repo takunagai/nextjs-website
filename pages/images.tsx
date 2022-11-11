@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
@@ -29,7 +29,7 @@ const Images: NextPage = () => {
                 などの外部データソースによってホストされている場合でも、最適化できる
               </li>
             </ul>
-            <Image
+            <img
               src="/images/sample-image-1.jpg" // Route of the image file
               width={500} // Desired size with correct aspect ratio
               height={375} // Desired size with correct aspect ratio

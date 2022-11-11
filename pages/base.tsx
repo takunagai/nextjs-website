@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
@@ -343,7 +343,7 @@ const About: NextPage = () => {
           <section className="stack-small">
             <h2>The Frame - アスペクト比 ★★うまくいかない？</h2>
             <div className="frame">
-              <Image
+              <img
                 src="https://picsum.photos/600/600.webp" // 外部 URL の場合、next.config に要追記
                 width={400}
                 height={600}
@@ -355,7 +355,7 @@ const About: NextPage = () => {
               />
             </div>
             <div className="frame:square">
-              <Image
+              <img
                 src="https://picsum.photos/400/600.webp"
                 width={400}
                 height={600}

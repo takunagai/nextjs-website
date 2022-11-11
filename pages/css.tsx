@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import Button from "../components/Button"
 import Alert from "../components/Alert"
@@ -186,7 +186,7 @@ const CSS: NextPage = () => {
             </ul>
             <h3 className="mt-5">カード</h3>
             <div className="mx-auto max-w-sm space-y-2 rounded-xl bg-white py-8 px-8 shadow-lg sm:flex sm:items-center sm:space-y-0 sm:space-x-6 sm:py-4">
-              <Image
+              <img
                 className="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
                 src="/images/sample-image-1.jpg" // Route of the image file
                 width={500} // Desired size with correct aspect ratio

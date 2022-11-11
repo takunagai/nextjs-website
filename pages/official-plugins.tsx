@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
@@ -113,7 +113,7 @@ const OfficialPlugins: NextPage = () => {
             ></iframe>
           </div>
           <div className="aspect-w-16 aspect-h-9">
-            <Image
+            <img
               className="h-full w-full object-cover object-center"
               src="https://picsum.photos/id/1/300/200.webp" // Route of the image file
               width={3000}

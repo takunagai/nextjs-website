@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
@@ -23,7 +23,7 @@ const About: NextPage = () => {
 
         <header className="flex flex-col gap-10">
           <h1 className="site-title order-2 text-center text-xs font-normal">
-            <Image
+            <img
               src="/images/souffle/logo.png"
               width={140}
               height={47}
@@ -94,12 +94,11 @@ const About: NextPage = () => {
           if (isMobile) {
             return (
               <div className="hero-image alignfull mt-8 p-3">
-                <Image
+                <img
                   src="/images/souffle/main.png"
                   width={733}
                   height={876}
                   alt="スフレ"
-                  quality={85}
                   style={{
                     maxWidth: "100%",
                     height: "auto",
@@ -110,7 +109,7 @@ const About: NextPage = () => {
           } else {
             return (
               <div className="hero-image alignfull mt-8 text-center">
-                <Image
+                <img
                   src="/images/souffle/main_lg.png"
                   width={1800}
                   height={733}
@@ -126,7 +125,7 @@ const About: NextPage = () => {
         })()}
 
         <p className="home-catch mt-12 text-center">
-          <Image
+          <img
             src="/images/souffle/top_catch.png"
             width={280}
             height={94}
@@ -146,7 +145,7 @@ const About: NextPage = () => {
             <div className="grid__item">
               <div className="media--mobile-2col text-center">
                 <FadeIn>
-                  <Image
+                  <img
                     src="/images/souffle/feature_dough.png"
                     width={403}
                     height={333}
@@ -175,7 +174,7 @@ const About: NextPage = () => {
             <div className="grid__item">
               <div className="media--mobile-2col media--mobile--inverse text-center">
                 <FadeIn delay={isMobile ? 0 : 0.5}>
-                  <Image
+                  <img
                     src="/images/souffle/feature_bake.png"
                     width={403}
                     height={333}
@@ -204,7 +203,7 @@ const About: NextPage = () => {
             <div className="grid__item">
               <div className="media--mobile-2col text-center">
                 <FadeIn delay={isMobile ? 0 : 1}>
-                  <Image
+                  <img
                     src="/images/souffle/feature_serve.png"
                     width={403}
                     height={333}
@@ -237,7 +236,7 @@ const About: NextPage = () => {
           <div className="container">
             <div className="text-center">
               <h2 className="text-center text-xs font-normal tracking-wide">
-                <Image
+                <img
                   src="/images/souffle/header_menu.png"
                   width={98}
                   height={28}
@@ -267,7 +266,7 @@ const About: NextPage = () => {
               <div className="grid__item">
                 <FadeIn>
                   <p className="image-with-border">
-                    <Image
+                    <img
                       src="/images/souffle/souffle_cheese.jpg"
                       width={600}
                       height={400}
@@ -293,7 +292,7 @@ const About: NextPage = () => {
               <div className="grid__item">
                 <FadeIn delay={isMobile ? 0 : 0.25}>
                   <p className="image-with-border">
-                    <Image
+                    <img
                       src="/images/souffle/souffle_chocolate.jpg"
                       width={600}
                       height={400}
@@ -319,7 +318,7 @@ const About: NextPage = () => {
               <div className="grid__item">
                 <FadeIn delay={isMobile ? 0 : 0.5}>
                   <p className="image-with-border">
-                    <Image
+                    <img
                       src="/images/souffle/souffle_maple.jpg"
                       width={600}
                       height={400}
@@ -345,7 +344,7 @@ const About: NextPage = () => {
               <div className="grid__item">
                 <FadeIn delay={isMobile ? 0 : 0.75}>
                   <p className="image-with-border">
-                    <Image
+                    <img
                       src="/images/souffle/souffle_plate-berry.jpg"
                       width={600}
                       height={400}
@@ -373,7 +372,7 @@ const About: NextPage = () => {
               <div className="grid__item">
                 <FadeIn delay={isMobile ? 0 : 1}>
                   <p className="image-with-border">
-                    <Image
+                    <img
                       src="/images/souffle/souffle_plate-tea.jpg"
                       width={600}
                       height={400}
@@ -401,7 +400,7 @@ const About: NextPage = () => {
               <div className="grid__item">
                 <FadeIn delay={isMobile ? 0 : 1.25}>
                   <p className="image-with-border">
-                    <Image
+                    <img
                       src="/images/souffle/mix-sandwitch.jpg"
                       width={600}
                       height={400}
@@ -427,7 +426,7 @@ const About: NextPage = () => {
               <div className="grid__item">
                 <FadeIn delay={isMobile ? 0 : 1.5}>
                   <p className="image-with-border">
-                    <Image
+                    <img
                       src="/images/souffle/hot-chocolate.jpg"
                       width={600}
                       height={400}
@@ -505,7 +504,7 @@ const About: NextPage = () => {
               <div className="grid__item bg-white shadow">
                 <FadeIn delay={isMobile ? 0 : 1.75}>
                   <p>
-                    <Image
+                    <img
                       src="/images/souffle/drink-set-menu.jpg"
                       width={600}
                       height={400}
@@ -552,7 +551,7 @@ const About: NextPage = () => {
         <section className="takeout py-16">
           <div className="container">
             <h2 className="header-deco text-center text-xs font-normal tracking-wide">
-              <Image
+              <img
                 src="/images/souffle/header_takeout.png"
                 width={147}
                 height={29}
@@ -570,7 +569,7 @@ const About: NextPage = () => {
               <div className="col-span-3 text-center">
                 <div className="takeout-images text-center">
                   <FadeIn delay={isMobile ? 0 : 0.5}>
-                    <Image
+                    <img
                       src="/images/souffle/takeout-images.jpg"
                       width={600}
                       height={700}
@@ -659,7 +658,7 @@ const About: NextPage = () => {
 
         <section className="voice alignfull relative bg-dots2 py-16">
           <h2 className="header-deco text-center text-xs font-normal tracking-wide">
-            <Image
+            <img
               src="/images/souffle/header_voice.png"
               width={107}
               height={28}
@@ -777,7 +776,7 @@ const About: NextPage = () => {
             <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 lg:grid-cols-5">
               <div className="order-1 text-center md:order-2 lg:col-span-2">
                 <h2 className="header-deco mb-8 text-xs font-normal tracking-wide">
-                  <Image
+                  <img
                     src="/images/souffle/header_instagram.png"
                     width={172}
                     height={31}
@@ -792,7 +791,7 @@ const About: NextPage = () => {
                   ギャラリー
                 </h2>
 
-                <Image
+                <img
                   src="/images/souffle/instagram-profile.jpg"
                   width={100}
                   height={100}
@@ -821,7 +820,7 @@ const About: NextPage = () => {
               </div>
               <div className="order-2 mt-8 md:order-1 md:mt-0 lg:col-span-3">
                 <div className="grid grid-cols-3 gap-5">
-                  <Image
+                  <img
                     src="/images/souffle/instagram-01.jpg"
                     width={300}
                     height={300}
@@ -833,7 +832,7 @@ const About: NextPage = () => {
                       height: "auto",
                     }}
                   />
-                  <Image
+                  <img
                     src="/images/souffle/instagram-02.jpg"
                     width={300}
                     height={300}
@@ -845,7 +844,7 @@ const About: NextPage = () => {
                       height: "auto",
                     }}
                   />
-                  <Image
+                  <img
                     src="/images/souffle/instagram-03.jpg"
                     width={300}
                     height={300}
@@ -857,7 +856,7 @@ const About: NextPage = () => {
                       height: "auto",
                     }}
                   />
-                  <Image
+                  <img
                     src="/images/souffle/instagram-04.jpg"
                     width={300}
                     height={300}
@@ -869,7 +868,7 @@ const About: NextPage = () => {
                       height: "auto",
                     }}
                   />
-                  <Image
+                  <img
                     src="/images/souffle/instagram-05.jpg"
                     width={300}
                     height={300}
@@ -881,7 +880,7 @@ const About: NextPage = () => {
                       height: "auto",
                     }}
                   />
-                  <Image
+                  <img
                     src="/images/souffle/instagram-06.jpg"
                     width={300}
                     height={300}
@@ -893,7 +892,7 @@ const About: NextPage = () => {
                       height: "auto",
                     }}
                   />
-                  <Image
+                  <img
                     src="/images/souffle/instagram-07.jpg"
                     width={300}
                     height={300}
@@ -905,7 +904,7 @@ const About: NextPage = () => {
                       height: "auto",
                     }}
                   />
-                  <Image
+                  <img
                     src="/images/souffle/instagram-08.jpg"
                     width={300}
                     height={300}
@@ -917,7 +916,7 @@ const About: NextPage = () => {
                       height: "auto",
                     }}
                   />
-                  <Image
+                  <img
                     src="/images/souffle/instagram-09.jpg"
                     width={300}
                     height={300}
@@ -940,7 +939,7 @@ const About: NextPage = () => {
             <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 lg:grid-cols-5">
               <div className="lg:col-span-2">
                 <h2 className="header-deco mb-8 text-center text-xs font-normal tracking-wide">
-                  <Image
+                  <img
                     src="/images/souffle/header_about.png"
                     width={88}
                     height={24}
@@ -965,7 +964,7 @@ const About: NextPage = () => {
               </div>
               <div className="mt-4 px-12 text-center md:mt-0 lg:col-span-3">
                 <FadeIn delay={isMobile ? 0 : 0.5}>
-                  <Image
+                  <img
                     src="/images/souffle/shop-images.jpg"
                     width={700}
                     height={628}
@@ -986,7 +985,7 @@ const About: NextPage = () => {
         <section className="alignfull bg-leaf access relative py-16">
           <div className="md:container">
             <h2 className="header-deco text-center text-xs font-normal tracking-wide">
-              <Image
+              <img
                 src="/images/souffle/header_access.png"
                 width={130}
                 height={27}
@@ -1030,7 +1029,7 @@ const About: NextPage = () => {
             <div className="container max-w-4xl">
               <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 lg:grid-cols-5 lg:justify-center">
                 <div className="lg:col-span-3 lg:text-right">
-                  <Image
+                  <img
                     src="/images/souffle/nattsberry_inside.jpg"
                     width={600}
                     height={400}
@@ -1044,7 +1043,7 @@ const About: NextPage = () => {
                   />
                 </div>
                 <div className="mt-4 text-center md:mt-0 lg:col-span-2">
-                  <Image
+                  <img
                     src="/images/souffle/logo.png"
                     width={140}
                     height={47}

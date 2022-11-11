@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import type { NextPage } from "next"
 import { motion } from "framer-motion"
@@ -63,7 +63,7 @@ const Parts: NextPage = () => {
                 </p>
               </div>
               <p className="mx-auto mt-6 max-w-fit lg:mt-0">
-                <Image
+                <img
                   src="/images/hanshin-branch/sample.png"
                   width={762}
                   height={396}
@@ -114,7 +114,7 @@ const Parts: NextPage = () => {
           <div className="mx-4 mt-8 flex flex-wrap">
             <div className="basis-1/2 px-3 md:basis-1/4">
               <a href="#">
-                <Image
+                <img
                   src="/images/hanshin-branch/sample-leaflet-1.jpg"
                   width={400}
                   height={548}
@@ -129,7 +129,7 @@ const Parts: NextPage = () => {
             </div>
             <div className="basis-1/2 px-3 md:basis-1/4">
               <a href="#">
-                <Image
+                <img
                   src="/images/hanshin-branch/sample-leaflet-2.jpg"
                   width={400}
                   height={548}
@@ -144,7 +144,7 @@ const Parts: NextPage = () => {
             </div>
             <div className="basis-1/2 px-3 md:basis-1/4">
               <a href="#">
-                <Image
+                <img
                   src="/images/hanshin-branch/sample-leaflet-1.jpg"
                   width={400}
                   height={548}
@@ -296,7 +296,7 @@ const Parts: NextPage = () => {
           <div className="container">
             <div className="flex flex-col gap-4 md:flex-row md:gap-8 lg:items-center">
               <p className="basis-1/2">
-                <Image
+                <img
                   src="/images/hanshin-branch/sample.png"
                   width={1089}
                   height={566}

@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import Layout from "../components/layout"
 import { motion } from "framer-motion"
 import type { NextPage } from "next"
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
         <section className="mt-8">
           <div className="grid grid-cols-2 gap-4 md:gap-8 lg:grid-cols-4">
             <div>
-              <Image
+              <img
                 src="/images/sample-image-1.jpg"
                 width={500}
                 height={375}
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/sample-image-1.jpg"
                 width={500}
                 height={375}
@@ -105,7 +105,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/sample-image-1.jpg"
                 width={500}
                 height={375}
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/sample-image-1.jpg"
                 width={500}
                 height={375}
