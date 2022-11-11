@@ -1,3 +1,7 @@
+# TODO
+
+* Images を img にしてるのを直す
+
 # 習作：Next.js で静的な Web サイトを構築
 
 TypeScript ベースで [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) を 進めながら、Web サイト構築を学習。
