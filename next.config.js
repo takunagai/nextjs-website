@@ -8,7 +8,7 @@ module.exports = {
       "vercel.app",
       "hanshin-branch.org",
     ],
-    unoptimized: true, // 画像最適化の無効化。Vercel なら不要
+    // unoptimized: true, // 画像最適化の無効化。Vercel なら不要
     // https://nextjs.org/docs/messages/export-image-api
   },
 }
