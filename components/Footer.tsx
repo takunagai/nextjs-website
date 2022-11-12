@@ -39,12 +39,12 @@ const Footer = () => {
       <div className="container px-5 pt-12">
         <footer className="alignfull bg-tertiary-100 pt-8">
           <div className="container">
-            <div className="flex flex-col gap-4 py-8 md:flex-row md:gap-8 lg:items-center">
-              <p className="md:basis-1/2 lg:basis-3/5">
+            <div className="flex flex-col gap-4 py-8 md:flex-row md:gap-8 lg:items-center lg:justify-center">
+              <p className="md:basis-1/2 lg:basis-2/5">
                 <img
-                  src="/images/hanshin-branch/sample.png"
-                  width={1089}
-                  height={566}
+                  src="/images/hanshin-branch/illust_main.png"
+                  width={900}
+                  height={637}
                   alt="イラスト"
                   style={{
                     maxWidth: "100%",

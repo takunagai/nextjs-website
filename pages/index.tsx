@@ -109,9 +109,9 @@ const Home: NextPage = ({ newsItems }: any) => {
             </div>
             <p className="mx-auto mt-6 max-w-fit lg:mt-0">
               <img
-                src="/images/hanshin-branch/sample.png"
-                width={762}
-                height={396}
+                src="/images/hanshin-branch/illust_main.png"
+                width={900}
+                height={637}
                 alt="イラスト"
                 style={{
                   maxWidth: "100%",
