@@ -58,7 +58,7 @@ const Flow: NextPage = () => {
           </p>
           <div className="mx-auto mt-6 max-w-2xl text-center">
             <img
-              src="/images/hanshin-branch/dummy-600x400.png"
+              src="/images/hanshin-branch/flow.png"
               width={600}
               height={400}
               alt="写真"
@@ -68,12 +68,10 @@ const Flow: NextPage = () => {
               }}
               className="inline rounded-2xl"
             />
-            <br />
-            [★★図が入ります]
           </div>
         </section>
 
-        <section className="lg:flex lg:gap-8">
+        <section className="lg:mx-auto lg:flex lg:max-w-4xl lg:gap-8">
           <div className="lg:basis-1/3">
             <h2 id="telephone-counseling">
               <FaCat className="mr-2 inline align-baseline text-secondary-300" />
