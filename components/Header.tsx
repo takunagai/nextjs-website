@@ -1,7 +1,7 @@
 import SiteLogo from "./SiteLogo"
 import NavbarCollapseButton from "./NavbarCollapseButton"
 import Navbar from "./Navbar"
-import ModeSwitcher from "./ModeSwitcher"
+// import ModeSwitcher from "./ModeSwitcher"
 
 type Props = {
   home?: boolean
@@ -21,13 +21,13 @@ const Header = ({ home, siteTitle, theme, setTheme }: Props) => {
         <div className="flex items-center justify-between">
           <SiteLogo home={home} siteTitle={siteTitle} />
           <div className="flex items-center gap-2 sm:hidden">
-            <ModeSwitcher theme={theme} setTheme={setTheme} />
+            {/*<ModeSwitcher theme={theme} setTheme={setTheme} />*/}
             <NavbarCollapseButton />
           </div>
         </div>
         <Navbar />
         <div className="hidden md:block">
-          <ModeSwitcher theme={theme} setTheme={setTheme} />
+          {/*<ModeSwitcher theme={theme} setTheme={setTheme} />*/}
         </div>
       </nav>
     </header>
