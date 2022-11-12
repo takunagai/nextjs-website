@@ -96,104 +96,107 @@ const Inquiry: NextPage = () => {
             <p className="text-small text-center text-sm">(24H受付)</p>
             <div className="mx-auto max-w-lg">
               <p className="mt-3">
-                送信後すぐに、自動返信メールが届きます。内容を確認次第、スタッフより連絡させていただきます。
+                準備中です。電話か Twitter でお問合せください。
               </p>
-              <p className="mt-1">
-                <Link href="/privacy-policy" className="text-sm text-primary">
-                  » 個人情報保護方針
-                </Link>
-              </p>
-              <p className="text-sm font-bold">
-                ※
-                送信から3時間経っても当センターからの自動返信メールが届いていない場合、お手数ですが電話連絡ください。
-              </p>
-              <div className="mail-form text-left">
-                <form action="#" method="post" encType="multipart/form-data">
-                  <dl>
-                    <dt className="mt-4 font-bold text-primary">
-                      お名前(必須)
-                    </dt>
-                    <dd>
-                      <input type="hidden" name="お名前[params]" value="名前" />
-                      <input type="text" name="お名前[value]" />
-                    </dd>
-                  </dl>
-                  <dl>
-                    <dt className="mt-4 font-bold text-primary">
-                      メールアドレス(必須)
-                    </dt>
-                    <dd>
-                      <input
-                        type="hidden"
-                        name="メールアドレス[params]"
-                        value="メール"
-                      />
-                      <input type="text" name="メールアドレス[value]" />
-                    </dd>
-                  </dl>
-                  <dl>
-                    <dt className="mt-4 font-bold text-primary">
-                      メールアドレス確認(必須)
-                    </dt>
-                    <dd>
-                      <input
-                        type="hidden"
-                        name="メールアドレス確認[params]"
-                        value="再入力"
-                      />
-                      <input type="text" name="メールアドレス確認[value]" />
-                    </dd>
-                  </dl>
-                  <dl>
-                    <dt className="mt-4 font-bold text-primary">
-                      電話番号(必須)
-                    </dt>
-                    <dd>
-                      <input
-                        type="hidden"
-                        name="電話番号[params]"
-                        value="電話番号,必須"
-                      />
-                      <input type="text" name="電話番号[value]" />
-                    </dd>
-                  </dl>
-                  <dl>
-                    <dt className="mt-4 font-bold text-primary">
-                      お問い合わせ内容(必須)
-                    </dt>
-                    <dd>
-                      <input
-                        type="hidden"
-                        name="お問い合わせ内容[params]"
-                        value="必須"
-                      />
-                      <textarea name="お問い合わせ内容[value]"></textarea>
-                    </dd>
-                  </dl>
-                  <dl>
-                    <dt className="mt-4 font-bold text-primary">
-                      個人情報の確認(必須)
-                    </dt>
-                    <dd>
-                      <input
-                        type="checkbox"
-                        id="privacy-comfirm"
-                        name="privacy-comfirm"
-                      />
-                      <label htmlFor="privacy-comfirm">
-                        個人情報について了承しました
-                      </label>
-                    </dd>
-                  </dl>
-                  <div className="submit_area mt-4 text-center">
-                    <input
-                      type="submit"
-                      value="送信する"
-                      className="btn btn-secondary px-12"
-                    />
-                  </div>
-                </form>
-              </div>
+              {/*<p className="mt-3">*/}
+              {/*  送信後すぐに、自動返信メールが届きます。内容を確認次第、スタッフより連絡させていただきます。*/}
+              {/*</p>*/}
+              {/*<p className="mt-1">*/}
+              {/*  <Link href="/privacy-policy" className="text-sm text-primary">*/}
+              {/*    » 個人情報保護方針*/}
+              {/*  </Link>*/}
+              {/*</p>*/}
+              {/*<p className="text-sm font-bold">*/}
+              {/*  ※*/}
+              {/*  送信から3時間経っても当センターからの自動返信メールが届いていない場合、お手数ですが電話連絡ください。*/}
+              {/*</p>*/}
+              {/*<div className="mail-form text-left">*/}
+              {/*  <form action="#" method="post" encType="multipart/form-data">*/}
+              {/*    <dl>*/}
+              {/*      <dt className="mt-4 font-bold text-primary">*/}
+              {/*        お名前(必須)*/}
+              {/*      </dt>*/}
+              {/*      <dd>*/}
+              {/*        <input type="hidden" name="お名前[params]" value="名前" />*/}
+              {/*        <input type="text" name="お名前[value]" />*/}
+              {/*      </dd>*/}
+              {/*    </dl>*/}
+              {/*    <dl>*/}
+              {/*      <dt className="mt-4 font-bold text-primary">*/}
+              {/*        メールアドレス(必須)*/}
+              {/*      </dt>*/}
+              {/*      <dd>*/}
+              {/*        <input*/}
+              {/*          type="hidden"*/}
+              {/*          name="メールアドレス[params]"*/}
+              {/*          value="メール"*/}
+              {/*        />*/}
+              {/*        <input type="text" name="メールアドレス[value]" />*/}
+              {/*      </dd>*/}
+              {/*    </dl>*/}
+              {/*    <dl>*/}
+              {/*      <dt className="mt-4 font-bold text-primary">*/}
+              {/*        メールアドレス確認(必須)*/}
+              {/*      </dt>*/}
+              {/*      <dd>*/}
+              {/*        <input*/}
+              {/*          type="hidden"*/}
+              {/*          name="メールアドレス確認[params]"*/}
+              {/*          value="再入力"*/}
+              {/*        />*/}
+              {/*        <input type="text" name="メールアドレス確認[value]" />*/}
+              {/*      </dd>*/}
+              {/*    </dl>*/}
+              {/*    <dl>*/}
+              {/*      <dt className="mt-4 font-bold text-primary">*/}
+              {/*        電話番号(必須)*/}
+              {/*      </dt>*/}
+              {/*      <dd>*/}
+              {/*        <input*/}
+              {/*          type="hidden"*/}
+              {/*          name="電話番号[params]"*/}
+              {/*          value="電話番号,必須"*/}
+              {/*        />*/}
+              {/*        <input type="text" name="電話番号[value]" />*/}
+              {/*      </dd>*/}
+              {/*    </dl>*/}
+              {/*    <dl>*/}
+              {/*      <dt className="mt-4 font-bold text-primary">*/}
+              {/*        お問い合わせ内容(必須)*/}
+              {/*      </dt>*/}
+              {/*      <dd>*/}
+              {/*        <input*/}
+              {/*          type="hidden"*/}
+              {/*          name="お問い合わせ内容[params]"*/}
+              {/*          value="必須"*/}
+              {/*        />*/}
+              {/*        <textarea name="お問い合わせ内容[value]"></textarea>*/}
+              {/*      </dd>*/}
+              {/*    </dl>*/}
+              {/*    <dl>*/}
+              {/*      <dt className="mt-4 font-bold text-primary">*/}
+              {/*        個人情報の確認(必須)*/}
+              {/*      </dt>*/}
+              {/*      <dd>*/}
+              {/*        <input*/}
+              {/*          type="checkbox"*/}
+              {/*          id="privacy-comfirm"*/}
+              {/*          name="privacy-comfirm"*/}
+              {/*        />*/}
+              {/*        <label htmlFor="privacy-comfirm">*/}
+              {/*          個人情報について了承しました*/}
+              {/*        </label>*/}
+              {/*      </dd>*/}
+              {/*    </dl>*/}
+              {/*    <div className="submit_area mt-4 text-center">*/}
+              {/*      <input*/}
+              {/*        type="submit"*/}
+              {/*        value="送信する"*/}
+              {/*        className="btn btn-secondary px-12"*/}
+              {/*      />*/}
+              {/*    </div>*/}
+              {/*  </form>*/}
+              {/*</div>*/}
             </div>
           </div>
         </section>

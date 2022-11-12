@@ -63,7 +63,7 @@ export const getStaticProps: GetStaticProps = async (
  */
 // const Index: NextPage<Props> = ({ newsItems }: : NewsItemsTypes) => { // 型付けるとエラー
 const Home: NextPage = ({ newsItems }: any) => {
-  console.log(newsItems)
+  // console.log(newsItems)
 
   return (
     <Layout title="Home" description="Home の概要です。">
@@ -87,7 +87,7 @@ const Home: NextPage = ({ newsItems }: any) => {
                 <p className="mt-2 text-xs">
                   尼崎市、西宮市、芦屋市、伊丹市、宝塚市、
                   <br />
-                  三田市、川辺郡猪名川町
+                  川西市、三田市、川辺郡猪名川町
                 </p>
               </div>
               <p className="mt-6 font-bold leading-7 tracking-wide text-primary-700">

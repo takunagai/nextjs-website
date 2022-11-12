@@ -20,9 +20,9 @@ const Sitemap: NextPage = () => {
           兵庫ひきこもり相談支援センター阪神ブランチのサイトマップです。
         </p>
 
-        <section className="py-12">
-          <ul>
-            <li>
+        <section className="mx-auto max-w-2xl py-12">
+          <ul className="mt-8 list-square pl-5 marker:text-secondary-400">
+            <li className="border-b border-dashed border-primary-100 py-2">
               <Link
                 href="/"
                 className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
@@ -32,7 +32,7 @@ const Sitemap: NextPage = () => {
               </Link>
             </li>
 
-            <li>
+            <li className="border-b border-dashed border-primary-100 py-2">
               <Link
                 href="/flow"
                 className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
@@ -41,15 +41,23 @@ const Sitemap: NextPage = () => {
                 相談する
               </Link>
             </li>
-            <li>
+            <li className="border-b border-dashed border-primary-100 py-2">
               <Link
                 href="/places-and-groups"
                 className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
               >
-                居場所一覧
+                阪神地区の居場所の一覧
               </Link>
             </li>
-            <li>
+            <li className="border-b border-dashed border-primary-100 py-2">
+              <Link
+                href="/reference"
+                className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
+              >
+                相談窓口・教育支援センターの一覧
+              </Link>
+            </li>
+            <li className="border-b border-dashed border-primary-100 py-2">
               <Link
                 href="/user-comments"
                 className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
@@ -57,7 +65,7 @@ const Sitemap: NextPage = () => {
                 ご利用者様の声
               </Link>
             </li>
-            <li>
+            <li className="border-b border-dashed border-primary-100 py-2">
               <Link
                 href="/faq"
                 className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
@@ -65,15 +73,15 @@ const Sitemap: NextPage = () => {
                 よくある質問
               </Link>
             </li>
-            <li>
+            <li className="border-b border-dashed border-primary-100 py-2">
               <Link
-                href="/inquiry"
+                href="/news"
                 className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
               >
-                お問合せ
+                お知らせ
               </Link>
             </li>
-            <li>
+            <li className="border-b border-dashed border-primary-100 py-2">
               <Link
                 href="/privacy-policy"
                 className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
@@ -81,12 +89,12 @@ const Sitemap: NextPage = () => {
                 個人情報保護方針
               </Link>
             </li>
-            <li>
+            <li className="border-b border-dashed border-primary-100 py-2">
               <Link
-                href="/news"
+                href="/inquiry"
                 className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500"
               >
-                お知らせ
+                お問合せ
               </Link>
             </li>
           </ul>
