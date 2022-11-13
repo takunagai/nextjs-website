@@ -8,9 +8,6 @@ import Header from "./Header"
 import BreadCrumbs from "./BreadCrumbs"
 import Footer from "./Footer"
 
-import { Yomogi } from "@next/font/google"
-const yomogi = Yomogi({ weight: "400", subsets: ["japanese"] })
-
 // import styles from './layout.module.css'
 // import utilStyles from '../styles/utils.module.css'
 
@@ -74,8 +71,7 @@ export default function Layout({ children, title, description, home }: Props) {
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
 
-      {/*<div className={`${yomogi.className} flex h-full w-full flex-col`}>*/}
-      <div className={`${yomogi.className} flex h-full w-full flex-col`}>
+      <div className="flex h-full w-full flex-col">
         {/*<TopmostNotificationBar />*/}
         <Header
           home={home}
@@ -87,37 +83,10 @@ export default function Layout({ children, title, description, home }: Props) {
         {/*<div className="w-full border-b border-zinc-500/25 py-2 px-4 sm:px-6 lg:px-8">*/}
         {/*  <BreadCrumbs pageTitle={pageTitle} />*/}
         {/*</div>*/}
-        {/*<div className="cover__main container lg:flex lg:justify-between">*/}
         <div className="cover__main container">
           <main id="primary" role="main">
             {children}
           </main>
-          {/*<div id="secondary" className="w-64">*/}
-          {/*  <h3>見出し</h3>*/}
-          {/*  <ul>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目1</a>*/}
-          {/*    </li>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目2</a>*/}
-          {/*    </li>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目3</a>*/}
-          {/*    </li>*/}
-          {/*  </ul>*/}
-          {/*  <h3>見出し</h3>*/}
-          {/*  <ul>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目1</a>*/}
-          {/*    </li>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目2</a>*/}
-          {/*    </li>*/}
-          {/*    <li>*/}
-          {/*      <a href="#">項目3</a>*/}
-          {/*    </li>*/}
-          {/*  </ul>*/}
-          {/*</div>*/}
         </div>
 
         <Footer />
