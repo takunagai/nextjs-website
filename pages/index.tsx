@@ -74,7 +74,7 @@ const Home: NextPage = ({ newsItems }: any) => {
       >
         <div className="alignfull bg-tertiary-100 py-8 px-4 text-center sm:px-6 lg:py-24 lg:px-8">
           <div className="container flex flex-col items-center justify-center lg:flex-row">
-            <div className="mx-auto max-w-lg lg:order-1 lg:px-8">
+            <div className="order-2 mx-auto max-w-lg lg:px-8">
               <div className="mx-auto max-w-fit rounded-xl border border-2 border-dashed border-primary-300 bg-white/75 p-4 shadow ring ring-white/75">
                 <p className="text-sm font-bold text-secondary">
                   相談 / セミナー / 居場所 / 訪問支援
@@ -96,18 +96,18 @@ const Home: NextPage = ({ newsItems }: any) => {
                 専門の相談員による相談(電話・来所・訪問)、居場所の提供、ひきこもりに関するセミナーや研修会なども開催しています。
               </p>
               <p>
-                <Link href="/flow" className="btn btn-primary px-16">
+                <Link href="/flow" className="btn btn-primary px-7 md:px-16">
                   相談する
                 </Link>
                 <Link
                   href="/places-and-groups"
-                  className="btn btn-secondary px-7"
+                  className="btn btn-secondary lg:px-7"
                 >
                   居場所情報を見る
                 </Link>
               </p>
             </div>
-            <p className="mx-auto mt-6 max-w-fit lg:mt-0">
+            <p className="order-1 mx-auto max-w-fit md:mt-6 lg:mt-0">
               <img
                 src="/images/hanshin-branch/illust_main.png"
                 width={900}
