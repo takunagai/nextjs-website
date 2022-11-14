@@ -197,7 +197,7 @@ const Faq: NextPage = () => {
                       </li>
                       <li>
                         <a
-                          href="https://www.asobimura.net/"
+                          href="https://web.pref.hyogo.lg.jp/kk16/ac12_000000034.html"
                           target="_blank"
                           rel="noreferrer"
                         >
@@ -206,7 +206,7 @@ const Faq: NextPage = () => {
                       </li>
                       <li>
                         <a
-                          href="https://awajisoda.jp/"
+                          href="http://awajisoda.jp/"
                           target="_blank"
                           rel="noreferrer"
                         >
