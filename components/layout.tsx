@@ -13,21 +13,7 @@ const yomogi = Yomogi({
   variable: "--yomogi-font",
   weight: "400", // バリアブルフォントでないので必要
   subsets: ["japanese"],
-  fallback: [
-    "system-ui",
-    "-apple-system",
-    "Segoe UI",
-    "Roboto",
-    "Helvetica Neue",
-    "Arial",
-    "Noto Sans",
-    "Liberation Sans",
-    "sans-serif",
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji",
-  ],
+  fallback: ["cursive", "system-ui", "-apple-system", "sans-serif"],
 })
 
 // import styles from './layout.module.css'
