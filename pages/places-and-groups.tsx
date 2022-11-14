@@ -108,6 +108,16 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
                 </div>
               </div>
             </div>
+            <div className="mt-3 flex">
+              <div className="flex-shrink-0">
+                <FaInfoCircle className="inline align-baseline text-yellow-400" />
+              </div>
+              <div className="ml-2">
+                <div className="text-sm text-yellow-800">
+                  イベントの日程等は、各グループのサイトをご参照ください。
+                </div>
+              </div>
+            </div>
           </div>
           <p className="mt-4 text-center">
             <a href="#" className="btn btn-primary">
