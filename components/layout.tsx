@@ -8,6 +8,28 @@ import Header from "./Header"
 import BreadCrumbs from "./BreadCrumbs"
 import Footer from "./Footer"
 
+import { Yomogi } from "@next/font/google"
+const yomogi = Yomogi({
+  variable: "--yomogi-font",
+  weight: "400", // バリアブルフォントでないので必要
+  subsets: ["japanese"],
+  fallback: [
+    "system-ui",
+    "-apple-system",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    "Arial",
+    "Noto Sans",
+    "Liberation Sans",
+    "sans-serif",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji",
+  ],
+})
+
 // import styles from './layout.module.css'
 // import utilStyles from '../styles/utils.module.css'
 
@@ -71,7 +93,8 @@ export default function Layout({ children, title, description, home }: Props) {
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
 
-      <div className="flex h-full w-full flex-col">
+      {/*<div className="flex h-full w-full flex-col">*/}
+      <div className={`${yomogi.variable} flex h-full w-full flex-col`}>
         {/*<TopmostNotificationBar />*/}
         <Header
           home={home}
