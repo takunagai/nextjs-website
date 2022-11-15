@@ -62,8 +62,8 @@ export const getStaticProps: GetStaticProps = async (
 const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
   return (
     <Layout
-      title="fetch() メソッドで microCMS API からフェッチ"
-      description="fetch() メソッドで microCMS API からデータをフェッチして表示するサンプル"
+      title="居場所・親の会の情報"
+      description="阪神地域でされているひきこもりの方の居場所、不登校の方の居場所、親の会、学習支援、教育支援センター、相談機関などの情報を集めました。"
     >
       <motion.div
         initial={{ opacity: 0 }}
