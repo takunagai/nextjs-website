@@ -114,7 +114,7 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
               </div>
               <div className="ml-2">
                 <div className="text-sm text-yellow-800">
-                  イベントの日程等は、各グループのサイトをご参照ください。
+                  イベント日程等は、各グループのホームページをご参照ください。
                 </div>
               </div>
             </div>
