@@ -142,6 +142,15 @@ const Reference: NextPage = () => {
                 </li>
                 <li>
                   <a
+                    href="https://nishi-yorisoi.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    ソーシャルスポット西宮よりそい
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://nishi-shakyo.jp/kourei_syougai/tumugi/"
                     target="_blank"
                     rel="noreferrer"
