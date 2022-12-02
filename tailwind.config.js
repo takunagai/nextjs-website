@@ -201,7 +201,6 @@ module.exports = {
     require("@tailwindcss/line-clamp"),
     require("preline/plugin"),
   ],
-  mode: "jit",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
