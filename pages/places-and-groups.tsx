@@ -2,6 +2,7 @@
  * microcms API からフェッチ
  * @ref https://document.microcms.io/tutorial/next/next-getting-started
  */
+import { useState } from "react"
 import Layout from "../components/layout"
 import AfterContentArea from "../components/AfterContentArea"
 import { motion } from "framer-motion"
@@ -59,6 +60,8 @@ export const getStaticProps: GetStaticProps = async (
  */
 // const PlacesAndGroups: NextPage<Props> = ({ groups }: Groups) => { // 型付けるとエラー
 const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
+  const [selectedCity, setSelectedCity] = useState("all")
+
   return (
     <Layout
       title="居場所・親の会の情報"
@@ -70,23 +73,7 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
         exit={{ opacity: 0 }}
       >
         <h1 className="alignfull bg-dots3">居場所・親の会の情報</h1>
-
         <div className="mx-auto mt-8 max-w-2xl">
-          {/*<div className="mb-4 border border-4 border-pink-500 p-2 font-bold text-pink-500">*/}
-          {/*  <p>*/}
-          {/*    <strong>【内容をご確認される方へ】</strong>*/}
-          {/*  </p>*/}
-          {/*  <ul className="list-disc pl-6">*/}
-          {/*    <li>*/}
-          {/*      チラシの画像の箇所はボタンにし、クリックで大きい画像が表示されるようにします*/}
-          {/*    </li>*/}
-          {/*    <li>*/}
-          {/*      問合せ先は代表１つのみ。2つ以上記入された方は下部の備考に載せました*/}
-          {/*    </li>*/}
-          {/*    <li>グループ説明が長過ぎるものは、カットしています。</li>*/}
-          {/*    <li>市ごとに絞り込み表示ができるようにします</li>*/}
-          {/*  </ul>*/}
-          {/*</div>*/}
           <p className="font-bold text-primary">
             なかなか探しにくい、阪神地域でされているひきこもりの方の居場所、不登校の方の居場所、親の会、学習支援、教育支援センター、相談機関などの情報を集めました。
           </p>
@@ -125,8 +112,11 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
           </p>
         </div>
         <section className="mt-8">
-          <RadioButtonsForFilter />
-          <GroupList groups={groups} />
+          <RadioButtonsForFilter
+            selectedCity={selectedCity}
+            setSelectedCity={setSelectedCity}
+          />
+          <GroupList groups={groups} selectedCity={selectedCity} />
         </section>
 
         <AfterContentArea />
@@ -140,103 +130,81 @@ export default PlacesAndGroups
 /**
  * ラジオボタンエリア
  */
-const RadioButtonsForFilter = () => {
-  // ★★TODO: フィルター実装途中
-  // const handleChange = (e: any) => {
-  //   setVal(e.target.value)
-  // }
+const RadioButtonsForFilter = ({
+  selectedCity,
+  setSelectedCity,
+}: {
+  selectedCity: string
+  setSelectedCity: (selectedCity: string) => void
+}) => {
+  const CITIES = [
+    { id: "all", name: "全表示" },
+    { id: "amagasaki", name: "尼崎市" },
+    { id: "nishinomiya", name: "西宮市" },
+    { id: "ashiya", name: "芦屋市" },
+    { id: "itami", name: "伊丹市" },
+    { id: "takarazuka", name: "宝塚市" },
+    { id: "kawanishi", name: "川西市" },
+    { id: "sanda", name: "三田市" },
+    { id: "inagawa", name: "川辺郡猪名川町" },
+    { id: "online", name: "オンライン" },
+  ]
+
   return (
-    <div className="mx-auto max-w-lg rounded-2xl bg-gray-100 p-3">
-      <p className="text-center font-bold text-primary">
-        場所で絞り込む ★★機能実装
-      </p>
-      <fieldset className="mt-3">
-        <ul className="flex flex-wrap gap-3">
-          <li>
-            <input type="radio" id="all" name="city" value="全表示" checked />
-            <label className="ml-1" htmlFor="all">
-              全表示
-            </label>
-          </li>
-          <li>
-            <input type="radio" id="amagasaki" name="city" value="尼崎市" />
-            <label className="ml-1" htmlFor="amagasaki">
-              尼崎市
-            </label>
-          </li>
-          <li>
-            <input type="radio" id="nishinomiya" name="city" value="西宮市" />
-            <label className="ml-1" htmlFor="nishinomiya">
-              西宮市
-            </label>
-          </li>
-          <li>
-            <input type="radio" id="ashiya" name="city" value="芦屋市" />
-            <label className="ml-1" htmlFor="ashiya">
-              芦屋市
-            </label>
-          </li>
-          <li>
-            <input type="radio" id="itami" name="city" value="伊丹市" />
-            <label className="ml-1" htmlFor="itami">
-              伊丹市
-            </label>
-          </li>
-          <li>
-            <input type="radio" id="takarazuka" name="city" value="宝塚市" />
-            <label className="ml-1" htmlFor="takarazuka">
-              宝塚市
-            </label>
-          </li>
-          <li>
-            <input type="radio" id="kawanishi" name="city" value="川西市" />
-            <label className="ml-1" htmlFor="kawanishi">
-              川西市
-            </label>
-          </li>
-          <li>
-            <input type="radio" id="sanda" name="city" value="三田市" />
-            <label className="ml-1" htmlFor="sanda">
-              三田市
-            </label>
-          </li>
-          <li>
-            <input
-              type="radio"
-              id="inagawa"
-              name="city"
-              value="川辺郡猪名川町"
-            />
-            <label className="ml-1" htmlFor="inagawa">
-              川辺郡猪名川町
-            </label>
-          </li>
-          <li>
-            <input type="radio" id="online" name="city" value="オンライン" />
-            <label className="ml-1" htmlFor="online">
-              オンライン
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-    </div>
+    <>
+      <div className="mx-auto max-w-lg rounded-2xl bg-gray-100 p-3">
+        <p className="text-center font-bold text-primary">場所で絞り込む</p>
+        <fieldset className="mt-3">
+          <ul className="flex flex-wrap gap-3">
+            {CITIES.map((city) => (
+              <li key={city.id}>
+                <input
+                  type="radio"
+                  name="city"
+                  id={city.id}
+                  value={city.name}
+                  checked={selectedCity === city.name}
+                  onChange={(e) => setSelectedCity(e.target.value)}
+                />
+                <label className="ml-1" htmlFor={city.id}>
+                  {city.name}
+                </label>
+              </li>
+            ))}
+          </ul>
+        </fieldset>
+      </div>
+      <h2 className="mt-6 border-b border-dashed border-primary-200 pb-2 font-bold">
+        {selectedCity}
+      </h2>
+    </>
   )
 }
 
 /**
  * 居場所&グループのリスト
  */
-const GroupList = ({ groups }: Groups) => {
-  // フィルター関数 ★★TODO:途中
-  // const extractCategoryMatches = (item: any) => {
-  //   return item.city[0] === "西宮市"
-  // }
-
-  console.dir(groups)
-  return (
+const GroupList = ({
+  groups,
+  selectedCity,
+}: {
+  groups: Groups
+  selectedCity: string
+}) => {
+  const extractCategoryMatches = (item: Group) => {
+    if (selectedCity === "全表示") {
+      return true
+    } else {
+      return item.city[0] === selectedCity
+    }
+  }
+  // console.dir(groups) // FIXME: 確認用
+  return Object.keys(groups).length === 0 ? (
+    <p>登録がありません。</p>
+  ) : (
     <ul className="mt-8 gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
-      {groups
-        // .filter(extractCategoryMatches)
+      {(groups as any) // FIXME: 型
+        .filter(extractCategoryMatches)
         .map((group: Group, index: number) => (
           <li
             key={index}
