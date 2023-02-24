@@ -3,11 +3,7 @@ import Layout from "../components/layout"
 import Button from "../components/Button"
 import Alert from "../components/Alert"
 import { motion } from "framer-motion"
-import {
-  BeakerIcon,
-  ChevronDoubleRightIcon,
-  ExclamationCircleIcon,
-} from "@heroicons/react/24/solid"
+import { FaDragon, FaDemocrat, FaFrog } from "react-icons/fa"
 import type { NextPage } from "next"
 
 const CSS: NextPage = () => {
@@ -188,7 +184,7 @@ const CSS: NextPage = () => {
             <div className="mx-auto max-w-sm space-y-2 rounded-xl bg-white py-8 px-8 shadow-lg sm:flex sm:items-center sm:space-y-0 sm:space-x-6 sm:py-4">
               <img
                 className="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
-                src="/images/sample-image-1.jpg" // Route of the image file
+                src="images/work/sample-image-1.jpg" // Route of the image file
                 width={500} // Desired size with correct aspect ratio
                 height={375} // Desired size with correct aspect ratio
                 alt="代替テキスト"
@@ -365,15 +361,14 @@ const CSS: NextPage = () => {
             <h2>アイコンフォント (heroicons)</h2>
             <ul>
               <li>
-                <ChevronDoubleRightIcon className="inline h-5 w-5 text-orange-500" />{" "}
+                <FaDemocrat className="inline h-5 w-5 text-orange-500" />{" "}
                 リスト項目1
               </li>
               <li>
-                <ExclamationCircleIcon className="inline h-5 w-5 text-green-500" />{" "}
-                リスト項目2
+                <FaFrog className="inline h-5 w-5 text-green-500" /> リスト項目2
               </li>
               <li>
-                <BeakerIcon className="inline h-5 w-5 text-blue-500" />{" "}
+                <FaDragon className="inline h-5 w-5 text-blue-500" />{" "}
                 リスト項目3
               </li>
             </ul>

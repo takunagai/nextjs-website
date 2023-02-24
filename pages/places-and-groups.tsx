@@ -2,20 +2,19 @@
  * microcms API からフェッチ
  * @ref https://document.microcms.io/tutorial/next/next-getting-started
  */
-// import Image from "next/image"
 import Layout from "../components/layout"
 import AfterContentArea from "../components/AfterContentArea"
 import { motion } from "framer-motion"
 import { client } from "../lib/client" // microcms-js-sdkの初期化
-import {
-  EnvelopeIcon,
-  PhoneIcon,
-  PrinterIcon,
-  GlobeAltIcon,
-  ChatBubbleOvalLeftIcon,
-} from "@heroicons/react/24/outline"
 
-import { FaInfoCircle } from "react-icons/fa"
+import {
+  FaInfoCircle,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaPrint,
+  FaGlobe,
+  FaLine,
+} from "react-icons/fa"
 
 import type {
   GetStaticProps,
@@ -301,7 +300,7 @@ const GroupList = ({ groups }: Groups) => {
 
             {group.contactTel && (
               <p className="mt-0">
-                <PhoneIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
+                <FaPhoneAlt className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
                 Tel:{" "}
                 <span className="text-xl font-bold">
                   <a href={`tel:${group.contactTel}`}>{group.contactTel}</a>
@@ -312,7 +311,7 @@ const GroupList = ({ groups }: Groups) => {
 
             {group.contactFax && (
               <p className="mt-0">
-                <PrinterIcon className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
+                <FaPrint className="mx-auto inline h-4 w-4 text-secondary md:mx-0" />{" "}
                 Fax: {group.contactFax}
               </p>
             )}
@@ -320,7 +319,7 @@ const GroupList = ({ groups }: Groups) => {
             <p className="mt-1 flex gap-2">
               {group.contactEmail && (
                 <b>
-                  <EnvelopeIcon className="inline h-4 w-4 text-secondary" />
+                  <FaEnvelope className="inline h-4 w-4 text-secondary" />
                   <a
                     href={`mailto:${group.contactEmail}`}
                     target="_blank"
@@ -332,7 +331,7 @@ const GroupList = ({ groups }: Groups) => {
               )}
               {group.contactLine && (
                 <b>
-                  <ChatBubbleOvalLeftIcon className="inline h-4 w-4 text-secondary" />
+                  <FaLine className="inline h-4 w-4 text-secondary" />
                   <a
                     href={`https://lin.ee/${group.contactLine}`}
                     target="_blank"
@@ -344,7 +343,7 @@ const GroupList = ({ groups }: Groups) => {
               )}
               {group.webUrl && (
                 <b>
-                  <GlobeAltIcon className="inline h-4 w-4 text-secondary" />
+                  <FaGlobe className="inline h-4 w-4 text-secondary" />
                   <a href={`${group.webUrl}`} target="_blank" rel="noreferrer">
                     Web
                   </a>

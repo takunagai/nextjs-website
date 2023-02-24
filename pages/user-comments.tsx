@@ -6,15 +6,6 @@ import Layout from "../components/layout"
 import AfterContentArea from "../components/AfterContentArea"
 import { motion } from "framer-motion"
 import { client } from "../lib/client" // microcms-js-sdkの初期化
-import {
-  EnvelopeIcon,
-  PhoneIcon,
-  PrinterIcon,
-  GlobeAltIcon,
-  ChatBubbleOvalLeftIcon,
-} from "@heroicons/react/24/outline"
-
-import { FaInfoCircle } from "react-icons/fa"
 
 import type {
   GetStaticProps,

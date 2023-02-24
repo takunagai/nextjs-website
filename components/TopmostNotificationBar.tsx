@@ -1,11 +1,11 @@
 import Link from "next/link"
-import { FlagIcon } from "@heroicons/react/24/outline"
+import { FaFlag } from "react-icons/fa"
 
 const TopmostNotificationBar = () => {
   return (
     <aside className="bg-gradient-to-r from-purple-500 to-pink-500 py-2 text-white">
       <div className="flex flex-col justify-center text-center md:flex-row">
-        <FlagIcon className="mx-auto inline h-7 w-7 md:mx-0" />
+        <FaFlag className="mx-auto inline h-7 w-7 md:mx-0" />
         <p className="mx-3 inline-block font-bold">
           目立たせたいお知らせが入ります！
         </p>
