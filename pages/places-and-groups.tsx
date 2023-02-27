@@ -19,7 +19,7 @@ import {
 
 import type {
   GetStaticProps,
-  GetStaticPropsContext,
+  // GetStaticPropsContext,
   InferGetStaticPropsType,
   NextPage,
 } from "next" // TypeScript の型データ
@@ -37,30 +37,30 @@ type Groups = { groups: Array<Group> }
  */
 // ★★TODO: エラー消す (参考：https://zenn.dev/eitches/articles/2021-0424-getstaticprops-type)
 // export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext<{ slug: string }>) => {
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext,
-) => {
-  const data = await client.get({
-    endpoint: "group",
-    queries: {
-      // filters: "city[contains]宝塚市[or]city[contains]伊丹市",
-      limit: 50,
-    },
-  })
+export const getStaticProps: GetStaticProps = async () =>
+  // context: GetStaticPropsContext,
+  {
+    const data = await client.get({
+      endpoint: "group",
+      queries: {
+        // filters: "city[contains]宝塚市[or]city[contains]伊丹市",
+        limit: 50,
+      },
+    })
 
-  return {
-    props: {
-      groups: data.contents,
-    },
+    return {
+      props: {
+        groups: data.contents,
+      },
+    }
   }
-}
 
 /**
  * Main Component
  */
 // const PlacesAndGroups: NextPage<Props> = ({ groups }: Groups) => { // 型付けるとエラー
 const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
-  const [selectedCity, setSelectedCity] = useState("all")
+  const [selectedCity, setSelectedCity] = useState("全表示")
 
   return (
     <Layout
@@ -198,7 +198,7 @@ const GroupList = ({
       return item.city[0] === selectedCity
     }
   }
-  // console.dir(groups) // FIXME: 確認用
+
   return Object.keys(groups).length === 0 ? (
     <p>登録がありません。</p>
   ) : (
@@ -234,10 +234,15 @@ const GroupList = ({
               <b className="text-primary">対象者:</b> <br />
               {group.objectPerson}
             </p>
-            <p className="pl-12 -indent-12">
+            <p className="mb-1.5 pl-12 -indent-12 leading-5">
               <b className="text-primary">場所：</b>
               {group.place}{" "}
-              {/*group.address && `(${group.address})` ★★TODO:修正 */}
+              {group.address && (
+                <>
+                  <br />
+                  <small>({group.address})</small>
+                </>
+              )}
             </p>
             <p className="mt-0 pl-12 -indent-12">
               <b className="text-primary">日時：</b>
