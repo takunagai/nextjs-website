@@ -6,9 +6,9 @@ const Navbar = () => {
       {/* https://preline.co/docs/mega-menu.html */}
       <div
         id="navbar-collapse"
-        className="mx-10 hidden grow basis-full text-sm sm:block"
+        className="mx-10 hidden grow basis-full text-sm lg:block"
       >
-        <div className="mt-5 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:pl-5">
+        <div className="mt-5 flex flex-col gap-5 lg:mt-0 lg:flex-row lg:items-center lg:justify-end lg:pl-5">
           <Link
             href="/"
             className="font-medium text-primary-700 hover:text-primary-400 dark:text-gray-400 dark:hover:text-gray-500"
@@ -48,7 +48,7 @@ const Navbar = () => {
             </button>
 
             <div
-              className="hs-mega-menu-content top-full z-10 hidden w-full rounded-md bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:-top-5 before:left-0 before:h-5 before:w-full hs-mega-menu-open:opacity-100 dark:bg-gray-800 sm:absolute sm:w-48 sm:shadow-md sm:transition-all sm:duration-300"
+              className="hs-mega-menu-content top-full z-10 hidden w-full rounded-md bg-white p-2 opacity-0 transition-[opacity,margin] before:absolute before:-top-5 before:left-0 before:h-5 before:w-full hs-mega-menu-open:opacity-100 dark:bg-gray-800 lg:absolute lg:w-48 lg:shadow-md lg:transition-all lg:duration-300"
               aria-labelledby="hs-mega-menu-basic-dr"
             >
               <Link
@@ -94,9 +94,9 @@ const Navbar = () => {
 //   return (
 //     <div
 //       id="navbar-collapse-with-animation"
-//       className="hs-collapse hidden grow basis-full overflow-hidden transition-all duration-300 sm:block"
+//       className="hs-collapse hidden grow basis-full overflow-hidden transition-all duration-300 lg:block"
 //     >
-//       <ul className="mt-5 flex flex-col gap-5 sm:mt-0 sm:flex-row sm:items-center sm:justify-end sm:pl-5">
+//       <ul className="mt-5 flex flex-col gap-5 lg:mt-0 lg:flex-row lg:items-center lg:justify-end lg:pl-5">
 //         {[
 //           ["Home", "/"],
 //           ["About", "/about"],
