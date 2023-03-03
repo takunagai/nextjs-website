@@ -5,6 +5,7 @@
 import { useState } from "react"
 import Layout from "../components/layout"
 import AfterContentArea from "../components/AfterContentArea"
+import * as Dialog from "@radix-ui/react-dialog"
 import { motion } from "framer-motion"
 import { client } from "../lib/client" // microcms-js-sdkの初期化
 
@@ -29,6 +30,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 // microCMS - group
 import type { Group } from "../types/group"
+import Link from "next/link"
 type Groups = { groups: Array<Group> }
 
 /**
@@ -106,9 +108,55 @@ const PlacesAndGroups: NextPage<Props> = ({ groups }) => {
             </div>
           </div>
           <p className="mt-4 text-center">
-            <a href="#" className="btn btn-primary">
-              運営者の方へ<small> (掲載希望、情報変更)</small>
-            </a>
+            <Dialog.Root>
+              <Dialog.Trigger asChild>
+                <button className="btn btn-primary">
+                  運営者の方へ<small> (掲載希望、情報変更)</small>
+                </button>
+              </Dialog.Trigger>
+              <Dialog.Portal>
+                <Dialog.Overlay className="DialogOverlay" />
+                <Dialog.Content className="DialogContent">
+                  <Dialog.Title className="DialogTitle">
+                    運営者の方へ<small> (掲載希望、情報変更)</small>
+                  </Dialog.Title>
+                  {/*<Dialog.Description className="DialogDescription">*/}
+                  {/*  Make changes to your profile here. Click save when you're*/}
+                  {/*  done.*/}
+                  {/*</Dialog.Description>*/}
+                  <p className="mt-4">
+                    当ページへの新規掲載を気希望の方や掲載情報変更を希望の方は、お問い合わせください。
+                  </p>
+                  <p className="mt-4 text-center">
+                    <Link
+                      href="/inquiry"
+                      type="button"
+                      className="btn btn-secondary"
+                    >
+                      お問合せはこちら
+                    </Link>
+                  </p>
+
+                  <div
+                    style={{
+                      marginTop: "0.5em",
+                      textAlign: "center",
+                    }}
+                  >
+                    <Dialog.Close asChild>
+                      <button className="text-sm text-primary underline">
+                        閉じる
+                      </button>
+                    </Dialog.Close>
+                  </div>
+                  <Dialog.Close asChild>
+                    <button className="IconButton" aria-label="Close">
+                      ×
+                    </button>
+                  </Dialog.Close>
+                </Dialog.Content>
+              </Dialog.Portal>
+            </Dialog.Root>
           </p>
         </div>
         <section className="mt-8">
