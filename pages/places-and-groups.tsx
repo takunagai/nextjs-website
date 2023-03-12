@@ -6,6 +6,7 @@ import { useState } from "react"
 import Layout from "../components/layout"
 import AfterContentArea from "../components/AfterContentArea"
 import * as Dialog from "@radix-ui/react-dialog"
+import DialogDemo from "../components/Dialog"
 import { motion } from "framer-motion"
 import { client } from "../lib/client" // microcms-js-sdkの初期化
 
@@ -372,23 +373,49 @@ const GroupList = ({
               )}
             </p>
             {group.leafletImage1 && (
-              <p>
+              <p className="text-center text-sm">
                 <img
                   src={group.leafletImage1.url}
                   width={group.leafletImage1.width}
                   height={group.leafletImage1.height}
                   alt="リーフレット"
                 />
+                <DialogDemo
+                  title={group.title}
+                  showTitle={false}
+                  triggerType="link"
+                  triggerText="» 拡大表示"
+                >
+                  <img
+                    src={group.leafletImage1.url}
+                    width={group.leafletImage1.width}
+                    height={group.leafletImage1.height}
+                    alt="リーフレット"
+                  />
+                </DialogDemo>
               </p>
             )}
             {group.leafletImage2 && (
-              <p>
+              <p className="text-center text-sm">
                 <img
                   src={group.leafletImage2.url}
                   width={group.leafletImage2.width}
                   height={group.leafletImage2.height}
                   alt="リーフレット"
                 />
+                <DialogDemo
+                  title={group.title}
+                  showTitle={false}
+                  triggerType="link"
+                  triggerText="» 拡大表示"
+                >
+                  <img
+                    src={group.leafletImage2.url}
+                    width={group.leafletImage2.width}
+                    height={group.leafletImage2.height}
+                    alt="リーフレット"
+                  />
+                </DialogDemo>
               </p>
             )}
           </li>
