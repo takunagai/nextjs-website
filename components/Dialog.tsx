@@ -6,21 +6,28 @@ import React, { ReactNode } from "react"
 import * as Dialog from "@radix-ui/react-dialog"
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden"
 
+type Props = {
+  title?: string | null
+  showTitle?: boolean
+  triggerType?: "button" | "link"
+  triggerText?: string
+  isStretchLink?: boolean
+  children: ReactNode
+}
+
 const DialogDemo = ({
   title = null,
   showTitle = true,
   triggerType = "button",
   triggerText = "開く",
+  isStretchLink = false,
   children,
-}: {
-  title?: string | null
-  showTitle?: boolean
-  triggerType?: "button" | "link"
-  triggerText?: string
-  children: ReactNode
-}) => (
+}: Props) => (
   <Dialog.Root>
-    <Dialog.Trigger asChild>
+    <Dialog.Trigger
+      asChild
+      {isStretchLink ? (`className="after:absolute after:inset-0"`) : null} //★★TODO: うまくいかない
+    >
       {triggerType === "button" ? (
         <button className="rounded bg-primary-100 px-2 py-1 shadow data-[state=open]:bg-primary-200">
           {triggerText}

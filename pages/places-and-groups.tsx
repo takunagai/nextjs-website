@@ -373,7 +373,7 @@ const GroupList = ({
               )}
             </p>
             {group.leafletImage1 && (
-              <p className="text-center text-sm">
+              <p className="relative text-center text-sm">
                 <img
                   src={group.leafletImage1.url}
                   width={group.leafletImage1.width}
@@ -385,6 +385,7 @@ const GroupList = ({
                   showTitle={false}
                   triggerType="link"
                   triggerText="» 拡大表示"
+                  isStretchLink={true}
                 >
                   <img
                     src={group.leafletImage1.url}
