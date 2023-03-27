@@ -196,7 +196,7 @@ const Home: NextPage = () => {
                       チーズスフレ
                     </h3>
                     <p className="menu__price text-center text-xs">
-                      単品 730円/セット1,200円
+                      単品 830円/セット1,300円
                     </p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       甘さを抑えたさわやかスフレです。デンマーク産の高級クリームチーズをたっぷり使った自慢の逸品です。
@@ -218,7 +218,7 @@ const Home: NextPage = () => {
                       ショコラスフレ
                     </h3>
                     <p className="menu__price text-center text-xs">
-                      単品 780円/セット1,250円
+                      単品 900円/セット1,370円
                     </p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       思わず笑みがこぼれちゃう！チョコレートシロップはこだわりの純チョコレート。高品質カカオ64%使用で、ちょっぴり大人な味です。
@@ -240,12 +240,58 @@ const Home: NextPage = () => {
                       メープルスフレ
                     </h3>
                     <p className="menu__price text-center text-xs">
-                      単品 780円/セット1,250円
+                      単品 880円/セット1,350円
                     </p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       メープル好きにはたまらない！メープルをたっぷり入れて焼き上げた風味豊かな優しい味のスフレです。
                     </p>
                   </div>
+
+                  <div className="grid__item">
+                    <FadeIn delay={isMobile ? 0 : 0.75}>
+                      <p className="image-with-border">
+                        <Image
+                          src="/images/souffle/souffle_yuzu.jpg"
+                          width={450}
+                          height={300}
+                          alt="柚子スフレ"
+                          className="souffle-item rounded-lg"
+                        />
+                      </p>
+                    </FadeIn>
+                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                      柚子スフレ
+                    </h3>
+                    <p className="menu__price text-center text-xs">
+                      単品 880円/セット1,350円
+                    </p>
+                    <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
+                      さわやかな柚子の香りと甘さが◎。林檎のジュレとコンポートをトッピング！
+                    </p>
+                  </div>
+                  <div className="grid__item">
+                    <FadeIn delay={isMobile ? 0 : 1}>
+                      <p className="image-with-border">
+                        <Image
+                          src="/images/souffle/souffle_parmigiano.jpg"
+                          width={450}
+                          height={300}
+                          alt="パルジャミーノスフレ"
+                          className="souffle-item rounded-lg"
+                        />
+                      </p>
+                    </FadeIn>
+                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                      パルジャミーノスフレ
+                    </h3>
+                    <p className="menu__price text-center text-xs">
+                      単品 900円/セット1,370円
+                    </p>
+                    <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
+                      イタリアチーズの王様！チーズの塩見とハチミツの甘みがクセになります！
+                    </p>
+                  </div>
+                  {/* TODO: 差替え：ショコラ / 追加：柚子、メープル、パルミジャーノ、ラムレーズン、サンドイッチやトーストも？ / 季節追加？ 極ショコラ
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 0.75}>
                       <p className="image-with-border">
@@ -294,6 +340,7 @@ const Home: NextPage = () => {
                       <small>※季節によりスフレが変わります</small>
                     </p>
                   </div>
+                  */}
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 1.25}>
                       <p className="image-with-border">
@@ -367,7 +414,7 @@ const Home: NextPage = () => {
                               Juice:
                             </dt>
                             <dd className="text-sm text-gray-600">
-                              100%生搾りオレンジ、100%生搾りグレープフルーツ、100%すりおろしリンゴ、生搾りレモンスカッシュ、マンゴージュース、コーラ、ジンジャーエール
+                              100%生搾りオレンジ、100%すりおろしリンゴ、生搾りレモンスカッシュ、マンゴージュース、コーラ、ジンジャーエール
                             </dd>
                             <dt className="pt-3 font-bold text-secondary-500 first:pt-0">
                               Float:
@@ -442,16 +489,16 @@ const Home: NextPage = () => {
                   <br />
                   テイクアウト・配達
                 </h2>
-                <div className="mt-10 lg:grid lg:grid-cols-5 lg:gap-12">
+                <div className="mt-10 items-center lg:grid lg:grid-cols-5 lg:gap-12">
                   <div className="col-span-3 text-center">
                     <div className="takeout-images mx-auto max-w-xl">
                       <FadeIn>
                         <Image
                           src="/images/souffle/takeout-images.jpg"
                           width={600}
-                          height={700}
+                          height={680}
                           layout="responsive"
-                          alt="テイクアウト(サンドイッチ、スフレコーン、店頭)"
+                          alt="テイクアウト(サンドイッチ、店頭)"
                           className="takeout-image"
                         />
                       </FadeIn>
@@ -487,7 +534,7 @@ const Home: NextPage = () => {
                         </small>
                       </li>
                     </ul>
-
+                    {/*
                     <h3 className="mt-8 text-xl tracking-widest text-primary">
                       ワンハンド・スフレ
                     </h3>
@@ -511,6 +558,7 @@ const Home: NextPage = () => {
                         <small className="font-normal">単品 500円</small>
                       </li>
                     </ul>
+                    */}
 
                     <div className="mt-5 rounded-lg border border-dashed border-secondary-300 py-3 px-5">
                       <p>
