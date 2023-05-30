@@ -37,13 +37,9 @@ const Footer = () => {
                     </a>
                   </b>
                   <br />
-                  営業時間 <b className="text-lg">10:00～22:00</b>
+                  営業時間 <b className="text-lg">10:00～21:00</b>
                 </p>
-                <p className="ml-16 mt-0 text-xs">
-                  スフレタイム 10:00〜20:00
-                  <br />
-                  ラストオーダー 19:30
-                </p>
+                <p className="ml-16 mt-0 text-xs">ラストオーダー 20:30</p>
                 休業日{" "}
                 <a
                   href="https://www.astekawanishi.com/sales/"
@@ -57,7 +53,7 @@ const Footer = () => {
                 <p className="mt-3 leading-snug">
                   住所 兵庫県川西市栄町25番1号
                   <br />
-                  　　 アステ川西TENPO175 248号
+                  　　 アステ川西 TENPO175 248号
                 </p>
                 <p className="ml-9 mt-1 text-xs">
                   阪急川西能勢口駅より徒歩２分
