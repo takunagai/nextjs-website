@@ -26,7 +26,7 @@ const DialogDemo = ({
   <Dialog.Root>
     <Dialog.Trigger
       asChild
-      {isStretchLink ? (`className="after:absolute after:inset-0"`) : null} //★★TODO: うまくいかない
+      {...(isStretchLink && { className: "after:absolute after:inset-0" })}
     >
       {triggerType === "button" ? (
         <button className="rounded bg-primary-100 px-2 py-1 shadow data-[state=open]:bg-primary-200">
