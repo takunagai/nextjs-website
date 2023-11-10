@@ -71,13 +71,9 @@ const Footer = () => {
                   <br />
                   開所日時：火・水・木 10〜16時
                   <br />
-                  所在地：兵庫県西宮市名塩山荘 8-10 ※1
+                  所在地：兵庫県西宮市名塩新町3-2
                   <br />
-                  <span className="mt-1 block text-xs leading-tight">
-                    ※1 近隣に同住所の家があります。
-                    <br />
-                    <b>いきがいさがし/necoris</b>の表札がある茶色の家です
-                  </span>
+                  　　　　(JR西宮名塩駅から徒歩30秒)
                 </p>
                 <p className="mt-3 flex justify-center gap-2 lg:justify-start">
                   <a
@@ -206,7 +202,7 @@ const FooterBar = () => {
     <div className="bg-primary py-4 text-primary-200">
       <div className="container">
         <p className="text-center text-sm">
-          © 2022 兵庫ひきこもり相談支援センター 阪神ブランチ
+          © 2023 兵庫ひきこもり相談支援センター 阪神ブランチ
         </p>
       </div>
     </div>
