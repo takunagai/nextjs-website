@@ -28,8 +28,8 @@ import type { NewsItem } from "../../types/news"
 export default function BlogId({ newsArticle }: any) {
   return (
     <Layout
-      title="fetch() メソッドで microCMS API からフェッチ"
-      description="fetch() メソッドで microCMS API からデータをフェッチして表示するサンプル"
+      title={newsArticle.title}
+      description={newsArticle.body.replace(/(<([^>]+)>)/gi, "").slice(0, 100)}
     >
       <motion.div
         initial={{ opacity: 0 }}
