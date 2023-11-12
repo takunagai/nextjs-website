@@ -12,6 +12,7 @@ type Props = {
   triggerType?: "button" | "link"
   triggerText?: string
   isStretchLink?: boolean
+  isPortrait?: boolean
   children: ReactNode
 }
 
@@ -21,6 +22,7 @@ const DialogDemo = ({
   triggerType = "button",
   triggerText = "開く",
   isStretchLink = false,
+  isPortrait = false,
   children,
 }: Props) => (
   <Dialog.Root>
@@ -45,7 +47,9 @@ const DialogDemo = ({
       <Dialog.Overlay className="DialogOverlay bg-black/50" />
       <Dialog.Content
         aria-describedby={undefined}
-        className="DialogContent max-h-[85vh] w-11/12 max-w-xl rounded-xl bg-white p-6"
+        className={`DialogContent max-h-[85vh] w-11/12 rounded-xl bg-white p-6 ${
+          isPortrait ? `max-w-xl` : `max-w-3xl`
+        }`}
       >
         {title &&
           (showTitle ? (

@@ -386,6 +386,9 @@ const GroupList = ({
                   triggerType="link"
                   triggerText="» 拡大表示"
                   isStretchLink={true}
+                  isPortrait={
+                    group.leafletImage1.height >= group.leafletImage1.width
+                  }
                 >
                   <img
                     src={group.leafletImage1.url}
