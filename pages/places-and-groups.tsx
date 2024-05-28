@@ -47,7 +47,7 @@ export const getStaticProps: GetStaticProps = async () =>
       endpoint: "group",
       queries: {
         // filters: "city[contains]宝塚市[or]city[contains]伊丹市",
-        limit: 50,
+        limit: 100,
       },
     })
 
