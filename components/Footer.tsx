@@ -1,21 +1,6 @@
 // import Image from "next/image"
 import Link from "next/link"
-import {
-  FaLine,
-  FaTwitter,
-  FaLock,
-  FaHandHoldingHeart,
-  FaUserFriends,
-  FaHandshake,
-  FaDove,
-  FaCat,
-  FaCrow,
-  FaDemocrat,
-  FaDog,
-  FaFish,
-  FaHorse,
-  FaFrog,
-} from "react-icons/fa"
+import { FaTwitter } from "react-icons/fa"
 
 const Footer = () => {
   // const footerLinks = [
@@ -69,11 +54,11 @@ const Footer = () => {
                     </b>
                   </span>
                   <br />
-                  開所日時：火・水・木 10〜16時
+                  開所日時：水・木・金 10:00〜16:00
                   <br />
                   所在地：兵庫県西宮市名塩新町3-2
                   <br />
-                  　　　　(JR西宮名塩駅から徒歩30秒)
+                  　　　　(JR西宮名塩駅出てすぐ)
                 </p>
                 <p className="mt-3 flex justify-center gap-2 lg:justify-start">
                   <a
