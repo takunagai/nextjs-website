@@ -58,7 +58,7 @@ const Footer = () => {
                   <br />
                   所在地：兵庫県西宮市名塩新町3-2
                   <br />
-                  　　　　(JR西宮名塩駅出てすぐ)
+                  　　　　(JR西宮名塩駅西に出てすぐ)
                 </p>
                 <p className="mt-3 flex justify-center gap-2 lg:justify-start">
                   <a

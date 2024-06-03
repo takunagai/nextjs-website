@@ -17,7 +17,7 @@ const AccessMap = () => {
       <p className="mt-3 text-center leading-5">
         〒669-1134 西宮市名塩新町3-2
         <br />
-        <small>(JR西宮名塩駅から徒歩30秒)</small>
+        <small>(JR西宮名塩駅西に出てすぐ)</small>
       </p>
       <div className="iframe-wrapper iframe-wrapper--golden-ratio alignfull mt-6 md:container">
         <iframe

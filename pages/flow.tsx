@@ -169,7 +169,7 @@ const Flow: NextPage = () => {
                 <a href="tel:050-3749-1227">050-3749-1227</a>
               </b>
             </p>
-            <p className="mt-1 text-sm">受付時間 火・水・木　10〜16時</p>
+            <p className="mt-1 text-sm">受付時間 火・水・木・金 10〜16時</p>
             <p>
               <a
                 type="button"

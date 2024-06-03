@@ -62,7 +62,7 @@ const Inquiry: NextPage = () => {
                   <a href="tel:050-3749-1227">050-3749-1227</a>
                 </b>
               </p>
-              <p className="mt-1 text-sm">対応時間 火・水・木　10〜16時</p>
+              <p className="mt-1 text-sm">対応時間 火・水・木・金　10〜16時</p>
             </div>
 
             <div className="mx-auto mt-8 basis-1/2 rounded bg-craft p-4 text-center shadow lg:mt-0">
@@ -86,7 +86,7 @@ const Inquiry: NextPage = () => {
                     @ikigaisagashi1
                   </a>
                 </p>
-                <p className="mt-1 text-sm">対応時間 火・水・木　10〜16時</p>
+                <p className="mt-1 text-sm">対応時間 火・水・木・金 10〜16時</p>
               </div>
             </div>
           </div>

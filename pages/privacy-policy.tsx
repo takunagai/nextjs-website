@@ -104,7 +104,7 @@ const Recruit: NextPage = () => {
             <p className="mt-0 text-sm">運営：一般社団法人 いきがいさがし</p>
             <p className="mt-2 font-bold">TEL: 079-240-6299</p>
             <p className="mt-0 text-sm">
-              火・水・木 10〜16時
+              火・水・木・金 10〜16時
               <br />
               盆休み、GW、年末年始は休業
             </p>
