@@ -88,7 +88,7 @@ const Reference: NextPage = () => {
                 </li>
                 <li>
                   <a
-                    href="https://c1mdb.hp.peraichi.com/"
+                    href="https://amarisu.com"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -242,7 +242,7 @@ const Reference: NextPage = () => {
               <ul className="mt-4 flex list-square flex-col gap-2 pl-5 marker:text-secondary-400">
                 <li>
                   <a
-                    href="https://www.city.sanda.lg.jp/soshiki/65/gyomu/ikuji_student/2/728.html"
+                    href="https://www.city.sanda.lg.jp/soshiki/65/taisetsu/seitoshidou/futoukou/731.html"
                     target="_blank"
                     rel="noreferrer"
                   >
