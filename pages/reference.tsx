@@ -124,7 +124,7 @@ const Reference: NextPage = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.city.takarazuka.hyogo.jp/kenkofukushi/seikatsushien/1038806.html"
+                    href="https://www.city.takarazuka.hyogo.jp/kenkofukushi/seikatsushien/1051449/"
                     target="_blank"
                     rel="noreferrer"
                   >
