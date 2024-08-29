@@ -88,6 +88,15 @@ const Reference: NextPage = () => {
                 </li>
                 <li>
                   <a
+                    href="https://www.city.amagasaki.hyogo.jp/kurashi/seikatusien/1001977/1004321.html"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    尼崎しごとくらしサポートセンター
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://amarisu.com"
                     target="_blank"
                     rel="noreferrer"
