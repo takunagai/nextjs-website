@@ -283,7 +283,7 @@ const Reference: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    あすなろ学級<small> (みらい)</small>
+                    あすなろ<small> (みらい)</small>
                   </a>
                 </li>
                 <li>
@@ -292,7 +292,7 @@ const Reference: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    あすなろ学級
+                    あすなろ
                     <small>
                       {" "}
                       (なるおきた、かわらぎ、やまぐち、しおせ、うえがはら、はまわき)
