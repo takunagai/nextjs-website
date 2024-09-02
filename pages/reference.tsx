@@ -92,7 +92,7 @@ const Reference: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    尼崎しごとくらしサポートセンター
+                    しごと・くらしサポートセンター尼崎
                   </a>
                 </li>
                 <li>
