@@ -78,11 +78,11 @@ const Navbar = ({ home }: Props) => {
                 <a className="text-primary-400 no-underline">レシピ開発</a>
               </Link>
             </li>
-            <li className="uppercase">
+            {/* <li className="uppercase">
               <Link href="recruit">
                 <a className="text-primary-400 no-underline">求人情報</a>
               </Link>
-            </li>
+            </li> */}
             <li className="uppercase">
               <Link href="inquiry">
                 <a className="text-primary-400 no-underline">お問合せ</a>

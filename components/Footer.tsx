@@ -78,11 +78,11 @@ const Footer = () => {
               <a className="text-primary-600">スフレをメニューにしたい方へ</a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="recruit">
               <a className="text-primary-600">求人情報</a>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="privacy-policy">
               <a className="text-primary-600">個人情報保護方針</a>

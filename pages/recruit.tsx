@@ -1,8 +1,7 @@
-import Link from "next/link"
-import Image from "next/image"
 import { motion } from "framer-motion"
-import Layout from "../components/layout"
 import type { NextPage } from "next"
+import Image from "next/image"
+import Layout from "../components/layout"
 
 const Recruit: NextPage = () => {
   return (
@@ -24,7 +23,7 @@ const Recruit: NextPage = () => {
             className="rounded-xl"
           />
         </p>
-        <p className="text-center">
+        {/* <p className="text-center">
           <Image
             src="/images/souffle/recruit_catch.png"
             width={242}
@@ -32,8 +31,9 @@ const Recruit: NextPage = () => {
             alt="わたしたちと一緒に働きませんか？"
             className="rounded-xl"
           />
-        </p>
-        <p className="lead mx-auto mt-4 max-w-xl text-center text-primary-700">
+        </p> */}
+        <p className="text-center mb-10">現在は募集しておりません。</p>
+        {/* <p className="lead mx-auto mt-4 max-w-xl text-center text-primary-700">
           現在、スフレ専門店
           ナッツベリーでは、以下の職種を募集しています。面接ご希望の方は、電話又は
           <Link href="inquiry">
@@ -89,7 +89,7 @@ const Recruit: NextPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </motion.div>
     </Layout>
   )
